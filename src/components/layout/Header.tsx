@@ -8,11 +8,28 @@ import NextImage from '../NextImage';
 
 export default function Header() {
   const router = useRouter();
+  console.log('🚀 ~ file: Header.tsx ~ line 11 ~ Header ~ router', router);
   const [scrollTop, setScrollTop] = useState(0);
   const isScrolled = useMemo(() => scrollTop > 50, [scrollTop]);
   const onScroll = (e: any) => {
     setScrollTop(e.target.documentElement.scrollTop);
   };
+
+  const indexOfSelectedMenu = useMemo(() => {
+    const indexOfSolutionMenu = MENU_TAB_LIST.findIndex(
+      (menu) => menu?.isSolutionPage
+    );
+    const solutionMenuSubTabHrefList = MENU_TAB_LIST[
+      indexOfSolutionMenu
+    ]?.subTabs?.map((subTab) => subTab.href);
+    if (solutionMenuSubTabHrefList?.includes(router.pathname)) {
+      return indexOfSolutionMenu;
+    }
+    const indexOfMenu = MENU_TAB_LIST.findIndex((menu) =>
+      router.pathname.includes(menu.href as string)
+    );
+    return indexOfMenu;
+  }, [router.pathname]);
 
   useEffect(() => {
     window.addEventListener('scroll', onScroll);
@@ -46,7 +63,13 @@ export default function Header() {
             tab?.subTabs ? (
               <div key={index} className='group relative inline-block'>
                 <button className='inline-flex items-center rounded hover:bg-gray-100'>
-                  <span className='mr-1 px-4 py-2'>{tab.title}</span>
+                  <span
+                    className={`mr-1 px-4 py-2 ${
+                      indexOfSelectedMenu === index && 'text-primary'
+                    }`}
+                  >
+                    {tab.title}
+                  </span>
                   <i className='text-xl'>
                     <RiArrowDownSLine />
                   </i>
@@ -64,10 +87,10 @@ export default function Header() {
                 </ul>
               </div>
             ) : (
-              <Link key={index} href={tab.href}>
+              <Link key={index} href={tab.href as string}>
                 <a
                   className={`block rounded px-4 py-2 hover:bg-gray-100 ${
-                    router.asPath.startsWith(tab.href) && 'text-primary'
+                    router.asPath === tab.href && 'text-primary'
                   }`}
                 >
                   {tab.title}
@@ -84,10 +107,23 @@ export default function Header() {
   );
 }
 
-const MENU_TAB_LIST = [
+interface SubMenu {
+  href: string;
+  title: string;
+}
+
+interface Menu {
+  title: string;
+  href?: string;
+  subTabs?: SubMenu[];
+  isSolutionPage?: boolean;
+}
+
+const MENU_TAB_LIST: Menu[] = [
   { href: '/about-us', title: 'Về GAT' },
   {
     title: 'Giải pháp',
+    isSolutionPage: true,
     subTabs: [
       { href: '/green-agri', title: 'Green Agri' },
       { href: '/green-check', title: 'Green Check' },
@@ -95,7 +131,7 @@ const MENU_TAB_LIST = [
   },
   { href: '/features', title: 'Tính năng' },
   { href: '/recruit', title: 'Tuyển dụng' },
-  { href: '/guild', title: 'Hướng dẫn' },
+  { href: '/guide', title: 'Hướng dẫn' },
   { href: '/news-and-blog', title: 'Tin tức & Blog' },
   { href: '/join-us', title: 'Tham gia cộng đồng' },
 ];

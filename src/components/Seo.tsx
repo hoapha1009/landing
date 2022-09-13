@@ -70,11 +70,7 @@ export default function Seo(props: SeoProps) {
             property='og:publish_date'
             content={meta.date}
           />
-          <meta
-            name='author'
-            property='article:author'
-            content='Theodorus Clarence'
-          />
+          <meta name='author' property='article:author' content='GAT' />
         </>
       )}
 
@@ -82,11 +78,8 @@ export default function Seo(props: SeoProps) {
       {favicons.map((linkProps) => (
         <link key={linkProps.href} {...linkProps} />
       ))}
-      <meta name='msapplication-TileColor' content='#ffffff' />
-      <meta
-        name='msapplication-TileImage'
-        content='/favicon/ms-icon-144x144.png'
-      />
+      <meta name='GAT-TileColor' content='#ffffff' />
+      <meta name='GAT-TileImage' content='/images/logo.png' />
       <meta name='theme-color' content='#ffffff' />
     </Head>
   );

@@ -39,36 +39,36 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         disabled={disabled}
         className={clsxm(
           'inline-flex items-center rounded px-4 py-2 font-medium',
-          'focus:outline-none focus-visible:ring focus-visible:ring-primary-500',
+          'focus-visible:ring-primary focus:outline-none focus-visible:ring',
           'shadow-sm',
           'transition-colors duration-75',
           //#region  //*=========== Variants ===========
           [
             variant === 'primary' && [
               'bg-primary text-white',
-              'border border-primary',
+              'border-primary border',
               'hover:text-white hover:brightness-90',
               'active:bg-primary',
               'disabled:bg-primary disabled:hover:bg-primary',
             ],
             variant === 'outline' && [
               'text-primary',
-              'border border-primary',
-              'hover:bg-primary  hover:text-white active:bg-primary disabled:bg-primary',
+              'border-primary border',
+              'hover:bg-primary  active:bg-primary disabled:bg-primary hover:text-white',
               isDarkBg &&
                 'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
             ],
             variant === 'ghost' && [
-              'text-primary-500',
+              'text-primary',
               'shadow-none',
-              'hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100',
+              'hover:bg-primary-light active:bg-primary-light disabled:bg-primary-light',
               isDarkBg &&
                 'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
             ],
             variant === 'light' && [
-              'bg-white text-dark ',
+              'text-dark bg-white ',
               'border border-gray-300',
-              'hover:bg-gray-100 hover:text-dark',
+              'hover:text-dark hover:bg-gray-100',
               'active:bg-white/80 disabled:bg-gray-200',
             ],
             variant === 'dark' && [
@@ -92,7 +92,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
               {
                 'text-white': ['primary', 'dark'].includes(variant),
                 'text-black': ['light'].includes(variant),
-                'text-primary-500': ['outline', 'ghost'].includes(variant),
+                'text-primary': ['outline', 'ghost'].includes(variant),
               }
             )}
           >
