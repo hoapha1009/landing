@@ -1,6 +1,6 @@
 html,
 body {
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   @apply bg-gray-100;
   @apply text-gray-700;
   @apply text-base;
@@ -47,16 +47,16 @@ a:focus {
     max-width: none;
   }
   @screen lg {
-    width: 90%;
+    width: calc(100% - 100px);
     @apply max-w-screen-lg;
   }
   @screen xl {
-    width: 88%;
+    width: calc(100% - 100px);
     @apply max-w-screen-xl;
   }
   @screen 2xl {
-    width: 86%;
-    @apply max-w-screen-xl;
+    width: calc(100% - 100px);
+    max-width: 1960px;
   }
 }
 

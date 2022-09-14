@@ -8,7 +8,6 @@ import NextImage from '../NextImage';
 
 export default function Header() {
   const router = useRouter();
-  console.log('🚀 ~ file: Header.tsx ~ line 11 ~ Header ~ router', router);
   const [scrollTop, setScrollTop] = useState(0);
   const isScrolled = useMemo(() => scrollTop > 50, [scrollTop]);
   const onScroll = (e: any) => {
@@ -40,7 +39,7 @@ export default function Header() {
   return (
     <header className='sticky top-0 w-full z-100'>
       <div
-        className={`flex h-20 items-center justify-between bg-white px-14 text-lg transition-all
+        className={`main-container flex h-20 items-center justify-between bg-white text-lg font-medium transition-all
     ${
       isScrolled
         ? 'border-b border-gray-50 shadow'
