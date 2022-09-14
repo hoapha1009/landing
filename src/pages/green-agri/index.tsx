@@ -1,3 +1,11 @@
+import { GreenAgriPage } from '../../components/pages/green-agri-page';
+import Seo from '../../components/Seo';
+
 export default function Page() {
-  return <div>GreenAgri</div>;
+  return (
+    <>
+      <Seo />
+      <GreenAgriPage />
+    </>
+  );
 }

@@ -37,16 +37,14 @@ export default function Header() {
   }, []);
 
   return (
-    <header className='sticky top-0 w-full z-100'>
-      <div
-        className={`main-container flex h-20 items-center justify-between bg-white text-lg font-medium transition-all
-    ${
-      isScrolled
-        ? 'border-b border-gray-50 shadow'
-        : 'border-transparent shadow-none'
-    }
-    `}
-      >
+    <header
+      className={`sticky top-0 z-100  w-full bg-white ${
+        isScrolled
+          ? 'border-b border-gray-50 shadow'
+          : 'border-transparent shadow-none'
+      }`}
+    >
+      <div className='flex items-center justify-between h-20 text-lg font-medium main-container'>
         <div className='flex items-center gap-1'>
           <Link href='/'>
             <a className='block mr-8'>
@@ -73,7 +71,7 @@ export default function Header() {
                     <RiArrowDownSLine />
                   </i>
                 </button>
-                <ul className='absolute hidden rounded shadow group-hover:block'>
+                <ul className='absolute hidden bg-white rounded shadow group-hover:block'>
                   {tab.subTabs.map((subTab, index) => (
                     <li key={index} className=''>
                       <Link href={subTab.href}>
