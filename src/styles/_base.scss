@@ -30,33 +30,37 @@ a:focus {
   text-decoration: none;
 }
 
+@function calCWidth($value: 100) {
+  @return calc(100% - $value);
+}
+
 .main-container {
   margin-left: auto;
   margin-right: auto;
   width: 94%;
   @screen xs {
     width: 94%;
-    max-width: none;
+    max-width: 100%;
   }
   @screen sm {
     width: 94%;
-    max-width: none;
+    max-width: 100%;
   }
   @screen md {
     width: 92%;
-    max-width: none;
+    max-width: 100%;
   }
   @screen lg {
-    width: calc(100% - 100px);
-    @apply max-w-screen-lg;
+    width: calCWidth(100px);
+    max-width: 100%;
   }
   @screen xl {
-    width: calc(100% - 100px);
-    @apply max-w-screen-xl;
+    width: calCWidth(100px);
+    max-width: 100%;
   }
   @screen 2xl {
-    width: calc(100% - 100px);
-    max-width: 1960px;
+    width: calCWidth(100px);
+    max-width: 100%;
   }
 }
 
