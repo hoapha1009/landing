@@ -1,4 +1,5 @@
-const colors = async() => await import('tailwindcss/colors')
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const colors = require('tailwindcss/colors')
 
 delete colors['lightBlue'];
 delete colors['warmGray'];

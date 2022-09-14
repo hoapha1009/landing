@@ -1,0 +1,24 @@
+// Custom project-specific class here
+:root {
+  --color-primary-light: #95f8cd;
+  --color-primary: #10AE6A;
+  --color-primary-dark: #047041;
+  --color-accent-light: #6db6fa;
+  --color-accent: #4B8FF8;
+  --color-accent-dark: #095ede;
+}
+
+.swipper-vertical {
+  @screen md {
+    max-height: 180px;
+  }
+  @screen lg {
+    max-height: 180px;
+  }
+  @screen xl {
+    max-height: 320px;
+  }
+  @screen 2xl {
+    max-height: 320px;
+  }
+}

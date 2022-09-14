@@ -38,19 +38,19 @@ export default function Header() {
   }, []);
 
   return (
-    <header className='z-100 sticky top-0 w-full'>
+    <header className='sticky top-0 w-full z-100'>
       <div
         className={`flex h-20 items-center justify-between bg-white px-14 text-lg transition-all
     ${
       isScrolled
-        ? 'border-gray border-b shadow-sm'
+        ? 'border-b border-gray-50 shadow'
         : 'border-transparent shadow-none'
     }
     `}
       >
         <div className='flex items-center gap-1'>
           <Link href='/'>
-            <a className='mr-8 block'>
+            <a className='block mr-8'>
               <NextImage
                 src='/images/logo.png'
                 alt='logo'
@@ -61,7 +61,7 @@ export default function Header() {
           </Link>
           {MENU_TAB_LIST.map((tab, index) =>
             tab?.subTabs ? (
-              <div key={index} className='group relative inline-block'>
+              <div key={index} className='relative inline-block group'>
                 <button className='inline-flex items-center rounded hover:bg-gray-100'>
                   <span
                     className={`mr-1 px-4 py-2 ${
@@ -78,7 +78,7 @@ export default function Header() {
                   {tab.subTabs.map((subTab, index) => (
                     <li key={index} className=''>
                       <Link href={subTab.href}>
-                        <a className='block whitespace-nowrap py-3 px-8 hover:bg-gray-100'>
+                        <a className='block px-8 py-3 whitespace-nowrap hover:bg-gray-100'>
                           {subTab.title}
                         </a>
                       </Link>
