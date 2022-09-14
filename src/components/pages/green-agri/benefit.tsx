@@ -1,3 +1,4 @@
+import NextImage from '../../NextImage';
 import { OptionRow } from '../../shared/option-row/option-row';
 
 export function Benefit() {
@@ -9,7 +10,10 @@ export function Benefit() {
         </div>
         <div className='grid grid-cols-3 gap-8 mt-16 auto-rows-fr'>
           {LIST.map((item, index) => (
-            <div key={index} className='px-4 pt-20 pb-12 bg-white rounded-xl'>
+            <div
+              key={index}
+              className='relative px-4 pt-20 pb-12 bg-white rounded-xl'
+            >
               <div className='text-xl font-bold'>{item.title}</div>
               <div className='flex flex-col gap-3 mt-3'>
                 {item.options.map((option, index) => (
@@ -20,6 +24,18 @@ export function Benefit() {
                   />
                 ))}
               </div>
+              <div className='mx-auto h-[100px] w-[100px]  rounded-full bg-gradient-to-r from-primary to-accent p-[3px]'>
+                <div className='flex items-center justify-center h-full text-white bg-white rounded-full'>
+                  <NextImage
+                    src={item.img}
+                    alt={item.img.split('/')[2]}
+                    width={60}
+                    height={60}
+                    className='rounded-full'
+                  />
+                </div>
+              </div>
+              {/* <div className='flex items-center justify-center w-24 h-24 bg-white rounded-full'></div> */}
             </div>
           ))}
         </div>
