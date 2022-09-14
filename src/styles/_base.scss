@@ -51,15 +51,15 @@ a:focus {
     max-width: 100%;
   }
   @screen lg {
-    width: calCWidth(300px);
+    width: calCWidth(50px);
     max-width: 100%;
   }
   @screen xl {
-    width: calCWidth(300px);
+    width: calCWidth(100px);
     max-width: 100%;
   }
   @screen 2xl {
-    width: calCWidth(300px);
+    width: calCWidth(250px);
     max-width: 100%;
   }
 }

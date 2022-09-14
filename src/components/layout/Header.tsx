@@ -44,7 +44,7 @@ export default function Header() {
           : 'border-transparent shadow-none'
       }`}
     >
-      <div className='flex items-center justify-between h-20 text-lg font-medium main-container'>
+      <div className='flex items-center justify-between h-20 font-medium main-container'>
         <div className='flex items-center gap-1'>
           <Link href='/'>
             <a className='block mr-8'>

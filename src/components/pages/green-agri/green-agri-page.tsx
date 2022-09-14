@@ -1,4 +1,6 @@
-import { Introduce } from '../shared/solution/introduce';
+import { About } from './about';
+import { Benefit } from './benefit';
+import { Introduce } from '../../shared/solution/introduce';
 
 export function GreenAgriPage() {
   const title = 'GreenAgri - Giải pháp thương mại điện tử và kênh phân phối. ';
@@ -19,13 +21,13 @@ export function GreenAgriPage() {
   const img = {
     src: '/images/green-agri-banner.png',
     alt: 'green-agri-banner',
-    width: 800,
-    height: 308,
   };
 
   return (
     <div className=''>
       <Introduce title={title} options={options} img={img} />
+      <About />
+      <Benefit />
     </div>
   );
 }
