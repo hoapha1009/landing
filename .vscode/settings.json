@@ -36,5 +36,6 @@
   "tailwindCSS.emmetCompletions": true,
   "css.customData": [".vscode/css-custom-data.json"],
   "scss.validate": false,
-  "editor.definitionLinkOpensInPeek": true
+  "editor.definitionLinkOpensInPeek": true,
+  "cSpell.words": ["Swiper"]
 }

@@ -11,7 +11,7 @@ export default function Footer() {
             <QRcode />
           </div>
         </div>
-        <div className='flex flex-col items-center py-6 mx-5 text-sm font-medium text-gray-400 border-t border-t-white lg:flex-row lg:justify-between'>
+        <div className='mx-5 flex flex-col items-center border-t border-t-white py-6 text-sm font-medium text-gray-400 lg:flex-row lg:justify-between'>
           <div>Copyright © 2022 GreenAgri Software. All rights reserved. </div>
           <div>Quy định sử dụng | Chính sách bảo mật</div>
         </div>
@@ -23,8 +23,16 @@ export default function Footer() {
 function InformationGat() {
   return (
     <div className='w-[450px] shrink-0 grow-0'>
-      <img srcSet='/images/logo.png 2x' alt='logo' />
-      <div className='mt-4 mb-4 text-lg font-semibold text-white uppercase'>
+      <Link href='/'>
+        <a>
+          <img
+            src='/images/logo.png'
+            alt='logo'
+            className='w-36 object-contain'
+          />
+        </a>
+      </Link>
+      <div className='mt-4 mb-4 text-lg font-semibold uppercase text-white'>
         Cty CP Công nghệ Green Agri
       </div>
       {MOCKS_DATA.map((item, index) => (
@@ -33,7 +41,7 @@ function InformationGat() {
           <div className='mt-2'>
             {item.contacts.map((contact, idx) => (
               <div
-                className='text-sm font-medium text-gray-400 lg:text-base'
+                className='mt-2 text-sm font-medium text-gray-400 lg:text-base'
                 key={idx}
               >
                 {contact}
@@ -42,7 +50,7 @@ function InformationGat() {
           </div>
         </div>
       ))}
-      <div className='flex flex-row gap-4 mb-6'>
+      <div className='mb-6 flex flex-row gap-4'>
         {IMAGE_SOCIAL.map((item, index) => (
           <Link href={item.href} key={index}>
             <a>
@@ -60,12 +68,12 @@ function MenusLink() {
     <div className='flex flex-row'>
       {MOCKS_LINK.map((item, index) => (
         <div key={index} className='mr-32 last:mr-0'>
-          <div className='mb-8 text-lg font-medium text-white uppercase'>
+          <div className='mb-4 text-lg font-medium uppercase text-white'>
             {item.name}
           </div>
           {item.menus.map((menu, idx) => (
             <Link href={menu.href} key={idx}>
-              <a className='block mb-2 text-sm font-medium text-gray-400 last:mb-0 hover:text-primary lg:text-base'>
+              <a className='mb-2 block text-sm font-medium text-gray-400 last:mb-0 hover:text-primary lg:text-base'>
                 {menu.name}
               </a>
             </Link>
@@ -78,9 +86,9 @@ function MenusLink() {
 
 function QRcode() {
   return (
-    <div className='flex flex-row mt-12'>
+    <div className='mt-12 flex flex-row'>
       <img src='/images/QR.png' alt='qrcode' />
-      <div className='flex flex-col justify-around ml-4'>
+      <div className='ml-4 flex flex-col justify-around'>
         <div className='font-semibold text-white lg:text-lg'>
           Tải app GreenAgri
         </div>

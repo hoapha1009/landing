@@ -1,9 +1,9 @@
 import { AppProps } from 'next/app';
 
-import "../styles/style.scss";
+import '../styles/style.scss';
 
 import Layout from '../components/layout/Layout';
-
+import { DefaultHead } from '../components/layout/default-head';
 
 /**
  * !STARTERCONF info
@@ -12,9 +12,12 @@ import Layout from '../components/layout/Layout';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      <DefaultHead />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </>
   );
 }
 
