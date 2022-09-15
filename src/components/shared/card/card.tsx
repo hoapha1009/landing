@@ -17,7 +17,7 @@ export function Card({ item, className, ...props }: CardProps) {
       className={`flex h-full flex-col items-center justify-between rounded-xl border border-gray-100 shadow ${className}`}
     >
       <img src={item.img.url} alt={item.img.alt} height='100%' />
-      <div className='h-full mt-auto'>{item.content}</div>
+      <div className='mt-auto h-full text-center'>{item.content}</div>
     </div>
   );
 }

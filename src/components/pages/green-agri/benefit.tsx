@@ -4,18 +4,18 @@ import { OptionRow } from '../../shared/option-row/option-row';
 export function Benefit() {
   return (
     <div className='pt-10 pb-16'>
-      <div className='p-24 main-container rounded-xl bg-primary-dark'>
-        <div className='text-3xl font-bold text-center text-white uppercase'>
+      <div className='main-container rounded-xl bg-primary-dark p-24'>
+        <div className='text-center text-3xl font-bold uppercase text-white'>
           Lợi ích của green agri
         </div>
-        <div className='grid grid-cols-3 gap-8 mt-16 auto-rows-fr'>
+        <div className='mt-16 grid auto-rows-fr grid-cols-3 gap-8'>
           {LIST.map((item, index) => (
             <div
               key={index}
-              className='relative px-4 pt-20 pb-12 bg-white rounded-xl'
+              className='relative rounded-xl bg-white px-4 pt-20 pb-12'
             >
               <div className='text-xl font-bold'>{item.title}</div>
-              <div className='flex flex-col gap-3 mt-3'>
+              <div className='mt-3 flex flex-col gap-3'>
                 {item.options.map((option, index) => (
                   <OptionRow
                     key={index}
@@ -24,8 +24,8 @@ export function Benefit() {
                   />
                 ))}
               </div>
-              <div className='mx-auto h-[100px] w-[100px]  rounded-full bg-gradient-to-r from-primary to-accent p-[3px]'>
-                <div className='flex items-center justify-center h-full text-white bg-white rounded-full'>
+              <div className='absolute top-0 left-1/2 h-[100px] w-[100px] -translate-x-14 -translate-y-12 transform rounded-full bg-gradient-to-r from-primary to-accent p-[3px]'>
+                <div className='flex h-full items-center justify-center rounded-full bg-white text-white'>
                   <NextImage
                     src={item.img}
                     alt={item.img.split('/')[2]}

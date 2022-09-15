@@ -1,6 +1,9 @@
 import { About } from './about';
 import { Benefit } from './benefit';
 import { Introduce } from '../../shared/solution/introduce';
+import { TargetCustomer } from './target-customer';
+import { Customer } from './customer';
+import { Form } from '../../shared/form/form';
 
 export function GreenAgriPage() {
   const title = 'GreenAgri - Giải pháp thương mại điện tử và kênh phân phối. ';
@@ -28,6 +31,9 @@ export function GreenAgriPage() {
       <Introduce title={title} options={options} img={img} />
       <About />
       <Benefit />
+      <TargetCustomer />
+      <Customer />
+      <Form />
     </div>
   );
 }

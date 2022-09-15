@@ -39,22 +39,22 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         disabled={disabled}
         className={clsxm(
           'inline-flex items-center rounded px-4 py-2 font-medium',
-          'focus-visible:ring-primary focus:outline-none focus-visible:ring',
+          'focus:outline-none focus-visible:ring focus-visible:ring-primary',
           'shadow-sm',
           'transition-colors duration-75',
           //#region  //*=========== Variants ===========
           [
             variant === 'primary' && [
               'bg-primary text-white',
-              'border-primary border',
+              'border border-primary',
               'hover:text-white hover:brightness-90',
               'active:bg-primary',
               'disabled:bg-primary disabled:hover:bg-primary',
             ],
             variant === 'outline' && [
               'text-primary',
-              'border-primary border',
-              'hover:bg-primary  active:bg-primary disabled:bg-primary hover:text-white',
+              'border border-primary',
+              'hover:bg-primary  hover:text-white active:bg-primary disabled:bg-primary',
               isDarkBg &&
                 'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
             ],
