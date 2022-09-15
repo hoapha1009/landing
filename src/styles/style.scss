@@ -9,3 +9,11 @@
 }
 
 @import './custom';
+
+.swiper-pagination-bullet-active {
+  width: 58px;
+  background-color: var(--color-primary);
+}
+.swiper-pagination-bullet-active:hover {
+  background-color: var(--color-primary);
+}

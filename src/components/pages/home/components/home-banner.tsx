@@ -1,20 +1,20 @@
 import Button from '../../../buttons/Button';
 import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper/core';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 SwiperCore.use([Pagination, Autoplay, Navigation]);
 
 export function HomeBanner() {
   const paginationRef = useRef(null);
+  const [_, setActiveIndex] = useState<any>();
 
   return (
-    <div className="mb-96 flex h-[725px] max-h-[725px] w-full flex-row items-center justify-center bg-[url('/images/home-banner.png')]">
-      <div className='overflow-hidden'>
+    <div className="relative mb-96 flex h-[725px] max-h-[725px] w-full flex-row items-center justify-center bg-[url('/images/home-banner.png')]">
+      <div className='overflow-hidden '>
         <Swiper
           slidesPerView={1}
           grabCursor
           loop={true}
-          className='pb-10'
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
@@ -23,19 +23,14 @@ export function HomeBanner() {
             el: paginationRef.current,
             clickable: true,
             type: 'bullets',
-            bulletActiveClass: `bg-primary hover:bg-primary-dark  w-10`,
-
-            bulletClass: `inline-block w-3 h-3 bg-gray-100 hover:bg-white rounded-full transition-all cursor-pointer mr-2 last:mr-0 hover:bg-primary-dark`,
+            bulletClass: `inline-block w-3 h-3 bg-gray-100 rounded-full transition-all cursor-pointer mr-2 last:mr-0 hover:bg-primary`,
             renderBullet: function (index, className) {
               return `<span class="${className}"></span>`;
             },
           }}
+          onSwiper={setActiveIndex}
           freeMode={false}
         >
-          <div
-            className='flex-center absolute bottom-4 z-50 mt-16 w-full gap-1.5 text-center'
-            ref={paginationRef}
-          />
           {[1, 2, 3, 4].map((item, index) => (
             <SwiperSlide key={index}>
               <HomBannerContent />
@@ -43,6 +38,10 @@ export function HomeBanner() {
           ))}
         </Swiper>
       </div>
+      <div
+        className='flex-center absolute bottom-16 z-50 w-full gap-1.5 text-center'
+        ref={paginationRef}
+      />
     </div>
   );
 }
