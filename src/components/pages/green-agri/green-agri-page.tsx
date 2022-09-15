@@ -2,7 +2,7 @@ import { About } from './about';
 import { Benefit } from './benefit';
 import { Introduce } from '../../shared/solution/introduce';
 import { TargetCustomer } from './target-customer';
-import { Customer } from './customer';
+// import { Customer } from './customer';
 import { Form } from '../../shared/form/form';
 
 export function GreenAgriPage() {
@@ -32,7 +32,7 @@ export function GreenAgriPage() {
       <About />
       <Benefit />
       <TargetCustomer />
-      <Customer />
+      {/* <Customer /> */}
       <Form />
     </div>
   );
