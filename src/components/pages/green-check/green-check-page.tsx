@@ -1,6 +1,8 @@
+import { Form } from '../../shared/form/form';
+import { SlidePart } from '../../shared/slide-part/slide-part';
 import { Introduce } from '../../shared/solution/introduce';
-import { FarmingDiarySolution } from './farming-diary-solution';
-import { TraceabilitySolution } from './traceability-solution';
+import { FarmingDiarySolution } from './components/farming-diary-solution';
+import { TraceabilitySolution } from './components/traceability-solution';
 
 export function GreenCheckPage() {
   const title =
@@ -27,6 +29,8 @@ export function GreenCheckPage() {
       <Introduce title={title} options={options} img={img} />
       <FarmingDiarySolution />
       <TraceabilitySolution />
+      <SlidePart title='khách hàng green agri' />
+      <Form />
     </div>
   );
 }

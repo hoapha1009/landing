@@ -1,29 +1,16 @@
-import { InfoCard } from '../../shared/info-card/info-card';
-import { Subtitle } from '../../shared/subtitle/subtitle';
-import { Title } from '../../shared/title/title';
+import { InfoCard } from '../../../shared/info-card/info-card';
+import { Title } from '../../../shared/title/title';
 
-export function TraceabilitySolution() {
+export function Benefit() {
   return (
-    <div className='bg-primary-light py-16'>
-      <div className='main-container'>
-        <Title text='giải pháp truy xuất nguồn gốc' />
-        <Subtitle
-          text={`Là giải pháp cho phép người tiêu
-dùng cũng như các bên liên quan truy tìm lịch sử các thông tin về quy trình sản xuất, chế biến, phân phối và cho đến khi sản phẩm đến được tay người
-dùng`}
-        />
-        <img
-          src='/images/solution-origin.png'
-          alt='solution-origin-image'
-          className='w-full'
-        />
-        <div className='mt-16 grid auto-rows-fr grid-cols-3 gap-8'>
-          {LIST.map((item, index) => (
-            <InfoCard key={index} item={item} />
-          ))}
-        </div>
+    <>
+      <Title text='Lợi ích của Green Agri' className='mt-14 pb-4' />
+      <div className='mt-16 grid auto-rows-fr grid-cols-3 gap-8'>
+        {LIST.map((item, index) => (
+          <InfoCard key={index} item={item} />
+        ))}
       </div>
-    </div>
+    </>
   );
 }
 

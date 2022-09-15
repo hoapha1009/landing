@@ -1,4 +1,4 @@
-import NextImage from '../../NextImage';
+import NextImage from '../../../NextImage';
 
 export function FarmingDiarySolution() {
   return (
