@@ -11,7 +11,9 @@ export function SlidePart({ title = '', className = '' }: SlidePartProps) {
     <div className={`py-16 ${className}`}>
       <div className='main-container'>
         <Title text={title} />
-        <LogoSlider />
+        <div className='mt-8 rounded-md border border-gray-200 pt-10 pb-10 shadow-md'>
+          <LogoSlider />
+        </div>
       </div>
     </div>
   );
