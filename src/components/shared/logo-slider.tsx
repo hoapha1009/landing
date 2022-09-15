@@ -15,7 +15,7 @@ export function LogoSlider() {
       slidesPerView='auto'
       spaceBetween={56}
       grabCursor
-      className='pb-12'
+      className='pb-16'
       loop={true}
       autoplay={{
         delay: 3000,

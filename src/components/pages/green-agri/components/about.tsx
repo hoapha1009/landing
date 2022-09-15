@@ -1,8 +1,8 @@
-import { Card } from '../../shared/card/card';
+import { Card } from '../../../shared/card/card';
 
 export function About() {
   return (
-    <div className='py-16 text-center main-container'>
+    <div className='main-container py-16 text-center'>
       <div className='text-3xl font-bold uppercase'>Về green agri</div>
       <div className='mt-3 mb-8 text-xl'>
         Là giải pháp thương mại điện tử và kênh phân phối <br /> trong ngành
@@ -11,7 +11,7 @@ export function About() {
       <img
         src='/images/about-greenAgri.png'
         alt='about-green-agri'
-        className='w-2/3 mx-auto'
+        className='mx-auto w-2/3'
       />
       <div className='my-8 text-xl'>
         Hệ thống hỗ trợ nền tảng công nghệ cho doanh nghiệp kinh doanh truyền
@@ -19,12 +19,12 @@ export function About() {
         phân phối đến các đại lý các tỉnh, và phát triển mạng lưới sales/ cộng
         tác viên
       </div>
-      <div className='grid w-full grid-cols-4 gap-5 auto-rows-fr'>
+      <div className='grid w-full auto-rows-fr grid-cols-4 gap-5'>
         {LIST.map((item, index) => (
           <Card
             key={index}
             item={item}
-            className='gap-8 p-8 text-lg bg-gray-50'
+            className='gap-8 bg-gray-50 p-8 text-lg'
           />
         ))}
       </div>

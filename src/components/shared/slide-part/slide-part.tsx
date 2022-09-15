@@ -8,10 +8,10 @@ interface SlidePartProps {
 
 export function SlidePart({ title = '', className = '' }: SlidePartProps) {
   return (
-    <div className={`py-16 ${className}`}>
+    <div className={`py-24 ${className}`}>
       <div className='main-container'>
         <Title text={title} />
-        <div className='mt-8 rounded-md border border-gray-200 pt-10 pb-10 shadow-md'>
+        <div className='mt-8 rounded-md border bg-white p-12 shadow-md'>
           <LogoSlider />
         </div>
       </div>

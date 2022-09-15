@@ -1,9 +1,9 @@
 import { About } from './about';
 import { Benefit } from './benefit';
-import { Introduce } from '../../shared/solution/introduce';
-import { TargetCustomer } from './target-customer';
-import { Customer } from './customer';
-import { Form } from '../../shared/form/form';
+import { Introduce } from '../../../shared/solution/introduce';
+import { TargetCustomer } from '../target-customer';
+import { Form } from '../../../shared/form/form';
+import { SlidePart } from '../../../shared/slide-part/slide-part';
 
 export function GreenAgriPage() {
   const title = 'GreenAgri - Giải pháp thương mại điện tử và kênh phân phối. ';
@@ -32,7 +32,7 @@ export function GreenAgriPage() {
       <About />
       <Benefit />
       <TargetCustomer />
-      <Customer />
+      <SlidePart title='khách hàng green agri' className='bg-primary-light' />
       <Form />
     </div>
   );
