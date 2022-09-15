@@ -11,7 +11,7 @@ interface CardProps {
   item: Card;
 }
 
-export function Card({ item, className, ...props }: CardProps) {
+export function Card({ item, className }: CardProps) {
   return (
     <div
       className={`flex h-full flex-col items-center justify-between rounded-xl border border-gray-100 shadow ${className}`}
