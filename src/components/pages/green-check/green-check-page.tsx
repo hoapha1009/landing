@@ -1,4 +1,6 @@
-import { Introduce } from '../shared/solution/introduce';
+import { Introduce } from '../../shared/solution/introduce';
+import { FarmingDiarySolution } from './farming-diary-solution';
+import { TraceabilitySolution } from './traceability-solution';
 
 export function GreenCheckPage() {
   const title =
@@ -23,6 +25,8 @@ export function GreenCheckPage() {
   return (
     <div className=''>
       <Introduce title={title} options={options} img={img} />
+      <FarmingDiarySolution />
+      <TraceabilitySolution />
     </div>
   );
 }
