@@ -23,9 +23,10 @@ export function HomeBanner() {
             el: paginationRef.current,
             clickable: true,
             type: 'bullets',
+            bulletActiveClass: 'swiper-pagination-bullet-active-banner',
             bulletClass: `inline-block w-3 h-3 bg-gray-100 rounded-full transition-all cursor-pointer mr-2 last:mr-0 hover:bg-primary`,
             renderBullet: function (index, className) {
-              return `<span class="${className}"></span>`;
+              return `<span class="${className} "></span>`;
             },
           }}
           onSwiper={setActiveIndex}
