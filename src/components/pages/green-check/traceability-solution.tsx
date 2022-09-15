@@ -12,11 +12,14 @@ export function TraceabilitySolution() {
 dùng cũng như các bên liên quan truy tìm lịch sử các thông tin về quy trình sản xuất, chế biến, phân phối và cho đến khi sản phẩm đến được tay người
 dùng`}
         />
-        <img
-          src='/images/solution-origin.png'
-          alt='solution-origin-image'
-          className='w-full'
-        />
+        <div className='w-full pr-4'>
+          <img
+            src='/images/solution-origin.png'
+            alt='solution-origin-image'
+            className='w-full'
+          />
+        </div>
+        <Title text='Lợi ích của Green Agri' className='mt-14 pb-4' />
         <div className='mt-16 grid auto-rows-fr grid-cols-3 gap-8'>
           {LIST.map((item, index) => (
             <InfoCard key={index} item={item} />

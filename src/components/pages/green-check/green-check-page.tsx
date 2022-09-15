@@ -1,3 +1,4 @@
+import { Form } from '../../shared/form/form';
 import { Introduce } from '../../shared/solution/introduce';
 import { FarmingDiarySolution } from './farming-diary-solution';
 import { TraceabilitySolution } from './traceability-solution';
@@ -27,6 +28,7 @@ export function GreenCheckPage() {
       <Introduce title={title} options={options} img={img} />
       <FarmingDiarySolution />
       <TraceabilitySolution />
+      <Form />
     </div>
   );
 }
