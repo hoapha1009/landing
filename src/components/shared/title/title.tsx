@@ -1,11 +1,11 @@
 interface TitleProps {
-  textColor?: string;
   text: string;
+  className?: string;
 }
 
-export function Title({ textColor = 'text-gray-700', text }: TitleProps) {
+export function Title({ text = '', className = '' }: TitleProps) {
   return (
-    <div className={`text-center text-3xl font-bold uppercase ${textColor}`}>
+    <div className={`text-center text-3xl font-bold uppercase ${className}`}>
       {text}
     </div>
   );

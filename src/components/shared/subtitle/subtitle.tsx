@@ -1,10 +1,10 @@
 interface SubtitleProps {
-  textColor?: string;
+  className?: string;
   text: string;
 }
 
-export function Subtitle({ textColor = 'text-gray-700', text }: SubtitleProps) {
+export function Subtitle({ className = '', text }: SubtitleProps) {
   return (
-    <div className={`mt-3 mb-8 text-center text-xl ${textColor}`}>{text}</div>
+    <div className={`mt-3 mb-8 text-center text-xl ${className}`}>{text}</div>
   );
 }
