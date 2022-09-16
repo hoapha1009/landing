@@ -18,7 +18,7 @@ interface InfoCardProps {
 export function InfoCard({ item }: InfoCardProps) {
   return (
     <div className='relative rounded-xl bg-white px-4 pt-20 pb-12'>
-      <div className='text-xl font-bold'>{item.title}</div>
+      <div className='text-2xl font-bold'>{item.title}</div>
       <div className='mt-3 flex flex-col gap-3'>
         {item.options.map((option, index) => (
           <OptionRow key={index} content={option.content} className='text-lg' />

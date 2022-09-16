@@ -1,17 +1,18 @@
 import NextImage from '../../../NextImage';
+import { Subtitle } from '../../../shared/subtitle/subtitle';
+import { Title } from '../../../shared/title/title';
 
 export function FarmingDiarySolution() {
   return (
     <div className='main-container py-16 text-center'>
-      <div className='text-3xl font-bold uppercase'>
-        GIẢI PHÁP NHẬT KÝ CANH TÁC
-      </div>
-      <div className='mt-3 mb-8 text-xl'>
-        Là giải pháp cung cấp nền tảng ghi nhận lại hoạt động sản xuất của người
+      <Title text='GIẢI PHÁP NHẬT KÝ CANH TÁC' />
+      <Subtitle
+        className='mx-auto w-5/6'
+        text='Là giải pháp cung cấp nền tảng ghi nhận lại hoạt động sản xuất của người
         nông dân và các mốc thời gian tương ứng với các hoạt động đó. Nhật ký sẽ
         tập hợp các thông tin về quá trình tạo ra sản phẩm, hình thành nên một
-        hồ sơ sản phẩm
-      </div>
+        hồ sơ sản phẩm'
+      />
       <img
         src='/images/solution-diary.png'
         alt='solution-diary-image'
@@ -41,7 +42,7 @@ interface CardProps {
 
 export function Card({ item, ...props }: CardProps) {
   return (
-    <div className='rounded-md border border-gray-50 bg-primary-light p-8 shadow'>
+    <div className='rounded-md border border-gray-50 bg-gray-50 p-8 shadow'>
       <div className='ml-2.5 flex items-center gap-2'>
         <NextImage
           src={item.img.url}
@@ -63,22 +64,25 @@ const LIST = [
       alt: 'scan-image',
     },
     title: 'Thu thập dữ liệu',
-    content: 'Tự động hóa quá trình bán hàng cho thành viên kênh phân phối',
+    content:
+      'Hỗ trợ thu thập dữ liệu quá trình sản xuất, số hóa và cung cấp dữ liệu cho truy xuất nguồn gốc sản phẩm nông sản',
   },
   {
     img: {
-      url: '/images/update.png',
-      alt: 'about-green-agri-2',
+      url: '/images/coop.png',
+      alt: 'coop-image',
     },
-    title: 'Thu thập dữ liệu',
-    content: 'Cập nhật, tổng hợp và báo cáo tình hình của đội ngũ bán hàng',
+    title: 'Tăng cao hiệu quả canh tác',
+    content:
+      'Tăng năng suất canh tác, cải thiện sản lượng và chất lượng sản phẩm đồng thời giảm chi phí các hoạt động canh tác',
   },
   {
     img: {
-      url: '/images/handle.png',
-      alt: 'about-green-agri-3',
+      url: '/images/leaf2.png',
+      alt: 'leaf2-image',
     },
-    title: 'Thu thập dữ liệu',
-    content: 'Chủ động kiểm soát hàng tồn kho, xử lý đơn hàng,… ',
+    title: 'Chuẩn hóa quy trình',
+    content:
+      'Giúp chuẩn hóa quy trình sản xuất theo các tiêu chuẩn như VietGap, GlobalGap và Organic',
   },
 ];

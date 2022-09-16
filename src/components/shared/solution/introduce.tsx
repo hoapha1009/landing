@@ -14,29 +14,29 @@ interface IntroduceProps {
 
 export function Introduce({ img, title, options, ...props }: IntroduceProps) {
   return (
-    <div className='py-16 bg-primary-light'>
-      <div className='flex items-center gap-2 main-container'>
+    <div className='bg-primary-light py-16'>
+      <div className='main-container flex items-center gap-2'>
         <div className='flex-1'>
           <div className='text-5xl font-bold leading-tight'>{title}</div>
-          <div className='flex flex-col gap-4 mt-4'>
+          <div className='mt-4 flex flex-col gap-4'>
             {options.map((option, index) => (
               <OptionRow
                 key={index}
                 content={option.content}
-                className='text-xl'
+                contentClassName='text-xl leading-8'
               />
             ))}
           </div>
-          <Button variant='primary' className='mt-8'>
+          <Button variant='primary' className='mt-8 !px-8 !py-3'>
             SỬ DỤNG NGAY
           </Button>
         </div>
-        <div className='w-5/12 ml-auto shrink-0 grow-0'>
+        <div className='ml-auto w-5/12 shrink-0 grow-0'>
           <img
             src={img.src}
             alt={img.alt}
-            width='90%'
-            height='90%'
+            width='100%'
+            height='100%'
             className='ml-auto'
           />
         </div>

@@ -29,7 +29,7 @@ export function Label({
           {props.text}
           {props.subText && (
             <span
-              className={`ml-1 text-xs font-normal italic text-gray-500 ${subTextClassName}`}
+              className={`ml-1 text-xs font-normal italic text-gray-600 ${subTextClassName}`}
             >
               {props.subText}
             </span>
@@ -47,7 +47,7 @@ export function Label({
           {props.tooltip && (
             <i
               className={`ml-1.5 inline-block text-sm ${
-                props.error ? 'text-danger' : 'text-gray-500'
+                props.error ? 'text-danger' : 'text-gray-600'
               }`}
               data-tooltip={props.tooltip}
             >

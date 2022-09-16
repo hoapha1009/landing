@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import Button from '../../buttons/Button';
+import { Subtitle } from '../subtitle/subtitle';
+import { Title } from '../title/title';
 import { Label } from './label';
 
 export function Form() {
@@ -32,13 +34,9 @@ export function Form() {
 
   return (
     <div className='my-16'>
-      <div className='mx-auto w-2/3 rounded-xl border border-gray-50 bg-gray-50 px-24 py-7 shadow-md'>
-        <div className='text-center text-3xl font-bold uppercase'>
-          sản phẩm của chúng tôi đã sẵn sàng
-        </div>
-        <div className='mt-2 mb-4 text-center text-xl text-gray-600'>
-          Đăng ký đặt lịch để được trải nghiệm sớm nhất công nghệ của chúng tôi
-        </div>
+      <div className='mx-auto w-2/3 rounded-xl border border-gray-50 bg-gray-50 px-24 py-12 shadow-md'>
+        <Title text='sản phẩm của chúng tôi đã sẵn sàng' />
+        <Subtitle text='Đăng ký đặt lịch để được trải nghiệm sớm nhất công nghệ của chúng tôi' />
 
         <form className='flex flex-col gap-4' onSubmit={handleSubmit}>
           <div className=''>
