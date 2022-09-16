@@ -27,7 +27,7 @@ function AboutUseCardHorizontal({
 }) {
   return (
     <div className='max-h-32'>
-      <div className='mb-4 text-right font-saira text-2xl font-semibold uppercase text-white'>
+      <div className='mb-4 text-right font-saira text-2xl font-medium uppercase text-white'>
         {data.title}
       </div>
       <div

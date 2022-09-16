@@ -13,7 +13,15 @@ export default function Footer() {
         </div>
         <div className='mx-5 flex flex-col items-center border-t border-t-white py-6 text-sm font-medium text-gray-600 lg:flex-row lg:justify-between'>
           <div>Copyright © 2022 GreenAgri Software. All rights reserved. </div>
-          <div>Quy định sử dụng | Chính sách bảo mật</div>
+          <div>
+            <Link href='/'>
+              <a className='hover:underline'>Quy định sử dụng </a>
+            </Link>
+            <span>|</span>
+            <Link href='/'>
+              <a className='hover:underline'> Chính sách bảo mật</a>
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
@@ -94,8 +102,16 @@ function QRcode() {
         <div className='font-saira font-semibold text-white lg:text-lg'>
           Tải app GreenAgri
         </div>
-        <div className='font-medium text-gray-600'>Link IOS</div>
-        <div className='font-medium text-gray-600'>Link Android</div>
+        <div className='font-medium text-gray-600'>
+          <Link href='/'>
+            <a className='hover:underline'>Link IOS</a>
+          </Link>
+        </div>
+        <div className='font-medium text-gray-600'>
+          <Link href='/'>
+            <a className='hover:underline'>Link Android</a>
+          </Link>
+        </div>
       </div>
     </div>
   );
