@@ -24,12 +24,12 @@ function AboutUsSolutionCard({
   data: { image: string; title: string; content: string };
 }) {
   return (
-    <div className='rounded-md bg-gray-100 p-5 shadow-sm'>
+    <div className='rounded-md border bg-gray-100 p-5 shadow-md'>
       <div className='flex flex-row items-center'>
         <img src={data.image} alt='leaf' className='mr-4' />
         <div className='font-saira text-2xl font-semibold'>{data.title}</div>
       </div>
-      <div className='mt-7 text-lg font-medium text-gray-400'>
+      <div className='mt-7 text-lg font-normal text-gray-500'>
         {data.content}
       </div>
     </div>
