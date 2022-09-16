@@ -1,19 +1,22 @@
 import { Card } from '../../../shared/card/card';
+import { Subtitle } from '../../../shared/subtitle/subtitle';
+import { Title } from '../../../shared/title/title';
 
 export function About() {
   return (
     <div className='main-container py-16 text-center'>
-      <div className='text-3xl font-bold uppercase'>Về green agri</div>
-      <div className='mt-3 mb-8 text-xl'>
-        Là giải pháp thương mại điện tử và kênh phân phối <br /> trong ngành
-        nông nghiệp
-      </div>
+      <Title text='Về green agri' />
+      <Subtitle
+        className='mx-auto w-1/3'
+        text='Là giải pháp thương mại điện tử và kênh phân phối  trong ngành
+        nông nghiệp'
+      />
       <img
         src='/images/about-greenAgri.png'
         alt='about-green-agri'
         className='mx-auto w-2/3'
       />
-      <div className='my-8 text-xl'>
+      <div className='my-8 text-left text-xl text-gray-600'>
         Hệ thống hỗ trợ nền tảng công nghệ cho doanh nghiệp kinh doanh truyền
         thống offline và kênh online hiệu quả. Hỗ trợ doanh nghiệp mở rộng kênh
         phân phối đến các đại lý các tỉnh, và phát triển mạng lưới sales/ cộng
@@ -25,6 +28,7 @@ export function About() {
             key={index}
             item={item}
             className='gap-8 bg-gray-50 p-8 text-lg'
+            contentClass='text-gray-600'
           />
         ))}
       </div>
