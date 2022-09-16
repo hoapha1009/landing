@@ -9,7 +9,7 @@ export function HomeBanner() {
   const [_, setActiveIndex] = useState<any>();
 
   return (
-    <div className="relative mb-96 flex h-[725px] max-h-[725px] w-full flex-row items-center justify-center bg-[url('/images/home-banner.png')]">
+    <div className="relative mb-32 flex h-[725px] max-h-[725px] w-full flex-row items-center justify-center bg-[url('/images/home-banner.png')]">
       <div className='overflow-hidden '>
         <Swiper
           slidesPerView={1}

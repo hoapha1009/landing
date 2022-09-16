@@ -28,6 +28,20 @@
   box-sizing: content-box;
   align-items: center;
 }
+.mark-gradient {
+  background: linear-gradient(
+    149.72deg,
+    #10ae6a 6.68%,
+    #12ad6e 21.59%,
+    #16ab7a 36.11%,
+    #1fa68d 50.46%,
+    #2aa0a9 64.72%,
+    #3999cc 78.9%,
+    #4a8ff7 92.86%,
+    #4b8ff8 93.23%
+  );
+  opacity: 0.6;
+}
 
 .form-control {
   @apply mt-auto block min-h-10 w-full rounded border border-gray-400 bg-white py-0 px-3 hover:border-gray-500;
