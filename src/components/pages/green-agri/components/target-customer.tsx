@@ -1,8 +1,8 @@
-import { Card } from '../../shared/card/card';
+import { Card } from '../../../shared/card/card';
 
 export function TargetCustomer() {
   return (
-    <div className='pb-16'>
+    <div className='pb-24' data-aos='fade-up'>
       <div className='mb-10 text-center text-3xl font-bold uppercase'>
         các đối tượng khách hàng <br /> của green agri
       </div>

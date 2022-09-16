@@ -4,7 +4,7 @@ import { Title } from '../../../shared/title/title';
 
 export function About() {
   return (
-    <div className='main-container py-16 text-center'>
+    <div className='main-container py-24 text-center' data-aos='fade-up'>
       <Title text='Về green agri' />
       <Subtitle
         className='mx-auto w-1/3'
@@ -12,6 +12,10 @@ export function About() {
         nông nghiệp'
       />
       <img
+        data-aos='zoom-in'
+        data-delay='50'
+        data-duration='500'
+        data-aos-once='true'
         src='/images/about-greenAgri.png'
         alt='about-green-agri'
         className='mx-auto w-2/3'
@@ -25,6 +29,7 @@ export function About() {
       <div className='grid w-full auto-rows-fr grid-cols-4 gap-5'>
         {LIST.map((item, index) => (
           <Card
+            // index={index}
             key={index}
             item={item}
             className='gap-8 bg-gray-50 p-8 text-lg'

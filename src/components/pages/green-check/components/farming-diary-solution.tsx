@@ -4,7 +4,7 @@ import { Title } from '../../../shared/title/title';
 
 export function FarmingDiarySolution() {
   return (
-    <div className='main-container py-16 text-center'>
+    <div className='main-container py-24 text-center'>
       <Title text='GIẢI PHÁP NHẬT KÝ CANH TÁC' />
       <Subtitle
         className='mx-auto w-5/6'

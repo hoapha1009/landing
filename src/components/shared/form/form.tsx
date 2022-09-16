@@ -33,7 +33,7 @@ export function Form() {
   };
 
   return (
-    <div className='my-16'>
+    <div className='my-24' data-aos='fade-up'>
       <div className='mx-auto w-2/3 rounded-xl border border-gray-50 bg-gray-50 px-24 py-12 shadow-md'>
         <Title text='sản phẩm của chúng tôi đã sẵn sàng' />
         <Subtitle text='Đăng ký đặt lịch để được trải nghiệm sớm nhất công nghệ của chúng tôi' />

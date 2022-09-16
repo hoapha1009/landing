@@ -11,11 +11,23 @@ interface CardProps {
   contentClass?: string;
   imageClass?: string;
   item: Card;
+  // index: number;
 }
 
-export function Card({ item, className, contentClass, imageClass }: CardProps) {
+export function Card({
+  // index,
+  item,
+  className,
+  contentClass,
+  imageClass,
+}: CardProps) {
+  // const delay = (index * 20).toString();
+
   return (
     <div
+      data-aos='fade-up'
+      // data-delay={delay}
+      data-aos-easing='ease-in-out'
       className={`flex h-full flex-col items-center justify-between rounded-xl border border-gray-100 shadow ${className}`}
     >
       <img

@@ -2,7 +2,7 @@ import { InfoCard } from '../../../shared/info-card/info-card';
 
 export function Benefit() {
   return (
-    <div className='pt-10 pb-16'>
+    <div className='pt-10 pb-24' data-aos='fade-up'>
       <div className='main-container rounded-xl bg-primary-dark p-24'>
         <div className='text-center text-3xl font-bold uppercase text-white'>
           Lợi ích của green agri
