@@ -11,7 +11,7 @@ export default function Footer() {
             <QRcode />
           </div>
         </div>
-        <div className='mx-5 flex flex-col items-center border-t border-t-white py-6 text-sm font-medium text-gray-400 lg:flex-row lg:justify-between'>
+        <div className='mx-5 flex flex-col items-center border-t border-t-white py-6 text-sm font-medium text-gray-600 lg:flex-row lg:justify-between'>
           <div>Copyright © 2022 GreenAgri Software. All rights reserved. </div>
           <div>
             <Link href='/'>
@@ -51,7 +51,7 @@ function InformationGat() {
           <div className='mt-2'>
             {item.contacts.map((contact, idx) => (
               <div
-                className='mt-2 text-base font-medium text-gray-400 lg:text-lg'
+                className='mt-2 text-base font-medium text-gray-600 lg:text-lg'
                 key={idx}
               >
                 {contact}
@@ -83,7 +83,7 @@ function MenusLink() {
           </div>
           {item.menus.map((menu, idx) => (
             <Link href={menu.href} key={idx}>
-              <a className='mb-2 block text-base font-medium text-gray-400 last:mb-0 hover:text-white lg:text-lg'>
+              <a className='mb-2 block text-base font-medium text-gray-600 last:mb-0 hover:text-primary lg:text-lg'>
                 {menu.name}
               </a>
             </Link>
@@ -102,12 +102,12 @@ function QRcode() {
         <div className='font-saira font-semibold text-white lg:text-lg'>
           Tải app GreenAgri
         </div>
-        <div className='font-medium text-gray-400'>
+        <div className='font-medium text-gray-600'>
           <Link href='/'>
             <a className='hover:underline'>Link IOS</a>
           </Link>
         </div>
-        <div className='font-medium text-gray-400'>
+        <div className='font-medium text-gray-600'>
           <Link href='/'>
             <a className='hover:underline'>Link Android</a>
           </Link>

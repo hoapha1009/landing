@@ -26,14 +26,14 @@ export function FeaturesItem({
       </div>
       <div className={`w-[998px] ${reverse ? 'mr-[100px]' : 'ml-[100px]'}`}>
         <div
-          className={`my-auto  mb-4 max-w-[33rem] text-4xl font-semibold uppercase leading-tight  ${titleClassName}`}
+          className={`my-auto  mb-4 max-w-[33rem] text-4xl font-semibold uppercase leading-[1.4]  ${titleClassName}`}
         >
           {title}
         </div>
 
         {subtitle && (
           <div
-            className={`text-xl font-normal text-gray-400 ${subtitleClassName}`}
+            className={`text-xl font-normal leading-8 text-gray-600 ${subtitleClassName}`}
           >
             {subtitle}
           </div>

@@ -43,16 +43,16 @@ interface CardProps {
 export function Card({ item, ...props }: CardProps) {
   return (
     <div className='rounded-md border border-gray-50 bg-gray-50 p-8 shadow'>
-      <div className='ml-2.5 flex items-center gap-2'>
+      <div className='flex items-center gap-4'>
         <NextImage
           src={item.img.url}
           alt={item.img.alt}
           width={47}
           height={47}
         />
-        <div className='text-2xl font-bold'>{item.title}</div>
+        <div className='font-saira text-2xl font-semibold'>{item.title}</div>
       </div>
-      <div className='mt-8 text-xl'>{item.content}</div>
+      <div className='mt-8 text-left text-xl'>{item.content}</div>
     </div>
   );
 }

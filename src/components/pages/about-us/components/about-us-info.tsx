@@ -11,7 +11,7 @@ export function AboutUsInfo() {
         className='!mt-8 mb-16 !text-left text-lg font-normal !text-white'
       />
 
-      <div className='grid grid-cols-2 gap-24 p-16'>
+      <div className='grid grid-cols-2 gap-24 px-16'>
         {MOCK_DATA.map((item, index) => (
           <AboutUseCardHorizontal data={item} key={index} />
         ))}

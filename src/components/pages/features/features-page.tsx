@@ -14,7 +14,7 @@ export function FeaturesPage() {
         <Title text='Chi tiết tính năng Ưu đãi' className='text-4xl' />
         <Subtitle
           text='CNV Loyalty đã đồng hành cùng hơn 500+ doanh nghiệp xây dựng App riêng mang tên thương hiệu, tạo nhóm khách hàng trung thành, giúp tăng doanh thu và hỗ trợ quá trình chăm sóc khách hàng'
-          className='mx-auto mb-12 max-w-screen-lg text-gray-400'
+          className='mx-auto mb-12 max-w-screen-lg text-gray-600'
         />
 
         <FeaturesItem

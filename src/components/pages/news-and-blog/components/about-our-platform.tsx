@@ -36,7 +36,7 @@ function Card({ item }: CardProps) {
       <div className='mx-auto w-7/12'>
         <img src={item.img.url} alt={item.img.alt} width='100%' height='100%' />
       </div>
-      <div className='mt-8 text-2xl font-bold'>{item.title}</div>
+      <div className='mt-8 font-saira text-2xl font-semibold'>{item.title}</div>
       <div className='mt-5 mb-8 flex flex-col gap-4'>
         {item.options.map((option, index) => (
           <OptionRow key={index} content={option.content} />
