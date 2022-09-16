@@ -74,7 +74,7 @@ function NewsAndBlogList({ selectedTab }: NewsAndBlogListProps) {
             width='100%'
             height='100%'
           />
-          <div className='mt-3 text-2xl font-bold leading-9 group-hover:text-primary'>
+          <div className='mt-3 font-saira text-2xl font-semibold leading-9 group-hover:text-primary'>
             {NEWS_LIST[0].title}
           </div>
         </div>
@@ -90,7 +90,7 @@ function NewsAndBlogList({ selectedTab }: NewsAndBlogListProps) {
                   className='rounded group-hover:brightness-75'
                 />
               </div>
-              <div className='flex-1 text-2xl font-bold leading-9 group-hover:text-primary'>
+              <div className='flex-1 font-saira text-2xl font-semibold leading-9 group-hover:text-primary'>
                 {item.title}
               </div>
             </div>

@@ -1,3 +1,11 @@
+import Seo from '../../components/Seo';
+import NotFoundPage from '../404';
+
 export default function Page() {
-  return <div>Guide</div>;
+  return (
+    <>
+      <Seo />
+      <NotFoundPage />
+    </>
+  );
 }

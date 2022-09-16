@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 SwiperCore.use([Pagination, Autoplay, Navigation]);
 export function FeaturesOther() {
   return (
-    <div className='pt-16'>
+    <div className='pt-32'>
       <Title text='Các tính năng khác' className='mb-10' />
       <Swiper
         slidesPerView={1.5}

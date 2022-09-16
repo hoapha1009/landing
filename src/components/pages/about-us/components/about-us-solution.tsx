@@ -29,7 +29,7 @@ function AboutUsSolutionCard({
         <img src={data.image} alt='leaf' className='mr-4' />
         <div className='font-saira text-2xl font-semibold'>{data.title}</div>
       </div>
-      <div className='mt-7 text-lg font-medium text-gray-400'>
+      <div className='mt-7 text-lg font-medium text-gray-600'>
         {data.content}
       </div>
     </div>

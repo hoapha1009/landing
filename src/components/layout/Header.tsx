@@ -44,10 +44,10 @@ export default function Header() {
           : 'border-transparent shadow-none'
       }`}
     >
-      <div className='flex items-center justify-between h-20 font-medium main-container'>
+      <div className='main-container flex h-20 items-center justify-between font-medium'>
         <div className='flex items-center gap-1'>
           <Link href='/'>
-            <a className='block mr-8'>
+            <a className='mr-8 block'>
               <NextImage
                 src='/images/logo.png'
                 alt='logo'
@@ -58,7 +58,7 @@ export default function Header() {
           </Link>
           {MENU_TAB_LIST.map((tab, index) =>
             tab?.subTabs ? (
-              <div key={index} className='relative inline-block group'>
+              <div key={index} className='group relative inline-block'>
                 <button className='inline-flex items-center rounded hover:bg-gray-100'>
                   <span
                     className={`mr-1 px-4 py-2 ${
@@ -71,11 +71,11 @@ export default function Header() {
                     <RiArrowDownSLine />
                   </i>
                 </button>
-                <ul className='absolute hidden bg-white rounded shadow group-hover:block'>
+                <ul className='absolute hidden rounded bg-white shadow group-hover:block'>
                   {tab.subTabs.map((subTab, index) => (
                     <li key={index} className=''>
                       <Link href={subTab.href}>
-                        <a className='block px-8 py-3 whitespace-nowrap hover:bg-gray-100'>
+                        <a className='block whitespace-nowrap px-8 py-3 hover:bg-gray-100'>
                           {subTab.title}
                         </a>
                       </Link>
@@ -127,8 +127,8 @@ const MENU_TAB_LIST: Menu[] = [
     ],
   },
   { href: '/features', title: 'Tính năng' },
-  { href: '/recruit', title: 'Tuyển dụng' },
-  { href: '/guide', title: 'Hướng dẫn' },
+  // { href: '/recruit', title: 'Tuyển dụng' },
+  // { href: '/guide', title: 'Hướng dẫn' },
   { href: '/news-and-blog', title: 'Tin tức & Blog' },
   { href: '/join-us', title: 'Tham gia cộng đồng' },
 ];
