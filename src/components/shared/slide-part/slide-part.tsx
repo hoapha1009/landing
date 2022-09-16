@@ -8,7 +8,7 @@ interface SlidePartProps {
 
 export function SlidePart({ title = '', className = '' }: SlidePartProps) {
   return (
-    <div className={`py-16 ${className}`}>
+    <div className={`py-24 ${className}`}>
       <div className='main-container'>
         <Title text={title} />
         <div className='mt-8 rounded-md border border-gray-200 p-12 shadow-md'>

@@ -1,4 +1,4 @@
-import { InfoCard } from '../../shared/info-card/info-card';
+import { InfoCard } from '../../../shared/info-card/info-card';
 
 export function Benefit() {
   return (
