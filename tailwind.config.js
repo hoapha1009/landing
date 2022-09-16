@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const colors = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors');
 
 delete colors['lightBlue'];
 delete colors['warmGray'];
@@ -11,18 +11,18 @@ function getSemanticColors(color) {
   return {
     light: color[100],
     DEFAULT: color[500],
-    dark: color[600]
-  }
+    dark: color[600],
+  };
 }
 
 function generateSemanticColors() {
-  const semanticColors = {}
+  const semanticColors = {};
   for (const color in colors) {
-    if (typeof colors[color] !== "string") {
-      semanticColors[color] = getSemanticColors(colors[color])
+    if (typeof colors[color] !== 'string') {
+      semanticColors[color] = getSemanticColors(colors[color]);
     }
   }
-  return semanticColors
+  return semanticColors;
 }
 
 module.exports = {
@@ -40,7 +40,7 @@ module.exports = {
     },
     {
       pattern: /bg-.+/,
-    },    
+    },
     {
       pattern: /animate-.+/,
     },
@@ -56,12 +56,15 @@ module.exports = {
   ],
   theme: {
     screens: {
-      'xs': '480px',
-      'sm': '640px',
-      'md': '768px',
-      'lg': '1024px',      
-      'xl': '1280px',
+      xs: '480px',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
       '2xl': '1536px',
+    },
+    fontFamily: {
+      saira: ['Saira', 'Arial', 'sans-serif'],
     },
     extend: {
       colors: {
@@ -129,7 +132,7 @@ module.exports = {
         '2xs': '16rem',
       },
       minWidth: {
-        'none': 'none',
+        none: 'none',
         1: '0.25rem',
         2: '0.5rem',
         3: '0.75rem',
@@ -154,11 +157,11 @@ module.exports = {
         '4xs': '8rem',
         '3xs': '12rem',
         '2xs': '16rem',
-        'xs': '20rem',
-        'sm': '24rem',
-        'md': '28rem',
-        'lg': '32rem',
-        'xl': '36rem',
+        xs: '20rem',
+        sm: '24rem',
+        md: '28rem',
+        lg: '32rem',
+        xl: '36rem',
         '2xl': '42rem',
         '3xl': '48rem',
         '4xl': '56rem',
@@ -176,7 +179,7 @@ module.exports = {
         22: '5.5rem',
       },
       minHeight: {
-        'none': 'none',
+        none: 'none',
         1: '0.25rem',
         2: '0.5rem',
         3: '0.75rem',
@@ -201,21 +204,21 @@ module.exports = {
         '4xs': '8rem',
         '3xs': '12rem',
         '2xs': '16rem',
-        'xs': '20rem',
-        'sm': '24rem',
-        'md': '28rem',
-        'lg': '32rem',
-        'xl': '36rem',
+        xs: '20rem',
+        sm: '24rem',
+        md: '28rem',
+        lg: '32rem',
+        xl: '36rem',
         '2xl': '42rem',
         '3xl': '48rem',
         '4xl': '56rem',
         '5xl': '64rem',
         '6xl': '72rem',
         '7xl': '80rem',
-        'min': 'min-content',
+        min: 'min-content',
       },
       borderRadius: {
-        inherit: 'inherit'
+        inherit: 'inherit',
       },
       keyframes: {
         emerge: {
@@ -227,82 +230,114 @@ module.exports = {
           to: { opacity: 0 },
         },
         emergeUp: {
-          from: { opacity: 0, transform: "translateY(4px)" },
-          to: { opacity: 1, transform: "translateY(0)" },
+          from: { opacity: 0, transform: 'translateY(4px)' },
+          to: { opacity: 1, transform: 'translateY(0)' },
         },
         slideInBottom: {
-          from: { transform: "translateY(100%)" },
-          to: { transform: "translateY(0)" },
+          from: { transform: 'translateY(100%)' },
+          to: { transform: 'translateY(0)' },
         },
         slideOutBottom: {
-          from: { transform: "translateY(0)" },
-          to: { transform: "translateY(100%)" },
+          from: { transform: 'translateY(0)' },
+          to: { transform: 'translateY(100%)' },
         },
         slideInLeft: {
-          from: { transform: "translateX(-100%)" },
-          to: { transform: "translateX(0)" },
+          from: { transform: 'translateX(-100%)' },
+          to: { transform: 'translateX(0)' },
         },
         slideOutLeft: {
-          from: { transform: "translateX(0)" },
-          to: { transform: "translateX(-100%)" },
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' },
         },
         slideInRight: {
-          from: { transform: "translateX(100%)" },
-          to: { transform: "translateX(0)" },
+          from: { transform: 'translateX(100%)' },
+          to: { transform: 'translateX(0)' },
         },
         slideOutRight: {
-          from: { transform: "translateX(0)" },
-          to: { transform: "translateX(100%)" },
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(100%)' },
         },
         scaleUp: {
-          from: {  opacity: 0, transform: "scale(0.6)" },
-          to: {  opacity: 1, transform: "scale(1)" },
+          from: { opacity: 0, transform: 'scale(0.6)' },
+          to: { opacity: 1, transform: 'scale(1)' },
         },
         scaleDown: {
-          from: { opacity: 1,  ransform: "scale(1)" },
-          to: {  opacity: 0, transform: "scale(0.6)" },
+          from: { opacity: 1, ransform: 'scale(1)' },
+          to: { opacity: 0, transform: 'scale(0.6)' },
         },
         scaleInLeft: {
-          from: { opacity: 0, transform: "scaleX(0)", transformOrigin: "center left" },
-          to: { opacity: 1, transform: "scaleX(1)", transformOrigin: "center left" },
+          from: {
+            opacity: 0,
+            transform: 'scaleX(0)',
+            transformOrigin: 'center left',
+          },
+          to: {
+            opacity: 1,
+            transform: 'scaleX(1)',
+            transformOrigin: 'center left',
+          },
         },
         scaleOutLeft: {
-          from: { opacity: 1, transform: "scaleX(1)", transformOrigin: "center left" },
-          to: { opacity: 0, transform: "scaleX(0)", transformOrigin: "center left" },
+          from: {
+            opacity: 1,
+            transform: 'scaleX(1)',
+            transformOrigin: 'center left',
+          },
+          to: {
+            opacity: 0,
+            transform: 'scaleX(0)',
+            transformOrigin: 'center left',
+          },
         },
         scaleInRight: {
-          from: { opacity: 0, transform: "scaleX(0)", transformOrigin: "center right" },
-          to: { opacity: 1, transform: "scaleX(1)", transformOrigin: "center right" },
+          from: {
+            opacity: 0,
+            transform: 'scaleX(0)',
+            transformOrigin: 'center right',
+          },
+          to: {
+            opacity: 1,
+            transform: 'scaleX(1)',
+            transformOrigin: 'center right',
+          },
         },
         scaleOutRight: {
-          from: { opacity: 1, transform: "scaleX(1)", transformOrigin: "center right" },
-          to: { opacity: 0, transform: "scaleX(0)", transformOrigin: "center right" },
+          from: {
+            opacity: 1,
+            transform: 'scaleX(1)',
+            transformOrigin: 'center right',
+          },
+          to: {
+            opacity: 0,
+            transform: 'scaleX(0)',
+            transformOrigin: 'center right',
+          },
         },
       },
       zIndex: {
-        100: "100",
-        200: "200",
-        300: "300",
-        400: "400",
-        500: "500",
+        100: '100',
+        200: '200',
+        300: '300',
+        400: '400',
+        500: '500',
       },
       animation: {
-        emerge: "emerge 0.1s ease-in",
-        fade: "fade .1s ease-out forwards",
-        "emerge-up": "emergeUp .1s ease-in",
-        "slide-in-bottom": "slideInBottom .1s ease-in",
-        "slide-out-bottom": "slideOutBottom .1s ease-out forwards",
-        "scale-up": "scaleUp .1s ease-in",
-        "scale-down": "scaleDown .1s ease-out forwards",
-        "slide-in-left": "slideInLeft .1s ease-in",
-        "slide-out-left": "slideOutLeft .1s ease-out forwards",
-        "slide-in-right": "slideInRight .1s ease-in",
-        "slide-out-right": "slideOutRight .1s ease-out forwards",
-        "scale-in-left": "scaleInLeft .1s ease-in",
-        "scale-out-left": "scaleOutLeft .1s ease-out forwards",
-        "scale-in-right": "scaleInRight .1s ease-in",
-        "scale-out-right": "scaleOutRight .1s ease-out forwards",
+        emerge: 'emerge 0.1s ease-in',
+        fade: 'fade .1s ease-out forwards',
+        'emerge-up': 'emergeUp .1s ease-in',
+        'slide-in-bottom': 'slideInBottom .1s ease-in',
+        'slide-out-bottom': 'slideOutBottom .1s ease-out forwards',
+        'scale-up': 'scaleUp .1s ease-in',
+        'scale-down': 'scaleDown .1s ease-out forwards',
+        'slide-in-left': 'slideInLeft .1s ease-in',
+        'slide-out-left': 'slideOutLeft .1s ease-out forwards',
+        'slide-in-right': 'slideInRight .1s ease-in',
+        'slide-out-right': 'slideOutRight .1s ease-out forwards',
+        'scale-in-left': 'scaleInLeft .1s ease-in',
+        'scale-out-left': 'scaleOutLeft .1s ease-out forwards',
+        'scale-in-right': 'scaleInRight .1s ease-in',
+        'scale-out-right': 'scaleOutRight .1s ease-out forwards',
       },
     },
   },
-}
+};

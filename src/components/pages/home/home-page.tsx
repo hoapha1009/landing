@@ -1,3 +1,4 @@
+import { SlidePart } from '../../shared/slide-part/slide-part';
 import { HomeBanner } from './components/home-banner';
 import { HomeCustomer } from './components/home-customer';
 import { HomeGroupCard } from './components/home-group-card';
@@ -10,6 +11,7 @@ export function HomePage() {
   return (
     <>
       <HomeBanner />
+
       <HomeGroupCard
         text='Ưu điểm GAT'
         subtitle='Miêu tả giải pháp của GAT Miêu tả giải pháp của GAT Miêu tả giải pháp của GAT'
@@ -21,8 +23,11 @@ export function HomePage() {
         text='Giá trị cộng đồng'
         subtitle='Miêu tả giải pháp của GAT Miêu tả giải pháp của GAT Miêu tả giải pháp của GAT'
       />
-      <HomePartner />
-      <HomeCustomer />
+
+      <SlidePart title='Đối tác CỦA gREEN aGRI' className='bg-primary-light' />
+      <SlidePart title='Khách hàng Green Agri' />
+      {/* <HomePartner />
+      <HomeCustomer /> */}
       <HomeNews />
     </>
   );

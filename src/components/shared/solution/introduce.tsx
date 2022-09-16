@@ -18,7 +18,7 @@ export function Introduce({ img, title, options, ...props }: IntroduceProps) {
       <div className='main-container flex items-center gap-2'>
         <div className='flex-1'>
           <div className='text-5xl font-bold leading-tight'>{title}</div>
-          <div className='mt-4 flex flex-col gap-4'>
+          <div className='mt-6 flex flex-col gap-4'>
             {options.map((option, index) => (
               <OptionRow
                 key={index}
