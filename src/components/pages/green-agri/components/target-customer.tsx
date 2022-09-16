@@ -9,6 +9,7 @@ export function TargetCustomer() {
       <div className='mx-auto grid w-1/2 auto-rows-fr grid-cols-4 gap-8'>
         {LIST.map((item, index) => (
           <Card
+            index={index + 1}
             key={index}
             item={item}
             className='gap-6 bg-primary-dark p-8 text-white'

@@ -18,10 +18,21 @@ interface InfoCardProps {
 export function InfoCard({ item }: InfoCardProps) {
   return (
     <div className='relative rounded-xl bg-white px-4 pt-20 pb-12'>
-      <div className='font-saira text-2xl font-semibold'>{item.title}</div>
+      <div
+        data-aos='fade-up'
+        data-aos-delay='100'
+        className='font-saira text-2xl font-semibold'
+      >
+        {item.title}
+      </div>
       <div className='mt-3 flex flex-col gap-3'>
         {item.options.map((option, index) => (
-          <OptionRow key={index} content={option.content} className='text-lg' />
+          <OptionRow
+            key={index}
+            content={option.content}
+            className='text-lg'
+            hasAnimation
+          />
         ))}
       </div>
       <div className='absolute top-0 left-1/2 h-[100px] w-[100px] -translate-x-14 -translate-y-12 transform rounded-full bg-gradient-to-r from-primary to-accent p-[3px]'>

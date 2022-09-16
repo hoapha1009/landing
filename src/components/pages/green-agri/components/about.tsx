@@ -15,7 +15,6 @@ export function About() {
         data-aos='zoom-in'
         data-delay='50'
         data-duration='500'
-        data-aos-once='true'
         src='/images/about-greenAgri.png'
         alt='about-green-agri'
         className='mx-auto w-2/3'
@@ -29,7 +28,7 @@ export function About() {
       <div className='grid w-full auto-rows-fr grid-cols-4 gap-5'>
         {LIST.map((item, index) => (
           <Card
-            // index={index}
+            index={index + 1}
             key={index}
             item={item}
             className='gap-8 bg-gray-50 p-8 text-lg'

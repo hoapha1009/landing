@@ -8,7 +8,7 @@ export function AboutOurPlatform() {
       <Title text='know more about our platform' />
       <div className='mx-auto mt-10 grid w-2/3 auto-rows-fr grid-cols-3 gap-8'>
         {LIST.map((item, index) => (
-          <Card key={index} item={item} />
+          <Card key={index} index={index} item={item} />
         ))}
       </div>
     </div>
@@ -28,11 +28,18 @@ interface Card {
 
 interface CardProps {
   item: Card;
+  index: number;
 }
 
-function Card({ item }: CardProps) {
+function Card({ item, index }: CardProps) {
+  const delay = (index * 200).toString();
+
   return (
-    <div className='rounded border border-gray-200 p-7 shadow-md'>
+    <div
+      data-aos='fade-up'
+      data-aos-delay={delay}
+      className='rounded border border-gray-200 p-7 shadow-md'
+    >
       <div className='mx-auto w-7/12'>
         <img src={item.img.url} alt={item.img.alt} width='100%' height='100%' />
       </div>

@@ -3,14 +3,14 @@ import { Title } from '../../../shared/title/title';
 
 export function Benefit() {
   return (
-    <>
+    <div data-aos='fade-up'>
       <Title text='Lợi ích của Green Agri' className='mt-14 pb-4' />
       <div className='mt-16 grid auto-rows-fr grid-cols-3 gap-8'>
         {LIST.map((item, index) => (
           <InfoCard key={index} item={item} />
         ))}
       </div>
-    </>
+    </div>
   );
 }
 

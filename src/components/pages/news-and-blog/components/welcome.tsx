@@ -15,7 +15,7 @@ export function Welcome() {
   const handleSelect = (val: TabValue) => setSelectedTab(val);
 
   return (
-    <div className='main-container py-24'>
+    <div data-aos='fade-up' className='main-container py-24'>
       <div className='mb-8 text-center text-5xl font-bold'>
         Welcome to Cropin’s Resource Section
       </div>
@@ -40,7 +40,10 @@ interface TabListProps {
 
 export function TabList({ selectedTab, onSelect }: TabListProps) {
   return (
-    <div className='mx-auto mt-8 mb-12 flex w-1/2 items-center gap-2 rounded-md border border-gray-200 p-2 shadow-md'>
+    <div
+      data-aos='fade-up'
+      className='mx-auto mt-8 mb-12 flex w-1/2 items-center gap-2 rounded-md border border-gray-200 p-2 shadow-md'
+    >
       {TAB_LIST.map((tab, index) => (
         <div
           key={index}
@@ -66,7 +69,7 @@ function NewsAndBlogList({ selectedTab }: NewsAndBlogListProps) {
   return (
     <>
       <div className='mt-12 flex justify-between gap-5'>
-        <div className='group flex-1 cursor-pointer'>
+        <div data-aos='fade-right' className='group flex-1 cursor-pointer'>
           <img
             src={NEWS_LIST[0].img.url}
             alt={NEWS_LIST[0].img.alt}
@@ -78,7 +81,7 @@ function NewsAndBlogList({ selectedTab }: NewsAndBlogListProps) {
             {NEWS_LIST[0].title}
           </div>
         </div>
-        <div className='flex flex-1 flex-col gap-3'>
+        <div data-aos='fade-left' className='flex flex-1 flex-col gap-3'>
           {NEWS_LIST.slice(1).map((item, index) => (
             <div key={index} className='group flex cursor-pointer gap-3'>
               <div className='w-1/3 shrink-0 grow-0'>
@@ -97,7 +100,7 @@ function NewsAndBlogList({ selectedTab }: NewsAndBlogListProps) {
           ))}
         </div>
       </div>
-      <div className='mt-8 flex justify-center'>
+      <div data-aos='fade-up' className='mt-8 flex justify-center'>
         <Button variant='primary'>XEM TẤT CẢ TIN TỨC</Button>
       </div>
     </>

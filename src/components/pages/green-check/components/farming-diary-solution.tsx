@@ -4,7 +4,7 @@ import { Title } from '../../../shared/title/title';
 
 export function FarmingDiarySolution() {
   return (
-    <div className='main-container py-24 text-center'>
+    <div data-aos='fade-up' className='main-container py-24 text-center'>
       <Title text='GIẢI PHÁP NHẬT KÝ CANH TÁC' />
       <Subtitle
         className='mx-auto w-5/6'
@@ -14,13 +14,16 @@ export function FarmingDiarySolution() {
         hồ sơ sản phẩm'
       />
       <img
+        data-aos='zoom-in'
+        data-delay='50'
+        data-duration='500'
         src='/images/solution-diary.png'
         alt='solution-diary-image'
         className='mx-auto w-2/3'
       />
       <div className='mt-8 grid w-full auto-rows-fr grid-cols-3 gap-8'>
         {LIST.map((item, index) => (
-          <Card key={index} item={item} />
+          <Card key={index} item={item} index={index + 1} />
         ))}
       </div>
     </div>
@@ -38,11 +41,18 @@ interface Card {
 
 interface CardProps {
   item: Card;
+  index: number;
 }
 
-export function Card({ item, ...props }: CardProps) {
+export function Card({ item, index, ...props }: CardProps) {
+  const delay = (index * 200).toString();
+
   return (
-    <div className='rounded-md border border-gray-50 bg-gray-50 p-8 shadow'>
+    <div
+      data-aos='fade-up'
+      data-aos-delay={delay}
+      className='rounded-md border border-gray-50 bg-gray-50 p-8 shadow'
+    >
       <div className='flex items-center gap-4'>
         <NextImage
           src={item.img.url}

@@ -10,8 +10,9 @@ export function HomeGroupCard({ text, subtitle }) {
       <div className='flex flex-row justify-between '>
         {MOCK_DATA.map((item, index) => (
           <Card
-            item={item}
             key={index}
+            index={index}
+            item={item}
             className='h-80 w-80 px-6 py-8 pb-16'
             contentClass='!mt-12 h-auto'
             imageClass='w-[100px]'
