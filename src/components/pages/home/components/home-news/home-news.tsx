@@ -15,12 +15,12 @@ export function HomeNews() {
       />
       <div className='main-container py-24'>
         <div className='flex flex-row items-center justify-between px-12'>
-          <Title text='tin tức và chia sẽ' />
+          <Title text='tin tức và chia sẻ' />
           <div className='flex flex-row items-center'>
-            <a className='border-transparent bg-transparent font-semibold text-primary no-underline'>
+            <a className='cursor-pointer border-transparent bg-transparent font-semibold text-primary no-underline hover:text-primary-dark'>
               Xem thêm
             </a>
-            <i className='ml-4 text-3xl font-semibold text-primary'>
+            <i className='ml-2 text-3xl font-semibold text-primary'>
               <RiArrowRightSLine />
             </i>
           </div>

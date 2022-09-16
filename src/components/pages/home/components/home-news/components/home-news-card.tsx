@@ -14,7 +14,7 @@ export function HomeNewsCard({ news }: { news: NewProps }) {
     <Link href='/'>
       <a>
         <div
-          className={`relative h-[400px] w-[440px] cursor-pointer overflow-hidden rounded-md bg-[url('/images/home-news-share-2.png')] bg-contain bg-no-repeat shadow-md`}
+          className={`relative h-[400px] w-[440px] cursor-pointer overflow-hidden rounded-md border bg-white bg-[url('/images/home-news-share-2.png')] bg-contain bg-no-repeat shadow-md`}
         >
           <div className='flex p-5'>
             <span className='mr-4 inline-block rounded-md bg-white px-4 py-1 text-blue-400'>
