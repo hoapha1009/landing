@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Button from '../../../../buttons/Button';
+import { OptionRow } from '../../../../shared/option-row/option-row';
 
 export function HomeSolutionTabs() {
   const [show, setShow] = useState(0);
@@ -18,7 +19,7 @@ export function HomeSolutionTabs() {
             >
               <Button
                 onClick={() => setShow(index)}
-                className={` border-0 px-8 transition  duration-300 ease-in-out hover:bg-none ${
+                className={` border-0 px-8 transition duration-300 ease-in-out hover:bg-none ${
                   show !== index
                     ? 'rounded-md bg-white text-gray-700 hover:text-gray-700'
                     : 'bg-primary'
@@ -30,7 +31,7 @@ export function HomeSolutionTabs() {
           </div>
         ))}
       </div>
-      <ul
+      <div
         className={`h-full bg-white px-6 ${
           show === 0 ? 'rounded-tr-md' : 'rounded-t-md'
         }`}
@@ -38,15 +39,16 @@ export function HomeSolutionTabs() {
         <div className='mb-4 pt-6 text-lg font-semibold'>
           {MOCK_DATA[show].topic}
         </div>
-        {MOCK_DATA[show].contens.map((val, indx) => (
+        {MOCK_DATA[show].contens.map((content, indx) => (
           <div key={indx} className='mb-8 last:mb-0'>
-            <li className='list-type-none mr-3 flex flex-row items-start text-lg'>
+            {/* <li className='list-type-none mr-3 flex flex-row items-start text-lg'>
               <img src='/images/leaf.png' alt='leaf' className='mr-4 w-5' />
-              <span>{val}</span>
-            </li>
+              <span>{content}</span>
+            </li> */}
+            <OptionRow key={indx} content={content} />
           </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

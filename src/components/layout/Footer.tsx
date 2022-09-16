@@ -37,11 +37,13 @@ function InformationGat() {
       </div>
       {MOCKS_DATA.map((item, index) => (
         <div key={index} className='mb-6'>
-          <div className='text-lg font-semibold text-white '>{item.name}</div>
+          <div className='font-saira text-xl font-semibold text-white'>
+            {item.name}
+          </div>
           <div className='mt-2'>
             {item.contacts.map((contact, idx) => (
               <div
-                className='mt-2 text-sm font-medium text-gray-400 lg:text-base'
+                className='mt-2 text-base font-medium text-gray-400 lg:text-lg'
                 key={idx}
               >
                 {contact}
@@ -68,12 +70,12 @@ function MenusLink() {
     <div className='flex flex-row'>
       {MOCKS_LINK.map((item, index) => (
         <div key={index} className='mr-32 last:mr-0'>
-          <div className='mb-4 text-lg font-medium uppercase text-white'>
+          <div className='mb-4 font-saira text-xl font-normal uppercase text-white'>
             {item.name}
           </div>
           {item.menus.map((menu, idx) => (
             <Link href={menu.href} key={idx}>
-              <a className='mb-2 block text-sm font-medium text-gray-400 last:mb-0 hover:text-primary lg:text-base'>
+              <a className='mb-2 block text-base font-medium text-gray-400 last:mb-0 hover:text-primary lg:text-lg'>
                 {menu.name}
               </a>
             </Link>
@@ -89,7 +91,7 @@ function QRcode() {
     <div className='mt-12 flex flex-row'>
       <img src='/images/QR.png' alt='qrcode' />
       <div className='ml-4 flex flex-col justify-around'>
-        <div className='font-semibold text-white lg:text-lg'>
+        <div className='font-saira font-semibold text-white lg:text-lg'>
           Tải app GreenAgri
         </div>
         <div className='font-medium text-gray-400'>Link IOS</div>
