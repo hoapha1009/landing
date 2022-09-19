@@ -6,8 +6,6 @@ interface SubtitleProps {
 export function Subtitle({ className = '', text }: SubtitleProps) {
   return (
     <div
-      data-aos='fade'
-      data-aos-delay='100'
       className={`mt-3 mb-8 text-center text-xl leading-8 text-gray-600 ${className}`}
     >
       {text}

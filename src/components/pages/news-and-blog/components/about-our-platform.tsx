@@ -4,7 +4,7 @@ import { Title } from '../../../shared/title/title';
 
 export function AboutOurPlatform() {
   return (
-    <div className='bg-gray-50 py-24'>
+    <div data-aos='fade-up' className='bg-gray-50 py-24'>
       <Title text='know more about our platform' />
       <div className='mx-auto mt-10 grid w-2/3 auto-rows-fr grid-cols-3 gap-8'>
         {LIST.map((item, index) => (
