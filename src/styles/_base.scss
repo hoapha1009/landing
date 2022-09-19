@@ -40,27 +40,27 @@ a:focus {
   width: 94%;
   @screen xs {
     width: 94%;
-    max-width: 100%;
+    max-width: none;
   }
   @screen sm {
     width: 94%;
-    max-width: 100%;
+    max-width: none;
   }
   @screen md {
-    width: 92%;
-    max-width: 100%;
+    width: 96%;
+    max-width: none;
   }
   @screen lg {
-    width: calCWidth(200px);
-    max-width: 100%;
+    width: 96%;
+    @apply max-w-screen-lg;
   }
   @screen xl {
-    width: calCWidth(200px);
-    max-width: 100%;
+    width: 94%;
+    @apply max-w-screen-xl;
   }
   @screen 2xl {
-    width: calCWidth(400px);
-    max-width: 100%;
+    width: 92%;
+    @apply max-w-screen-2xl;
   }
 }
 

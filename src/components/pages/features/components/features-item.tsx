@@ -6,6 +6,7 @@ export function FeaturesItem({
   className = '',
   titleClassName = '',
   subtitleClassName = '',
+  wrapContentClassName = '',
 }: {
   reverse?: boolean;
   image: string;
@@ -14,26 +15,27 @@ export function FeaturesItem({
   className?: string;
   titleClassName?: string;
   subtitleClassName?: string;
+  wrapContentClassName?: string;
 }) {
   return (
     <div
-      className={`flex flex-row items-center ${
+      className={`my-auto mx-60 flex h-full max-w-fit flex-row items-center ${
         reverse ? 'flex-row-reverse' : ''
       } ${className}`}
     >
-      <div>
-        <img src={image} alt='image' />
+      <div className='w-2/5'>
+        <img src={image} alt='image' className='w-full' />
       </div>
-      <div className={`w-[998px] ${reverse ? 'mr-[100px]' : 'ml-[100px]'}`}>
+      <div className={`mx-11 ${wrapContentClassName}`}>
         <div
-          className={`my-auto  mb-4 max-w-[33rem] text-4xl font-semibold uppercase leading-[1.4]  ${titleClassName}`}
+          className={`my-auto  mb-4 text-4xl font-semibold uppercase leading-[1.4]  ${titleClassName}`}
         >
           {title}
         </div>
 
         {subtitle && (
           <div
-            className={`text-xl font-normal leading-8 text-gray-600 ${subtitleClassName}`}
+            className={`max-w-[600px] text-xl font-normal leading-8 text-gray-600 ${subtitleClassName}`}
           >
             {subtitle}
           </div>

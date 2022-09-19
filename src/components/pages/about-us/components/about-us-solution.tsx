@@ -6,7 +6,7 @@ export function AboutUsSolution() {
     <div className='main-container p-16'>
       <Title text='Giải pháp green agri' />
       <Subtitle
-        text='Miêu tả giải pháp của GAT Miêu tả giải pháp của GAT Miêu tả giải pháp của GAT'
+        text='Bộ giải pháp hàng đầu cho ngành nông nghiệp'
         className='mx-auto mt-4 mb-10 max-w-lg'
       />
       <div className='grid grid-cols-2 gap-8'>
@@ -24,7 +24,7 @@ function AboutUsSolutionCard({
   data: { image: string; title: string; content: string };
 }) {
   return (
-    <div className='rounded-md border bg-gray-100 p-5 shadow-md'>
+    <div className='rounded-md border bg-gray-100 p-6 shadow-md'>
       <div className='flex flex-row items-center'>
         <img src={data.image} alt='leaf' className='mr-4' />
         <div className='font-saira text-2xl font-semibold'>{data.title}</div>

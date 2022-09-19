@@ -3,7 +3,7 @@ import { Title } from '../../../shared/title/title';
 
 export function AboutUsInfo() {
   return (
-    <div className='main-container rounded-lg bg-primary-dark p-20 shadow-sm'>
+    <div className='main-container rounded-lg bg-primary-dark p-16 shadow-sm'>
       <Title text='giới thiệu về gat' className='text-white' />
       <Subtitle
         text='Công ty Cổ phần Công nghệ Green Agri là đơn vị tiên phong trong lĩnh vực cung cấp các giải pháp công nghệ cho ngành nông nghiệp
@@ -11,7 +11,7 @@ export function AboutUsInfo() {
         className='!mt-8 mb-16 !text-left text-lg font-normal !text-white'
       />
 
-      <div className='grid grid-cols-2 gap-24 px-16 pb-16'>
+      <div className='grid grid-cols-2 gap-[92px] px-16 pb-16'>
         {MOCK_DATA.map((item, index) => (
           <AboutUseCardHorizontal data={item} key={index} />
         ))}
@@ -26,18 +26,18 @@ function AboutUseCardHorizontal({
   data: { image: string; content: string; title: string };
 }) {
   return (
-    <div className='max-h-32'>
-      <div className='mb-4 text-right font-saira text-2xl font-medium uppercase text-white'>
+    <div className='flex flex-col gap-4 '>
+      <div className='bg-primary-dark text-right font-saira text-2xl font-medium uppercase text-white'>
         {data.title}
       </div>
       <div
-        className='relative h-full rounded-md shadow-sm'
+        className='flex h-full min-h-28 rounded-md shadow-sm'
         style={{ backgroundColor: 'rgba(255, 255, 255, 0.3)' }}
       >
-        <div className='absolute flex h-[125px] w-[125px] -translate-x-16 -translate-y-6 transform items-center justify-center rounded-full border-4 border-primary-dark bg-white'>
+        <div className='-ml-16 -mt-9 flex h-[120px] w-[120px] shrink-0 items-center justify-center rounded-full border-4 border-primary-dark bg-white'>
           <img src={data.image} alt='' />
         </div>
-        <div className='ml-auto h-full max-w-[480px] p-5 pl-0 text-lg text-white'>
+        <div className='z-20 h-full w-full rounded-md p-4 text-lg text-white '>
           {data.content}
         </div>
       </div>

@@ -2,20 +2,25 @@ import { Subtitle } from '../../../shared/subtitle/subtitle';
 import { Title } from '../../../shared/title/title';
 import { Card } from '../../../shared/card/card';
 
-export function HomeGroupCard({ text, subtitle }) {
+export function HomeGroupCard({
+  text,
+  subtitle,
+}: {
+  text: string;
+  subtitle?: string;
+}) {
   return (
-    <div className='main-container p-20 '>
-      <Title text={text} />
-      <Subtitle text={subtitle} className='mx-auto max-w-lg' />
-      <div className='grid lg:grid-cols-4 '>
+    <div className='main-container py-16 px-[74px]'>
+      <Title text={text} className={subtitle ? '' : 'mb-10'} />
+      {subtitle && <Subtitle text={subtitle} className='mx-auto max-w-lg' />}
+      <div className='grid w-full auto-rows-fr grid-cols-4 gap-8'>
         {MOCK_DATA.map((item, index) => (
           <Card
             key={index}
             index={index}
             item={item}
-            className='h-80 w-80 px-6 py-8 pb-16'
-            contentClass='!mt-12 h-auto'
-            imageClass='w-[100px]'
+            className='gap-8 border-2 bg-gray-50 px-6 pb-10 pt-[38px]'
+            contentClass='text-gray-600 text-lg'
           />
         ))}
       </div>
@@ -29,27 +34,28 @@ const MOCK_DATA = [
       url: '/images/leaf.png',
       alt: 'lá cây',
     },
-    content: 'Location and crop agnostic AI models',
+    content: 'Tự động hóa quá trình bán hàng cho thành viên kênh phân phối',
   },
   {
     img: {
       url: '/images/scan.png',
       alt: 'lá cây',
     },
-    content: 'Intelligence at a crop, plot and pin code level.',
+    content:
+      'Giảm thiểu gian lận, làm giả hàng hóa thông qua truy xuất nguồn gốc',
   },
   {
     img: {
       url: '/images/virut.png',
       alt: 'lá cây',
     },
-    content: 'Convergence of satellite imagery and cloud ',
+    content: 'Chuẩn hóa quy trình sản xuất nông nghiệp theo các tiêu chuẩn',
   },
   {
     img: {
       url: '/images/user.png',
       alt: 'lá cây',
     },
-    content: 'Satellite imagery and cloud computing',
+    content: 'Đảm bảo quyền lợi cho các đối tác, lợi ích cho người tiêu dùng',
   },
 ];
