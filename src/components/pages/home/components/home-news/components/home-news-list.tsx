@@ -2,7 +2,7 @@ import { HomeNewsCard } from './home-news-card';
 
 export function HomeNewList() {
   return (
-    <div className='flex flex-col justify-between p-12 lg:flex-row'>
+    <div className=' grid grid-cols-3 gap-12 p-12'>
       {MOCK_DATA.map((item, index) => (
         <HomeNewsCard news={item} key={index} />
       ))}

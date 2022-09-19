@@ -7,7 +7,7 @@ export function HomeGroupCard({ text, subtitle }) {
     <div className='main-container p-20 '>
       <Title text={text} />
       <Subtitle text={subtitle} className='mx-auto max-w-lg' />
-      <div className='flex flex-row justify-between '>
+      <div className='grid lg:grid-cols-4 '>
         {MOCK_DATA.map((item, index) => (
           <Card
             key={index}
