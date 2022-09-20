@@ -66,7 +66,12 @@ function InformationGat() {
         {IMAGE_SOCIAL.map((item, index) => (
           <Link href={item.href} key={index}>
             <a>
-              <img src={`images/${item.img}`} alt={item.img} />
+              <img
+                src={`images/${item.img}`}
+                alt={item.img}
+                height='100%'
+                className='object-contain'
+              />
             </a>
           </Link>
         ))}
@@ -101,7 +106,7 @@ function MenusLink() {
 function QRcode() {
   return (
     <div className='mt-12 mb-4 flex flex-row lg:mb-0'>
-      <img src='/images/QR.png' alt='qrcode' />
+      <img src='/images/QR.png' alt='qrcode' className='object-contain' />
       <div className='ml-4 flex flex-col justify-around'>
         <div className='font-saira font-semibold text-white lg:text-lg'>
           Tải app GreenAgri
@@ -109,14 +114,22 @@ function QRcode() {
         <div className='font-medium text-gray-400 hover:text-white'>
           <Link href='/'>
             <a>
-              <img src='./images/google-play.png' alt='google-play' />
+              <img
+                src='./images/google-play.png'
+                alt='google-play'
+                className='object-contain'
+              />
             </a>
           </Link>
         </div>
         <div className='font-medium text-gray-400 hover:text-white'>
           <Link href='/'>
             <a>
-              <img src='./images/app-store.png' alt='app-store' />
+              <img
+                src='./images/app-store.png'
+                alt='app-store'
+                className='object-contain'
+              />
             </a>
           </Link>
         </div>

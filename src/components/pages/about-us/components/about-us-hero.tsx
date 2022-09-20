@@ -11,7 +11,11 @@ export function AboutUsHero() {
             vực cung cấp các giải pháp công nghệ cho ngành nông nghiệp
           </div>
         </div>
-        <img src='/images/about-us-hero.png' alt='' className='w-1/2' />
+        <img
+          src='/images/about-us-hero.png'
+          alt=''
+          className='w-1/2 object-contain'
+        />
       </div>
     </div>
   );

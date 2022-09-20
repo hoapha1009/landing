@@ -29,7 +29,7 @@ export function GreenCheckPage() {
       <Introduce title={title} options={options} img={img} />
       <FarmingDiarySolution />
       <TraceabilitySolution />
-      <SlidePart title='khách hàng green agri' />
+      <SlidePart title='Đối tác Green Agri' className='!pb-0' />
       <Form />
     </div>
   );

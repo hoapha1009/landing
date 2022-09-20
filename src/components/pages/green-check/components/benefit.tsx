@@ -4,7 +4,10 @@ import { Title } from '../../../shared/title/title';
 export function Benefit() {
   return (
     <div data-aos='fade-up'>
-      <Title text='Lợi ích của Green Agri' className='mt-10 pb-4 lg:mt-14' />
+      <Title
+        text='Lợi ích của Truy xuất nguồn gốc'
+        className='mt-10 pb-4 lg:mt-14'
+      />
       <div className='mt-16 grid gap-[72px] lg:auto-rows-fr lg:grid-cols-3 lg:gap-8'>
         {LIST.map((item, index) => (
           <InfoCard key={index} item={item} />
@@ -23,7 +26,6 @@ const LIST = [
         content:
           'Truy xuất nguồn gốc góp phần nâng cao vị thế thương hiệu, tạo dựng niềm tin với người tiêu dùng. ',
       },
-      { content: 'Khai thác chương trình khuyến mãi/hậu mãi hiệu quả' },
       {
         content: 'Tạo môi trường kinh doanh minh bạch',
       },

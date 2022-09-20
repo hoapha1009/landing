@@ -25,7 +25,7 @@ export function LogoSlider() {
         disableOnInteraction: false,
       }}
       pagination={{
-        bulletActiveClass: 'bg-blue-400',
+        bulletActiveClass: 'bg-primary',
         clickable: true,
 
         bulletClass:
@@ -38,7 +38,11 @@ export function LogoSlider() {
             <SwiperSlide key={index} className='w-40'>
               <Link href={item.href}>
                 <a>
-                  <img src={`/images/${item.url}`} alt={item.url} />
+                  <img
+                    src={`/images/${item.url}`}
+                    alt={item.url}
+                    className='object-contain'
+                  />
                 </a>
               </Link>
             </SwiperSlide>
@@ -55,6 +59,7 @@ export function LogoSlider() {
                       src={`/images/${logo.url}`}
                       alt={logo.url}
                       height='100%'
+                      className='object-contain'
                     />
                   </a>
                 </Link>

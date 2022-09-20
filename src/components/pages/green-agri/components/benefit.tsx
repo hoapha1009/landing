@@ -4,7 +4,7 @@ import { Title } from '../../../shared/title/title';
 export function Benefit() {
   return (
     <div className='lg:pt-10' data-aos='fade-up'>
-      <div className='main-container rounded-xl bg-primary-dark pt-8 pb-6 lg:p-24'>
+      <div className='main-container rounded-xl bg-primary-dark pt-8 pb-6 lg:p-16'>
         <Title text='Lợi ích của green agri' className='text-white' />
         <div className='mx-2 mt-20 grid auto-rows-fr gap-[72px] lg:mt-16 lg:grid-cols-3 lg:gap-8'>
           {LIST.map((item, index) => (

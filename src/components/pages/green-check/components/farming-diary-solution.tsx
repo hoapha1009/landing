@@ -1,3 +1,4 @@
+import { Swiper, SwiperSlide } from 'swiper/react';
 import NextImage from '../../../NextImage';
 import { Subtitle } from '../../../shared/subtitle/subtitle';
 import { Title } from '../../../shared/title/title';
@@ -16,15 +17,38 @@ export function FarmingDiarySolution() {
         tập hợp các thông tin về quá trình tạo ra sản phẩm, hình thành nên một
         hồ sơ sản phẩm'
       />
-      <img
-        data-aos='zoom-in'
-        data-delay='50'
-        data-duration='500'
-        src='/images/solution-diary.png'
-        alt='solution-diary-image'
-        className='mx-auto w-2/3'
-      />
-      <div className='mt-8 grid w-full gap-4 lg:auto-rows-fr lg:grid-cols-3 lg:gap-8'>
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={0}
+        grabCursor
+        className='mx-auto pb-10'
+        loop={true}
+        freeMode={false}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          bulletActiveClass: 'bg-primary',
+          clickable: true,
+
+          bulletClass:
+            'inline-block w-3 h-3 bg-gray-400 rounded-full transition-all cursor-pointer mr-2 last:mr-0 hover:bg-blue-500 transform translate-y-3',
+        }}
+      >
+        {IMAGE_LIST.map((item, index) => (
+          <SwiperSlide key={index} className=''>
+            <img
+              src={`/images/${item.url}`}
+              alt={item.url}
+              height='100%'
+              className='mx-auto object-contain'
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      <Title text='lợi ích của truy xuất nguồn gốc' className='mt-8 lg:mt-14' />
+      <div className='mt-4 grid w-full gap-4 lg:mt-8 lg:auto-rows-fr lg:grid-cols-3 lg:gap-8'>
         {LIST.map((item, index) => (
           <Card key={index} item={item} index={index + 1} />
         ))}
@@ -99,5 +123,24 @@ const LIST = [
     title: 'Chuẩn hóa quy trình',
     content:
       'Giúp chuẩn hóa quy trình sản xuất theo các tiêu chuẩn như VietGap, GlobalGap và Organic',
+  },
+];
+
+const IMAGE_LIST = [
+  {
+    url: 'solution-diary.png',
+    alt: 'solution-diary',
+  },
+  {
+    url: 'solution-diary.png',
+    alt: 'solution-diary',
+  },
+  {
+    url: 'solution-diary.png',
+    alt: 'solution-diary',
+  },
+  {
+    url: 'solution-diary.png',
+    alt: 'solution-diary',
   },
 ];

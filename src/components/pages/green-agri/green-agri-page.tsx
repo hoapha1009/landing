@@ -12,7 +12,7 @@ export function GreenAgriPage() {
       <About />
       <Benefit />
       <TargetCustomer />
-      <SlidePart title='khách hàng green agri' className='bg-primary-light' />
+      <SlidePart title='đối tác green agri' className='bg-primary-light' />
       <Form />
     </div>
   );

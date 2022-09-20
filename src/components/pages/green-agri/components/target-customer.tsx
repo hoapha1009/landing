@@ -4,14 +4,17 @@ import { Title } from '../../../shared/title/title';
 export function TargetCustomer() {
   return (
     <div className='py-8 lg:py-24' data-aos='fade-up'>
-      <Title text='các đối tượng khách hàng của green agri' className='mb-10' />
-      <div className='mx-2.5 grid auto-rows-fr grid-cols-2 gap-4 lg:mx-auto lg:w-1/2 lg:grid-cols-4 lg:gap-8'>
+      <Title
+        text='các đối tượng khách hàng của green agri'
+        className='mx-auto mb-10 lg:w-1/2'
+      />
+      <div className='main-container mx-2.5 grid auto-rows-fr grid-cols-2 gap-4 lg:mx-auto lg:grid-cols-4 lg:gap-8'>
         {LIST.map((item, index) => (
           <Card
             index={index + 1}
             key={index}
             item={item}
-            className='gap-6 bg-gray-50 p-4 text-gray-600 lg:bg-primary-dark lg:p-8 lg:text-white'
+            className='gap-6 bg-gray-50 p-4 text-gray-600 lg:p-8'
           />
         ))}
       </div>
