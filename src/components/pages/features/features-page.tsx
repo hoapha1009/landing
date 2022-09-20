@@ -21,25 +21,27 @@ export function FeaturesPage() {
           title='Quản lý danh sách ưu đãi'
           subtitle='Khách hàng có thể quản lý mọi ưu đãi của mình một cách dễ dàng. Khi nhìn vào danh sách ưu đãi, khách hàng sẽ biết mình đang có bao nhiêu ưu đãi đã dùng, ưu đãi chưa dùng và cả hạn sử dụng của những ưu đãi đó.'
           image='/images/features-banner.png'
-          wrapContentClassName='ml-20'
+          wrapContentClassName='ml-12'
         />
         <FeaturesItem
           reverse
           title='Quản lý ưu đãi theo thương hiệu'
           subtitle='Mỗi thương hiệu sẽ có nhiều ưu đãi khác nhau. Khi tổng hợp lại nhiều thương hiệu thì sẽ có càng nhiều ưu đãi. Chính vì vậy, tính năng này giúp khách hàng quản lý ưu đãi của mình theo từng thương hiệu để dễ dàng hơn trong việc sử dụng.'
           image='/images/features-banner-2.png'
+          wrapContentClassName='mr-12'
         />
         <FeaturesItem
           title='Hiển thị lịch sử sử dụng'
           subtitle='Tính năng này cho phép khách hàng nắm được lịch sử sử dụng ưu đãi của mình khi cần thiết. Đồng thời, nó sẽ giúp khách hàng không bỏ sót ưu đãi nào. Ngoài ra, khi có bất kì sự cố nào về việc sử dụng ưu đãi thì chỉ cần vào lịch sử sử dụng, vấn đề của khách hàng sẽ được giải quyết dễ dàng hơn.'
           image='/images/features-banner.png'
-          wrapContentClassName='ml-20'
+          wrapContentClassName='ml-12'
         />
         <FeaturesItem
           reverse
           title='Quản lý ưu đãi theo thương hiệu'
           subtitle='Mỗi thương hiệu sẽ có nhiều ưu đãi khác nhau. Khi tổng hợp lại nhiều thương hiệu thì sẽ có càng nhiều ưu đãi. Chính vì vậy, tính năng này giúp khách hàng quản lý ưu đãi của mình theo từng thương hiệu để dễ dàng hơn trong việc sử dụng.'
           image='/images/features-banner-2.png'
+          wrapContentClassName='mr-12'
         />
       </div>
 

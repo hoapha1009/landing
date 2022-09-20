@@ -8,6 +8,9 @@
   @import './base';
 }
 
+@layer utilities {
+  @import './utilities';
+}
 @import './custom';
 
 .swiper-pagination-bullet-active-banner {

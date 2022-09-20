@@ -10,17 +10,17 @@ export function HomeGroupCard({
   subtitle?: string;
 }) {
   return (
-    <div className='main-container py-16 px-[74px]'>
+    <div className='main-container py-8 lg:py-16 lg:px-[74px]'>
       <Title text={text} className={subtitle ? '' : 'mb-10'} />
       {subtitle && <Subtitle text={subtitle} className='mx-auto max-w-lg' />}
-      <div className='grid w-full auto-rows-fr grid-cols-4 gap-8'>
+      <div className='grid w-full auto-rows-fr grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-8'>
         {MOCK_DATA.map((item, index) => (
           <Card
             key={index}
             index={index}
             item={item}
-            className='gap-8 border-2 bg-gray-50 px-6 pb-10 pt-[38px]'
-            contentClass='text-gray-600 text-lg'
+            className='gap-4 border-2 bg-gray-50 px-2 py-4 lg:gap-8 lg:px-6 lg:py-0 lg:pb-10 lg:pt-[38px]'
+            contentClass='text-gray-600 lg:text-lg text-base'
           />
         ))}
       </div>

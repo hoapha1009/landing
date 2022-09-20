@@ -4,16 +4,18 @@ export default function Footer() {
   return (
     <footer className='bg-primary-dark'>
       <div className='main-container'>
-        <div className='flex pt-16 lg:flex-row lg:justify-between'>
+        <div className='flex flex-col pt-8 lg:flex-row lg:justify-between lg:pt-16'>
           <InformationGat />
           <div className='shrink-0 grow-0'>
             <MenusLink />
             <QRcode />
           </div>
         </div>
-        <div className='mx-5 flex flex-col items-center border-t border-t-white py-6 text-sm font-medium text-gray-400 lg:flex-row lg:justify-between'>
-          <div>Copyright © 2022 GreenAgri Software. All rights reserved. </div>
-          <div>
+        <div className='mx-5 flex flex-col-reverse items-center border-t border-t-white py-6 text-sm font-medium text-gray-400 lg:flex-row lg:justify-between'>
+          <div className='min-w-max text-xs lg:text-base'>
+            Copyright © 2022 GreenAgri Software. All rights reserved.{' '}
+          </div>
+          <div className='mb-1 lg:mb-0'>
             <Link href='/'>
               <a className='hover:underline'>Quy định sử dụng </a>
             </Link>
@@ -30,7 +32,7 @@ export default function Footer() {
 
 function InformationGat() {
   return (
-    <div className='w-[470px] shrink-0 grow-0'>
+    <div className='shrink-0 grow-0 lg:w-[470px]'>
       <Link href='/'>
         <a>
           <img
@@ -75,19 +77,21 @@ function InformationGat() {
 
 function MenusLink() {
   return (
-    <div className='flex flex-row'>
+    <div className='flex flex-col gap-4 lg:flex-row lg:gap-16'>
       {MOCKS_LINK.map((item, index) => (
-        <div key={index} className='mr-16 last:mr-0'>
+        <div key={index}>
           <div className='mb-4 font-saira text-xl font-normal uppercase text-white'>
             {item.name}
           </div>
-          {item.menus.map((menu, idx) => (
-            <Link href={menu.href} key={idx}>
-              <a className='mb-2 block text-base font-medium text-gray-400 last:mb-0 hover:text-white lg:text-lg'>
-                {menu.name}
-              </a>
-            </Link>
-          ))}
+          <div className='grid grid-cols-2 gap-1 lg:grid-cols-1 lg:gap-2'>
+            {item.menus.map((menu, idx) => (
+              <Link href={menu.href} key={idx}>
+                <a className='block text-base font-medium text-gray-400 hover:text-white lg:text-lg'>
+                  {menu.name}
+                </a>
+              </Link>
+            ))}
+          </div>
         </div>
       ))}
     </div>
@@ -96,7 +100,7 @@ function MenusLink() {
 
 function QRcode() {
   return (
-    <div className='mt-12 flex flex-row'>
+    <div className='mt-12 mb-4 flex flex-row lg:mb-0'>
       <img src='/images/QR.png' alt='qrcode' />
       <div className='ml-4 flex flex-col justify-around'>
         <div className='font-saira font-semibold text-white lg:text-lg'>
@@ -160,19 +164,11 @@ const MOCKS_LINK = [
         href: '/about-us',
       },
       {
-        name: 'Giải pháp',
-        href: '',
-      },
-      {
-        name: 'Tính năng',
-        href: '',
-      },
-      {
-        name: 'Tuyển dụng',
-        href: '',
-      },
-      {
         name: 'Hướng dẫn',
+        href: '',
+      },
+      {
+        name: 'Giải pháp',
         href: '',
       },
       {
@@ -180,7 +176,15 @@ const MOCKS_LINK = [
         href: '',
       },
       {
+        name: 'tính năng',
+        href: '',
+      },
+      {
         name: 'Tham gia cộng đồng',
+        href: '',
+      },
+      {
+        name: 'Tuyển dụng',
         href: '',
       },
     ],
@@ -193,11 +197,11 @@ const MOCKS_LINK = [
         href: '',
       },
       {
-        name: 'Truy xuất nguồn gốc',
+        name: 'Quản lý kênh phân phối',
         href: '',
       },
       {
-        name: 'Quản lý kênh phân phối',
+        name: 'Truy xuất nguồn gốc',
         href: '',
       },
       {
@@ -214,11 +218,11 @@ const MOCKS_LINK = [
         href: '',
       },
       {
-        name: 'Tài liệu nhà phát triển',
+        name: 'Tuyển dụng',
         href: '',
       },
       {
-        name: 'Tuyển dụng',
+        name: 'Tài liệu nhà phát triển',
         href: '',
       },
       {

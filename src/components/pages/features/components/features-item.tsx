@@ -26,7 +26,9 @@ export function FeaturesItem({
       <div className='w-2/5'>
         <img src={image} alt='image' className='w-full' />
       </div>
-      <div className={`mx-11 ${wrapContentClassName}`}>
+      <div
+        className={`${wrapContentClassName ? wrapContentClassName : 'ml-11 '}`}
+      >
         <div
           className={`my-auto  mb-4 text-4xl font-semibold uppercase leading-[1.4]  ${titleClassName}`}
         >
