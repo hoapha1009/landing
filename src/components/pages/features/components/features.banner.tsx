@@ -2,11 +2,10 @@ import { FeaturesItem } from './features-item';
 
 export function FeaturesBanner() {
   return (
-    <div className="relative mb-32 flex h-[476px] max-h-[476px] w-full flex-row overflow-hidden bg-[url('/images/home-banner.png')] bg-cover  bg-no-repeat lg:h-[725px] lg:max-h-[725px]">
-      {/* <div className="flex flex-row wrapper-features">
-        <img src='/images/features-banner.png' alt='banner'/>
-        <div className="max-w-md my-auto text-5xl font-semibold leading-tight text-white ml-11">CÁC TÍNH NĂNG TIÊU BIỂU CỦA GAT</div>
-      </div> */}
+    <div
+      data-aos='fade-up'
+      className="relative mb-24 flex h-[476px] max-h-[476px] w-full flex-row overflow-hidden bg-[url('/images/home-banner.png')] bg-cover  bg-no-repeat lg:h-[725px] lg:max-h-[725px]"
+    >
       <div className='main-container'>
         <FeaturesItem
           title='CÁC TÍNH NĂNG TIÊU BIỂU CỦA GAT'

@@ -9,17 +9,12 @@ export function AboutUsPage() {
   const isLg = useScreen('lg');
   return (
     <>
-      <div className='main-container'>
-        {!isLg && (
-          <BreadCrumbs
-            breadcrumbs={[
-              { label: 'Trang chủ', href: `/` },
-              { label: 'Về GAT' },
-            ]}
-            className='pt-2 pb-6'
-          />
-        )}
-      </div>
+      {!isLg && (
+        <BreadCrumbs
+          breadcrumbs={[{ label: 'Trang chủ', href: `/` }, { label: 'Về GAT' }]}
+          className='pt-2 pb-6'
+        />
+      )}
       <AboutUsHero />
       <AboutUsInfo />
       <AboutUsSolution />

@@ -17,6 +17,7 @@ export function FeaturesItem({
 }) {
   return (
     <div
+      data-aos='fade-up'
       className={`my-auto flex max-w-fit items-center lg:mx-60 lg:h-full  lg:flex-row ${className}`}
     >
       <div className='w-7/12 lg:w-2/5'>

@@ -3,7 +3,7 @@ import { useScreen } from '../../../../hooks/use-screen';
 export function AboutUsHero() {
   const isLg = useScreen('lg');
   return (
-    <div className='main-container pb-8 lg:p-16 lg:pb-24'>
+    <div data-aos='fade-up' className='main-container pb-8 lg:p-16 lg:pb-24'>
       <div className='flex flex-col justify-between lg:flex-row'>
         <div className='w-auto max-w-[300pz] text-center lg:mr-52 lg:mt-32 lg:w-[452px] lg:max-w-md lg:text-left'>
           {isLg ? (
