@@ -25,7 +25,7 @@ export function BreadCrumbs({ breadcrumbs, className = '' }: PropsType) {
 
   return (
     <div
-      className={`main-container m-0 flex w-full flex-row items-center overflow-hidden text-sm font-semibold ${className}`}
+      className={`main-container flex flex-row items-center overflow-hidden text-sm font-semibold ${className}`}
     >
       {breadcrumbs.map((breadcrumb, index) => (
         <Fragment key={index}>

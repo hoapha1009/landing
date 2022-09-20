@@ -54,7 +54,7 @@ export function LogoSlider() {
             <SwiperSlide key={index} className='grid grid-cols-2 gap-12'>
               {item.list.map((logo, index) => (
                 <Link key={index} href={logo.href}>
-                  <a className='block'>
+                  <a className='mx-auto block'>
                     <img
                       src={`/images/${logo.url}`}
                       alt={logo.url}

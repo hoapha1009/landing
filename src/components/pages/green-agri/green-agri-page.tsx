@@ -4,10 +4,23 @@ import { Introduce } from '../../shared/solution/introduce';
 import { TargetCustomer } from './components/target-customer';
 import { Form } from '../../shared/form/form';
 import { SlidePart } from '../../shared/slide-part/slide-part';
+import { useScreen } from '../../../hooks/use-screen';
+import { BreadCrumbs } from '../../shared/breadcrumbs/breadcrumbs';
 
 export function GreenAgriPage() {
+  const isLg = useScreen('lg');
+
   return (
     <div className=''>
+      {!isLg && (
+        <BreadCrumbs
+          breadcrumbs={[
+            { label: 'Trang chủ', href: `/` },
+            { label: 'Green Agri' },
+          ]}
+          className='pb-3'
+        />
+      )}
       <Introduce title={title} options={options} img={img} />
       <About />
       <Benefit />
@@ -18,7 +31,7 @@ export function GreenAgriPage() {
   );
 }
 
-const title = 'GreenAgri - Giải pháp thương mại điện tử và kênh phân phối. ';
+const title = 'GreenAgri - Giải pháp thương mại điện tử và kênh phân phối.';
 const options = [
   {
     content:

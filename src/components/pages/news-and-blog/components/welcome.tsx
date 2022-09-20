@@ -18,7 +18,7 @@ export function Welcome() {
 
   return (
     <div data-aos='fade-up' className='main-container py-8 lg:py-24'>
-      <div className='mx-auto mb-4 w-2/3 text-center text-[23px] font-bold leading-9 lg:mb-8 lg:w-full lg:text-5xl'>
+      <div className='mx-auto mb-4 w-2/3 text-center text-[23px] font-bold leading-8 lg:mb-8 lg:w-full lg:text-5xl'>
         Welcome to Cropin’s Resource Section
       </div>
       <Subtitle
@@ -84,7 +84,7 @@ interface NewsAndBlogListProps {
 function NewsAndBlogList({ selectedTab }: NewsAndBlogListProps) {
   return (
     <>
-      <div className='flex flex-col justify-between gap-5 lg:mt-12 lg:flex-row'>
+      <div className='flex flex-col justify-between gap-8 lg:mt-12 lg:flex-row lg:gap-5'>
         <div data-aos='fade-right' className='group flex-1 cursor-pointer'>
           <img
             src={NEWS_LIST[0].img.url}
@@ -97,7 +97,7 @@ function NewsAndBlogList({ selectedTab }: NewsAndBlogListProps) {
             <Chip text='Thông tin mùa vụ' />
             <div className='text-xs lg:text-base'>08/03/2022</div>
           </div>
-          <div className='font-saira text-[23px] font-semibold leading-9 group-hover:text-primary'>
+          <div className='font-saira text-[23px] font-semibold leading-8 group-hover:text-primary'>
             {NEWS_LIST[0].title}
           </div>
         </div>
@@ -118,7 +118,7 @@ function NewsAndBlogList({ selectedTab }: NewsAndBlogListProps) {
                   <Chip text='Thông tin mùa vụ' />
                   <div className='text-xs lg:text-base'>08/03/2022</div>
                 </div>
-                <div className='text-ellipsis-2 font-saira font-medium group-hover:text-primary lg:text-[23px] lg:font-semibold lg:leading-9'>
+                <div className='text-ellipsis-2 font-saira font-medium group-hover:text-primary lg:text-[23px] lg:font-semibold lg:leading-8'>
                   {item.title}
                 </div>
               </div>

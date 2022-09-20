@@ -1,3 +1,5 @@
+import { useScreen } from '../../../hooks/use-screen';
+import { BreadCrumbs } from '../../shared/breadcrumbs/breadcrumbs';
 import { Form } from '../../shared/form/form';
 import { SlidePart } from '../../shared/slide-part/slide-part';
 import { Introduce } from '../../shared/solution/introduce';
@@ -23,9 +25,19 @@ export function GreenCheckPage() {
     src: '/images/green-check-banner.png',
     alt: 'green-check-banner',
   };
+  const isLg = useScreen('lg');
 
   return (
     <div className=''>
+      {!isLg && (
+        <BreadCrumbs
+          breadcrumbs={[
+            { label: 'Trang chủ', href: `/` },
+            { label: 'Green Check' },
+          ]}
+          className='pb-3'
+        />
+      )}
       <Introduce title={title} options={options} img={img} />
       <FarmingDiarySolution />
       <TraceabilitySolution />
