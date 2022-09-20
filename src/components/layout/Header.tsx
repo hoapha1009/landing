@@ -1,7 +1,11 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useMemo, useState } from 'react';
-import { RiAlignJustify, RiArrowUpSLine } from 'react-icons/ri';
+import {
+  RiAlignJustify,
+  RiArrowDownSLine,
+  RiArrowUpSLine,
+} from 'react-icons/ri';
 import { useScreen } from '../../hooks/use-screen';
 
 import Button from '../buttons/Button';
@@ -112,18 +116,14 @@ export function MenuLink({ indexOfSelectedMenu }) {
         tab?.subTabs ? (
           <div key={index} className='group relative lg:inline-block'>
             <button
-              className='inline-flex w-full items-center justify-between rounded lg:w-auto lg:justify-start lg:hover:bg-gray-100'
+              className={`inline-flex w-full items-center justify-between rounded lg:w-auto lg:justify-start lg:hover:bg-gray-100 ${
+                indexOfSelectedMenu === index && 'text-primary'
+              }`}
               onClick={() => !isLg && setShow(!show)}
             >
-              <span
-                className={`mr-1 py-2 lg:px-4 ${
-                  indexOfSelectedMenu === index && 'text-primary'
-                }`}
-              >
-                {tab.title}
-              </span>
+              <span className={`mr-1 py-2 lg:px-4 `}>{tab.title}</span>
               <i className={`text-xl  ${show ? '-rotate-180' : ''}`}>
-                <RiArrowUpSLine />
+                {isLg ? <RiArrowDownSLine /> : <RiArrowUpSLine />}
               </i>
             </button>
             {!isLg ? (
@@ -132,7 +132,7 @@ export function MenuLink({ indexOfSelectedMenu }) {
                   {tab.subTabs.map((subTab, index) => (
                     <li key={index} className=''>
                       <Link href={subTab.href} onClick={() => setShow(false)}>
-                        <a className='block whitespace-nowrap px-6 py-1 hover:bg-gray-100 lg:px-8 lg:py-3'>
+                        <a className='block whitespace-nowrap px-6 py-2 hover:bg-gray-100 lg:px-8 lg:py-3'>
                           {subTab.title}
                         </a>
                       </Link>
