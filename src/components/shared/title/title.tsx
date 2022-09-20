@@ -6,7 +6,7 @@ interface TitleProps {
 export function Title({ text = '', className = '' }: TitleProps) {
   return (
     <div
-      className={`text-center font-saira text-[23px] font-semibold uppercase lg:text-4xl ${className}`}
+      className={`text-center font-saira text-[23px] font-semibold uppercase leading-8 lg:text-4xl lg:leading-10 ${className}`}
     >
       {text}
     </div>

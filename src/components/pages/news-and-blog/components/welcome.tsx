@@ -22,7 +22,7 @@ export function Welcome() {
         Welcome to Cropin’s Resource Section
       </div>
       <Subtitle
-        className='mx-auto !text-left lg:w-5/6 lg:!text-center lg:leading-8'
+        className='mx-auto !mb-4 !text-left lg:w-5/6 lg:!text-center lg:leading-8'
         text='We, at Cropin, are on our way to building the world’s first ag-tech resource library based on our experiences, the projects implemented, problems solved, and trillions of farm pixel-level datasets we have collected over a decade from 52 countries.'
       />
       <Subtitle
@@ -46,7 +46,7 @@ export function TabList({ selectedTab, onSelect }: TabListProps) {
   return (
     <div
       data-aos='fade-up'
-      className='no-scrollbar mx-auto mt-8 mb-12 flex flex-nowrap items-center gap-3 overflow-x-scroll whitespace-nowrap rounded-md border border-gray-200 p-2 shadow-md lg:w-1/2 lg:gap-2 lg:whitespace-normal'
+      className='no-scrollbar mx-auto mt-8 mb-6 flex flex-nowrap items-center gap-3 overflow-x-scroll whitespace-nowrap rounded-md border border-gray-200 p-2 shadow-md lg:mb-12 lg:w-1/2 lg:gap-2 lg:whitespace-normal'
     >
       {TAB_LIST.map((tab, index) => (
         <div
@@ -84,7 +84,7 @@ interface NewsAndBlogListProps {
 function NewsAndBlogList({ selectedTab }: NewsAndBlogListProps) {
   return (
     <>
-      <div className='mt-12 flex justify-between gap-5'>
+      <div className='flex flex-col justify-between gap-5 lg:mt-12 lg:flex-row'>
         <div data-aos='fade-right' className='group flex-1 cursor-pointer'>
           <img
             src={NEWS_LIST[0].img.url}
@@ -93,10 +93,11 @@ function NewsAndBlogList({ selectedTab }: NewsAndBlogListProps) {
             width='100%'
             height='100%'
           />
-          <div className='my-3 flex gap-2'>
+          <div className='my-3 flex items-center gap-2'>
             <Chip text='Thông tin mùa vụ' />
+            <div className='text-xs lg:text-base'>08/03/2022</div>
           </div>
-          <div className='font-saira text-2xl font-semibold leading-9 group-hover:text-primary'>
+          <div className='font-saira text-[23px] font-semibold leading-9 group-hover:text-primary'>
             {NEWS_LIST[0].title}
           </div>
         </div>
@@ -112,14 +113,20 @@ function NewsAndBlogList({ selectedTab }: NewsAndBlogListProps) {
                   className='rounded group-hover:brightness-75'
                 />
               </div>
-              <div className='flex-1 font-saira text-2xl font-semibold leading-9 group-hover:text-primary'>
-                {item.title}
+              <div className='flex flex-1 flex-col justify-between lg:gap-6'>
+                <div className='flex items-center gap-2'>
+                  <Chip text='Thông tin mùa vụ' />
+                  <div className='text-xs lg:text-base'>08/03/2022</div>
+                </div>
+                <div className='text-ellipsis-2 font-saira font-medium group-hover:text-primary lg:text-[23px] lg:font-semibold lg:leading-9'>
+                  {item.title}
+                </div>
               </div>
             </div>
           ))}
         </div>
       </div>
-      <div data-aos='fade-up' className='mt-8 flex justify-center'>
+      <div data-aos='fade-up' className='mt-4 flex justify-center lg:mt-8'>
         <Button variant='primary'>XEM TẤT CẢ TIN TỨC</Button>
       </div>
     </>

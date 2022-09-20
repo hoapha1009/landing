@@ -34,7 +34,7 @@ export function Form() {
       data-aos='fade-up'
     >
       <div className='mx-auto rounded-xl border-gray-50 pb-12 lg:w-2/3 lg:border lg:bg-gray-50 lg:px-24 lg:shadow-md'>
-        <Title text='sản phẩm của chúng tôi đã sẵn sàng' />
+        <Title text='sản phẩm của chúng tôi đã sẵn sàng' className='lg:pt-12' />
         <Subtitle text='Đăng ký đặt lịch để được trải nghiệm sớm nhất công nghệ của chúng tôi' />
 
         <form className='flex flex-col gap-4' onSubmit={handleSubmit}>

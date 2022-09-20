@@ -4,9 +4,9 @@ import { Title } from '../../../shared/title/title';
 
 export function AboutOurPlatform() {
   return (
-    <div data-aos='fade-up' className='bg-gray-50 py-24'>
-      <Title text='know more about our platform' />
-      <div className='mx-auto mt-10 grid w-2/3 auto-rows-fr grid-cols-3 gap-8'>
+    <div data-aos='fade-up' className='bg-gray-50 py-8 lg:py-24'>
+      <Title text='Know more about our platform' className='' />
+      <div className='mx-auto mt-6 grid auto-rows-fr gap-4 px-2.5 lg:mt-10 lg:w-2/3 lg:grid-cols-3 lg:gap-8 lg:px-0'>
         {LIST.map((item, index) => (
           <Card key={index} index={index} item={item} />
         ))}
@@ -38,23 +38,25 @@ function Card({ item, index }: CardProps) {
     <div
       data-aos='fade-up'
       data-aos-delay={delay}
-      className='rounded border border-gray-200 p-7 shadow-md'
+      className='rounded border border-gray-200 p-4 shadow-md lg:p-7'
     >
       <div className='mx-auto w-7/12'>
         <img src={item.img.url} alt={item.img.alt} width='100%' height='100%' />
       </div>
-      <div className='mt-8 font-saira text-2xl font-semibold'>{item.title}</div>
+      <div className='mt-8 font-saira text-[23px] font-semibold'>
+        {item.title}
+      </div>
       <div className='mt-5 mb-8 flex flex-col gap-4'>
         {item.options.map((option, index) => (
           <OptionRow
             key={index}
             content={option.content}
-            contentClassName='text-lg'
+            contentClassName='lg:text-lg'
           />
         ))}
       </div>
-      <div className='flex justify-center'>
-        <Button variant='primary' className='!px-7 !py-2.5'>
+      <div className='mb-4 flex justify-center lg:mb-0'>
+        <Button variant='primary' className='!px-7'>
           LEARN MORE
         </Button>
       </div>
