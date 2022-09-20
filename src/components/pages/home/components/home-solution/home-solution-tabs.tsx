@@ -1,41 +1,57 @@
 import { useState } from 'react';
+import { useScreen } from '../../../../../hooks/use-screen';
 import Button from '../../../../buttons/Button';
 import { OptionRow } from '../../../../shared/option-row/option-row';
 
 export function HomeSolutionTabs() {
+  const isLg = useScreen('lg');
   const [show, setShow] = useState(0);
   return (
-    <div className='w-full flex-1 overflow-hidden rounded-md bg-transparent lg:w-[917px]'>
-      <div className='flex flex-row items-center bg-primary-dark'>
-        {MOCK_DATA.map((item, index) => (
-          <div
-            key={index}
-            className={`min-w-fit rounded-t-md border-[12px] lg:min-w-none  ${
-              show !== index ? 'border-primary-dark' : 'border-white'
-            }`}
-          >
+    <div className='w-full flex-1  overflow-hidden rounded-md  lg:w-[917px] lg:bg-transparent'>
+      <div className='bg-white lg:bg-transparent'>
+        <div
+          className='no-scrollbar mb-3 flex flex-row items-center gap-3 overflow-hidden overflow-x-scroll bg-primary-dark'
+          style={{
+            WebkitMaskImage: isLg
+              ? 'linear-gradient(270deg,transparent .5%,#fff 20%)'
+              : '',
+          }}
+        >
+          {MOCK_DATA.map((item, index) => (
             <div
-              className={`bg-white   ${show !== index ? 'rounded-md' : ''} `}
+              key={index}
+              id={item.appName}
+              className={`min-w-fit lg:min-w-none  ${
+                show !== index ? 'border-primary-dark' : ''
+              }`}
             >
-              <Button
-                onClick={() => setShow(index)}
-                className={` border-0 px-4  transition duration-300 ease-in-out hover:bg-none ${
-                  show !== index
-                    ? 'rounded-md bg-white text-gray-700 hover:text-gray-700'
-                    : 'bg-primary'
-                }`}
-              >
-                {item.appName}
-              </Button>
+              <div>
+                <Button
+                  onClick={() => {
+                    if (!isLg) {
+                      const el = document.getElementById(item.appName);
+                      el?.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'nearest',
+                        inline: 'center',
+                      });
+                    }
+                    setShow(index);
+                  }}
+                  className={` border-0 px-4  transition duration-300 ease-in-out hover:bg-none ${
+                    show !== index
+                      ? 'rounded-md bg-white text-gray-700 hover:text-gray-700'
+                      : 'bg-primary'
+                  }`}
+                >
+                  {item.appName}
+                </Button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-      <div
-        className={`h-full bg-white px-6 py-2 lg:py-6 ${
-          show === 0 ? 'rounded-tr-md' : 'rounded-t-md'
-        }`}
-      >
+      <div className='h-full rounded-md bg-white px-6 py-2 lg:py-6'>
         <div className='mb-4 text-lg font-semibold '>
           {MOCK_DATA[show].topic}
         </div>
