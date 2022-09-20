@@ -74,14 +74,18 @@ export default function Header() {
           <div className={!isLg ? 'flex flex-row items-center gap-x-2' : ''}>
             <Button
               variant='primary'
-              className='px-2.5 text-sm lg:px-4 lg:text-base'
+              className='px-3 text-sm lg:px-4 lg:text-base'
             >
               Đăng ký tư vấn
             </Button>
             {!isLg && (
               <Button
                 variant='outline'
-                className={`px-2 ${showMenuMobile ? 'bg-primary:' : ''}`}
+                className={`px-2.5  ${
+                  showMenuMobile
+                    ? '!bg-primary:'
+                    : '!bg-transparent !text-primary'
+                }`}
                 onClick={() => setShowMenuMobile(!showMenuMobile)}
               >
                 <i className='text-xl'>

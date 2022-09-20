@@ -7,11 +7,11 @@ export function AboutUsHero() {
       <div className='flex flex-col justify-between lg:flex-row'>
         <div className='w-auto max-w-[300pz] text-center lg:mr-52 lg:mt-32 lg:w-[452px] lg:max-w-md lg:text-left'>
           {isLg ? (
-            <div className='text-[23px] font-semibold leading-[1.25] lg:text-5xl'>
+            <div className='font-saira text-[23px] font-semibold !leading-[1.3] lg:text-5xl'>
               Công nghệ xanh Sống an lành
             </div>
           ) : (
-            <div className='text-[23px] font-semibold leading-[1.25] lg:text-5xl'>
+            <div className='font-saira text-[23px] font-semibold leading-[1.25] lg:text-5xl'>
               Công nghệ xanh - Sống an lành
             </div>
           )}
@@ -23,7 +23,7 @@ export function AboutUsHero() {
         <img
           src='/images/about-us-hero.png'
           alt=''
-          className='mt-5 w-1/2 object-contain'
+          className='mt-5 object-contain lg:w-1/2'
         />
       </div>
     </div>

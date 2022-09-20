@@ -11,7 +11,7 @@ export default function Footer() {
             <QRcode />
           </div>
         </div>
-        <div className='mx-5 flex flex-col-reverse items-center border-t border-t-white py-6 text-sm font-medium text-gray-400 lg:flex-row lg:justify-between'>
+        <div className='flex flex-col-reverse items-center border-t border-t-white py-6 text-sm font-medium text-gray-400 lg:mx-5 lg:flex-row lg:justify-between'>
           <div className='text-center text-xs lg:text-base'>
             Copyright © 2022 GreenAgri Software. All rights reserved.{' '}
           </div>

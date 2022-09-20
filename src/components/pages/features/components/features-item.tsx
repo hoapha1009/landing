@@ -35,7 +35,7 @@ export function FeaturesItem({
 
         {subtitle && (
           <div
-            className={`max-w-[600px] text-xl font-normal leading-8 text-gray-600 ${subtitleClassName}`}
+            className={`max-w-[600px] font-normal leading-8 text-gray-600 lg:text-xl ${subtitleClassName}`}
           >
             {subtitle}
           </div>

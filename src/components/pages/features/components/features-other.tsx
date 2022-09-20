@@ -2,11 +2,13 @@ import { Title } from '../../../shared/title/title';
 import Link from 'next/link';
 import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper/core';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { useScreen } from '../../../../hooks/use-screen';
 
 SwiperCore.use([Pagination, Autoplay, Navigation]);
 export function FeaturesOther() {
+  const isLg = useScreen('lg');
   return (
-    <div className='pt-32'>
+    <div className='pt-16'>
       <Title text='Các tính năng khác' className='mb-10' />
       <Swiper
         slidesPerView={1.5}
@@ -19,15 +21,15 @@ export function FeaturesOther() {
           disableOnInteraction: false,
         }}
         pagination={{
-          bulletActiveClass: 'bg-blue-400',
+          bulletActiveClass: 'bg-primary',
           clickable: true,
           dynamicBullets: true,
           bulletClass:
-            'inline-block w-3 h-3 bg-gray-400 rounded-full transition-all cursor-pointer mr-2 last:mr-0 hover:bg-blue-500 transform translate-y-3',
+            'inline-block w-3 h-3 bg-gray-400 rounded-full transition-all cursor-pointer mr-2 last:mr-0 hover:bg-primary transform translate-y-3',
         }}
       >
         {[...Array(5)].map((_, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} className={isLg ? '' : '!w-[500px]'}>
             <Link href='/'>
               <a>
                 <img

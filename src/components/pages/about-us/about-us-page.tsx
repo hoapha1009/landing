@@ -9,7 +9,7 @@ export function AboutUsPage() {
   const isLg = useScreen('lg');
   return (
     <>
-      <div className='main-container'>
+      <div>
         {!isLg && (
           <BreadCrumbs
             breadcrumbs={[
