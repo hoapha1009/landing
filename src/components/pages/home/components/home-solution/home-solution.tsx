@@ -4,7 +4,7 @@ import { HomeSolutionTabs } from './home-solution-tabs';
 
 export function HomeSolution() {
   return (
-    <div className='main-container rounded-xl bg-primary-dark px-1 pt-8 pb-3 lg:px-16 lg:pt-16 lg:pb-8'>
+    <div className='main-container rounded-xl bg-primary-dark px-1 pt-8 pb-3 lg:px-8 lg:pt-16 lg:pb-8 xl:px-16'>
       <div className='mb-8 px-3 lg:px-0'>
         <Title text='giải pháp gat' className='text-white' />
         <Subtitle

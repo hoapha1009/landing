@@ -5,7 +5,7 @@ export function AboutUsHero() {
   return (
     <div className='main-container pb-8 lg:p-16 lg:pb-24'>
       <div className='flex flex-col justify-between lg:flex-row'>
-        <div className='w-auto max-w-[300pz] text-center lg:mr-52 lg:mt-32 lg:w-[452px] lg:max-w-md lg:text-left'>
+        <div className='ml-auto mr-auto w-auto max-w-[350px] text-center lg:mr-16 lg:mt-32 lg:w-[452px] lg:max-w-md lg:text-left xl:ml-0 xl:mr-52'>
           {isLg ? (
             <div className='font-saira text-[23px] font-semibold !leading-[1.3] lg:text-5xl'>
               Công nghệ xanh Sống an lành
@@ -15,7 +15,7 @@ export function AboutUsHero() {
               Công nghệ xanh - Sống an lành
             </div>
           )}
-          <div className='mt-4 text-base font-medium leading-[1.5] text-gray-600 lg:text-xl'>
+          <div className='mt-4 text-base font-medium  !leading-[1.5] text-gray-600 lg:text-xl'>
             Công ty Cổ phần Công nghệ Green Agri là đơn vị tiên phong trong lĩnh
             vực cung cấp các giải pháp công nghệ cho ngành nông nghiệp
           </div>

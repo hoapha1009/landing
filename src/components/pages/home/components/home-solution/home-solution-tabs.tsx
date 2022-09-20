@@ -70,7 +70,7 @@ export function HomeSolutionTabs() {
         <img
           src='/images/home-solution.png'
           alt='image'
-          className='w-full lg:w-auto'
+          className='w-full object-cover lg:w-auto'
         />
       </div>
     </div>

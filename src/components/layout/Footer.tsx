@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className='bg-primary-dark'>
       <div className='main-container'>
-        <div className='flex flex-col pt-8 lg:flex-row lg:justify-between lg:pt-16'>
+        <div className='flex flex-col pt-8 lg:pt-16 xl:flex-row  xl:justify-between'>
           <InformationGat />
           <div className='shrink-0 grow-0'>
             <MenusLink />
@@ -105,7 +105,7 @@ function MenusLink() {
 
 function QRcode() {
   return (
-    <div className='mt-12 mb-4 flex flex-row lg:mb-0'>
+    <div className='mt-12 mb-4 flex flex-row xl:mb-0'>
       <img src='/images/QR.png' alt='qrcode' className='object-contain' />
       <div className='ml-4 flex flex-col justify-around'>
         <div className='font-saira font-semibold text-white lg:text-lg'>
