@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import { useScreen } from '../../../../hooks/use-screen';
 import Button from '../../../buttons/Button';
+import { Chip } from '../../../shared/chip/chip';
 import { Subtitle } from '../../../shared/subtitle/subtitle';
 
 type TabValue =
@@ -15,17 +17,17 @@ export function Welcome() {
   const handleSelect = (val: TabValue) => setSelectedTab(val);
 
   return (
-    <div data-aos='fade-up' className='main-container py-24'>
-      <div className='mb-8 text-center text-5xl font-bold'>
+    <div data-aos='fade-up' className='main-container py-8 lg:py-24'>
+      <div className='mx-auto mb-4 w-2/3 text-center text-[23px] font-bold leading-9 lg:mb-8 lg:w-full lg:text-5xl'>
         Welcome to Cropin’s Resource Section
       </div>
       <Subtitle
-        className='mx-auto w-5/6 leading-8'
+        className='mx-auto !text-left lg:w-5/6 lg:!text-center lg:leading-8'
         text='We, at Cropin, are on our way to building the world’s first ag-tech resource library based on our experiences, the projects implemented, problems solved, and trillions of farm pixel-level datasets we have collected over a decade from 52 countries.'
       />
       <Subtitle
         text='You will find case studies, whitepapers, use cases, and reports covering the entire agri-value chain housed here.'
-        className='!mt-0'
+        className='!mt-0 !text-left lg:!text-center'
       />
       <TabList selectedTab={selectedTab} onSelect={handleSelect} />
       <NewsAndBlogList selectedTab={selectedTab} />
@@ -39,20 +41,34 @@ interface TabListProps {
 }
 
 export function TabList({ selectedTab, onSelect }: TabListProps) {
+  const isLg = useScreen('lg');
+
   return (
     <div
       data-aos='fade-up'
-      className='mx-auto mt-8 mb-12 flex w-1/2 items-center gap-2 rounded-md border border-gray-200 p-2 shadow-md'
+      className='no-scrollbar mx-auto mt-8 mb-12 flex flex-nowrap items-center gap-3 overflow-x-scroll whitespace-nowrap rounded-md border border-gray-200 p-2 shadow-md lg:w-1/2 lg:gap-2 lg:whitespace-normal'
     >
       {TAB_LIST.map((tab, index) => (
         <div
           key={index}
-          className={`flex-1 cursor-pointer whitespace-nowrap rounded-md px-4 py-3 text-center ${
+          id={tab.value}
+          className={`flex-1 cursor-pointer rounded-md px-4 py-3 text-center ${
             selectedTab === tab.value
               ? 'bg-primary text-white'
               : 'hover:bg-gray-200'
           }`}
-          onClick={() => onSelect?.(tab.value)}
+          onClick={() => {
+            onSelect?.(tab.value);
+
+            if (!isLg) {
+              const el = document.getElementById(tab.value);
+              el?.scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest',
+                inline: 'center',
+              });
+            }
+          }}
         >
           {tab.label}
         </div>
@@ -77,7 +93,10 @@ function NewsAndBlogList({ selectedTab }: NewsAndBlogListProps) {
             width='100%'
             height='100%'
           />
-          <div className='mt-3 font-saira text-2xl font-semibold leading-9 group-hover:text-primary'>
+          <div className='my-3 flex gap-2'>
+            <Chip text='Thông tin mùa vụ' />
+          </div>
+          <div className='font-saira text-2xl font-semibold leading-9 group-hover:text-primary'>
             {NEWS_LIST[0].title}
           </div>
         </div>
