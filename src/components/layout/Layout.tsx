@@ -7,7 +7,7 @@ import Footer from './Footer';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   useEffect(() => {
-    Aos.init({ duration: 1000, easing: 'ease-in-out', once: true });
+    Aos.init({ duration: 800, easing: 'ease-in-out', once: true });
   }, []);
 
   // Put Header or Footer Here

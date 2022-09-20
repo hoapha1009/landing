@@ -1,7 +1,7 @@
 import Button from '../../../buttons/Button';
 import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper/core';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 SwiperCore.use([Pagination, Autoplay, Navigation]);
 
 export function HomeBanner() {
@@ -9,7 +9,10 @@ export function HomeBanner() {
   const [_, setActiveIndex] = useState<any>();
 
   return (
-    <div className="relative flex max-h-96 min-h-[350px] w-full flex-row justify-center bg-[url('/images/home-banner.png')] bg-cover bg-no-repeat lg:mb-32 lg:h-[725px] lg:max-h-[725px] lg:items-center">
+    <div
+      data-aos='fade-up'
+      className="relative flex max-h-96 min-h-[350px] w-full flex-row justify-center bg-[url('/images/home-banner.png')] bg-cover bg-no-repeat lg:mb-8 lg:h-[725px] lg:max-h-[725px] lg:items-center"
+    >
       <div className='overflow-hidden '>
         <Swiper
           slidesPerView={1}
