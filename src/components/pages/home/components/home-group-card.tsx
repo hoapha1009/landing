@@ -10,7 +10,7 @@ export function HomeGroupCard({
   subtitle?: string;
 }) {
   return (
-    <div className='main-container py-8 lg:py-16 lg:px-[74px]'>
+    <div className='main-container py-8 lg:p-16'>
       <Title text={text} className={subtitle ? '' : 'mb-10'} />
       {subtitle && <Subtitle text={subtitle} className='mx-auto max-w-lg' />}
       <div className='grid w-full auto-rows-fr grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-8'>

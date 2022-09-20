@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useMemo, useState } from 'react';
-import { RiAlignJustify, RiArrowDownSLine } from 'react-icons/ri';
+import { RiAlignJustify, RiArrowUpSLine } from 'react-icons/ri';
 import { useScreen } from '../../hooks/use-screen';
 
 import Button from '../buttons/Button';
@@ -11,6 +11,7 @@ export default function Header() {
   const isLg = useScreen('lg');
   const router = useRouter();
   const [scrollTop, setScrollTop] = useState(0);
+  const [showMenuMobile, setShowMenuMobile] = useState(false);
   const isScrolled = useMemo(() => scrollTop > 50, [scrollTop]);
   const onScroll = (e: any) => {
     setScrollTop(e.target.documentElement.scrollTop);
@@ -38,80 +39,148 @@ export default function Header() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  useEffect(() => {
+    setShowMenuMobile(false);
+  }, [router.pathname]);
+
   return (
-    <header
-      className={`sticky top-0 z-100  w-full bg-white ${
-        isScrolled
-          ? 'border-b border-gray-50 shadow'
-          : 'border-transparent shadow-none'
-      }`}
-    >
-      <div className='main-container flex h-20 items-center justify-between font-medium'>
-        <div className='flex items-center gap-1'>
-          <Link href='/'>
-            <a className='mr-8 block'>
-              <NextImage
-                src='/images/logo.png'
-                alt='logo'
-                layout='responsive'
-                width={102}
-                height={36}
-              />
+    <>
+      <header
+        className={`sticky top-0 z-400  w-full bg-white ${
+          isScrolled
+            ? 'border-b border-gray-50 shadow'
+            : 'border-transparent shadow-none'
+        }`}
+      >
+        <div className='main-container flex h-20 items-center justify-between font-medium'>
+          <div className='flex items-center gap-1'>
+            <Link href='/'>
+              <a className='mr-8 block'>
+                <NextImage
+                  src='/images/logo.png'
+                  alt='logo'
+                  layout='responsive'
+                  width={isLg ? 102 : 85}
+                  height={isLg ? 36 : 30}
+                />
+              </a>
+            </Link>
+            {isLg && <MenuLink indexOfSelectedMenu={indexOfSelectedMenu} />}
+          </div>
+          <div className={!isLg ? 'flex flex-row items-center gap-x-2' : ''}>
+            <Button
+              variant='primary'
+              className='px-2.5 text-sm lg:px-4 lg:text-base'
+            >
+              Đăng ký tư vấn
+            </Button>
+            {!isLg && (
+              <Button
+                variant='outline'
+                className={`px-2 ${showMenuMobile ? 'bg-primary:' : ''}`}
+                onClick={() => setShowMenuMobile(!showMenuMobile)}
+              >
+                <i className='text-xl'>
+                  <RiAlignJustify />
+                </i>
+              </Button>
+            )}
+          </div>
+        </div>
+        <MenuMobile isShow={showMenuMobile}>
+          <MenuLink indexOfSelectedMenu={indexOfSelectedMenu} />
+        </MenuMobile>
+      </header>
+      {!isLg && showMenuMobile && (
+        <div
+          onClick={() => setShowMenuMobile(false)}
+          className='fixed top-0 left-0 z-200 h-full w-full'
+          style={{ backgroundColor: 'rgba(0, 0, 0, 0.32)' }}
+        ></div>
+      )}
+    </>
+  );
+}
+export function MenuLink({ indexOfSelectedMenu }) {
+  const router = useRouter();
+  const [show, setShow] = useState(false);
+  const isLg = useScreen('lg');
+
+  return (
+    <>
+      {MENU_TAB_LIST.map((tab, index) =>
+        tab?.subTabs ? (
+          <div key={index} className='group relative lg:inline-block'>
+            <button
+              className='inline-flex w-full items-center justify-between rounded lg:w-auto lg:justify-start lg:hover:bg-gray-100'
+              onClick={() => !isLg && setShow(!show)}
+            >
+              <span
+                className={`mr-1 py-2 lg:px-4 ${
+                  indexOfSelectedMenu === index && 'text-primary'
+                }`}
+              >
+                {tab.title}
+              </span>
+              <i className={`text-xl  ${show ? '-rotate-180' : ''}`}>
+                <RiArrowUpSLine />
+              </i>
+            </button>
+            {!isLg ? (
+              show && (
+                <ul className='rounded bg-white transition duration-300 ease-in-out lg:absolute lg:hidden lg:shadow lg:group-hover:block'>
+                  {tab.subTabs.map((subTab, index) => (
+                    <li key={index} className=''>
+                      <Link href={subTab.href} onClick={() => setShow(false)}>
+                        <a className='block whitespace-nowrap px-6 py-1 hover:bg-gray-100 lg:px-8 lg:py-3'>
+                          {subTab.title}
+                        </a>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )
+            ) : (
+              <>
+                <ul className='absolute hidden rounded bg-white shadow group-hover:block'>
+                  {tab.subTabs.map((subTab, index) => (
+                    <li key={index} className=''>
+                      <Link href={subTab.href}>
+                        <a className='block whitespace-nowrap px-8 py-3 hover:bg-gray-100'>
+                          {subTab.title}
+                        </a>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+          </div>
+        ) : (
+          <Link key={index} href={tab.href as string}>
+            <a
+              className={`block rounded py-2 hover:bg-gray-100 lg:px-4 ${
+                router.asPath === tab.href && 'text-primary'
+              }`}
+            >
+              {tab.title}
             </a>
           </Link>
-          {isLg &&
-            MENU_TAB_LIST.map((tab, index) =>
-              tab?.subTabs ? (
-                <div key={index} className='group relative inline-block'>
-                  <button className='inline-flex items-center rounded hover:bg-gray-100'>
-                    <span
-                      className={`mr-1 px-4 py-2 ${
-                        indexOfSelectedMenu === index && 'text-primary'
-                      }`}
-                    >
-                      {tab.title}
-                    </span>
-                    <i className='text-xl'>
-                      <RiArrowDownSLine />
-                    </i>
-                  </button>
-                  <ul className='absolute hidden rounded bg-white shadow group-hover:block'>
-                    {tab.subTabs.map((subTab, index) => (
-                      <li key={index} className=''>
-                        <Link href={subTab.href}>
-                          <a className='block whitespace-nowrap px-8 py-3 hover:bg-gray-100'>
-                            {subTab.title}
-                          </a>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ) : (
-                <Link key={index} href={tab.href as string}>
-                  <a
-                    className={`block rounded px-4 py-2 hover:bg-gray-100 ${
-                      router.asPath === tab.href && 'text-primary'
-                    }`}
-                  >
-                    {tab.title}
-                  </a>
-                </Link>
-              )
-            )}
+        )
+      )}
+    </>
+  );
+}
+
+export function MenuMobile({ children, isShow }) {
+  return (
+    <>
+      {isShow && (
+        <div className='absolute z-400 w-full animate-emerge-up bg-white pb-8'>
+          <div className='main-container z-300 px-1'>{children}</div>
         </div>
-        <div className={!isLg ? 'flex flex-row items-center gap-x-3' : ''}>
-          <Button variant='primary'>Đăng ký tư vấn</Button>
-          {!isLg && (
-            <Button variant='outline' className='px-2.5'>
-              <i className='text-2xl'>
-                <RiAlignJustify />
-              </i>
-            </Button>
-          )}
-        </div>
-      </div>
-    </header>
+      )}
+    </>
   );
 }
 
