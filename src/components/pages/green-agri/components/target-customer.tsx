@@ -1,18 +1,17 @@
 import { Card } from '../../../shared/card/card';
+import { Title } from '../../../shared/title/title';
 
 export function TargetCustomer() {
   return (
-    <div className='pb-24' data-aos='fade-up'>
-      <div className='mb-10 text-center text-3xl font-bold uppercase'>
-        các đối tượng khách hàng <br /> của green agri
-      </div>
-      <div className='mx-auto grid w-1/2 auto-rows-fr grid-cols-4 gap-8'>
+    <div className='py-8 lg:py-24' data-aos='fade-up'>
+      <Title text='các đối tượng khách hàng của green agri' className='mb-10' />
+      <div className='mx-2.5 grid auto-rows-fr grid-cols-2 gap-4 lg:mx-auto lg:w-1/2 lg:grid-cols-4 lg:gap-8'>
         {LIST.map((item, index) => (
           <Card
             index={index + 1}
             key={index}
             item={item}
-            className='gap-6 bg-primary-dark p-8 text-white'
+            className='gap-6 bg-gray-50 p-4 text-gray-600 lg:bg-primary-dark lg:p-8 lg:text-white'
           />
         ))}
       </div>

@@ -4,10 +4,13 @@ import { Title } from '../../../shared/title/title';
 
 export function About() {
   return (
-    <div className='main-container py-24 text-center' data-aos='fade-up'>
+    <div
+      className='main-container py-8 text-center lg:py-24'
+      data-aos='fade-up'
+    >
       <Title text='Về green agri' />
       <Subtitle
-        className='mx-auto w-1/3'
+        className='mx-auto lg:w-1/3'
         text='Là giải pháp thương mại điện tử và kênh phân phối  trong ngành
         nông nghiệp'
       />
@@ -17,21 +20,21 @@ export function About() {
         data-duration='500'
         src='/images/about-greenAgri.png'
         alt='about-green-agri'
-        className='mx-auto w-2/3'
+        className='mx-auto lg:w-1/2'
       />
-      <div className='my-8 text-left text-xl text-gray-600'>
+      <div className='my-8 text-left text-gray-600 lg:text-xl'>
         Hệ thống hỗ trợ nền tảng công nghệ cho doanh nghiệp kinh doanh truyền
         thống offline và kênh online hiệu quả. Hỗ trợ doanh nghiệp mở rộng kênh
         phân phối đến các đại lý các tỉnh, và phát triển mạng lưới sales/ cộng
         tác viên
       </div>
-      <div className='grid w-full auto-rows-fr grid-cols-4 gap-5'>
+      <div className='grid w-full auto-rows-fr gap-5 px-7 lg:grid-cols-4 lg:px-0'>
         {LIST.map((item, index) => (
           <Card
             index={index + 1}
             key={index}
             item={item}
-            className='gap-8 bg-gray-50 p-8 text-lg'
+            className='gap-5 bg-gray-50 p-4 text-lg lg:gap-8 lg:p-8'
             contentClass='text-gray-600'
           />
         ))}

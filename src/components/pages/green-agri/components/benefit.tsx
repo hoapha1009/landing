@@ -1,13 +1,12 @@
 import { InfoCard } from '../../../shared/info-card/info-card';
+import { Title } from '../../../shared/title/title';
 
 export function Benefit() {
   return (
-    <div className='pt-10 pb-24' data-aos='fade-up'>
-      <div className='main-container rounded-xl bg-primary-dark p-24'>
-        <div className='text-center text-3xl font-bold uppercase text-white'>
-          Lợi ích của green agri
-        </div>
-        <div className='mt-16 grid auto-rows-fr grid-cols-3 gap-8'>
+    <div className='lg:pt-10' data-aos='fade-up'>
+      <div className='main-container rounded-xl bg-primary-dark pt-8 pb-6 lg:p-24'>
+        <Title text='Lợi ích của green agri' className='text-white' />
+        <div className='mx-2 mt-20 grid auto-rows-fr gap-[72px] lg:mt-16 lg:grid-cols-3 lg:gap-8'>
           {LIST.map((item, index) => (
             <InfoCard key={index} item={item} />
           ))}

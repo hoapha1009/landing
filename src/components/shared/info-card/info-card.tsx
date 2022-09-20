@@ -17,11 +17,11 @@ interface InfoCardProps {
 
 export function InfoCard({ item }: InfoCardProps) {
   return (
-    <div className='relative rounded-xl bg-white px-4 pt-20 pb-12'>
+    <div className='relative rounded-xl border border-gray-50 bg-white px-4 pt-20 pb-8 shadow lg:pb-12'>
       <div
         data-aos='fade-up'
         data-aos-delay='100'
-        className='font-saira text-2xl font-semibold'
+        className='font-saira text-[23px] font-semibold lg:text-2xl'
       >
         {item.title}
       </div>
@@ -30,8 +30,8 @@ export function InfoCard({ item }: InfoCardProps) {
           <OptionRow
             key={index}
             content={option.content}
-            className='text-lg'
             hasAnimation
+            contentClassName='lg:text-lg'
           />
         ))}
       </div>

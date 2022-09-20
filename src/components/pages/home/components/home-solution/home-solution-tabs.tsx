@@ -41,11 +41,15 @@ export function HomeSolutionTabs() {
         </div>
         {MOCK_DATA[show].contens.map((content, indx) => (
           <div key={indx} className='mb-8 last:mb-0'>
-            {/* <li className='list-type-none mr-3 flex flex-row items-start text-lg'>
-              <img src='/images/leaf.png' alt='leaf' className='mr-4 w-5' />
+            {/* <li className='flex flex-row items-start mr-3 text-lg list-type-none'>
+              <img src='/images/leaf.png' alt='leaf' className='w-5 mr-4' />
               <span>{content}</span>
             </li> */}
-            <OptionRow key={indx} content={content} />
+            <OptionRow
+              key={indx}
+              content={content}
+              contentClassName='text-lg'
+            />
           </div>
         ))}
       </div>
