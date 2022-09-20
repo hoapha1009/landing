@@ -42,10 +42,7 @@
   );
   opacity: 0.6;
 }
-.wrapper-features {
-  padding-left: 24rem;
-  padding-right: 24rem;
-}
+
 .form-control {
   @apply mt-auto block min-h-10 w-full rounded border border-gray-400 bg-white py-0 px-3 hover:border-gray-500;
   @apply focus:border-primary focus:ring-1 focus:ring-primary focus:ring-opacity-50;

@@ -9,8 +9,8 @@ export function AboutUsPage() {
       <AboutUsHero />
       <AboutUsInfo />
       <AboutUsSolution />
-      <SlidePart title='Đối tác CỦA gREEN aGRI' className='bg-primary-light' />
-      <SlidePart title='Khách hàng Green Agri' />
+      <SlidePart title='Khách hàng Green Agri' className='bg-primary-light' />
+      <SlidePart title='Đối tác CỦA gREEN aGRI' />
     </>
   );
 }

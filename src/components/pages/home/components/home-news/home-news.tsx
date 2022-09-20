@@ -4,29 +4,19 @@ import { HomeNewList } from './components/home-news-list';
 
 export function HomeNews() {
   return (
-    <div className='relative bg-gray-50'>
-      <img
-        src='/images/home-leaf-bg-1.png'
-        className='absolute bottom-0 left-0'
-      />
-      <img
-        src='/images/home-leaf-bg-2.png'
-        className='absolute right-0 -top-[140px]'
-      />
-      <div className='main-container py-24'>
-        <div className='flex flex-row items-center justify-between px-12'>
-          <Title text='tin tức và chia sẻ' />
-          <div className='flex flex-row items-center'>
-            <a className='cursor-pointer border-transparent bg-transparent font-semibold text-primary no-underline hover:text-primary-dark'>
-              Xem thêm
-            </a>
-            <i className='ml-2 text-3xl font-semibold text-primary'>
-              <RiArrowRightSLine />
-            </i>
-          </div>
+    <div className='main-container py-24'>
+      <div className='flex flex-row items-center justify-between'>
+        <Title text='tin tức và chia sẻ' className='mb-8' />
+        <div className='flex flex-row items-center'>
+          <a className='cursor-pointer border-transparent bg-transparent font-semibold text-primary no-underline hover:text-primary-dark'>
+            Xem thêm
+          </a>
+          <i className='ml-2 text-3xl font-semibold text-primary'>
+            <RiArrowRightSLine />
+          </i>
         </div>
-        <HomeNewList />
       </div>
+      <HomeNewList />
     </div>
   );
 }

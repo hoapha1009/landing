@@ -14,7 +14,7 @@ export function HomePage() {
 
       <HomeGroupCard
         text='Ưu điểm GAT'
-        subtitle='Miêu tả giải pháp của GAT Miêu tả giải pháp của GAT Miêu tả giải pháp của GAT'
+        // subtitle='Miêu tả giải pháp của GAT Miêu tả giải pháp của GAT Miêu tả giải pháp của GAT'
       />
       <HomeSolution />
 

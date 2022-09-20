@@ -19,7 +19,7 @@ export function HomeSolutionTabs() {
             >
               <Button
                 onClick={() => setShow(index)}
-                className={` border-0 px-8 transition duration-300 ease-in-out hover:bg-none ${
+                className={` border-0 px-4  transition duration-300 ease-in-out hover:bg-none ${
                   show !== index
                     ? 'rounded-md bg-white text-gray-700 hover:text-gray-700'
                     : 'bg-primary'
@@ -40,11 +40,7 @@ export function HomeSolutionTabs() {
           {MOCK_DATA[show].topic}
         </div>
         {MOCK_DATA[show].contens.map((content, indx) => (
-          <div key={indx} className='mb-8 last:mb-0'>
-            {/* <li className='flex flex-row items-start mr-3 text-lg list-type-none'>
-              <img src='/images/leaf.png' alt='leaf' className='w-5 mr-4' />
-              <span>{content}</span>
-            </li> */}
+          <div key={indx} className='mb-6'>
             <OptionRow
               key={indx}
               content={content}
@@ -59,31 +55,33 @@ export function HomeSolutionTabs() {
 
 const MOCK_DATA = [
   {
-    appName: 'App Nhân Viên',
+    appName: 'Thương mại điện tử',
     topic: 'Hệ sinh thái GAT',
     contens: [
-      'Là nơi để khách hàng và doanh nghiệp tương tác với nhau mà không phải thông qua một nền tảng thứ 3 nào khác.',
-      'App được đặt tên theo Brandname của doanh nghiệp, tạo sự khác biệt với các thương hiệu đối thủ khác.',
-      'Khách hàng có thể quản lý được lịch sử mua hàng, điểm tích luỹ, được cập nhập các chương trình khuyến mãi, thông báo của doanh nghiệp...',
-      'Nhận feedback từ khách hàng một cách nhanh chóng, hạn chế tạo ra bad review khó khắc phục như trước đây.',
+      'Là nơi để khách hàng và doanh nghiệp tương tác với nhau mà không phải thônGiải pháp công nghệ tập trung tối ưu hiệu quả quản lý hệ thống kênh phân phối của doanh nghiệp.',
+      'Dễ dàng quản lý và tuyển cộng tác viên, đại lý. Mở rộng mô hình kinh doanh.',
+      'Tiết kiệm thời gian và chi phí quản lý. Đột phá doanh thu',
+      'Dễ dàng trong việc tính toán khoa học thu nhập cho cộng tác viên và đại lý. ',
     ],
   },
   {
-    appName: 'App Quản lý',
+    appName: 'Truy xuất nguồn gốc',
     topic: 'Hệ sinh thái GAT',
     contens: [
-      'Là nơi để khách hàng và doanh nghiệp tương tác với nhau mà không phải thông qua một nền tảng thứ 3 nào khác.',
-      'App được đặt tên theo Brandname của doanh nghiệp, tạo sự khác biệt với các thương hiệu đối thủ khác.',
+      'Truy tìm lịch sử các thông tin về quy trình sản xuất, chế biến, phân phối và cho đến khi sản phẩm đến được tay người dùng',
+      'Nâng cao vị thế thương hiệu cho doanh nghiệp, tạo dựng niềm tin với người tiêu dùng. Tạo môi trường kinh doanh minh bạch.',
+      'Truy xuất nguồn gốc giúp giảm thiểu gian lận và làm giả thực phẩm. ',
+      'Giúp người tiêu dùng mua được các sản phẩm chất lượng với đầy đủ thông tin nguồn gốc. ',
     ],
   },
   {
-    appName: 'App khách hàng',
+    appName: 'Nhật ký canh tác',
     topic: 'Hệ sinh thái GAT',
     contens: [
-      'Là nơi để khách hàng và doanh nghiệp tương tác với nhau mà không phải thông qua một nền tảng thứ 3 nào khác.',
-      'App được đặt tên theo Brandname của doanh nghiệp, tạo sự khác biệt với các thương hiệu đối thủ khác.',
-      'Khách hàng có thể quản lý được lịch sử mua hàng, điểm tích luỹ, được cập nhập các chương trình khuyến mãi, thông báo của doanh nghiệp...',
-      'Nhận feedback từ khách hàng một cách nhanh chóng, hạn chế tạo ra bad review khó khắc phục như trước đây.',
+      'Là nơi để khách hàng và doanh nghiệp tCung cấp nền tảng ghi nhận lại hoạt động sản xuất của người nông dân và các mốc thời gian tương ứng với các hoạt động.',
+      'Hỗ trợ thu thập dữ liệu quá trình sản xuất, số hóa và cung cấp dữ liệu cho truy xuất nguồn gốc sản phẩm nông sản.',
+      'Tăng năng suất canh tác, cải thiện sản lượng và chất lượng sản phẩm đồng thời giảm chi phí các hoạt động canh tác',
+      'Giúp chuẩn hóa quy trình sản xuất theo các tiêu chuẩn như VietGap, GlobalGap và Organic.',
     ],
   },
 ];

@@ -13,29 +13,24 @@ export function HomeNewsCard({ news }: { news: NewProps }) {
   return (
     <Link href='/'>
       <a>
-        <div
-          className={`relative h-[400px] w-[440px] cursor-pointer overflow-hidden rounded-md border bg-white bg-[url('/images/home-news-share-2.png')] bg-contain bg-no-repeat shadow-md`}
-        >
-          <div className='flex p-5'>
-            <span className='mr-4 inline-block rounded-md bg-white px-4 py-1 text-blue-400'>
-              {news.topic}
-            </span>
-            <span className='inline-block rounded-md bg-orange-400 px-4 py-1 text-white'>
-              {news.date}
-            </span>
+        <div className='group cursor-pointer'>
+          <div className='h-64 w-full overflow-auto rounded-md'>
+            <img
+              src={`images/${news.image}`}
+              className='h-full w-full'
+              alt='image-new'
+            />
           </div>
-
-          <div className='mark-gradient absolute bottom-0 left-0 h-44 w-full'></div>
-          <div className='absolute bottom-0 left-0 z-20 flex h-[10.5rem] w-full flex-col items-start justify-center p-5'>
-            <div className='mb-4 text-2xl font-semibold text-white'>
-              {news.title}
+          <div className='my-3 flex flex-row items-center'>
+            <div className='rounded-sm bg-[#E7F7F0] px-4 py-1 font-semibold text-primary'>
+              {news.topic}
             </div>
-            <Button
-              variant='light'
-              className='bg-white px-10 py-2 text-gray-700'
-            >
-              Xem thêm
-            </Button>
+            <div className='px-4 py-1 font-semibold text-gray-500 '>
+              {news.date}
+            </div>
+          </div>
+          <div className='text-ellipsis-2 font-saira text-xl font-semibold group-hover:text-primary'>
+            {news.title}
           </div>
         </div>
       </a>

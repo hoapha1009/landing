@@ -30,7 +30,7 @@ export default function Footer() {
 
 function InformationGat() {
   return (
-    <div className='w-[450px] shrink-0 grow-0'>
+    <div className='w-[470px] shrink-0 grow-0'>
       <Link href='/'>
         <a>
           <img
@@ -77,7 +77,7 @@ function MenusLink() {
   return (
     <div className='flex flex-row'>
       {MOCKS_LINK.map((item, index) => (
-        <div key={index} className='mr-32 last:mr-0'>
+        <div key={index} className='mr-16 last:mr-0'>
           <div className='mb-4 font-saira text-xl font-normal uppercase text-white'>
             {item.name}
           </div>
@@ -104,12 +104,16 @@ function QRcode() {
         </div>
         <div className='font-medium text-gray-400 hover:text-white'>
           <Link href='/'>
-            <a className='hover:underline'>Link IOS</a>
+            <a>
+              <img src='./images/google-play.png' alt='google-play' />
+            </a>
           </Link>
         </div>
         <div className='font-medium text-gray-400 hover:text-white'>
           <Link href='/'>
-            <a className='hover:underline'>Link Android</a>
+            <a>
+              <img src='./images/app-store.png' alt='app-store' />
+            </a>
           </Link>
         </div>
       </div>
