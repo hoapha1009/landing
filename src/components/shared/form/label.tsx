@@ -36,11 +36,7 @@ export function Label({
           )}
 
           {props.required && (
-            <sup
-              className={`ml-1 text-[8px] ${
-                props.error ? 'text-danger' : 'text-primary'
-              }`}
-            >
+            <sup className='ml-1 text-[8px] text-danger'>
               <FaAsterisk />
             </sup>
           )}

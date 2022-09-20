@@ -1,5 +1,6 @@
 import { OptionRow } from '../option-row/option-row';
 import Button from '../../buttons/Button';
+import { useScreen } from '../../../hooks/use-screen';
 
 interface IntroduceProps {
   title: string;
@@ -13,6 +14,31 @@ interface IntroduceProps {
 }
 
 export function Introduce({ img, title, options, ...props }: IntroduceProps) {
+  const isLg = useScreen('lg');
+
+  if (!isLg) {
+    return (
+      <div className='bg-primary-light py-8' data-aos='fade-up'>
+        <div className='main-container'>
+          <div className='text-center text-2xl font-bold leading-tight'>
+            {title}
+          </div>
+          <img src={img.src} alt={img.alt} className='mx-auto object-contain' />
+          <div className='mt-6 flex flex-col gap-4'>
+            {options.map((option, index) => (
+              <OptionRow key={index} content={option.content} />
+            ))}
+          </div>
+          <div className='mt-8 text-center'>
+            <Button variant='primary' className='!px-8 !py-3'>
+              SỬ DỤNG NGAY
+            </Button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className='bg-primary-light py-24' data-aos='fade-up'>
       <div className='main-container flex items-center gap-2'>
@@ -37,7 +63,7 @@ export function Introduce({ img, title, options, ...props }: IntroduceProps) {
             alt={img.alt}
             width='100%'
             height='100%'
-            className='ml-auto'
+            className='object-contain'
           />
         </div>
       </div>

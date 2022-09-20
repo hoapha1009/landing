@@ -46,7 +46,11 @@ function Card({ item, index }: CardProps) {
       <div className='mt-8 font-saira text-2xl font-semibold'>{item.title}</div>
       <div className='mt-5 mb-8 flex flex-col gap-4'>
         {item.options.map((option, index) => (
-          <OptionRow key={index} content={option.content} />
+          <OptionRow
+            key={index}
+            content={option.content}
+            contentClassName='text-lg'
+          />
         ))}
       </div>
       <div className='flex justify-center'>

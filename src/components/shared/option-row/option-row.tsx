@@ -29,9 +29,7 @@ export function OptionRow({
         height={22}
         className='mt-1'
       />
-      <div
-        className={`flex-1 text-base text-gray-600 lg:text-lg ${contentClassName}`}
-      >
+      <div className={`flex-1 text-gray-600 ${contentClassName}`}>
         {content}
       </div>
     </div>

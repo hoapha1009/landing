@@ -9,11 +9,7 @@ export function Form() {
     email: '',
     phone: '',
     businessLines: '',
-    cultivatedArea: 0,
-    numberOfCultivators: 0,
-    address: '',
-    reasonKnowUs: '',
-    yourProblem: '',
+    yourNeeds: '',
   }));
 
   const handleSubmit = (e) => {
@@ -33,8 +29,11 @@ export function Form() {
   };
 
   return (
-    <div className='my-24' data-aos='fade-up'>
-      <div className='mx-auto w-2/3 rounded-xl border border-gray-50 bg-gray-50 px-24 py-12 shadow-md'>
+    <div
+      className='bg-gray-50 px-2.5 pt-8 lg:bg-white lg:py-24 lg:px-0'
+      data-aos='fade-up'
+    >
+      <div className='mx-auto rounded-xl border-gray-50 pb-12 lg:w-2/3 lg:border lg:bg-gray-50 lg:px-24 lg:shadow-md'>
         <Title text='sản phẩm của chúng tôi đã sẵn sàng' />
         <Subtitle text='Đăng ký đặt lịch để được trải nghiệm sớm nhất công nghệ của chúng tôi' />
 
@@ -50,7 +49,7 @@ export function Form() {
               onChange={handleChangeValue}
             />
           </div>
-          <div className='flex gap-2'>
+          <div className='flex flex-col gap-4 lg:flex-row lg:gap-2'>
             <div className='flex-1'>
               <Label required text='Số điện thoại' />
               <input
@@ -73,69 +72,25 @@ export function Form() {
               />
             </div>
           </div>
-          <div className='flex gap-2'>
-            <div className='flex-1'>
-              <Label required text='Diện tích canh tác' />
-              <input
-                required
-                name='cultivatedArea'
-                className='form-control'
-                type='number'
-                min='0'
-                value={data.cultivatedArea}
-                onChange={handleChangeValue}
-              />
-            </div>
-            <div className='flex-1'>
-              <Label required text='Số lượng người canh tác' />
-              <input
-                required
-                name='numberOfCultivators'
-                className='form-control'
-                type='number'
-                min='0'
-                value={data.numberOfCultivators}
-                onChange={handleChangeValue}
-              />
-            </div>
-          </div>
           <div className=''>
-            <Label required text='Địa chỉ canh tác' />
-            <input
-              required
-              name='address'
-              className='form-control'
-              value={data.address}
-              onChange={handleChangeValue}
-            />
-          </div>
-          <div className=''>
-            <Label required text='Vì sao bạn biết đến chúng tôi?' />
-            <input
-              required
-              name='reasonKnowUs'
-              className='form-control'
-              value={data.reasonKnowUs}
-              onChange={handleChangeValue}
-            />
-          </div>
-          <div className=''>
-            <Label text='Vấn đề của bạn là gì?' />
+            <Label text='Nhu cầu của bạn là gì?' />
             <textarea
               name='yourProblem'
               className='form-control py-2 outline-none'
               rows={3}
-              value={data.yourProblem}
+              value={data.yourNeeds}
               onChange={handleChangeValue}
             />
           </div>
-          <Button
-            variant='primary'
-            className='mt-1 w-52 justify-center'
-            type='submit'
-          >
-            ĐẶT LỊCH DÙNG THỬ
-          </Button>
+          <div className='mt-1 text-center lg:text-left'>
+            <Button
+              variant='primary'
+              className='w-52 justify-center !py-3'
+              type='submit'
+            >
+              ĐẶT LỊCH DÙNG THỬ
+            </Button>
+          </div>
         </form>
       </div>
     </div>

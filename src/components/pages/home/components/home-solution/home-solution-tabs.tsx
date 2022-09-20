@@ -57,7 +57,11 @@ export function HomeSolutionTabs() {
         </div>
         {MOCK_DATA[show].contens.map((content, indx) => (
           <div key={indx} className='mb-3 lg:mb-6'>
-            <OptionRow key={indx} content={content} />
+            <OptionRow
+              key={indx}
+              content={content}
+              contentClassName='text-lg'
+            />
           </div>
         ))}
       </div>

@@ -76,3 +76,16 @@ input::-webkit-inner-spin-button {
 input:focus {
   outline: none;
 }
+
+.no-scrollbar {
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}

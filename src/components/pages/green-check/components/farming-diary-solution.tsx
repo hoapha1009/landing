@@ -4,10 +4,13 @@ import { Title } from '../../../shared/title/title';
 
 export function FarmingDiarySolution() {
   return (
-    <div data-aos='fade-up' className='main-container py-24 text-center'>
+    <div
+      data-aos='fade-up'
+      className='main-container py-8 text-center lg:py-24'
+    >
       <Title text='GIẢI PHÁP NHẬT KÝ CANH TÁC' />
       <Subtitle
-        className='mx-auto w-5/6'
+        className='mx-auto w-full lg:w-5/6'
         text='Là giải pháp cung cấp nền tảng ghi nhận lại hoạt động sản xuất của người
         nông dân và các mốc thời gian tương ứng với các hoạt động đó. Nhật ký sẽ
         tập hợp các thông tin về quá trình tạo ra sản phẩm, hình thành nên một
@@ -21,7 +24,7 @@ export function FarmingDiarySolution() {
         alt='solution-diary-image'
         className='mx-auto w-2/3'
       />
-      <div className='mt-8 grid w-full auto-rows-fr grid-cols-3 gap-8'>
+      <div className='mt-8 grid w-full gap-4 lg:auto-rows-fr lg:grid-cols-3 lg:gap-8'>
         {LIST.map((item, index) => (
           <Card key={index} item={item} index={index + 1} />
         ))}
@@ -51,7 +54,7 @@ export function Card({ item, index, ...props }: CardProps) {
     <div
       data-aos='fade-up'
       data-aos-delay={delay}
-      className='rounded-md border border-gray-50 bg-gray-50 p-8 shadow'
+      className='rounded-md border border-gray-50 bg-gray-50 p-4 shadow lg:p-8'
     >
       <div className='flex items-center gap-4'>
         <NextImage
@@ -60,9 +63,11 @@ export function Card({ item, index, ...props }: CardProps) {
           width={47}
           height={47}
         />
-        <div className='font-saira text-2xl font-semibold'>{item.title}</div>
+        <div className='font-saira text-xl font-semibold lg:text-2xl'>
+          {item.title}
+        </div>
       </div>
-      <div className='mt-8 text-left text-xl'>{item.content}</div>
+      <div className='mt-2 text-left lg:mt-8 lg:text-xl'>{item.content}</div>
     </div>
   );
 }

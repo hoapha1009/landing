@@ -4,7 +4,7 @@ import { Benefit } from './benefit';
 
 export function TraceabilitySolution() {
   return (
-    <div data-aos='fade-up' className='bg-primary-light py-24'>
+    <div data-aos='fade-up' className='bg-primary-light py-8 lg:py-24'>
       <div className='main-container'>
         <Title text='giải pháp truy xuất nguồn gốc' />
         <Subtitle
