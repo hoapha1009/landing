@@ -4,8 +4,8 @@ import { HomeSolutionTabs } from './home-solution-tabs';
 
 export function HomeSolution() {
   return (
-    <div className='main-container rounded-xl bg-primary-dark py-16 px-[74px]'>
-      <div className='mb-8'>
+    <div className='main-container rounded-xl bg-primary-dark px-1 pt-8 pb-3 lg:px-16 lg:pt-16 lg:pb-8'>
+      <div className='mb-8 px-3 lg:px-0'>
         <Title text='giải pháp gat' className='text-white' />
         <Subtitle
           text='Miêu tả giải pháp của GAT Miêu tả giải pháp của GAT Miêu tả giải pháp của GAT'
@@ -13,10 +13,14 @@ export function HomeSolution() {
         />
       </div>
 
-      <div className='flex flex-row gap-x-10'>
+      <div className='flex flex-col gap-3 px-2 lg:flex-row lg:gap-10 lg:px-0'>
         <HomeSolutionTabs />
-        <div className='pt-16'>
-          <img src='/images/home-solution.png' alt='image' />
+        <div className='lg:pt-16'>
+          <img
+            src='/images/home-solution.png'
+            alt='image'
+            className='w-full lg:w-auto'
+          />
         </div>
       </div>
     </div>

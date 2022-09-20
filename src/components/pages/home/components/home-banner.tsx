@@ -9,7 +9,7 @@ export function HomeBanner() {
   const [_, setActiveIndex] = useState<any>();
 
   return (
-    <div className="relative mb-32 flex h-[725px] max-h-[725px] w-full flex-row items-center justify-center bg-[url('/images/home-banner.png')] bg-cover bg-no-repeat">
+    <div className="relative flex max-h-96 min-h-[350px] w-full flex-row justify-center bg-[url('/images/home-banner.png')] bg-cover bg-no-repeat lg:mb-32 lg:h-[725px] lg:max-h-[725px] lg:items-center">
       <div className='overflow-hidden '>
         <Swiper
           slidesPerView={1}
@@ -40,7 +40,7 @@ export function HomeBanner() {
         </Swiper>
       </div>
       <div
-        className='flex-center absolute bottom-16 z-50 w-full gap-1.5 text-center'
+        className='flex-center absolute bottom-4 z-50  w-full gap-1.5 text-center lg:bottom-16'
         ref={paginationRef}
       />
     </div>
@@ -49,21 +49,21 @@ export function HomeBanner() {
 
 function HomBannerContent() {
   return (
-    <div>
+    <div className='mt-8 lg:mt-0'>
       <img
         src='/images/logo.png'
         alt='logo'
-        className='mx-auto w-56 object-contain'
+        className='mx-auto w-16 object-contain lg:w-56'
       />
-      <div className='my-8 mx-auto w-[715px] bg-gradient-to-r from-[#65AFF4] to-primary bg-clip-text text-center text-5xl font-semibold leading-[3.5rem] text-transparent'>
+      <div className='my-2 mx-auto w-80 bg-gradient-to-r from-[#65AFF4] to-primary bg-clip-text text-center text-lg font-semibold text-transparent lg:my-8 lg:w-[715px] lg:text-5xl lg:leading-[3.5rem]'>
         Trying to be your most trusted Agriculte Platform
       </div>
-      <div className='mx-auto w-[840px] max-w-screen-lg text-center text-xl font-normal  leading-6 text-white'>
+      <div className='mx-auto w-80 max-w-screen-lg text-center text-base font-normal leading-6 text-white  lg:w-[840px] lg:text-xl'>
         Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in
         laying out print, graphic or web designs. The passage is attributed to
         an unknown.
       </div>
-      <div className='mt-7 text-center'>
+      <div className='mt-6 text-center lg:mt-7'>
         <Button variant='primary'>Tìm hiểu thêm</Button>
       </div>
     </div>

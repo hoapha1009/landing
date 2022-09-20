@@ -5,12 +5,12 @@ import { OptionRow } from '../../../../shared/option-row/option-row';
 export function HomeSolutionTabs() {
   const [show, setShow] = useState(0);
   return (
-    <div className='w-[917px] flex-1 overflow-hidden rounded-md bg-transparent'>
+    <div className='w-full flex-1 overflow-hidden rounded-md bg-transparent lg:w-[917px]'>
       <div className='flex flex-row items-center bg-primary-dark'>
         {MOCK_DATA.map((item, index) => (
           <div
             key={index}
-            className={`rounded-t-md border-[12px]  ${
+            className={`min-w-fit rounded-t-md border-[12px] lg:min-w-none  ${
               show !== index ? 'border-primary-dark' : 'border-white'
             }`}
           >
@@ -32,15 +32,15 @@ export function HomeSolutionTabs() {
         ))}
       </div>
       <div
-        className={`h-full bg-white px-6 ${
+        className={`h-full bg-white px-6 py-2 lg:py-6 ${
           show === 0 ? 'rounded-tr-md' : 'rounded-t-md'
         }`}
       >
-        <div className='mb-4 pt-6 text-lg font-semibold'>
+        <div className='mb-4 text-lg font-semibold '>
           {MOCK_DATA[show].topic}
         </div>
         {MOCK_DATA[show].contens.map((content, indx) => (
-          <div key={indx} className='mb-6'>
+          <div key={indx} className='mb-3 lg:mb-6'>
             <OptionRow
               key={indx}
               content={content}
