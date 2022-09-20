@@ -10,11 +10,11 @@ export function HomeNews() {
       <div className='flex flex-row items-center justify-between'>
         <Title text='tin tức và chia sẻ' className='mb-4 lg:mb-8' />
         {isLg && (
-          <div className='flex flex-row items-center'>
-            <a className='cursor-pointer border-transparent bg-transparent font-semibold text-primary no-underline hover:text-primary-dark'>
+          <div className='flex cursor-pointer flex-row items-center'>
+            <a className='border-transparent bg-transparent font-semibold text-primary no-underline'>
               Xem thêm
             </a>
-            <i className='ml-2 text-3xl font-semibold text-primary'>
+            <i className='ml-1 text-3xl font-semibold text-primary'>
               <RiArrowRightSLine />
             </i>
           </div>

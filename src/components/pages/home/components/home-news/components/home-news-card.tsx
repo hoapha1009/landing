@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useScreen } from '../../../../../../hooks/use-screen';
 import Button from '../../../../../buttons/Button';
 
 export interface NewProps {
@@ -10,10 +11,15 @@ export interface NewProps {
 }
 
 export function HomeNewsCard({ news }: { news: NewProps }) {
+  const isLg = useScreen('lg');
   return (
     <Link href='/'>
       <a>
-        <div className='group flex cursor-pointer flex-row items-center gap-2 lg:flex-col lg:gap-0'>
+        <div
+          className={`group flex  cursor-pointer flex-row gap-2 ${
+            isLg ? '' : 'items-center'
+          } lg:flex-col lg:gap-0`}
+        >
           <div className='shrink-0 basis-2/5 overflow-hidden rounded-md'>
             <img
               src={`images/${news.image}`}

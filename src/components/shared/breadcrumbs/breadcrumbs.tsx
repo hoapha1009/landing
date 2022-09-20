@@ -33,17 +33,17 @@ export function BreadCrumbs({ breadcrumbs, className = '' }: PropsType) {
             <div className='flex shrink-0 grow-0 items-center'>
               <Link href={breadcrumb.href}>
                 <a className=''>
-                  <div className='whitespace-nowrap lowercase text-primary-dark transition-all duration-200 first-letter:uppercase hover:text-primary hover:underline'>
+                  <div className='whitespace-nowrap lowercase !text-primary transition-all duration-200 first-letter:uppercase hover:text-primary hover:underline'>
                     {breadcrumb.label}
                   </div>
                 </a>
               </Link>
               <div className='px-1.5'>
-                <AiOutlineRight className='font-semibold text-gray-500' />
+                <AiOutlineRight className='font-semibold !text-primary' />
               </div>
             </div>
           ) : (
-            <div className='flex-1 whitespace-nowrap lowercase text-accent first-letter:uppercase'>
+            <div className='flex-1 whitespace-nowrap first-letter:uppercase'>
               {truncateLabel(breadcrumb.label)}
             </div>
           )}

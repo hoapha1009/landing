@@ -12,7 +12,7 @@ export function HomeNewList() {
 
 const MOCK_DATA = [
   {
-    image: 'home-news-share-3.png',
+    image: 'home-news-share-1.png',
     topic: 'Thông tin mùa vụ',
     date: '11/8/2000',
     title: 'Bật mí 4 cách bán hàng trên facebook hiệu quả cho người mới',

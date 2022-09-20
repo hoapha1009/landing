@@ -24,7 +24,7 @@ export function FeaturesPage() {
           wrapContentClassName='ml-12'
         />
         <FeaturesItem
-          reverse
+          className='flex-row-reverse'
           title='Quản lý ưu đãi theo thương hiệu'
           subtitle='Mỗi thương hiệu sẽ có nhiều ưu đãi khác nhau. Khi tổng hợp lại nhiều thương hiệu thì sẽ có càng nhiều ưu đãi. Chính vì vậy, tính năng này giúp khách hàng quản lý ưu đãi của mình theo từng thương hiệu để dễ dàng hơn trong việc sử dụng.'
           image='/images/features-banner-2.png'
@@ -37,7 +37,7 @@ export function FeaturesPage() {
           wrapContentClassName='ml-12'
         />
         <FeaturesItem
-          reverse
+          className='flex-row-reverse'
           title='Quản lý ưu đãi theo thương hiệu'
           subtitle='Mỗi thương hiệu sẽ có nhiều ưu đãi khác nhau. Khi tổng hợp lại nhiều thương hiệu thì sẽ có càng nhiều ưu đãi. Chính vì vậy, tính năng này giúp khách hàng quản lý ưu đãi của mình theo từng thương hiệu để dễ dàng hơn trong việc sử dụng.'
           image='/images/features-banner-2.png'

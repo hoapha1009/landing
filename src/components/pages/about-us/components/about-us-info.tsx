@@ -3,15 +3,15 @@ import { Title } from '../../../shared/title/title';
 
 export function AboutUsInfo() {
   return (
-    <div className='main-container rounded-lg bg-primary-dark p-16 shadow-sm'>
-      <Title text='giới thiệu về gat' className='text-white' />
+    <div className='main-container rounded-lg bg-primary-dark p-3 shadow-sm lg:p-16'>
+      <Title text='giới thiệu về gat' className='mt-3 text-white lg:mt-0' />
       <Subtitle
         text='Công ty Cổ phần Công nghệ Green Agri là đơn vị tiên phong trong lĩnh vực cung cấp các giải pháp công nghệ cho ngành nông nghiệp
         Với đội ngũ chuyên gia trong lĩnh vực nông nghiệp và công nghệ thông tin. Chúng tôi sẽ xây dựng và đưa ra những giải pháp công nghệ để hỗ trợ các doanh nghiệp và người nông dân số hóa các qui trình, công đoạn trong sản xuất, canh tác để nâng cao hiệu năng cho sản xuất nông nghiệp trên cơ sở nền tảng công nghệ tối ưu và minh bạch'
         className='!mt-8 mb-16 !text-left text-lg font-normal !text-white'
       />
 
-      <div className='grid grid-cols-2 gap-[92px] px-16 pb-16'>
+      <div className='grid grid-cols-1 gap-10 pl-16  pr-0 pb-16 lg:grid-cols-2 lg:gap-[92px] lg:pr-16'>
         {MOCK_DATA.map((item, index) => (
           <AboutUseCardHorizontal data={item} key={index} />
         ))}
@@ -34,10 +34,10 @@ function AboutUseCardHorizontal({
         className='flex h-full min-h-28 rounded-md shadow-sm'
         style={{ backgroundColor: 'rgba(255, 255, 255, 0.3)' }}
       >
-        <div className='-ml-16 -mt-9 flex h-[120px] w-[120px] shrink-0 items-center justify-center rounded-full border-4 border-primary-dark bg-white'>
+        <div className='-ml-16 -mt-9 flex h-24 w-24 shrink-0 items-center justify-center rounded-full border-4 border-primary-dark bg-white lg:h-[120px] lg:w-[120px]'>
           <img src={data.image} alt='' />
         </div>
-        <div className='z-20 h-full w-full rounded-md p-4 text-lg text-white '>
+        <div className='z-20 h-full w-full rounded-md p-2 text-base text-white lg:p-4 lg:text-lg'>
           {data.content}
         </div>
       </div>
