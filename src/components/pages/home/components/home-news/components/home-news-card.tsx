@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { useScreen } from '../../../../../../hooks/use-screen';
-import Button from '../../../../../buttons/Button';
 
 export interface NewProps {
   image: string;
@@ -10,12 +9,22 @@ export interface NewProps {
   href: string;
 }
 
-export function HomeNewsCard({ news }: { news: NewProps }) {
+export function HomeNewsCard({
+  news,
+  index,
+}: {
+  news: NewProps;
+  index: number;
+}) {
   const isLg = useScreen('lg');
+  const delay = (index * 200).toString();
+
   return (
     <Link href='/'>
       <a>
         <div
+          data-aos='fade-up'
+          data-aos-delay={delay}
           className={`group flex  cursor-pointer flex-row gap-2 ${
             isLg ? '' : 'items-center'
           } lg:flex-col lg:gap-0`}

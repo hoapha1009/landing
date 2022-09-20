@@ -8,7 +8,7 @@ SwiperCore.use([Pagination, Autoplay, Navigation]);
 export function FeaturesOther() {
   const isLg = useScreen('lg');
   return (
-    <div className='pt-16'>
+    <div data-aos='fade-up' className='pt-16'>
       <Title text='Các tính năng khác' className='mb-10' />
       <Swiper
         slidesPerView={1.5}

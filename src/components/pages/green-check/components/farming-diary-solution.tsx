@@ -21,7 +21,7 @@ export function FarmingDiarySolution() {
         slidesPerView={1}
         spaceBetween={0}
         grabCursor
-        className='mx-auto pb-10'
+        className='mx-auto w-full pb-10 lg:w-2/3'
         loop={true}
         freeMode={false}
         autoplay={{
@@ -33,7 +33,7 @@ export function FarmingDiarySolution() {
           clickable: true,
 
           bulletClass:
-            'inline-block w-3 h-3 bg-gray-400 rounded-full transition-all cursor-pointer mr-2 last:mr-0 hover:bg-blue-500 transform translate-y-3',
+            'inline-block w-3 h-3 bg-gray-400 rounded-full transition-all cursor-pointer mr-2 last:mr-0 hover:bg-primary transform translate-y-3',
         }}
       >
         {IMAGE_LIST.map((item, index) => (

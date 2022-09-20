@@ -25,6 +25,7 @@ export function BreadCrumbs({ breadcrumbs, className = '' }: PropsType) {
 
   return (
     <div
+      data-aos='fade'
       className={`main-container flex flex-row items-center overflow-hidden text-sm font-semibold ${className}`}
     >
       {breadcrumbs.map((breadcrumb, index) => (

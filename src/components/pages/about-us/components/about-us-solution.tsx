@@ -3,7 +3,7 @@ import { Title } from '../../../shared/title/title';
 
 export function AboutUsSolution() {
   return (
-    <div className='main-container py-16 lg:px-16'>
+    <div data-aos='fade-up' className='main-container py-16 lg:px-16'>
       <Title text='Giải pháp green agri' />
       <Subtitle
         text='Bộ giải pháp hàng đầu cho ngành nông nghiệp'
@@ -11,7 +11,7 @@ export function AboutUsSolution() {
       />
       <div className='grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8'>
         {MOCK_DATA.map((item, index) => (
-          <AboutUsSolutionCard data={item} key={index} />
+          <AboutUsSolutionCard data={item} key={index} index={index} />
         ))}
       </div>
     </div>
@@ -20,11 +20,19 @@ export function AboutUsSolution() {
 
 function AboutUsSolutionCard({
   data,
+  index,
 }: {
   data: { image: string; title: string; content: string };
+  index: number;
 }) {
+  const delay = (index * 100).toString();
+
   return (
-    <div className='min-h-[150px] rounded-md border bg-gray-100 p-3 shadow-md lg:p-6'>
+    <div
+      data-aos='fade-up'
+      data-aos-delay={delay}
+      className='min-h-[150px] rounded-md border bg-gray-100 p-3 shadow-md lg:p-6'
+    >
       <div className='flex flex-row items-center'>
         <img
           src={data.image}

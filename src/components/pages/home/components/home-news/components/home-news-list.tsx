@@ -4,7 +4,7 @@ export function HomeNewList() {
   return (
     <div className='grid grid-cols-1 gap-3 lg:grid-cols-3 lg:gap-8'>
       {MOCK_DATA.map((item, index) => (
-        <HomeNewsCard news={item} key={index} />
+        <HomeNewsCard news={item} key={index} index={index} />
       ))}
     </div>
   );

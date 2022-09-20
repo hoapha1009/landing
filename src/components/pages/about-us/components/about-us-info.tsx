@@ -3,7 +3,10 @@ import { Title } from '../../../shared/title/title';
 
 export function AboutUsInfo() {
   return (
-    <div className='main-container rounded-lg bg-primary-dark p-3 shadow-sm lg:p-16'>
+    <div
+      data-aos='fade-up'
+      className='main-container rounded-lg bg-primary-dark p-3 shadow-sm lg:p-16'
+    >
       <Title text='giới thiệu gat' className='mt-3 text-white lg:mt-0' />
       <Subtitle
         text='Công ty Cổ phần Công nghệ Green Agri là đơn vị tiên phong trong lĩnh vực cung cấp các giải pháp công nghệ cho ngành nông nghiệp
@@ -13,7 +16,7 @@ export function AboutUsInfo() {
 
       <div className='grid grid-cols-1 gap-10 pl-16  pr-0 pb-16 lg:grid-cols-2 lg:gap-[92px] lg:pr-16'>
         {MOCK_DATA.map((item, index) => (
-          <AboutUseCardHorizontal data={item} key={index} />
+          <AboutUseCardHorizontal data={item} key={index} index={index} />
         ))}
       </div>
     </div>
@@ -22,11 +25,19 @@ export function AboutUsInfo() {
 
 function AboutUseCardHorizontal({
   data,
+  index,
 }: {
   data: { image: string; content: string; title: string };
+  index: number;
 }) {
+  const delay = (index * 100).toString();
+
   return (
-    <div className='flex flex-col gap-2 lg:gap-4'>
+    <div
+      data-aos='fade-up'
+      data-aos-delay={delay}
+      className='flex flex-col gap-2 lg:gap-4'
+    >
       <div className='bg-primary-dark text-right font-saira text-2xl font-semibold uppercase text-white'>
         {data.title}
       </div>

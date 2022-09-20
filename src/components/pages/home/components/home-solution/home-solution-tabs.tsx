@@ -7,7 +7,11 @@ export function HomeSolutionTabs() {
   const isLg = useScreen('lg');
   const [show, setShow] = useState(0);
   return (
-    <div className='w-full flex-1  rounded-md  lg:w-[917px] lg:overflow-hidden lg:bg-transparent'>
+    <div
+      data-aos='fade'
+      data-aos-delay='100'
+      className='w-full flex-1  rounded-md  lg:w-[917px] lg:overflow-hidden lg:bg-transparent'
+    >
       <div className='lg:bg-transparent'>
         <div
           className='no-scrollbar mb-3 flex flex-row items-center gap-3 overflow-hidden overflow-x-scroll bg-primary-dark'
@@ -53,7 +57,7 @@ export function HomeSolutionTabs() {
         </div>
       </div>
       <div className='flex flex-col gap-4 lg:flex-row'>
-        <div className='rounded-md bg-white px-6 py-2  lg:py-6'>
+        <div className='rounded-md bg-white px-6 py-2 lg:py-6'>
           <div className='mb-4 text-lg font-semibold '>
             {MOCK_DATA[show].topic}
           </div>
