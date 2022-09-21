@@ -11,6 +11,7 @@ export function FeaturesOther() {
     <div data-aos='fade-up' className='pt-16'>
       <Title text='Các tính năng khác' className='mb-10' />
       <Swiper
+        centeredSlides
         slidesPerView={1.5}
         spaceBetween={12}
         grabCursor
