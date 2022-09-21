@@ -1,10 +1,11 @@
 import Link from 'next/link';
+import { useScreen } from '../../hooks/use-screen';
 
 export default function Footer() {
   return (
     <footer className='bg-primary-dark'>
       <div className='main-container'>
-        <div className='flex flex-col pt-8 lg:pt-16 xl:flex-row  xl:justify-between'>
+        <div className='flex flex-col pt-8 lg:pt-16 xl:flex-row xl:justify-between'>
           <InformationGat />
           <div className='shrink-0 grow-0'>
             <MenusLink />
@@ -81,9 +82,11 @@ function InformationGat() {
 }
 
 function MenusLink() {
+  const isLg = useScreen('lg');
+  const datasLink = isLg ? MOCKS_LINK_DEKTOP : MOCKS_LINK_WEBAPP;
   return (
     <div className='flex flex-col gap-4 lg:flex-row lg:gap-16'>
-      {MOCKS_LINK.map((item, index) => (
+      {datasLink.map((item, index) => (
         <div key={index}>
           <div className='mb-4 font-saira text-xl font-normal uppercase text-white'>
             {item.name}
@@ -168,7 +171,85 @@ const IMAGE_SOCIAL = [
   },
 ];
 
-const MOCKS_LINK = [
+const MOCKS_LINK_DEKTOP = [
+  {
+    name: 'gat',
+    menus: [
+      {
+        name: 'Về Gat',
+        href: '/about-us',
+      },
+      {
+        name: 'Giải pháp',
+        href: '/',
+      },
+      {
+        name: 'Tính năng',
+        href: '/features',
+      },
+      {
+        name: 'Tuyển dụng',
+        href: '/',
+      },
+      {
+        name: 'Hướng dẫn',
+        href: '/',
+      },
+      {
+        name: 'Tin tức & Blog',
+        href: 'news-and-blog',
+      },
+      {
+        name: 'Tham gia cộng đồng',
+        href: 'join-us',
+      },
+    ],
+  },
+  {
+    name: 'Giải pháp',
+    menus: [
+      {
+        name: 'Nhật ký canh tác',
+        href: '/',
+      },
+      {
+        name: 'Truy xuất nguồn gốc',
+        href: '/',
+      },
+      {
+        name: 'Quản lý kênh phân phối',
+        href: '/',
+      },
+      {
+        name: 'CRM Platform',
+        href: '/',
+      },
+    ],
+  },
+  {
+    name: 'Trung tâm hỗ trợ',
+    menus: [
+      {
+        name: 'Hướng dẫn sử dụng',
+        href: '',
+      },
+      {
+        name: 'Tài liệu nhà phát triển',
+        href: '',
+      },
+      {
+        name: 'Tuyển dụng',
+        href: '',
+      },
+      {
+        name: 'Chính sách bảo mật',
+        href: '',
+      },
+    ],
+  },
+];
+
+const MOCKS_LINK_WEBAPP = [
   {
     name: 'gat',
     menus: [
@@ -178,27 +259,27 @@ const MOCKS_LINK = [
       },
       {
         name: 'Hướng dẫn',
-        href: '',
+        href: '/',
       },
       {
         name: 'Giải pháp',
-        href: '',
+        href: '/',
       },
       {
         name: 'Tin tức & Blog',
-        href: '',
+        href: 'news-and-blog',
       },
       {
-        name: 'tính năng',
-        href: '',
+        name: 'Tính năng',
+        href: '/features',
       },
       {
         name: 'Tham gia cộng đồng',
-        href: '',
+        href: 'join-us',
       },
       {
         name: 'Tuyển dụng',
-        href: '',
+        href: '/',
       },
     ],
   },
@@ -207,19 +288,19 @@ const MOCKS_LINK = [
     menus: [
       {
         name: 'Nhật ký canh tác',
-        href: '',
+        href: '/',
       },
       {
         name: 'Quản lý kênh phân phối',
-        href: '',
+        href: '/',
       },
       {
         name: 'Truy xuất nguồn gốc',
-        href: '',
+        href: '/',
       },
       {
         name: 'CRM Platform',
-        href: '',
+        href: '/',
       },
     ],
   },
