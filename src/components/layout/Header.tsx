@@ -136,7 +136,13 @@ export function MenuLink({ indexOfSelectedMenu }) {
                   {tab.subTabs.map((subTab, index) => (
                     <li key={index} className=''>
                       <Link href={subTab.href} onClick={() => setShow(false)}>
-                        <a className='block whitespace-nowrap px-6 py-2 hover:bg-gray-100 lg:px-8 lg:py-3'>
+                        <a
+                          className={`block whitespace-nowrap px-6 py-2 hover:bg-gray-100 lg:px-8 lg:py-3 ${
+                            router.pathname.includes(subTab.href)
+                              ? 'text-primary'
+                              : ''
+                          }`}
+                        >
                           {subTab.title}
                         </a>
                       </Link>
