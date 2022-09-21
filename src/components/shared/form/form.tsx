@@ -30,14 +30,17 @@ export function Form() {
 
   return (
     <div
-      className='bg-gray-50 px-2.5 pt-8 lg:bg-white lg:py-24 lg:px-0'
+      className='bg-gray-50 pt-8 lg:bg-white lg:py-24 lg:px-0'
       data-aos='fade-up'
     >
-      <div className='mx-auto rounded-xl border-gray-50 pb-12 lg:w-2/3 lg:border lg:bg-gray-50 lg:px-24 lg:shadow-md'>
+      <div className='mx-auto rounded-xl border-gray-50 pb-12 lg:w-2/3 lg:border lg:bg-gray-50 lg:px-20 lg:shadow-md 2xl:w-7/12'>
         <Title text='sản phẩm của chúng tôi đã sẵn sàng' className='lg:pt-12' />
         <Subtitle text='Đăng ký đặt lịch để được trải nghiệm sớm nhất công nghệ của chúng tôi' />
 
-        <form className='flex flex-col gap-4' onSubmit={handleSubmit}>
+        <form
+          className='main-container flex flex-col gap-4'
+          onSubmit={handleSubmit}
+        >
           <div className=''>
             <Label required text='Email doanh nghiệp' />
             <input
@@ -88,7 +91,7 @@ export function Form() {
               className='w-52 justify-center !py-3'
               type='submit'
             >
-              ĐẶT LỊCH DÙNG THỬ
+              ĐẶT LỊCH LIÊN HỆ
             </Button>
           </div>
         </form>

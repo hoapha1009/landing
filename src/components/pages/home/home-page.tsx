@@ -16,7 +16,7 @@ export function HomePage() {
       <HomeValueChain />
       <HomeGroupCard text='Giá trị cộng đồng' />
 
-      <SlidePart title='Đối tác CỦA gREEN aGRI' className='bg-primary-light' />
+      <SlidePart title='Đối tác CỦA gREEN aGRI' className='bg-[#E7F7F0]' />
       <SlidePart title='Khách hàng Green Agri' />
       {/* <HomePartner />
       <HomeCustomer /> */}

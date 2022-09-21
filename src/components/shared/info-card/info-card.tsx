@@ -17,7 +17,7 @@ interface InfoCardProps {
 
 export function InfoCard({ item }: InfoCardProps) {
   return (
-    <div className='relative rounded-xl border border-gray-50 bg-white px-4 pt-20 pb-8 shadow lg:pb-12'>
+    <div className='relative rounded-xl border border-gray-50 bg-white px-6 pt-20 pb-8 shadow lg:pb-12'>
       <div
         data-aos='fade-up'
         data-aos-delay='100'
@@ -25,7 +25,7 @@ export function InfoCard({ item }: InfoCardProps) {
       >
         {item.title}
       </div>
-      <div className='mt-3 flex flex-col gap-3'>
+      <div className='mt-3 flex flex-col gap-4'>
         {item.options.map((option, index) => (
           <OptionRow
             key={index}

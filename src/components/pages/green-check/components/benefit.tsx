@@ -5,10 +5,10 @@ export function Benefit() {
   return (
     <div data-aos='fade-up'>
       <Title
-        text='Lợi ích của Truy xuất nguồn gốc'
+        text='Lợi ích của truy xuất nguồn gốc'
         className='mt-10 pb-4 lg:mt-14'
       />
-      <div className='mt-16 grid gap-[72px] lg:auto-rows-fr lg:grid-cols-3 lg:gap-8'>
+      <div className='mt-16 grid gap-20 lg:auto-rows-fr lg:grid-cols-3 lg:gap-5 xl:gap-8'>
         {LIST.map((item, index) => (
           <InfoCard key={index} item={item} />
         ))}
