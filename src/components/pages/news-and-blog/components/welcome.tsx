@@ -46,13 +46,13 @@ export function TabList({ selectedTab, onSelect }: TabListProps) {
   return (
     <div
       data-aos='fade-up'
-      className='no-scrollbar mx-auto mt-8 mb-6 flex flex-nowrap items-center gap-3 overflow-x-scroll whitespace-nowrap rounded-md border border-gray-200 p-2 shadow-md lg:mb-12 lg:w-1/2 lg:gap-2 lg:whitespace-normal'
+      className='no-scrollbar mx-auto mt-8 mb-6 flex flex-nowrap items-center gap-3 overflow-x-scroll whitespace-nowrap rounded-md border border-gray-200 p-2 shadow-md lg:mb-12 lg:w-2/3 lg:gap-2 lg:whitespace-normal xl:w-1/2'
     >
       {TAB_LIST.map((tab, index) => (
         <div
           key={index}
           id={tab.value}
-          className={`flex-1 cursor-pointer rounded-md px-4 py-3 text-center ${
+          className={`flex-1 cursor-pointer whitespace-nowrap rounded-md px-4 py-3 text-center ${
             selectedTab === tab.value
               ? 'bg-primary text-white'
               : 'hover:bg-gray-200'
