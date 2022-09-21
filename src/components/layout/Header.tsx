@@ -64,6 +64,7 @@ export default function Header() {
                   alt='logo'
                   width={isLg ? 102 : 85}
                   height={isLg ? 36 : 30}
+                  className='object-contain'
                 />
               </a>
             </Link>
