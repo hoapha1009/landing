@@ -43,7 +43,7 @@ export function FeaturesPage() {
               titleClassName='!leading-[1.3]'
               subtitle={item.subtitle}
               image={item.image}
-              wrapContentClassName={item.reverse ? 'mr-12' : 'ml-12'}
+              wrapContentClassName={item.reverse ? 'mr-28' : 'ml-12'}
             />
           ))
         ) : (
