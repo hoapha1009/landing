@@ -5,7 +5,8 @@ import { OptionRow } from '../../../../shared/option-row/option-row';
 
 export function HomeSolutionTabs() {
   const isLg = useScreen('lg');
-  const [show, setShow] = useState(0);
+  const [show, setShow] = useState({ index: 0, image: 'tab-3.png' });
+
   return (
     <div
       data-aos='fade'
@@ -17,7 +18,7 @@ export function HomeSolutionTabs() {
           className='no-scrollbar mb-3 flex flex-row items-center gap-3 overflow-hidden overflow-x-scroll bg-primary-dark'
           style={{
             WebkitMaskImage:
-              !isLg && show + 1 < MOCK_DATA.length
+              !isLg && show.index + 1 < MOCK_DATA.length
                 ? 'linear-gradient(270deg,transparent .5%,#fff 20%)'
                 : '',
           }}
@@ -27,7 +28,7 @@ export function HomeSolutionTabs() {
               key={index}
               id={item.appName}
               className={`min-w-fit lg:min-w-none  ${
-                show !== index ? 'border-primary-dark' : ''
+                show.index !== index ? 'border-primary-dark' : ''
               }`}
             >
               <div>
@@ -41,10 +42,10 @@ export function HomeSolutionTabs() {
                         inline: 'center',
                       });
                     }
-                    setShow(index);
+                    setShow({ index: index, image: item.image });
                   }}
                   className={` border-0 px-4 font-semibold text-black transition duration-300 ease-in-out hover:bg-none ${
-                    show !== index
+                    show.index !== index
                       ? 'rounded-md bg-white hover:text-black'
                       : 'bg-primary text-white'
                   }`}
@@ -59,9 +60,9 @@ export function HomeSolutionTabs() {
       <div className='flex flex-col gap-4 lg:flex-row'>
         <div className='grow-0 rounded-md bg-white px-6 py-2 lg:h-[395px] lg:py-4'>
           <div className='mb-4 text-[23px] font-bold text-black '>
-            {MOCK_DATA[show].topic}
+            {MOCK_DATA[show.index].topic}
           </div>
-          {MOCK_DATA[show].contens.map((content, indx) => (
+          {MOCK_DATA[show.index].contens.map((content, indx) => (
             <div key={indx} className='mb-3 lg:mb-6'>
               <OptionRow
                 key={indx}
@@ -72,7 +73,7 @@ export function HomeSolutionTabs() {
           ))}
         </div>
         <img
-          src='/images/home-solution.png'
+          src={`/images/${show.image}`}
           alt='image'
           className='grow-0  rounded-md  object-cover lg:h-[395px] lg:w-auto lg:w-[285px] xl:w-[325px]'
         />
@@ -91,6 +92,7 @@ const MOCK_DATA = [
       'Tiết kiệm thời gian và chi phí quản lý. Đột phá doanh thu',
       'Dễ dàng trong việc tính toán khoa học thu nhập cho cộng tác viên và đại lý. ',
     ],
+    image: 'tab-3.png',
   },
   {
     appName: 'Truy xuất nguồn gốc',
@@ -101,6 +103,7 @@ const MOCK_DATA = [
       'Truy xuất nguồn gốc giúp giảm thiểu gian lận và làm giả thực phẩm. ',
       'Giúp người tiêu dùng mua được các sản phẩm chất lượng với đầy đủ thông tin nguồn gốc. ',
     ],
+    image: 'tab-2.png',
   },
   {
     appName: 'Nhật ký canh tác',
@@ -111,5 +114,6 @@ const MOCK_DATA = [
       'Tăng năng suất canh tác, cải thiện sản lượng và chất lượng sản phẩm đồng thời giảm chi phí các hoạt động canh tác',
       'Giúp chuẩn hóa quy trình sản xuất theo các tiêu chuẩn như VietGap, GlobalGap và Organic.',
     ],
+    image: 'tab-3.png',
   },
 ];
