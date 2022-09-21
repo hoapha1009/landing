@@ -43,10 +43,10 @@ export function HomeSolutionTabs() {
                     }
                     setShow(index);
                   }}
-                  className={` border-0 px-4  transition duration-300 ease-in-out hover:bg-none ${
+                  className={` border-0 px-4 font-semibold text-black transition duration-300 ease-in-out hover:bg-none ${
                     show !== index
-                      ? 'rounded-md bg-white text-gray-700 hover:text-gray-700'
-                      : 'bg-primary'
+                      ? 'rounded-md bg-white hover:text-black'
+                      : 'bg-primary text-white'
                   }`}
                 >
                   {item.appName}
@@ -57,8 +57,8 @@ export function HomeSolutionTabs() {
         </div>
       </div>
       <div className='flex flex-col gap-4 lg:flex-row'>
-        <div className='rounded-md bg-white px-6 py-2 lg:py-6'>
-          <div className='mb-4 text-lg font-semibold '>
+        <div className='grow-0 rounded-md bg-white px-6 py-2 lg:h-[395px] lg:py-4'>
+          <div className='mb-4 text-[23px] font-bold text-black '>
             {MOCK_DATA[show].topic}
           </div>
           {MOCK_DATA[show].contens.map((content, indx) => (
@@ -74,7 +74,7 @@ export function HomeSolutionTabs() {
         <img
           src='/images/home-solution.png'
           alt='image'
-          className='w-full object-cover lg:w-auto'
+          className='grow-0  rounded-md  object-cover lg:h-[395px] lg:w-auto lg:w-[285px] xl:w-[325px]'
         />
       </div>
     </div>

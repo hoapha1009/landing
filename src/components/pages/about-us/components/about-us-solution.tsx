@@ -1,3 +1,4 @@
+import NextImage from '../../../NextImage';
 import { Subtitle } from '../../../shared/subtitle/subtitle';
 import { Title } from '../../../shared/title/title';
 
@@ -22,7 +23,7 @@ function AboutUsSolutionCard({
   data,
   index,
 }: {
-  data: { image: string; title: string; content: string };
+  data: { url: string; alt: string; title: string; content: string };
   index: number;
 }) {
   const delay = (index * 100).toString();
@@ -31,19 +32,15 @@ function AboutUsSolutionCard({
     <div
       data-aos='fade-up'
       data-aos-delay={delay}
-      className='min-h-[150px] rounded-md border bg-gray-100 p-3 shadow-md lg:p-6'
+      className='min-h-[150px] rounded-md border bg-[#FAFAFA] p-3 shadow-md lg:p-6'
     >
-      <div className='flex flex-row items-center'>
-        <img
-          src={data.image}
-          alt='leaf'
-          className='mr-2 w-1/6 object-contain lg:mr-4 lg:w-auto'
-        />
-        <div className='font-saira text-base font-semibold lg:text-2xl'>
+      <div className='flex items-center gap-4'>
+        <NextImage src={data.url} alt={data.alt} width={47} height={47} />
+        <div className='font-saira text-xl font-semibold lg:text-2xl'>
           {data.title}
         </div>
       </div>
-      <div className='mt-3 text-base font-medium text-gray-600 lg:mt-7 lg:text-lg'>
+      <div className='mt-3 text-base font-medium text-[#6C6C6C] lg:mt-7 lg:text-lg'>
         {data.content}
       </div>
     </div>
@@ -52,24 +49,28 @@ function AboutUsSolutionCard({
 
 const MOCK_DATA = [
   {
-    image: '/images/leaf.png',
+    url: '/images/leaf.png',
+    alt: 'nhat-ky-canh-tac',
     title: 'Giải pháp nhật ký canh tác',
     content:
       'Ghi chép nhật ký các hoạt động nội bộ trong suốt quá trình trồng trọt và chăn nuôi',
   },
   {
-    image: '/images/search2.png',
+    url: '/images/search2.png',
+    alt: 'giai-phap-truy-suat-nguon-goc',
     title: 'Giải pháp truy xuất nguồn gốc',
     content: 'Minh bạch thông tin sản phẩm chính hãng tới người dùng.',
   },
   {
-    image: '/images/coop.png',
+    url: '/images/coop.png',
+    alt: 'giai-phap-quan-ly-kenh-phan-phoi',
     title: 'Giải pháp quản lý kênh phân phối',
     content:
       'Tích hợp các giải pháp trong 1 QR Code: Chống hàng giả, chống phá giá, bảo hành điện tử',
   },
   {
-    image: '/images/user.png',
+    url: '/images/user.png',
+    alt: 'crm-platform',
     title: 'CRM Platform',
     content: 'Nền tảng tạo ứng dụng chăm sóc khách hàng.',
   },

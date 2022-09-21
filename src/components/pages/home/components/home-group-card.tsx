@@ -19,7 +19,7 @@ export function HomeGroupCard({
             key={index}
             index={index}
             item={item}
-            className='gap-4 border-2 bg-gray-50 px-2 py-4 lg:gap-8 lg:px-6 lg:py-0 lg:pb-10 lg:pt-[38px]'
+            className='gap-4 border-2 bg-[#FAFAFA] px-2 py-4 lg:gap-8 lg:px-6 lg:py-0 lg:pb-10 lg:pt-[38px]'
             contentClass='text-gray-600 lg:text-lg text-base'
           />
         ))}

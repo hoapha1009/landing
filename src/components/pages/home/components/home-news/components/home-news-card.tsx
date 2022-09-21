@@ -41,11 +41,11 @@ export function HomeNewsCard({
               <div className='rounded-sm bg-[#E7F7F0] px-1 py-1 text-xs font-semibold text-primary lg:px-4 lg:text-base'>
                 {news.topic}
               </div>
-              <div className='px-1 py-1 text-xs font-semibold text-gray-500 lg:px-4 lg:text-base'>
+              <div className='px-1 py-1 text-xs font-semibold text-[#6C6C6C] lg:px-4 lg:text-base'>
                 {news.date}
               </div>
             </div>
-            <div className='text-ellipsis-2 font-saira text-base font-semibold group-hover:text-primary lg:text-xl'>
+            <div className='text-ellipsis-2 font-saira text-base font-semibold group-hover:text-[#35936a] lg:text-xl'>
               {news.title}
             </div>
           </div>

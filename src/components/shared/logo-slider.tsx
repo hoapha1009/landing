@@ -29,7 +29,7 @@ export function LogoSlider() {
         clickable: true,
 
         bulletClass:
-          'inline-block w-3 h-3 bg-gray-400 rounded-full transition-all cursor-pointer mr-2 last:mr-0 hover:bg-blue-500 transform translate-y-3',
+          'inline-block w-3 h-3 bg-gray-400 rounded-full transition-all cursor-pointer mr-2 last:mr-0 hover:bg-primary transform translate-y-3',
       }}
     >
       {isLg ? (

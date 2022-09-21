@@ -10,17 +10,11 @@ export function HomePage() {
     <>
       <HomeBanner />
 
-      <HomeGroupCard
-        text='Ưu điểm GAT'
-        // subtitle='Miêu tả giải pháp của GAT Miêu tả giải pháp của GAT Miêu tả giải pháp của GAT'
-      />
+      <HomeGroupCard text='Ưu điểm GAT' />
       <HomeSolution />
 
       <HomeValueChain />
-      <HomeGroupCard
-        text='Giá trị cộng đồng'
-        subtitle='Miêu tả giải pháp của GAT Miêu tả giải pháp của GAT Miêu tả giải pháp của GAT'
-      />
+      <HomeGroupCard text='Giá trị cộng đồng' />
 
       <SlidePart title='Đối tác CỦA gREEN aGRI' className='bg-[#E7F7F0]' />
       <SlidePart title='Khách hàng Green Agri' />
