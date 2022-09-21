@@ -25,7 +25,7 @@ export function FeaturesPage() {
       </div>
       <FeaturesBanner />
 
-      <div className='main-container overflow-hidden '>
+      <div className='main-container'>
         <div data-aos='fade-up' className=''>
           <Title text='Chi tiết tính năng Ưu đãi' className='' />
           <Subtitle
