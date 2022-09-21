@@ -1,0 +1,24 @@
+{
+  "c": ["webpack"],
+  "r": ["pages/features", "pages/404", "pages/news-and-blog"],
+  "m": [
+    "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?absolutePagePath=D%3A%5Cwork%5Cgat-landing%5Csrc%5Cpages%5Cfeatures%5Cindex.tsx&page=%2Ffeatures!",
+    "./src/components/pages/features/components/features-item.tsx",
+    "./src/components/pages/features/components/features-other.tsx",
+    "./src/components/pages/features/components/features-slider.tsx",
+    "./src/components/pages/features/components/features.banner.tsx",
+    "./src/components/pages/features/features-page.tsx",
+    "./src/pages/features/index.tsx",
+    "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?absolutePagePath=D%3A%5Cwork%5Cgat-landing%5Csrc%5Cpages%5C404.tsx&page=%2F404!",
+    "./src/components/links/ArrowLink.tsx",
+    "./src/components/links/UnderlineLink.tsx",
+    "./src/components/links/UnstyledLink.tsx",
+    "./src/pages/404.tsx",
+    "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?absolutePagePath=D%3A%5Cwork%5Cgat-landing%5Csrc%5Cpages%5Cnews-and-blog%5Cindex.tsx&page=%2Fnews-and-blog!",
+    "./src/components/pages/news-and-blog/components/about-our-platform.tsx",
+    "./src/components/pages/news-and-blog/components/welcome.tsx",
+    "./src/components/pages/news-and-blog/news-and-blog-page.tsx",
+    "./src/components/shared/chip/chip.tsx",
+    "./src/pages/news-and-blog/index.tsx"
+  ]
+}

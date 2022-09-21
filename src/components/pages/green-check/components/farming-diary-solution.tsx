@@ -119,10 +119,6 @@ const LIST = [
 
 const IMAGE_LIST = [
   {
-    url: 'solution-diary.png',
-    alt: 'solution-diary',
-  },
-  {
     url: 'solution-diary-1.png',
     alt: 'solution-diary-1',
   },
