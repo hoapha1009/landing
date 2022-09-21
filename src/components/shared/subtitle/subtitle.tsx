@@ -6,7 +6,7 @@ interface SubtitleProps {
 export function Subtitle({ className = '', text }: SubtitleProps) {
   return (
     <div
-      className={`mb-8 mt-1 text-center font-light text-gray-600 lg:mt-3 lg:text-xl lg:leading-8 ${className}`}
+      className={`mb-8 mt-1 text-center  text-gray-600 lg:mt-3 lg:text-xl lg:leading-8 ${className}`}
     >
       {text}
     </div>

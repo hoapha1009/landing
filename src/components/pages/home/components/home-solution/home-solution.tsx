@@ -11,7 +11,7 @@ export function HomeSolution() {
       <div className='mb-8 px-3 lg:px-0'>
         <Title text='giải pháp gat' className='text-white' />
         <Subtitle
-          text='Miêu tả giải pháp của GAT Miêu tả giải pháp của GAT Miêu tả giải pháp của GAT'
+          text='Bộ giải pháp hàng đầu cho ngành nông nghiệp'
           className='mx-auto max-w-lg !text-white'
         />
       </div>

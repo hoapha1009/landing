@@ -13,10 +13,10 @@ export default function Footer() {
           </div>
         </div>
         <div className='flex flex-col-reverse items-center border-t border-t-white py-6 text-sm font-medium text-gray-400 lg:mx-5 lg:flex-row lg:justify-between'>
-          <div className='text-center text-xs lg:text-base'>
+          <div className='text-center text-xs text-[#CCCCCC] lg:text-base'>
             Copyright © 2022 GreenAgri Software. All rights reserved.{' '}
           </div>
-          <div className='mb-1 lg:mb-0'>
+          <div className='mb-1 text-[#CCCCCC] lg:mb-0'>
             <Link href='/'>
               <a className='hover:underline'>Quy định sử dụng </a>
             </Link>
@@ -52,14 +52,35 @@ function InformationGat() {
             {item.name}
           </div>
           <div className='mt-2'>
-            {item.contacts.map((contact, idx) => (
-              <div
-                className='mt-2 text-base font-medium text-gray-400 hover:text-white lg:text-lg'
-                key={idx}
-              >
-                {contact}
-              </div>
-            ))}
+            <div className='mt-2 text-base text-[#CCCCCC]  lg:text-lg'>
+              <p>
+                <a
+                  className='hover:text-white hover:underline'
+                  href={item.linkAddress}
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  {' '}
+                  {item.address}
+                </a>
+              </p>
+              <p>
+                <a
+                  className='hover:text-white hover:underline'
+                  href={`tel: +${item.hotline}`}
+                >
+                  Phone: {item.hotline}
+                </a>
+              </p>
+              <p>
+                <a
+                  className='hover:text-white hover:underline'
+                  href={`mailto:${item.email}`}
+                >
+                  Email: {item.email}
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       ))}
@@ -94,7 +115,7 @@ function MenusLink() {
           <div className='grid grid-cols-2 gap-1 lg:grid-cols-1 lg:gap-2'>
             {item.menus.map((menu, idx) => (
               <Link href={menu.href} key={idx}>
-                <a className='block text-base font-medium text-gray-400 hover:text-white lg:text-lg'>
+                <a className='block text-base  text-[#CCCCCC] hover:text-white hover:underline lg:text-lg'>
                   {menu.name}
                 </a>
               </Link>
@@ -144,20 +165,21 @@ function QRcode() {
 const MOCKS_DATA = [
   {
     name: 'Trung tâm kinh doanh Hồ Chí Minh',
-    contacts: [
-      'Chung Cư Intresco An Khang',
-      'Số 30, đường 19 An Khang building, Cao ốc, khu đô thị An Phú An Khánh, Thủ Đức, Thành phố Hồ Chí Minh',
-      'Hotline: 090 4451 107',
-      'Email: contact@greengroups.com.vn',
-    ],
+    address:
+      'Chung Cư Intresco An Khang, Số 30, đường 19 An Khang building, Cao ốc, khu đô thị An Phú An Khánh, Thủ Đức, Thành phố Hồ Chí Minh',
+    hotline: '090 4451 107',
+    email: 'contact@greengroups.com.vn',
+    linkAddress:
+      'https://www.google.com/maps/place/L%C3%B4+B+Chung+C%C6%B0+Intresco+An+Khang/@10.7971588,106.7375904,17z/data=!3m1!4b1!4m5!3m4!1s0x3175260e177ca075:0xf1962dca329764ca!8m2!3d10.7971588!4d106.7397791?hl=vi-VN',
   },
   {
     name: 'Trụ sở Vũng Tàu',
-    contacts: [
+    address:
       'Thôn Sông Xoài 1, xã Láng Lớn, huyện Châu Đức tỉnh Bà Rịa-Vũng Tàu',
-      'Hotline: 090 4451 107',
-      'Email: contact@greengroupsvungtau.com.vn',
-    ],
+    hotline: '090 4451 107',
+    email: 'contact@greengroupsvungtau.com.vn',
+    linkAddress:
+      'https://www.google.com/maps/search/Th%C3%B4n+S%C3%B4ng+Xo%C3%A0i+1,+x%C3%A3+L%C3%A1ng+L%E1%BB%9Bn,+huy%E1%BB%87n+Ch%C3%A2u+%C4%90%E1%BB%A9c+t%E1%BB%89nh+B%C3%A0+R%E1%BB%8Ba-V%C5%A9ng+T%C3%A0u/@10.6565782,107.1808849,13z/data=!3m1!4b1',
   },
 ];
 
@@ -173,10 +195,10 @@ const IMAGE_SOCIAL = [
 
 const MOCKS_LINK_DEKTOP = [
   {
-    name: 'gat',
+    name: 'GAT',
     menus: [
       {
-        name: 'Về Gat',
+        name: 'Về GAT',
         href: '/about-us',
       },
       {

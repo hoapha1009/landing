@@ -5,7 +5,8 @@ export function AboutUsInfo() {
   return (
     <div
       data-aos='fade-up'
-      className='main-container rounded-lg bg-primary-dark p-3 shadow-sm lg:p-16'
+      className='main-container rounded-lg bg-primary-dark bg-cover bg-center bg-no-repeat p-3 shadow-sm lg:p-16'
+      style={{ backgroundImage: "url('./images/about-us.png')" }}
     >
       <Title text='giới thiệu gat' className='mt-3 text-white lg:mt-0' />
       <Subtitle
@@ -38,7 +39,7 @@ function AboutUseCardHorizontal({
       data-aos-delay={delay}
       className='flex flex-col gap-2 lg:gap-4'
     >
-      <div className='bg-primary-dark text-right font-saira text-2xl font-semibold uppercase text-white'>
+      <div className='bg-transparent text-right font-saira text-2xl font-semibold uppercase text-white'>
         {data.title}
       </div>
       <div

@@ -9,12 +9,7 @@ export function HomeValueChain() {
   if (Object.keys(screen).length <= 0) return <></>;
   return (
     <div data-aos='fade-up' className='main-container pt-8 lg:p-16 lg:pt-16'>
-      <Title text='Chuỗi giá trị GAT' />
-      <Subtitle
-        text='Miêu tả giải pháp của GAT Miêu tả giải pháp của GAT Miêu tả giải pháp của GAT'
-        className='mx-auto max-w-lg'
-      />
-
+      <Title text='Chuỗi giá trị GAT' className='mb-10' />
       <img
         src={
           screen.lg
@@ -22,7 +17,7 @@ export function HomeValueChain() {
             : '/images/home-string-value-hor.png'
         }
         alt='home-string-value'
-        className='w-full'
+        className={`  ${screen.lg ? 'w-full' : 'mx-auto w-full max-w-lg'}`}
       />
     </div>
   );
