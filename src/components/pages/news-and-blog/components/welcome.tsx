@@ -113,7 +113,7 @@ function NewsAndBlogList({ selectedTab }: NewsAndBlogListProps) {
                   className='rounded group-hover:brightness-75'
                 />
               </div>
-              <div className='flex flex-1 flex-col justify-between lg:gap-6'>
+              <div className='flex flex-1 flex-col md:gap-2 xl:gap-6'>
                 <div className='flex items-center gap-2'>
                   <Chip text='Thông tin mùa vụ' />
                   <div className='text-xs lg:text-base'>08/03/2022</div>
@@ -126,7 +126,7 @@ function NewsAndBlogList({ selectedTab }: NewsAndBlogListProps) {
           ))}
         </div>
       </div>
-      <div data-aos='fade-up' className='mt-4 flex justify-center lg:mt-8'>
+      <div className='mt-4 flex justify-center lg:mt-8'>
         <Button variant='primary'>XEM TẤT CẢ TIN TỨC</Button>
       </div>
     </>

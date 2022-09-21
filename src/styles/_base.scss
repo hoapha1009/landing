@@ -47,15 +47,15 @@ a:focus {
     max-width: none;
   }
   @screen md {
-    width: 96%;
+    width: 94%;
     max-width: none;
   }
   @screen lg {
-    width: 96%;
+    width: 92%;
     @apply max-w-screen-lg;
   }
   @screen xl {
-    width: 94%;
+    width: 92%;
     @apply max-w-screen-xl;
   }
   @screen 2xl {

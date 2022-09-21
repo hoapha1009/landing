@@ -22,7 +22,7 @@ export function HomePage() {
         subtitle='Miêu tả giải pháp của GAT Miêu tả giải pháp của GAT Miêu tả giải pháp của GAT'
       />
 
-      <SlidePart title='Đối tác CỦA gREEN aGRI' className='bg-primary-light' />
+      <SlidePart title='Đối tác CỦA gREEN aGRI' className='bg-[#E7F7F0]' />
       <SlidePart title='Khách hàng Green Agri' />
       {/* <HomePartner />
       <HomeCustomer /> */}

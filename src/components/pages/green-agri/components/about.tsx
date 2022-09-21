@@ -11,7 +11,7 @@ export function About() {
     >
       <Title text='Về green agri' />
       <Subtitle
-        className=''
+        className='mx-auto lg:w-3/4'
         text='Là giải pháp thương mại điện tử và kênh phân phối trong ngành nông nghiệp. Hệ thống hỗ trợ nền tảng công nghệ cho doanh nghiệp kinh doanh truyền thống offline và kênh online hiệu quả. Hỗ trợ doanh nghiệp mở rộng kênh phân phối đến các đại lý các tỉnh, và phát triển mạng lưới sales/ cộng tác viên'
       />
       <Swiper
@@ -40,12 +40,12 @@ export function About() {
               src={`/images/${item.url}`}
               alt={item.url}
               height='100%'
-              className='mx-auto object-contain'
+              className='mx-auto rounded-lg object-contain'
             />
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className='mt-8 grid w-full auto-rows-fr gap-5 px-7 lg:grid-cols-4 lg:px-0'>
+      <div className='mt-8 grid w-full auto-rows-fr grid-cols-2 gap-4 px-0 md:grid-cols-4 lg:gap-5'>
         {LIST.map((item, index) => (
           <Card
             index={index + 1}
@@ -97,15 +97,19 @@ const IMAGE_LIST = [
     alt: 'about-greenAgri',
   },
   {
-    url: 'about-greenAgri.png',
-    alt: 'about-greenAgri',
+    url: 'about-greenAgri-1.png',
+    alt: 'about-greenAgri-1',
   },
   {
-    url: 'about-greenAgri.png',
-    alt: 'about-greenAgri',
+    url: 'about-greenAgri-2.png',
+    alt: 'about-greenAgri-2',
   },
   {
-    url: 'about-greenAgri.png',
-    alt: 'about-greenAgri',
+    url: 'about-greenAgri-3.png',
+    alt: 'about-greenAgri-3',
+  },
+  {
+    url: 'about-greenAgri-4.png',
+    alt: 'about-greenAgri-4',
   },
 ];

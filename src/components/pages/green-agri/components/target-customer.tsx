@@ -6,7 +6,7 @@ export function TargetCustomer() {
     <div className='py-8 lg:py-24' data-aos='fade-up'>
       <Title
         text='các đối tượng khách hàng của green agri'
-        className='mx-auto mb-10 lg:w-1/2'
+        className='mx-auto mb-10 lg:max-w-lg'
       />
       <div className='main-container mx-2.5 grid auto-rows-fr grid-cols-2 gap-4 lg:mx-auto lg:grid-cols-4 lg:gap-8'>
         {LIST.map((item, index) => (
