@@ -11,7 +11,7 @@ export function HomeBanner() {
   return (
     <div
       data-aos='fade-up'
-      className="relative flex max-h-96 min-h-[350px] w-full flex-row justify-center bg-[url('/images/home-banner.png')] bg-cover bg-no-repeat lg:mb-32 lg:h-[725px] lg:max-h-[725px] "
+      className="relative flex max-h-96 min-h-[350px] w-full flex-row justify-center bg-[url('/images/home-banner.png')] bg-cover bg-no-repeat lg:mb-24 lg:h-[725px] lg:max-h-[725px] "
     >
       <div className='overflow-hidden '>
         <Swiper
