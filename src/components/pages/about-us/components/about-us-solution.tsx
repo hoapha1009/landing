@@ -1,4 +1,3 @@
-import NextImage from '../../../NextImage';
 import { Subtitle } from '../../../shared/subtitle/subtitle';
 import { Title } from '../../../shared/title/title';
 
@@ -35,7 +34,7 @@ function AboutUsSolutionCard({
       className='min-h-[150px] rounded-md border bg-[#FAFAFA] p-3 shadow-md lg:p-6'
     >
       <div className='flex items-center gap-4'>
-        <NextImage src={data.url} alt={data.alt} width={47} height={47} />
+        <img src={data.url} alt={data.alt} width={47} height={47} />
         <div className='font-saira text-xl font-semibold lg:text-2xl'>
           {data.title}
         </div>

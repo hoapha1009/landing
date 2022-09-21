@@ -1,5 +1,3 @@
-import NextImage from '../../NextImage';
-
 interface OptionRowProps {
   content: string;
   className?: string;
@@ -22,7 +20,7 @@ export function OptionRow({
       className={`flex gap-2 ${className}`}
       {...(hasAnimation && { 'data-aos': 'fade-up', 'data-aos-delay': delay })}
     >
-      <NextImage
+      <img
         src='/images/leaf.png'
         alt='leaf'
         width={22}

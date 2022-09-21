@@ -9,7 +9,6 @@ import {
 import { useScreen } from '../../hooks/use-screen';
 
 import Button from '../buttons/Button';
-import NextImage from '../NextImage';
 
 export default function Header() {
   const isLg = useScreen('lg');
@@ -60,10 +59,9 @@ export default function Header() {
           <div className='flex items-center gap-1'>
             <Link href='/'>
               <a className='mr-8 block'>
-                <NextImage
+                <img
                   src='/images/logo.png'
                   alt='logo'
-                  layout='responsive'
                   width={isLg ? 102 : 85}
                   height={isLg ? 36 : 30}
                 />
@@ -125,8 +123,8 @@ export function MenuLink({ indexOfSelectedMenu }) {
               }`}
               onClick={() => !isLg && setShow(!show)}
             >
-              <span className={`mr-1 py-2 lg:px-4 `}>{tab.title}</span>
-              <i className={`text-xl  ${show ? '-rotate-180' : ''}`}>
+              <span className={`mr-1 py-2 lg:pl-4 `}>{tab.title}</span>
+              <i className={`pr-4 text-xl  ${show ? '-rotate-180' : ''}`}>
                 {isLg ? <RiArrowDownSLine /> : <RiArrowUpSLine />}
               </i>
             </button>
