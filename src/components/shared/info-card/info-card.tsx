@@ -20,7 +20,7 @@ export function InfoCard({ item }: InfoCardProps) {
       <div
         data-aos='fade-up'
         data-aos-delay='100'
-        className='font-saira text-[23px] font-semibold lg:text-2xl'
+        className='text-center font-saira text-[23px] font-semibold lg:text-2xl'
       >
         {item.title}
       </div>
@@ -41,7 +41,6 @@ export function InfoCard({ item }: InfoCardProps) {
             alt={item.img.split('/')[2]}
             width={60}
             height={60}
-            className='rounded-full'
           />
         </div>
       </div>

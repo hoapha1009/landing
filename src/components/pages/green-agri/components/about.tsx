@@ -93,10 +93,6 @@ const LIST = [
 
 const IMAGE_LIST = [
   {
-    url: 'about-greenAgri.png',
-    alt: 'about-greenAgri',
-  },
-  {
     url: 'about-greenAgri-1.png',
     alt: 'about-greenAgri-1',
   },

@@ -1,0 +1,24 @@
+{
+  "c": ["webpack"],
+  "r": ["pages/green-check", "pages/features", "pages/404"],
+  "m": [
+    "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?absolutePagePath=D%3A%5Cwork%5Cgat-landing%5Csrc%5Cpages%5Cgreen-check%5Cindex.tsx&page=%2Fgreen-check!",
+    "./src/components/pages/green-check/components/benefit.tsx",
+    "./src/components/pages/green-check/components/farming-diary-solution.tsx",
+    "./src/components/pages/green-check/components/traceability-solution.tsx",
+    "./src/components/pages/green-check/green-check-page.tsx",
+    "./src/pages/green-check/index.tsx",
+    "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?absolutePagePath=D%3A%5Cwork%5Cgat-landing%5Csrc%5Cpages%5Cfeatures%5Cindex.tsx&page=%2Ffeatures!",
+    "./src/components/pages/features/components/features-item.tsx",
+    "./src/components/pages/features/components/features-other.tsx",
+    "./src/components/pages/features/components/features-slider.tsx",
+    "./src/components/pages/features/components/features.banner.tsx",
+    "./src/components/pages/features/features-page.tsx",
+    "./src/pages/features/index.tsx",
+    "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?absolutePagePath=D%3A%5Cwork%5Cgat-landing%5Csrc%5Cpages%5C404.tsx&page=%2F404!",
+    "./src/components/links/ArrowLink.tsx",
+    "./src/components/links/UnderlineLink.tsx",
+    "./src/components/links/UnstyledLink.tsx",
+    "./src/pages/404.tsx"
+  ]
+}
