@@ -1,4 +1,3 @@
-import NextImage from '../../NextImage';
 import { OptionRow } from '../option-row/option-row';
 
 interface Option {
@@ -37,7 +36,7 @@ export function InfoCard({ item }: InfoCardProps) {
       </div>
       <div className='absolute top-0 left-1/2 h-[100px] w-[100px] -translate-x-14 -translate-y-12 transform rounded-full bg-gradient-to-r from-primary to-accent p-[3px]'>
         <div className='flex h-full items-center justify-center rounded-full bg-white text-white'>
-          <NextImage
+          <img
             src={item.img}
             alt={item.img.split('/')[2]}
             width={60}

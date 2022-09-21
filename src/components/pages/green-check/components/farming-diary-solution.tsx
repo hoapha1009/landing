@@ -1,5 +1,4 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import NextImage from '../../../NextImage';
 import { Subtitle } from '../../../shared/subtitle/subtitle';
 import { Title } from '../../../shared/title/title';
 
@@ -78,12 +77,7 @@ export function Card({ item, index, ...props }: CardProps) {
       className='rounded-md border border-gray-50 bg-gray-50 p-4 shadow lg:p-6'
     >
       <div className='flex items-center gap-4'>
-        <NextImage
-          src={item.img.url}
-          alt={item.img.alt}
-          width={47}
-          height={47}
-        />
+        <img src={item.img.url} alt={item.img.alt} width={47} height={47} />
         <div className='font-saira text-xl font-semibold lg:text-2xl'>
           {item.title}
         </div>
