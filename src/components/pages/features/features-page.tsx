@@ -40,7 +40,7 @@ export function FeaturesPage() {
               key={index}
               className={`${item.reverse ? 'lg:flex-row-reverse' : ''} `}
               title={item.title}
-              titleClassName='!leading-[1.3]'
+              titleClassName='!leading-[1.3] max-w-[550px]'
               subtitle={item.subtitle}
               image={item.image}
               wrapContentClassName={item.reverse ? 'mr-28' : 'ml-12'}
