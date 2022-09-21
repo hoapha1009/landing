@@ -20,7 +20,7 @@ export function FeaturesItem({
   return (
     <div
       data-aos='fade-up'
-      className={`my-auto flex max-w-fit items-center  lg:mx-32 lg:mt-3 lg:h-full lg:flex-row  xl:mx-60 ${className}`}
+      className={`my-auto flex max-w-fit items-center  lg:mx-32 lg:mt-3 lg:h-full lg:flex-row  xl:ml-[13rem] xl:mr-[8rem] ${className}`}
     >
       <div
         data-aos='fade-up'
