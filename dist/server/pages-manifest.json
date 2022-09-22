@@ -2,6 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/green-agri": "pages/green-agri.js",
-  "/features": "pages/features.js"
+  "/features": "pages/features.js",
+  "/news-and-blog": "pages/news-and-blog.js"
 }
