@@ -24,7 +24,7 @@ export function DefaultHead() {
           name='viewport'
           content='initial-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=0'
         />
-        <link rel='icon' type='image/x-icon' href='/favicon.ico' />
+        <link rel='icon' type='image/x-icon' href='/favicon.ico?v=2' />
         <link rel='preconnect' href='https://fonts.gstatic.com' />
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link

@@ -39,7 +39,7 @@ function InformationGat() {
           <img
             src='/images/logo.png'
             alt='logo'
-            className='w-36 object-contain'
+            className='lazyload w-36 object-contain'
           />
         </a>
       </Link>
@@ -92,7 +92,7 @@ function InformationGat() {
                 src={`images/${item.img}`}
                 alt={item.img}
                 height='100%'
-                className='object-contain'
+                className='lazyload object-contain'
               />
             </a>
           </Link>
@@ -130,7 +130,11 @@ function MenusLink() {
 function QRcode() {
   return (
     <div className='mt-12 mb-4 flex flex-row xl:mb-0'>
-      <img src='/images/QR.png' alt='qrcode' className='object-contain' />
+      <img
+        src='/images/QR.png'
+        alt='qrcode'
+        className='lazyload object-contain'
+      />
       <div className='ml-4 flex flex-col justify-around'>
         <div className='font-saira font-semibold text-white lg:text-lg'>
           Tải app GreenAgri
@@ -141,7 +145,7 @@ function QRcode() {
               <img
                 src='./images/google-play.png'
                 alt='google-play'
-                className='object-contain'
+                className='lazyload object-contain'
               />
             </a>
           </Link>
@@ -152,7 +156,7 @@ function QRcode() {
               <img
                 src='./images/app-store.png'
                 alt='app-store'
-                className='object-contain'
+                className='lazyload object-contain'
               />
             </a>
           </Link>

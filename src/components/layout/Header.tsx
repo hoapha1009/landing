@@ -1,11 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useMemo, useState } from 'react';
-import {
-  RiAlignJustify,
-  RiArrowDownSLine,
-  RiArrowUpSLine,
-} from 'react-icons/ri';
+import { RiAlignJustify, RiArrowDownSLine } from 'react-icons/ri';
 import { useScreen } from '../../hooks/use-screen';
 
 import Button from '../buttons/Button';
@@ -64,6 +60,7 @@ export default function Header() {
                   alt='logo'
                   width={isLg ? 102 : 85}
                   height={isLg ? 36 : 30}
+                  className='lazyload'
                 />
               </a>
             </Link>

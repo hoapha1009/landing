@@ -41,7 +41,7 @@ export function LogoSlider() {
                   <img
                     src={`/images/${item.url}`}
                     alt={item.url}
-                    className='object-contain'
+                    className='lazyload object-contain'
                   />
                 </a>
               </Link>
@@ -59,7 +59,7 @@ export function LogoSlider() {
                       src={`/images/${logo.url}`}
                       alt={logo.url}
                       height='100%'
-                      className='object-contain'
+                      className='lazyload object-contain'
                     />
                   </a>
                 </Link>

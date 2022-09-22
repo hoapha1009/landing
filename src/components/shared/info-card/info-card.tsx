@@ -41,7 +41,7 @@ export function InfoCard({ item }: InfoCardProps) {
             alt={item.img.split('/')[2]}
             width={60}
             height={60}
-            className='rounded-full'
+            className='lazyload rounded-full'
           />
         </div>
       </div>
