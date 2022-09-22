@@ -8,6 +8,8 @@ import Button from '../buttons/Button';
 
 export default function Header() {
   const isLg = useScreen('lg');
+  console.log('isLg: ', isLg);
+
   const router = useRouter();
   const [scrollTop, setScrollTop] = useState(0);
   const [showMenuMobile, setShowMenuMobile] = useState(false);
