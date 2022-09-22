@@ -51,10 +51,10 @@ export default function Header() {
             : 'border-transparent shadow-none'
         }`}
       >
-        <div className='flex items-center justify-between h-20 font-medium main-container'>
+        <div className='main-container flex h-20 items-center justify-between font-medium'>
           <div className='flex items-center gap-1'>
             <Link href='/'>
-              <a className='block mr-8'>
+              <a className='mr-8 block'>
                 <img
                   src='/images/logo.png'
                   alt='logo'
@@ -96,7 +96,7 @@ export default function Header() {
       {!isLg && showMenuMobile && (
         <div
           onClick={() => setShowMenuMobile(false)}
-          className='fixed top-0 left-0 w-full h-full z-200'
+          className='fixed top-0 left-0 z-200 h-full w-full'
           style={{ backgroundColor: 'rgba(0, 0, 0, 0.32)' }}
         ></div>
       )}
@@ -112,7 +112,7 @@ export function MenuLink({ indexOfSelectedMenu }) {
     <>
       {MENU_TAB_LIST.map((tab, index) =>
         tab?.subTabs ? (
-          <div key={index} className='relative group lg:inline-block'>
+          <div key={index} className='group relative lg:inline-block'>
             <button
               className={`inline-flex w-full items-center justify-between rounded lg:w-auto lg:justify-start lg:hover:bg-gray-100 ${
                 indexOfSelectedMenu === index && 'text-primary'
@@ -126,7 +126,7 @@ export function MenuLink({ indexOfSelectedMenu }) {
             </button>
             {!isLg ? (
               show && (
-                <ul className='transition duration-300 ease-in-out bg-white rounded lg:absolute lg:hidden lg:shadow lg:group-hover:block'>
+                <ul className='rounded bg-white transition duration-300 ease-in-out lg:absolute lg:hidden lg:shadow lg:group-hover:block'>
                   {tab.subTabs.map((subTab, index) => (
                     <li key={index} className=''>
                       <Link href={subTab.href} onClick={() => setShow(false)}>
@@ -146,11 +146,11 @@ export function MenuLink({ indexOfSelectedMenu }) {
               )
             ) : (
               <>
-                <ul className='absolute hidden bg-white rounded shadow group-hover:block'>
+                <ul className='absolute hidden rounded bg-white shadow group-hover:block'>
                   {tab.subTabs.map((subTab, index) => (
                     <li key={index} className=''>
                       <Link href={subTab.href}>
-                        <a className='block px-8 py-3 whitespace-nowrap hover:bg-gray-100'>
+                        <a className='block whitespace-nowrap px-8 py-3 hover:bg-gray-100'>
                           {subTab.title}
                         </a>
                       </Link>
@@ -180,8 +180,8 @@ export function MenuMobile({ children, isShow }) {
   return (
     <>
       {isShow && (
-        <div className='absolute w-full pb-8 bg-white z-400 animate-emerge-up'>
-          <div className='px-1 main-container z-300'>{children}</div>
+        <div className='absolute z-400 w-full animate-emerge-up bg-white pb-8'>
+          <div className='main-container z-300 px-1'>{children}</div>
         </div>
       )}
     </>
