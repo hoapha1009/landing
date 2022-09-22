@@ -114,6 +114,6 @@ const MOCK_DATA = [
       'Tăng năng suất canh tác, cải thiện sản lượng và chất lượng sản phẩm đồng thời giảm chi phí các hoạt động canh tác',
       'Giúp chuẩn hóa quy trình sản xuất theo các tiêu chuẩn như VietGap, GlobalGap và Organic.',
     ],
-    image: 'tab-3.png',
+    image: 'tab-1.png',
   },
 ];

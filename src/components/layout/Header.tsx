@@ -205,6 +205,7 @@ interface Menu {
 }
 
 const MENU_TAB_LIST: Menu[] = [
+  { href: '/', title: 'Trang chủ' },
   { href: '/about-us', title: 'Về GAT' },
   {
     title: 'Giải pháp',
