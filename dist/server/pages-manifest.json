@@ -1,6 +1,16 @@
 {
   "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/features": "pages/features.js"
+  "/404": "pages/404.html",
+  "/about-us": "pages/about-us.html",
+  "/api/hello": "pages/api/hello.js",
+  "/features": "pages/features.html",
+  "/green-agri": "pages/green-agri.html",
+  "/green-check": "pages/green-check.html",
+  "/guide": "pages/guide.html",
+  "/": "pages/index.html",
+  "/join-us": "pages/join-us.html",
+  "/news-and-blog": "pages/news-and-blog.html",
+  "/recruit": "pages/recruit.html",
+  "/_error": "pages/_error.js"
 }

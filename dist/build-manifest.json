@@ -25,15 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/features": [
+    "/news-and-blog": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/features.js"
-    ],
-    "/green-agri": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/green-agri.js"
+      "static/chunks/pages/news-and-blog.js"
     ]
   },
   "ampFirstPages": []

@@ -1,0 +1,80 @@
+{
+  "version": 3,
+  "pages404": true,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "dynamicRoutes": [],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/404",
+      "regex": "^/404(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/404(?:/)?$"
+    },
+    {
+      "page": "/about-us",
+      "regex": "^/about\\-us(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/about\\-us(?:/)?$"
+    },
+    {
+      "page": "/features",
+      "regex": "^/features(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/features(?:/)?$"
+    },
+    {
+      "page": "/green-agri",
+      "regex": "^/green\\-agri(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/green\\-agri(?:/)?$"
+    },
+    {
+      "page": "/green-check",
+      "regex": "^/green\\-check(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/green\\-check(?:/)?$"
+    },
+    {
+      "page": "/guide",
+      "regex": "^/guide(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/guide(?:/)?$"
+    },
+    {
+      "page": "/join-us",
+      "regex": "^/join\\-us(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/join\\-us(?:/)?$"
+    },
+    {
+      "page": "/news-and-blog",
+      "regex": "^/news\\-and\\-blog(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/news\\-and\\-blog(?:/)?$"
+    },
+    {
+      "page": "/recruit",
+      "regex": "^/recruit(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/recruit(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rewrites": []
+}
