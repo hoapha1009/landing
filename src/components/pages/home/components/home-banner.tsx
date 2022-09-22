@@ -57,7 +57,7 @@ function HomBannerContent(banner) {
         <div
           data-aos='fade-up'
           data-aos-delay='100'
-          className='mx-auto mt-10 mb-2 text-center font-saira text-xl font-semibold uppercase !leading-[1.5] text-white lg:mt-16 lg:mb-8 lg:max-w-5xl lg:text-[60px]'
+          className={`mx-auto mt-10 mb-2 text-center font-saira text-xl font-semibold uppercase !leading-[1.5] text-white lg:mt-16 lg:mb-8 ${banner.banner.maxWidth} lg:text-[60px]`}
         >
           {banner.banner.title}
         </div>
@@ -68,7 +68,7 @@ function HomBannerContent(banner) {
         >
           <Button
             variant='primary'
-            className='py-[14px] px-7 font-normal uppercase'
+            className='py-[12px] px-5 font-normal uppercase  lg:py-[14px] lg:px-7'
           >
             Tìm hiểu thêm
           </Button>
@@ -83,15 +83,18 @@ const MOCK_DATA_BANNER = [
     image: 'home-banner-3.png',
     title: 'Nông nghiệp xanh sống an lành',
     href: '/',
+    maxWidth: 'lg:max-w-2xl max-w-[250px]',
   },
   {
     image: 'home-banner-2.png',
     title: 'giải pháp công nghệ hàng đầu trong ngành nông nghiệp',
     href: '/',
+    maxWidth: 'lg:max-w-5xl',
   },
   {
     image: 'home-banner-1.png',
     title: 'ứng dụng công nghệ nâng tầm nông nghiệp Việt Nam',
     href: '/',
+    maxWidth: 'lg:max-w-5xl',
   },
 ];

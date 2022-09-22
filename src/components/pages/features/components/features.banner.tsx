@@ -13,11 +13,11 @@ export function FeaturesBanner() {
         <FeaturesItem
           title='Tính năng chính giải pháp GAT'
           image='/images/features-banner.png'
-          imageClassName='lg:w-[45%]'
+          imageClassName='lg:w-[30%] sm:w-[32%] w-3/5'
           titleClassName={`text-white  lg:text-6xl  ${
-            isLg ? 'max-w-400px' : 'max-w-[285px] mark-gradient '
+            isLg ? 'lg:max-w-[600px]' : 'max-w-[285px] mark-gradient '
           }  text-[23px] lg:text-left text-center !leading-[1.4] `}
-          className='mt-10 flex h-auto flex-col-reverse lg:mt-0'
+          className='mt-10 flex h-auto flex-col-reverse lg:mt-0 lg:justify-center'
         />
       </div>
     </div>

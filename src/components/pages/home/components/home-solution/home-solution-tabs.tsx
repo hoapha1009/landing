@@ -58,7 +58,10 @@ export function HomeSolutionTabs() {
         </div>
       </div>
       <div className='flex flex-col gap-4 lg:flex-row'>
-        <div className='grow-0 rounded-md bg-white px-6 py-2 lg:h-[395px] lg:py-4'>
+        <div
+          className=' rounded-md bg-white px-6 py-2 lg:h-[395px]  lg:py-4'
+          style={{ flex: 1 }}
+        >
           <div className='mb-4 text-[23px] font-bold text-black '>
             {MOCK_DATA[show.index].topic}
           </div>
@@ -87,9 +90,9 @@ const MOCK_DATA = [
     appName: 'Thương mại điện tử',
     topic: 'Hệ sinh thái GAT',
     contens: [
-      'Là nơi để khách hàng và doanh nghiệp tương tác với nhau mà không phải thônGiải pháp công nghệ tập trung tối ưu hiệu quả quản lý hệ thống kênh phân phối của doanh nghiệp.',
+      'Giải pháp công nghệ tập trung tối ưu hiệu quả quản lý hệ thống kênh phân phối của doanh nghiệp.',
       'Dễ dàng quản lý và tuyển cộng tác viên, đại lý. Mở rộng mô hình kinh doanh.',
-      'Tiết kiệm thời gian và chi phí quản lý. Đột phá doanh thu',
+      'Tiết kiệm thời gian và chi phí quản lý. Đột phá doanh thu.',
       'Dễ dàng trong việc tính toán khoa học thu nhập cho cộng tác viên và đại lý. ',
     ],
     image: 'tab-3.png',
@@ -98,7 +101,7 @@ const MOCK_DATA = [
     appName: 'Truy xuất nguồn gốc',
     topic: 'Hệ sinh thái GAT',
     contens: [
-      'Truy tìm lịch sử các thông tin về quy trình sản xuất, chế biến, phân phối và cho đến khi sản phẩm đến được tay người dùng',
+      'Truy tìm lịch sử các thông tin về quy trình sản xuất, chế biến, phân phối và cho đến khi sản phẩm đến được tay người dùng.',
       'Nâng cao vị thế thương hiệu cho doanh nghiệp, tạo dựng niềm tin với người tiêu dùng. Tạo môi trường kinh doanh minh bạch.',
       'Truy xuất nguồn gốc giúp giảm thiểu gian lận và làm giả thực phẩm. ',
       'Giúp người tiêu dùng mua được các sản phẩm chất lượng với đầy đủ thông tin nguồn gốc. ',
@@ -109,11 +112,11 @@ const MOCK_DATA = [
     appName: 'Nhật ký canh tác',
     topic: 'Hệ sinh thái GAT',
     contens: [
-      'Là nơi để khách hàng và doanh nghiệp tCung cấp nền tảng ghi nhận lại hoạt động sản xuất của người nông dân và các mốc thời gian tương ứng với các hoạt động.',
+      'Cung cấp nền tảng ghi nhận lại hoạt động sản xuất của người nông dân và các mốc thời gian tương ứng với các hoạt động.',
       'Hỗ trợ thu thập dữ liệu quá trình sản xuất, số hóa và cung cấp dữ liệu cho truy xuất nguồn gốc sản phẩm nông sản.',
       'Tăng năng suất canh tác, cải thiện sản lượng và chất lượng sản phẩm đồng thời giảm chi phí các hoạt động canh tác',
       'Giúp chuẩn hóa quy trình sản xuất theo các tiêu chuẩn như VietGap, GlobalGap và Organic.',
     ],
-    image: 'tab-3.png',
+    image: 'tab-1.png',
   },
 ];
