@@ -76,13 +76,13 @@ export function Card({ item, index, ...props }: CardProps) {
       data-aos-delay={delay}
       className='rounded-md border border-gray-50 bg-gray-50 p-4 shadow lg:p-6'
     >
-      <div className='flex items-center gap-4'>
+      <div className='flex items-center gap-3'>
         <img src={item.img.url} alt={item.img.alt} width={47} height={47} />
-        <div className='font-saira text-xl font-semibold lg:text-2xl'>
+        <div className='font-saira text-xl font-semibold lg:text-[23px]'>
           {item.title}
         </div>
       </div>
-      <div className='mt-2 text-left lg:text-xl'>{item.content}</div>
+      <div className='mt-3 text-left lg:text-xl'>{item.content}</div>
     </div>
   );
 }

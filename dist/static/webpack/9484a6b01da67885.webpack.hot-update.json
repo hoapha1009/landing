@@ -1,0 +1,24 @@
+{
+  "c": ["webpack"],
+  "r": ["pages/index", "pages/green-agri"],
+  "m": [
+    "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?absolutePagePath=C%3A%5CUsers%5CHieuTran%5CDesktop%5CGAT%5Cgat-landing%5Csrc%5Cpages%5Cindex.tsx&page=%2F!",
+    "./src/components/pages/home/components/home-banner.tsx",
+    "./src/components/pages/home/components/home-group-card.tsx",
+    "./src/components/pages/home/components/home-news/components/home-news-card.tsx",
+    "./src/components/pages/home/components/home-news/components/home-news-list.tsx",
+    "./src/components/pages/home/components/home-news/home-news.tsx",
+    "./src/components/pages/home/components/home-solution/home-solution-tabs.tsx",
+    "./src/components/pages/home/components/home-solution/home-solution.tsx",
+    "./src/components/pages/home/components/home-value-chain.tsx",
+    "./src/components/pages/home/home-page.tsx",
+    "./src/components/shared/card/card.tsx",
+    "./src/pages/index.tsx",
+    "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?absolutePagePath=C%3A%5CUsers%5CHieuTran%5CDesktop%5CGAT%5Cgat-landing%5Csrc%5Cpages%5Cgreen-agri%5Cindex.tsx&page=%2Fgreen-agri!",
+    "./src/components/pages/green-agri/components/about.tsx",
+    "./src/components/pages/green-agri/components/benefit.tsx",
+    "./src/components/pages/green-agri/components/target-customer.tsx",
+    "./src/components/pages/green-agri/green-agri-page.tsx",
+    "./src/pages/green-agri/index.tsx"
+  ]
+}
