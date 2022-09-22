@@ -40,7 +40,7 @@ export function About() {
               src={`/images/${item.url}`}
               alt={item.url}
               height='100%'
-              className='mx-auto rounded-lg object-contain'
+              className='lazyload mx-auto rounded-lg object-contain'
             />
           </SwiperSlide>
         ))}

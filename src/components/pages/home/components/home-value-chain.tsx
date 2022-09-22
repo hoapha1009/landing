@@ -1,5 +1,4 @@
 import { useScreen } from '../../../../hooks/use-screen';
-import { Subtitle } from '../../../shared/subtitle/subtitle';
 import { Title } from '../../../shared/title/title';
 
 export function HomeValueChain() {
@@ -17,7 +16,9 @@ export function HomeValueChain() {
             : '/images/home-string-value-hor.png'
         }
         alt='home-string-value'
-        className={`  ${screen.lg ? 'w-full' : 'mx-auto w-full max-w-lg'}`}
+        className={`lazyload ${
+          screen.lg ? 'w-full' : 'mx-auto w-full max-w-lg'
+        }`}
       />
     </div>
   );

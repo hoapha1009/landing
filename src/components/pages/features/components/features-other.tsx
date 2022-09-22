@@ -36,7 +36,7 @@ export function FeaturesOther() {
                 <img
                   src='/images/features-other.png'
                   alt='image'
-                  className='w-full'
+                  className='lazyload w-full'
                 />
               </a>
             </Link>

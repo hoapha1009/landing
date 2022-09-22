@@ -33,7 +33,7 @@ export function Card({
         src={item.img.url}
         alt={item.img.alt}
         height='100%'
-        className={`object-contain ${imageClass}`}
+        className={`lazyload object-contain ${imageClass}`}
       />
       <div className={`mt-auto h-full text-center ${contentClass}`}>
         {item.content}

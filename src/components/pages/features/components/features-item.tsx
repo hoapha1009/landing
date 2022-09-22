@@ -27,7 +27,7 @@ export function FeaturesItem({
         data-aos-delay={300}
         className={`w-7/12 lg:w-2/5 ${imageClassName}`}
       >
-        <img src={image} alt='image' className='w-full' />
+        <img src={image} alt='image' className='lazyload w-full' />
       </div>
       <div
         className={`${

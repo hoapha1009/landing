@@ -23,7 +23,7 @@ export function OptionRow({
       <img
         src='/images/leaf.png'
         alt='leaf'
-        className='mt-1 h-[22px] w-[22px]'
+        className='lazyload mt-1 h-[22px] w-[22px]'
       />
       <div className={`flex-1 text-gray-600 ${contentClassName}`}>
         {content}

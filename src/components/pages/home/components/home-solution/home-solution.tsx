@@ -18,13 +18,6 @@ export function HomeSolution() {
 
       <div className='flex flex-col gap-3 px-2 lg:flex-row lg:gap-10 lg:px-0'>
         <HomeSolutionTabs />
-        {/* <div className='lg:pt-16'>
-          <img
-            src='/images/home-solution.png'
-            alt='image'
-            className='w-full lg:w-auto'
-          />
-        </div> */}
       </div>
     </div>
   );

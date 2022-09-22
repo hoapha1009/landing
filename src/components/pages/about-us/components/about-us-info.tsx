@@ -47,7 +47,7 @@ function AboutUseCardHorizontal({
         style={{ backgroundColor: 'rgba(255, 255, 255, 0.3)' }}
       >
         <div className='-ml-16 -mt-9 flex h-24 w-24 shrink-0 items-center justify-center rounded-full border-4 border-primary-dark bg-white lg:h-[120px] lg:w-[120px]'>
-          <img src={data.image} alt='' />
+          <img src={data.image} alt='' className='lazyload' />
         </div>
         <div className='z-20 h-full w-full rounded-md p-2 text-base text-white lg:p-4 lg:text-lg'>
           {data.content}

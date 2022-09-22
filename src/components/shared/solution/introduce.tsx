@@ -23,7 +23,11 @@ export function Introduce({ img, title, options, ...props }: IntroduceProps) {
           <div className='text-center text-2xl font-bold leading-tight'>
             {title}
           </div>
-          <img src={img.src} alt={img.alt} className='mx-auto object-contain' />
+          <img
+            src={img.src}
+            alt={img.alt}
+            className='lazyload mx-auto object-contain'
+          />
           <div className='mt-6 flex flex-col gap-4'>
             {options.map((option, index) => (
               <OptionRow key={index} content={option.content} />
@@ -63,7 +67,7 @@ export function Introduce({ img, title, options, ...props }: IntroduceProps) {
             alt={img.alt}
             width='100%'
             height='100%'
-            className='object-contain'
+            className='lazyload object-contain'
           />
         </div>
       </div>
