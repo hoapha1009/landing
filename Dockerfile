@@ -29,6 +29,7 @@ COPY --from=BUILD_IMAGE /usr/src/app/.next ./.next
 COPY --from=BUILD_IMAGE /usr/src/app/next.config.js ./next.config.js
 COPY --from=BUILD_IMAGE /usr/src/app/next-sitemap.config.js ./next-sitemap.config.js
 COPY --from=BUILD_IMAGE /usr/src/app/tailwind.config.js ./tailwind.config.js
+
 EXPOSE 3000
 
 CMD [ "npm", "start"]
