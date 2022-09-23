@@ -33,7 +33,7 @@ export function AboutUsHero() {
           data-aos-delay={200}
           src='/images/about-us-hero.png'
           alt=''
-          className='lazyload mt-5 object-contain lg:w-1/2'
+          className=' mt-5 object-contain lg:w-1/2'
         />
       </div>
     </div>

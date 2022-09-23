@@ -58,7 +58,7 @@ export default function Header() {
                 <img
                   src='/images/logo.png'
                   alt='logo'
-                  className='lazyload h-[30px] w-[85px] lg:h-[36px] lg:w-[102px]'
+                  className=' h-[30px] w-[85px] lg:h-[36px] lg:w-[102px]'
                 />
               </a>
             </Link>

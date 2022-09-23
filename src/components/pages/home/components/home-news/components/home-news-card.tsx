@@ -32,7 +32,7 @@ export function HomeNewsCard({
           <div className='shrink-0 basis-2/5 overflow-hidden rounded-md'>
             <img
               src={`images/${news.image}`}
-              className='lazyload h-full w-full'
+              className=' h-full w-full'
               alt='image-new'
             />
           </div>

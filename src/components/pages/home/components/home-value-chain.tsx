@@ -16,9 +16,7 @@ export function HomeValueChain() {
             : '/images/home-string-value-hor.png'
         }
         alt='home-string-value'
-        className={`lazyload ${
-          screen.lg ? 'w-full' : 'mx-auto w-full max-w-lg'
-        }`}
+        className={` ${screen.lg ? 'w-full' : 'mx-auto w-full max-w-lg'}`}
       />
     </div>
   );
