@@ -89,7 +89,7 @@ function NewsAndBlogList({ selectedTab }: NewsAndBlogListProps) {
           <img
             src={NEWS_LIST[0].img.url}
             alt={NEWS_LIST[0].img.alt}
-            className='lazyload rounded group-hover:brightness-75'
+            className=' rounded group-hover:brightness-75'
             width='100%'
             height='100%'
           />
@@ -110,7 +110,7 @@ function NewsAndBlogList({ selectedTab }: NewsAndBlogListProps) {
                   alt={item.img.alt}
                   width='100%'
                   height='100%'
-                  className='lazyload rounded group-hover:brightness-75'
+                  className=' rounded group-hover:brightness-75'
                 />
               </div>
               <div className='flex flex-1 flex-col md:gap-2 xl:gap-6'>

@@ -38,7 +38,7 @@ export function FarmingDiarySolution() {
               src={`/images/${item.url}`}
               alt={item.url}
               height='100%'
-              className='lazyload mx-auto rounded-lg object-contain'
+              className=' mx-auto rounded-lg object-contain'
             />
           </SwiperSlide>
         ))}
@@ -82,7 +82,7 @@ export function Card({ item, index, ...props }: CardProps) {
           alt={item.img.alt}
           width={47}
           height={47}
-          className='lazyload'
+          className=''
         />
         <div className='text-left font-saira text-xl font-semibold lg:text-[23px]'>
           {item.title}
