@@ -58,9 +58,7 @@ export default function Header() {
                 <img
                   src='/images/logo.png'
                   alt='logo'
-                  width={isLg ? 102 : 85}
-                  height={isLg ? 36 : 30}
-                  className='lazyload object-contain'
+                  className='lazyload h-[30px] w-[85px] lg:h-[36px] lg:w-[102px]'
                 />
               </a>
             </Link>
@@ -73,21 +71,19 @@ export default function Header() {
             >
               Đăng ký tư vấn
             </Button>
-            {!isLg && (
-              <Button
-                variant='outline'
-                className={`px-2.5  ${
-                  showMenuMobile
-                    ? '!bg-primary:'
-                    : '!bg-transparent !text-primary'
-                }`}
-                onClick={() => setShowMenuMobile(!showMenuMobile)}
-              >
-                <i className='text-xl'>
-                  <RiAlignJustify />
-                </i>
-              </Button>
-            )}
+            <Button
+              variant='outline'
+              className={`block px-2.5 lg:hidden ${
+                showMenuMobile
+                  ? '!bg-primary:'
+                  : '!bg-transparent !text-primary'
+              }`}
+              onClick={() => setShowMenuMobile(!showMenuMobile)}
+            >
+              <i className='text-xl'>
+                <RiAlignJustify />
+              </i>
+            </Button>
           </div>
         </div>
         <MenuMobile isShow={showMenuMobile}>
