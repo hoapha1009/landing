@@ -39,7 +39,7 @@ function InformationGat() {
           <img
             src='/images/logo.png'
             alt='logo'
-            className='lazyload w-36 object-contain'
+            className='w-36 object-contain'
           />
         </a>
       </Link>
@@ -92,7 +92,7 @@ function InformationGat() {
                 src={`images/${item.img}`}
                 alt={item.img}
                 height='100%'
-                className='lazyload object-contain'
+                className='object-contain '
               />
             </a>
           </Link>
@@ -133,7 +133,7 @@ function QRcode() {
       <img
         src='/images/QR.png'
         alt='qrcode'
-        className='lazyload object-contain'
+        className='h-24 w-24 object-contain '
       />
       <div className='ml-4 flex flex-col justify-around'>
         <div className='font-saira font-semibold text-white lg:text-lg'>
@@ -145,7 +145,7 @@ function QRcode() {
               <img
                 src='./images/google-play.png'
                 alt='google-play'
-                className='lazyload object-contain'
+                className='object-contain '
               />
             </a>
           </Link>
@@ -156,7 +156,7 @@ function QRcode() {
               <img
                 src='./images/app-store.png'
                 alt='app-store'
-                className='lazyload object-contain'
+                className='object-contain '
               />
             </a>
           </Link>

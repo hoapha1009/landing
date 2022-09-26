@@ -20,7 +20,7 @@ export function TraceabilitySolution() {
             data-duration='500'
             src='/images/solution-origin.png'
             alt='solution-origin-image'
-            className='lazyload w-full'
+            className=' w-full'
           />
         </div>
         <Benefit />
