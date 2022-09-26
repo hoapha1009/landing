@@ -6,6 +6,7 @@ import '../styles/style.scss';
 
 import Layout from '../components/layout/Layout';
 import { DefaultHead } from '../components/layout/default-head';
+import { ScreenProvider } from '../lib/providers/screen-provider';
 
 /**
  * !STARTERCONF info
@@ -16,9 +17,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <DefaultHead />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <ScreenProvider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ScreenProvider>
     </>
   );
 }
