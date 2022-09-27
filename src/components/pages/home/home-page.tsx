@@ -62,14 +62,14 @@ export const MOCK_DATA_2 = [
       url: '/images/leaf.png',
       alt: 'lá cây',
     },
-    content: 'Hạn chế hàng giả, kém chất lượng',
+    content: 'Tăng tính minh bạch thương mại',
   },
   {
     img: {
       url: '/images/scan.png',
       alt: 'lá cây',
     },
-    content: 'Hiện đại hóa nền nông nghiệp Việt',
+    content: 'Hiện đại hóa nền nông nghiệp Việt Nam',
   },
   {
     img: {
@@ -83,6 +83,6 @@ export const MOCK_DATA_2 = [
       url: '/images/user.png',
       alt: 'lá cây',
     },
-    content: 'Ổn định thị trường nông nghiệp',
+    content: 'Thúc đẩy phát triển kinh tế và giảm thiểu đói nghèo',
   },
 ];
