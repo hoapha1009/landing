@@ -19,14 +19,14 @@ export function Welcome() {
   return (
     <div data-aos='fade-up' className='main-container py-8 lg:py-24'>
       <div className='mx-auto mb-4 w-2/3 text-center text-[23px] font-bold leading-8 lg:mb-8 lg:w-full lg:text-5xl'>
-        Welcome to Cropin’s Resource Section
+        Tin tức nông nghiệp mới nhất từ GAT
       </div>
       <Subtitle
         className='mx-auto !mb-4 !text-left lg:w-5/6 lg:!text-center lg:leading-8'
-        text='We, at Cropin, are on our way to building the world’s first ag-tech resource library based on our experiences, the projects implemented, problems solved, and trillions of farm pixel-level datasets we have collected over a decade from 52 countries.'
+        text='Chúng tôi, tại GAT, đang trên đường xây dựng thư viện tài nguyên công nghệ nông nghiệp đầu tiên trên thế giới dựa trên kinh nghiệm của chúng tôi, các dự án đã thực hiện, các vấn đề đã giải quyết và hàng nghìn tỷ bộ dữ liệu cấp pixel trong ngành nông nghiệp mà chúng tôi đã thu thập trong suốt thời gian qua.'
       />
       <Subtitle
-        text='You will find case studies, whitepapers, use cases, and reports covering the entire agri-value chain housed here.'
+        text='Bạn sẽ tìm thấy các tin tức, nghiên cứu điển hình, các trường hợp sử dụng và báo cáo liên quan đến chuỗi giá trị nông nghiệp tại đây..'
         className='!mt-0 !text-left lg:!text-center'
       />
       <TabList selectedTab={selectedTab} onSelect={handleSelect} />
@@ -46,7 +46,7 @@ export function TabList({ selectedTab, onSelect }: TabListProps) {
   return (
     <div
       data-aos='fade-up'
-      className='no-scrollbar mx-auto mt-8 mb-6 flex flex-nowrap items-center gap-3 overflow-x-scroll whitespace-nowrap rounded-md border border-gray-200 p-2 shadow-md lg:mb-12 lg:w-2/3 lg:gap-2 lg:whitespace-normal xl:w-1/2'
+      className='no-scrollbar mx-auto mt-8 mb-6 flex flex-nowrap items-center gap-3 overflow-x-scroll whitespace-nowrap rounded-md border border-gray-200 p-2 shadow-md lg:mb-12 lg:w-[1171px] lg:gap-2 lg:whitespace-normal'
     >
       {TAB_LIST.map((tab, index) => (
         <div
@@ -89,7 +89,7 @@ function NewsAndBlogList({ selectedTab }: NewsAndBlogListProps) {
           <img
             src={NEWS_LIST[0].img.url}
             alt={NEWS_LIST[0].img.alt}
-            className=' rounded group-hover:brightness-75'
+            className='rounded group-hover:brightness-75'
             width='100%'
             height='100%'
           />
@@ -110,7 +110,7 @@ function NewsAndBlogList({ selectedTab }: NewsAndBlogListProps) {
                   alt={item.img.alt}
                   width='100%'
                   height='100%'
-                  className=' rounded group-hover:brightness-75'
+                  className='rounded group-hover:brightness-75'
                 />
               </div>
               <div className='flex flex-1 flex-col md:gap-2 xl:gap-6'>
@@ -140,28 +140,31 @@ const NEWS_LIST = [
       alt: 'news-blogs-1-image',
     },
     title:
-      'Uncovering the grain of truth: Remote sensing to drive pest control in rice farming',
+      'Hội Nông dân Đà Nẵng tích cực hỗ trợ nông dân thu hoạch rau màu "chạy" bão Noru',
   },
   {
     img: {
       url: '/images/news-blogs-2.png',
       alt: 'news-blogs-2-image',
     },
-    title: 'Post-harvesting losses - how to minimize using technology',
+    title:
+      'Đồng Nai: Nông dân liên kết cùng doanh nghiệp trồng lúa hữu cơ có lợi nhiều bề',
   },
   {
     img: {
       url: '/images/news-blogs-3.png',
       alt: 'news-blogs-3-image',
     },
-    title: 'Seed production challenges & solutions - how technology helps',
+    title:
+      'Đưa công nghệ cao vào chăn nuôi, tận dụng hiệu quả chất thải, nâng cao giá trị sản phẩm',
   },
   {
     img: {
       url: '/images/news-blogs-4.png',
       alt: 'news-blogs-4-image',
     },
-    title: 'Faster seed certification - how technology helps',
+    title:
+      'Đào ao dưới nuôi tôm, trên trồng thứ rau bò lan man, ra trái nằm la liệt, nông dân Kiên...',
   },
   {
     img: {
@@ -169,14 +172,16 @@ const NEWS_LIST = [
       alt: 'news-blogs-5-image',
     },
     title:
-      'Enforcing package of practices in farming - how farm digitization helps',
+      'Giá mít Thái hôm nay 27/9: Giá mít giảm thêm 3.000 đồng/kg, vì sao cây mít Thái...',
   },
 ];
 
 const TAB_LIST = [
-  { value: 'caseStudy', label: 'Case Study' },
-  { value: 'blogs', label: 'Blogs' },
-  { value: 'whitePaper', label: 'White Paper' },
-  { value: 'thoughtLeadership', label: 'Thought Leadership' },
-  { value: 'webinar', label: 'Webinar' },
+  { value: 'Nông nghiệp trong nước', label: 'Nông nghiệp trong nước ' },
+  { value: 'Blogs', label: 'Blogs' },
+  { value: 'Thời tiết nông vụ', label: 'Thời tiết nông vụ' },
+  { value: 'Dự báo sâu bệnh', label: 'Dự báo sâu bệnh' },
+  { value: 'Sự kiện nông nghiệp', label: 'Sự kiện nông nghiệp' },
+  { value: 'Thị trường', label: 'Thị trường' },
+  { value: 'Nông dân cảnh giác', label: 'Nông dân cảnh giác' },
 ];

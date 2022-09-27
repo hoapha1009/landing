@@ -24,13 +24,7 @@ const LIST = [
     options: [
       {
         content:
-          'Tạo ưu thế cạnh tranh khi áp dụng truy xuất nguồn gốc vào sản xuất và tối ưu quá trình vận hành sản xuất',
-      },
-      {
-        content: 'Quản lý hiệu quả vùng trồng và quy trình sản phẩm',
-      },
-      {
-        content: 'Tối ưu về nhân sự và chi phí',
+          'Tạo ưu thế cạnh tranh khi áp dụng truy xuất nguồn gốc vào sản xuất. Tối ưu quá trình vận hành sản xuất. Quản lý hiệu quả vùng trồng và quy trình sản phẩm.',
       },
     ],
   },

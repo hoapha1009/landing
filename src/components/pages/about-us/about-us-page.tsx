@@ -1,9 +1,9 @@
 import { useScreen } from '../../../hooks/use-screen';
 import { BreadCrumbs } from '../../shared/breadcrumbs/breadcrumbs';
 import { SlidePart } from '../../shared/slide-part/slide-part';
+import { AboutUsExpert } from './components/about-us-expert';
 import { AboutUsHero } from './components/about-us-hero';
 import { AboutUsInfo } from './components/about-us-info';
-import { AboutUsSolution } from './components/about-us-solution';
 
 export function AboutUsPage() {
   const isLg = useScreen('lg');
@@ -17,9 +17,10 @@ export function AboutUsPage() {
       )}
       <AboutUsHero />
       <AboutUsInfo />
-      <AboutUsSolution />
-      <SlidePart title='Khách hàng Green Agri' className='bg-[#E7F7F0]' />
-      <SlidePart title='Đối tác CỦA gREEN aGRI' />
+      <AboutUsExpert />
+      {/* <AboutUsSolution /> */}
+      <SlidePart title='KHÁCH HÀNG GAT' className='bg-[#E7F7F0]' />
+      <SlidePart title='Đối tác GAT' />
     </>
   );
 }

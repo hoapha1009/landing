@@ -16,11 +16,11 @@ interface InfoCardProps {
 
 export function InfoCard({ item }: InfoCardProps) {
   return (
-    <div className='relative rounded-xl border border-gray-50 bg-white px-6 pt-20 pb-8 shadow lg:pb-12'>
+    <div className='relative rounded-xl border-2 border-gray-50 bg-white px-6 pt-20 pb-8 shadow-md lg:pb-12'>
       <div
         data-aos='fade-up'
         data-aos-delay='100'
-        className='font-saira text-[23px] font-semibold lg:text-2xl'
+        className='text-center font-saira text-[23px] font-semibold lg:text-2xl'
       >
         {item.title}
       </div>

@@ -3,10 +3,10 @@ import { Title } from '../../../shared/title/title';
 
 export function Benefit() {
   return (
-    <div className='lg:pt-10' data-aos='fade-up'>
-      <div className='main-container rounded-xl bg-primary-dark pt-8 pb-6 md:p-8 lg:p-10 xl:p-16'>
-        <Title text='Lợi ích của green agri' className='text-white' />
-        <div className='mx-2 mt-20 grid gap-20 md:auto-rows-fr lg:mt-16 lg:grid-cols-3 lg:gap-8'>
+    <div className='bg-primary-light lg:pt-10' data-aos='fade-up'>
+      <div className='main-container rounded-xl pt-8 pb-6 md:p-8 lg:p-10 xl:p-16'>
+        <Title text='Lợi ích của green agri' />
+        <div className='mx-2 mt-24 grid gap-20 md:auto-rows-fr lg:mt-20 lg:grid-cols-3 lg:gap-8'>
           {LIST.map((item, index) => (
             <InfoCard key={index} item={item} />
           ))}

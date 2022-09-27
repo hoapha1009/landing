@@ -1,20 +1,17 @@
-import { Title } from '../../../shared/title/title';
+import Link from 'next/link';
 
 export function AboutUsInfo() {
   return (
     <div
       data-aos='fade-up'
-      className='main-container rounded-lg bg-primary-dark bg-cover bg-center bg-no-repeat p-3 shadow-sm lg:p-12'
+      className='main-container rounded-lg bg-primary-dark bg-cover bg-center bg-no-repeat p-8 shadow-sm'
       style={{ backgroundImage: "url('./images/about-us.png')" }}
     >
-      <Title text='giới thiệu gat' className='mt-3 text-white lg:mt-0' />
-      {/* <Subtitle
-        text='Công ty Cổ phần Công nghệ Green Agri là đơn vị tiên phong trong lĩnh vực cung cấp các giải pháp công nghệ cho ngành nông nghiệp
-        Với đội ngũ chuyên gia trong lĩnh vực nông nghiệp và công nghệ thông tin. Chúng tôi sẽ xây dựng và đưa ra những giải pháp công nghệ để hỗ trợ các doanh nghiệp và người nông dân số hóa các qui trình, công đoạn trong sản xuất, canh tác để nâng cao hiệu năng cho sản xuất nông nghiệp trên cơ sở nền tảng công nghệ tối ưu và minh bạch'
-        className='!mt-8 mb-16 !text-left text-lg !font-normal !text-white'
-      /> */}
+      <div className=''>
+        <img src='./images/logo.png' alt='logo' className='mx-auto w-[18%]' />
+      </div>
 
-      <div className='mt-8 grid grid-cols-1 gap-10 pl-16 pr-0  pb-6 lg:mt-16 lg:grid-cols-2 lg:gap-[92px] lg:pb-16 lg:pr-16'>
+      <div className='mt-8 grid gap-20 lg:mt-20 lg:grid-cols-4 lg:gap-8'>
         {MOCK_DATA.map((item, index) => (
           <AboutUseCardHorizontal data={item} key={index} index={index} />
         ))}
@@ -36,21 +33,22 @@ function AboutUseCardHorizontal({
     <div
       data-aos='fade-up'
       data-aos-delay={delay}
-      className='flex flex-col gap-2 lg:gap-4'
+      className='flex flex-col gap-2 rounded-md bg-white shadow-sm lg:gap-4'
     >
-      <div className='bg-transparent text-right font-saira text-2xl font-semibold uppercase text-white'>
-        {data.title}
+      <div className='mx-auto -mt-[55px] flex h-32 w-24 flex-row items-center justify-center rounded-full border-2 border-primary bg-white shadow-md'>
+        <img src={data.image} alt='image' className='' />
       </div>
-      <div
-        className='flex h-full min-h-28 rounded-md shadow-sm'
-        style={{ backgroundColor: 'rgba(255, 255, 255, 0.3)' }}
-      >
-        <div className='-ml-16 -mt-9 flex h-24 w-24 shrink-0 items-center justify-center rounded-full border-4 border-primary-dark bg-white lg:h-[120px] lg:w-[120px]'>
-          <img src={data.image} alt='' className='' />
+
+      <div className='flex h-full flex-col px-4 pt-2 pb-0'>
+        <div>
+          <div className='mb-3 text-center font-saira text-[23px] font-semibold uppercase'>
+            {data.title}
+          </div>
+          <div className='text-ellipsis-4 min-h-24'>{data.content}</div>
         </div>
-        <div className='z-20 h-full w-full whitespace-pre-wrap rounded-md p-2 text-base text-white lg:p-4 lg:text-lg'>
-          {data.content}
-        </div>
+        <Link href='/'>
+          <a className='hidden  text-primary lg:block'>Xem thêm</a>
+        </Link>
       </div>
     </div>
   );

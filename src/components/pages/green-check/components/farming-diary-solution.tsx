@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Subtitle } from '../../../shared/subtitle/subtitle';
 import { Title } from '../../../shared/title/title';
+import { FeatMain } from '../../green-agri/components/feat-main';
 
 export function FarmingDiarySolution() {
   return (
@@ -10,7 +11,7 @@ export function FarmingDiarySolution() {
     >
       <Title text='GIẢI PHÁP NHẬT KÝ CANH TÁC' />
       <Subtitle
-        className='mx-auto w-full lg:w-3/4'
+        className='mx-auto w-full text-center'
         text='Là giải pháp giám sát và quản lý trang trại giúp số hóa hồ sơ sản xuất của nông trại / hộ nông dân, chia sẻ thông tin thời tiết và dịch hại, theo dõi năng suất cây trồng, cải thiện hiệu quả trang trại và tăng năng suất lao động của nhân viên nông trại/ hộ nông dân'
       />
       <Swiper
@@ -43,6 +44,9 @@ export function FarmingDiarySolution() {
           </SwiperSlide>
         ))}
       </Swiper>
+      <div className='mt-8'>
+        <FeatMain options={LIST_FEAT} />
+      </div>
       <Title text='lợi ích của nhật ký canh tác' className='mt-8 lg:mt-14' />
       <div className='mt-4 grid w-full gap-4 lg:mt-8 lg:auto-rows-fr lg:grid-cols-3 lg:gap-8'>
         {LIST.map((item, index) => (
@@ -143,5 +147,40 @@ const IMAGE_LIST = [
   {
     url: 'solution-diary-4.png',
     alt: 'solution-diary-4',
+  },
+];
+
+const LIST_FEAT = [
+  {
+    url: '/images/leaf-2.png',
+    content: 'Định vị địa điểm canh tác',
+  },
+  {
+    url: '/images/leaf-2.png',
+    content: 'Xác định cây trồng',
+  },
+  {
+    url: '/images/leaf-2.png',
+    content: 'Chia sẻ thông tin thời tiết',
+  },
+  {
+    url: '/images/leaf-2.png',
+    content: 'Theo dõi sức khỏe cây trồng từ xa',
+  },
+  {
+    url: '/images/leaf-2.png',
+    content: 'Chia sẻ thông tin và Đặt cảnh báo dịch hại',
+  },
+  {
+    url: '/images/leaf-2.png',
+    content: 'Thiết lập công việc và quản lý năng suất công nhân',
+  },
+  {
+    url: '/images/leaf-2.png',
+    content: 'Quản lý vật tư đầu vào và kho vật tư nông nghiệp',
+  },
+  {
+    url: '/images/leaf-2.png',
+    content: 'Quản lý sản lượng',
   },
 ];
