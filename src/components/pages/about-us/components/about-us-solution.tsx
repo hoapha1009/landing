@@ -39,7 +39,7 @@ function AboutUsSolutionCard({
           alt={data.alt}
           width={47}
           height={47}
-          className='lazyload'
+          className=''
         />
         <div className='font-saira text-xl font-semibold lg:text-2xl'>
           {data.title}

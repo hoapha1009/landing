@@ -2,12 +2,12 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useMemo, useState } from 'react';
 import { RiAlignJustify, RiArrowDownSLine } from 'react-icons/ri';
-import { useScreen } from '../../hooks/use-screen';
+import { useScreen } from '../../lib/providers/screen-provider';
 
 import Button from '../buttons/Button';
 
 export default function Header() {
-  const isLg = useScreen('lg');
+  const { lg } = useScreen();
   const router = useRouter();
   const [scrollTop, setScrollTop] = useState(0);
   const [showMenuMobile, setShowMenuMobile] = useState(false);
@@ -58,13 +58,13 @@ export default function Header() {
                 <img
                   src='/images/logo.png'
                   alt='logo'
-                  className='lazyload h-[30px] w-[85px] lg:h-[36px] lg:w-[102px]'
+                  className=' h-[30px] w-[85px] lg:h-[36px] lg:w-[102px]'
                 />
               </a>
             </Link>
-            {isLg && <MenuLink indexOfSelectedMenu={indexOfSelectedMenu} />}
+            {lg && <MenuLink indexOfSelectedMenu={indexOfSelectedMenu} />}
           </div>
-          <div className={!isLg ? 'flex flex-row items-center gap-x-2' : ''}>
+          <div className={!lg ? 'flex flex-row items-center gap-x-2' : ''}>
             <Button
               variant='primary'
               className='px-3 text-sm lg:px-4 lg:text-base'
@@ -90,7 +90,7 @@ export default function Header() {
           <MenuLink indexOfSelectedMenu={indexOfSelectedMenu} />
         </MenuMobile>
       </header>
-      {!isLg && showMenuMobile && (
+      {!lg && showMenuMobile && (
         <div
           onClick={() => setShowMenuMobile(false)}
           className='fixed top-0 left-0 z-200 h-full w-full'
@@ -103,7 +103,7 @@ export default function Header() {
 export function MenuLink({ indexOfSelectedMenu }) {
   const router = useRouter();
   const [show, setShow] = useState(false);
-  const isLg = useScreen('lg');
+  const { lg } = useScreen();
 
   return (
     <>
@@ -114,7 +114,7 @@ export function MenuLink({ indexOfSelectedMenu }) {
               className={`inline-flex w-full items-center justify-between rounded lg:w-auto lg:justify-start lg:hover:bg-gray-100 ${
                 indexOfSelectedMenu === index && 'text-primary'
               }`}
-              onClick={() => !isLg && setShow(!show)}
+              onClick={() => !lg && setShow(!show)}
             >
               <span className={`mr-1 py-2 lg:pl-4 `}>{tab.title}</span>
               <i
@@ -123,7 +123,7 @@ export function MenuLink({ indexOfSelectedMenu }) {
                 <RiArrowDownSLine />
               </i>
             </button>
-            {!isLg ? (
+            {!lg ? (
               show && (
                 <ul className='rounded bg-white transition duration-300 ease-in-out lg:absolute lg:hidden lg:shadow lg:group-hover:block'>
                   {tab.subTabs.map((subTab, index) => (
@@ -210,7 +210,7 @@ const MENU_TAB_LIST: Menu[] = [
       { href: '/green-check', title: 'Green Check' },
     ],
   },
-  { href: '/features', title: 'Tính năng' },
+  // { href: '/features', title: 'Tính năng' },
   // { href: '/recruit', title: 'Tuyển dụng' },
   // { href: '/guide', title: 'Hướng dẫn' },
   { href: '/news-and-blog', title: 'Tin tức & Blog' },

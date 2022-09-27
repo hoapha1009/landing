@@ -1,7 +1,7 @@
-import { Card } from '../../../shared/card/card';
 import { Subtitle } from '../../../shared/subtitle/subtitle';
 import { Title } from '../../../shared/title/title';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { FeatMain } from './feat-main';
 
 export function About() {
   return (
@@ -11,8 +11,8 @@ export function About() {
     >
       <Title text='Về green agri' />
       <Subtitle
-        className='mx-auto lg:w-3/4'
-        text='Là giải pháp thương mại điện tử và kênh phân phối trong ngành nông nghiệp. Hệ thống hỗ trợ nền tảng công nghệ cho doanh nghiệp kinh doanh truyền thống offline và kênh online hiệu quả. Hỗ trợ doanh nghiệp mở rộng kênh phân phối đến các đại lý các tỉnh, và phát triển mạng lưới sales/ cộng tác viên'
+        className='mx-auto  !text-left  lg:!text-center'
+        text='Là giải pháp thương mại điện tử và quản lý kênh phân phối cho các doanh nghiệp trong lĩnh vực nông nghiệp. Hỗ trợ nền tảng công nghệ và giúp tiếp cận thêm kênh online hiệu quả. Ngoài ra, giúp doanh nghiệp mở rộng kênh phân phối đến các đại lý các tỉnh và mạng lưới cộng tác viên.'
       />
       <Swiper
         slidesPerView={1}
@@ -40,21 +40,22 @@ export function About() {
               src={`/images/${item.url}`}
               alt={item.url}
               height='100%'
-              className='lazyload mx-auto rounded-lg object-contain'
+              className='mx-auto rounded-lg object-contain '
             />
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className='mt-8 grid w-full auto-rows-fr grid-cols-2 gap-4 px-0 md:grid-cols-4 lg:gap-5'>
-        {LIST.map((item, index) => (
+      <div className='mt-8'>
+        {/* {LIST.map((item, index) => (
           <Card
             index={index + 1}
             key={index}
             item={item}
-            className='gap-5 bg-gray-50 p-4 text-lg lg:gap-8 lg:p-8'
+            className='gap-5 p-4 text-lg bg-gray-50 lg:gap-8 lg:p-8'
             contentClass='text-gray-600'
           />
-        ))}
+        ))} */}
+        <FeatMain options={LIST} />
       </div>
     </div>
   );
@@ -62,32 +63,32 @@ export function About() {
 
 const LIST = [
   {
-    img: {
-      url: '/images/automation.png',
-      alt: 'about-green-agri-1',
-    },
-    content: 'Tự động hóa quá trình bán hàng cho thành viên kênh phân phối',
+    url: '/images/leaf-2.png',
+    content:
+      'Quản lý đa kênh trên một nền tảng kiểm soát hoạt động bán hàng mọi lúc mọi nơi.',
   },
   {
-    img: {
-      url: '/images/update.png',
-      alt: 'about-green-agri-2',
-    },
-    content: 'Cập nhật, tổng hợp và báo cáo tình hình của đội ngũ bán hàng',
+    url: '/images/leaf-2.png',
+    content:
+      'Theo dõi tình trang hàng tồn, báo cáo luân chuyển hàng hóa giữa các kênh bán hàng. ',
   },
   {
-    img: {
-      url: '/images/handle.png',
-      alt: 'about-green-agri-3',
-    },
-    content: 'Chủ động kiểm soát hàng tồn kho, xử lý đơn hàng,… ',
+    url: '/images/leaf-2.png',
+    content: 'Quản lý thông tin sản phẩm phân phối tới người dùng.',
   },
   {
-    img: {
-      url: '/images/information.png',
-      alt: 'about-green-agri-4',
-    },
-    content: 'Kiểm soát thông tin chính xác',
+    url: '/images/leaf-2.png',
+    content: 'Quản lý thu chi kiểm soát hoạt động bán hàng.',
+  },
+  {
+    url: '/images/leaf-2.png',
+    content:
+      'Linh hoạt kết nối, xây dựng các chương trình khuyến mãi cho các nhóm khách hàng khác nhau.',
+  },
+  {
+    url: '/images/leaf-2.png',
+    content:
+      'Hệ thống API mở kết nối ERP, Call center và các phần mềm chuyên biệt của doanh nghiệp. ',
   },
 ];
 

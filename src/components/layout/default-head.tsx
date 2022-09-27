@@ -1,25 +1,26 @@
 import Head from 'next/head';
+import Script from 'next/script';
 
 // import { AnalyticConfig } from "../../dist/graphql/modules/shop/shopConfig/analytic/analyticConfig.graphql";
 
 export function DefaultHead() {
   return (
     <>
+      <Script
+        async
+        src='https://www.googletagmanager.com/gtag/js?id=G-7G5K593S56'
+      />
+      <Script
+        dangerouslySetInnerHTML={{
+          __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-7G5K593S56');
+              `,
+        }}
+      />
       <Head>
-        <script
-          async
-          src='https://www.googletagmanager.com/gtag/js?id=G-7G5K593S56'
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', 'G-7G5K593S56');
-                `,
-          }}
-        ></script>
         <meta
           name='viewport'
           content='initial-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=0'

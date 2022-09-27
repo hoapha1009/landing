@@ -3,13 +3,24 @@ import { BreadCrumbs } from '../../shared/breadcrumbs/breadcrumbs';
 import { Form } from '../../shared/form/form';
 import { SlidePart } from '../../shared/slide-part/slide-part';
 import { Introduce } from '../../shared/solution/introduce';
+import { TargetCustomer } from '../green-agri/components/target-customer';
 import { FarmingDiarySolution } from './components/farming-diary-solution';
 import { TraceabilitySolution } from './components/traceability-solution';
 
 export function GreenCheckPage() {
   const title =
-    'Green Check - Giải pháp Truy xuất nguồn gốc và Nhật ký canh tác';
+    'Green Check - Giải pháp Nhật ký canh tác và truy xuất nguồn gốc';
+  const subtitle = 'Nền tảng Green check cung cấp hai giải pháp bao gồm: ';
   const options = [
+    {
+      content: 'Nhật ký canh tác',
+    },
+    {
+      content: 'Truy xuất nguồn gốc.',
+    },
+  ];
+
+  const optionsWebapp = [
     {
       content: 'Quản lý các mã Code để truy xuất nguồn gốc',
     },
@@ -25,6 +36,7 @@ export function GreenCheckPage() {
     src: '/images/green-check-banner.png',
     alt: 'green-check-banner',
   };
+
   const isLg = useScreen('lg');
 
   return (
@@ -38,10 +50,16 @@ export function GreenCheckPage() {
           className='pb-3'
         />
       )}
-      <Introduce title={title} options={options} img={img} />
+      <Introduce
+        title={title}
+        subtitle={subtitle}
+        options={isLg ? options : optionsWebapp}
+        img={img}
+      />
       <FarmingDiarySolution />
       <TraceabilitySolution />
-      <SlidePart title='Đối tác Green Agri' className='!pb-0' />
+      <TargetCustomer title='Các đối tượng khách hàng của Green Check' />
+      <SlidePart title='Đối tác GAT' className='bg-[#E7F7F0]' />
       <Form />
     </div>
   );

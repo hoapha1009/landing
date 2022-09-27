@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Subtitle } from '../../../shared/subtitle/subtitle';
 import { Title } from '../../../shared/title/title';
+import { FeatMain } from '../../green-agri/components/feat-main';
 
 export function FarmingDiarySolution() {
   return (
@@ -10,8 +11,8 @@ export function FarmingDiarySolution() {
     >
       <Title text='GIẢI PHÁP NHẬT KÝ CANH TÁC' />
       <Subtitle
-        className='mx-auto w-full lg:w-3/4'
-        text='Là giải pháp cung cấp nền tảng ghi nhận lại hoạt động sản xuất của người nông dân và các mốc thời gian tương ứng với các hoạt động đó. Nhật ký sẽ tập hợp các thông tin về quá trình tạo ra sản phẩm, hình thành nên một hồ sơ sản phẩm'
+        className='mx-auto w-full text-center'
+        text='Là giải pháp giám sát và quản lý trang trại giúp số hóa hồ sơ sản xuất của nông trại / hộ nông dân, chia sẻ thông tin thời tiết và dịch hại, theo dõi năng suất cây trồng, cải thiện hiệu quả trang trại và tăng năng suất lao động của nhân viên nông trại/ hộ nông dân'
       />
       <Swiper
         slidesPerView={1}
@@ -38,11 +39,14 @@ export function FarmingDiarySolution() {
               src={`/images/${item.url}`}
               alt={item.url}
               height='100%'
-              className='lazyload mx-auto rounded-lg object-contain'
+              className='mx-auto rounded-lg object-contain '
             />
           </SwiperSlide>
         ))}
       </Swiper>
+      <div className='mt-8'>
+        <FeatMain options={LIST_FEAT} />
+      </div>
       <Title text='lợi ích của nhật ký canh tác' className='mt-8 lg:mt-14' />
       <div className='mt-4 grid w-full gap-4 lg:mt-8 lg:auto-rows-fr lg:grid-cols-3 lg:gap-8'>
         {LIST.map((item, index) => (
@@ -82,7 +86,7 @@ export function Card({ item, index, ...props }: CardProps) {
           alt={item.img.alt}
           width={47}
           height={47}
-          className='lazyload'
+          className=''
         />
         <div className='text-left font-saira text-xl font-semibold lg:text-[23px]'>
           {item.title}
@@ -119,7 +123,7 @@ const LIST = [
     },
     title: 'Chuẩn hóa quy trình',
     content:
-      'Giúp chuẩn hóa quy trình sản xuất theo các tiêu chuẩn như VietGap, GlobalGap và Organic',
+      'Giúp chuẩn hóa quy trình sản xuất theo các tiêu chuẩn như VietGap, GlobalGap và Organic. Giám sát các tín chỉ Carbon',
   },
 ];
 
@@ -139,5 +143,40 @@ const IMAGE_LIST = [
   {
     url: 'solution-diary-4.png',
     alt: 'solution-diary-4',
+  },
+];
+
+const LIST_FEAT = [
+  {
+    url: '/images/leaf-2.png',
+    content: 'Định vị địa điểm canh tác',
+  },
+  {
+    url: '/images/leaf-2.png',
+    content: 'Xác định cây trồng',
+  },
+  {
+    url: '/images/leaf-2.png',
+    content: 'Chia sẻ thông tin thời tiết',
+  },
+  {
+    url: '/images/leaf-2.png',
+    content: 'Theo dõi sức khỏe cây trồng từ xa',
+  },
+  {
+    url: '/images/leaf-2.png',
+    content: 'Chia sẻ thông tin và Đặt cảnh báo dịch hại',
+  },
+  {
+    url: '/images/leaf-2.png',
+    content: 'Thiết lập công việc và quản lý năng suất công nhân',
+  },
+  {
+    url: '/images/leaf-2.png',
+    content: 'Quản lý vật tư đầu vào và kho vật tư nông nghiệp',
+  },
+  {
+    url: '/images/leaf-2.png',
+    content: 'Quản lý sản lượng',
   },
 ];

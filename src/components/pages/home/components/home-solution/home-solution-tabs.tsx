@@ -78,7 +78,7 @@ export function HomeSolutionTabs() {
         <img
           src={`/images/${show.image}`}
           alt='image'
-          className='lazyload grow-0 rounded-md object-cover lg:h-[395px] lg:w-auto lg:w-[285px] xl:w-[325px]'
+          className=' grow-0 rounded-md object-cover lg:h-[395px] lg:w-auto lg:w-[285px] xl:w-[325px]'
         />
       </div>
     </div>

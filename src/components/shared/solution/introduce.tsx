@@ -4,6 +4,7 @@ import { useScreen } from '../../../hooks/use-screen';
 
 interface IntroduceProps {
   title: string;
+  subtitle?: string;
   options: {
     content: string;
   }[];
@@ -13,7 +14,13 @@ interface IntroduceProps {
   };
 }
 
-export function Introduce({ img, title, options, ...props }: IntroduceProps) {
+export function Introduce({
+  img,
+  title,
+  subtitle,
+  options,
+  ...props
+}: IntroduceProps) {
   const isLg = useScreen('lg');
 
   if (!isLg) {
@@ -26,7 +33,7 @@ export function Introduce({ img, title, options, ...props }: IntroduceProps) {
           <img
             src={img.src}
             alt={img.alt}
-            className='lazyload mx-auto object-contain'
+            className='mx-auto object-contain '
           />
           <div className='mt-6 flex flex-col gap-4'>
             {options.map((option, index) => (
@@ -35,7 +42,7 @@ export function Introduce({ img, title, options, ...props }: IntroduceProps) {
           </div>
           <div className='mt-8 text-center'>
             <Button variant='primary' className='!px-8 !py-3'>
-              SỬ DỤNG NGAY
+              LIÊN HỆ NGAY
             </Button>
           </div>
         </div>
@@ -48,6 +55,9 @@ export function Introduce({ img, title, options, ...props }: IntroduceProps) {
       <div className='main-container flex items-center gap-2'>
         <div className='flex-1'>
           <div className='text-5xl font-bold leading-tight'>{title}</div>
+          <div className='mt-5 mb-8 text-xl uppercase text-[#6C6C6C]'>
+            {subtitle}
+          </div>
           <div className='mt-4 flex flex-col gap-4'>
             {options.map((option, index) => (
               <OptionRow
@@ -58,7 +68,7 @@ export function Introduce({ img, title, options, ...props }: IntroduceProps) {
             ))}
           </div>
           <Button variant='primary' className='mt-8 !px-8 !py-3'>
-            SỬ DỤNG NGAY
+            LIÊN HỆ NGAY
           </Button>
         </div>
         <div className='ml-auto w-5/12 shrink-0 grow-0'>
@@ -67,7 +77,7 @@ export function Introduce({ img, title, options, ...props }: IntroduceProps) {
             alt={img.alt}
             width='100%'
             height='100%'
-            className='lazyload object-contain'
+            className='object-contain '
           />
         </div>
       </div>

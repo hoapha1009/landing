@@ -24,8 +24,8 @@ export function GreenAgriPage() {
       <Introduce title={title} options={options} img={img} />
       <About />
       <Benefit />
-      <TargetCustomer />
-      <SlidePart title='đối tác green agri' className='bg-[#E7F7F0]' />
+      <TargetCustomer title='các đối tượng khách hàng của green agri' />
+      <SlidePart title='Đối tác GAT' className='bg-[#E7F7F0]' />
       <Form />
     </div>
   );
