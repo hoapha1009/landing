@@ -24,10 +24,13 @@ const LIST = [
     options: [
       {
         content:
-          'Truy xuất nguồn gốc góp phần nâng cao vị thế thương hiệu, tạo dựng niềm tin với người tiêu dùng. ',
+          'Tạo ưu thế cạnh tranh khi áp dụng truy xuất nguồn gốc vào sản xuất và tối ưu quá trình vận hành sản xuất',
       },
       {
-        content: 'Tạo môi trường kinh doanh minh bạch',
+        content: 'Quản lý hiệu quả vùng trồng và quy trình sản phẩm',
+      },
+      {
+        content: 'Tối ưu về nhân sự và chi phí',
       },
     ],
   },

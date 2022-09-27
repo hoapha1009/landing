@@ -210,7 +210,7 @@ const MENU_TAB_LIST: Menu[] = [
       { href: '/green-check', title: 'Green Check' },
     ],
   },
-  { href: '/features', title: 'Tính năng' },
+  // { href: '/features', title: 'Tính năng' },
   // { href: '/recruit', title: 'Tuyển dụng' },
   // { href: '/guide', title: 'Hướng dẫn' },
   { href: '/news-and-blog', title: 'Tin tức & Blog' },

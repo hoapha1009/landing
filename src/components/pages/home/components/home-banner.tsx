@@ -3,6 +3,7 @@ import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper/core';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useRef, useState } from 'react';
 import { useScreen } from '../../../../hooks/use-screen';
+import { useRouter } from 'next/router';
 SwiperCore.use([Pagination, Autoplay, Navigation]);
 
 export function HomeBanner() {
@@ -45,6 +46,7 @@ export function HomeBanner() {
 }
 
 function HomBannerContent(banner) {
+  const router = useRouter();
   const isLg = useScreen('lg');
   return (
     <div
@@ -69,6 +71,7 @@ function HomBannerContent(banner) {
           <Button
             variant='primary'
             className='py-[12px] px-5 font-normal uppercase  lg:py-[14px] lg:px-7'
+            onClick={() => router.push('/about-us')}
           >
             Tìm hiểu thêm
           </Button>

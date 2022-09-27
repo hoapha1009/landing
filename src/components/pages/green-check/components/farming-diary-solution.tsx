@@ -11,7 +11,7 @@ export function FarmingDiarySolution() {
       <Title text='GIẢI PHÁP NHẬT KÝ CANH TÁC' />
       <Subtitle
         className='mx-auto w-full lg:w-3/4'
-        text='Là giải pháp cung cấp nền tảng ghi nhận lại hoạt động sản xuất của người nông dân và các mốc thời gian tương ứng với các hoạt động đó. Nhật ký sẽ tập hợp các thông tin về quá trình tạo ra sản phẩm, hình thành nên một hồ sơ sản phẩm'
+        text='Là giải pháp giám sát và quản lý trang trại giúp số hóa hồ sơ sản xuất của nông trại / hộ nông dân, chia sẻ thông tin thời tiết và dịch hại, theo dõi năng suất cây trồng, cải thiện hiệu quả trang trại và tăng năng suất lao động của nhân viên nông trại/ hộ nông dân'
       />
       <Swiper
         slidesPerView={1}
@@ -38,7 +38,7 @@ export function FarmingDiarySolution() {
               src={`/images/${item.url}`}
               alt={item.url}
               height='100%'
-              className=' mx-auto rounded-lg object-contain'
+              className='mx-auto rounded-lg object-contain '
             />
           </SwiperSlide>
         ))}
@@ -119,7 +119,7 @@ const LIST = [
     },
     title: 'Chuẩn hóa quy trình',
     content:
-      'Giúp chuẩn hóa quy trình sản xuất theo các tiêu chuẩn như VietGap, GlobalGap và Organic',
+      'Giúp chuẩn hóa quy trình sản xuất theo các tiêu chuẩn như VietGap, GlobalGap và Organic. Giám sát các tín chỉ Carbon',
   },
 ];
 

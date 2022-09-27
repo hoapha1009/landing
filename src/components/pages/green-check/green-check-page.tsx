@@ -8,13 +8,14 @@ import { TraceabilitySolution } from './components/traceability-solution';
 
 export function GreenCheckPage() {
   const title =
-    'Green Check - Giải pháp Truy xuất nguồn gốc và Nhật ký canh tác';
+    'Green Check - Giải pháp Nhật ký canh tác và truy xuất nguồn gốc';
   const options = [
     {
       content: 'Quản lý các mã Code để truy xuất nguồn gốc',
     },
     {
-      content: 'Hỗ trợ bán hàng và triển khai chương trình khuyến mãi',
+      content:
+        'Nền tảng Green Check cung cấp hai giải pháp bao gồm: Nhật ký canh tác và Truy xuất nguồn gốc.',
     },
     {
       content:
@@ -41,7 +42,7 @@ export function GreenCheckPage() {
       <Introduce title={title} options={options} img={img} />
       <FarmingDiarySolution />
       <TraceabilitySolution />
-      <SlidePart title='Đối tác Green Agri' className='!pb-0' />
+      <SlidePart title='Đối tác GAT' className='bg-[#E7F7F0]' />
       <Form />
     </div>
   );
