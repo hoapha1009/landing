@@ -1,21 +1,20 @@
-import { Subtitle } from '../../../shared/subtitle/subtitle';
 import { Title } from '../../../shared/title/title';
 
 export function AboutUsInfo() {
   return (
     <div
       data-aos='fade-up'
-      className='main-container rounded-lg bg-primary-dark bg-cover bg-center bg-no-repeat p-3 shadow-sm lg:p-16'
+      className='main-container rounded-lg bg-primary-dark bg-cover bg-center bg-no-repeat p-3 shadow-sm lg:p-12'
       style={{ backgroundImage: "url('./images/about-us.png')" }}
     >
       <Title text='giới thiệu gat' className='mt-3 text-white lg:mt-0' />
-      <Subtitle
+      {/* <Subtitle
         text='Công ty Cổ phần Công nghệ Green Agri là đơn vị tiên phong trong lĩnh vực cung cấp các giải pháp công nghệ cho ngành nông nghiệp
         Với đội ngũ chuyên gia trong lĩnh vực nông nghiệp và công nghệ thông tin. Chúng tôi sẽ xây dựng và đưa ra những giải pháp công nghệ để hỗ trợ các doanh nghiệp và người nông dân số hóa các qui trình, công đoạn trong sản xuất, canh tác để nâng cao hiệu năng cho sản xuất nông nghiệp trên cơ sở nền tảng công nghệ tối ưu và minh bạch'
         className='!mt-8 mb-16 !text-left text-lg !font-normal !text-white'
-      />
+      /> */}
 
-      <div className='grid grid-cols-1 gap-10 pl-16  pr-0 pb-16 lg:grid-cols-2 lg:gap-[92px] lg:pr-16'>
+      <div className='mt-8 grid grid-cols-1 gap-10 pl-16 pr-0  pb-6 lg:mt-16 lg:grid-cols-2 lg:gap-[92px] lg:pb-16 lg:pr-16'>
         {MOCK_DATA.map((item, index) => (
           <AboutUseCardHorizontal data={item} key={index} index={index} />
         ))}
@@ -49,7 +48,7 @@ function AboutUseCardHorizontal({
         <div className='-ml-16 -mt-9 flex h-24 w-24 shrink-0 items-center justify-center rounded-full border-4 border-primary-dark bg-white lg:h-[120px] lg:w-[120px]'>
           <img src={data.image} alt='' className='' />
         </div>
-        <div className='z-20 h-full w-full rounded-md p-2 text-base text-white lg:p-4 lg:text-lg'>
+        <div className='z-20 h-full w-full whitespace-pre-wrap rounded-md p-2 text-base text-white lg:p-4 lg:text-lg'>
           {data.content}
         </div>
       </div>
@@ -67,8 +66,7 @@ const MOCK_DATA = [
   {
     title: 'Sứ mệnh',
     image: '/images/target-3.png',
-    content:
-      'Xây dựng nền tảng và giải pháp công nghệ phù hợp, tối ưu với dịch vụ tư vấn và hỗ trợ vận hành hiệu quả, kịp thời',
+    content: `Đối với khách hàng: Xây dựng nền tảng và giải pháp công nghệ phù hợp, tối ưu với dịch vụ tư vấn và hỗ trợ vận hành hiệu quả, kịp thời\nĐối với nhà đầu tư: Luôn đảm bảo minh bạch và hiệu quả\nĐối với nhân viên: Luôn đổi mới, sáng tạo để tạo ra môi trường làm việc năng động với hiệu năng cao nhất`,
   },
   {
     title: 'Tầm nhìn',

@@ -2,6 +2,7 @@ import { AppProps } from 'next/app';
 import '../styles/style.scss';
 
 import { DefaultHead } from '../components/layout/default-head';
+import { ScreenProvider } from '../lib/providers/screen-provider';
 import Layout from '../components/layout/Layout';
 
 /**
@@ -13,9 +14,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <DefaultHead />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <ScreenProvider>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ScreenProvider>
     </>
   );
 }

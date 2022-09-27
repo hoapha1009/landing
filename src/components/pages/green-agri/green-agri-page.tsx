@@ -25,7 +25,7 @@ export function GreenAgriPage() {
       <About />
       <Benefit />
       <TargetCustomer />
-      <SlidePart title='đối tác green agri' className='bg-[#E7F7F0]' />
+      <SlidePart title='Đối tác GAT' className='bg-[#E7F7F0]' />
       <Form />
     </div>
   );

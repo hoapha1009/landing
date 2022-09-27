@@ -8,10 +8,8 @@ export function TraceabilitySolution() {
       <div className='main-container'>
         <Title text='giải pháp truy xuất nguồn gốc' />
         <Subtitle
-          className='mx-auto lg:w-3/4'
-          text={`Là giải pháp cho phép người tiêu
-            dùng cũng như các bên liên quan truy tìm lịch sử các thông tin về quy trình sản xuất, chế biến, phân phối và cho đến khi sản phẩm đến được tay người
-            dùng`}
+          className='mx-auto !text-left lg:w-3/4 lg:!text-center'
+          text='Là giải pháp cho phép người tiêu dùng và các bên liên quan trong chuỗi giá trị nông nghiệp truy xuất lịch sử các thông tin về quy trình sản xuất, chế biến, phân phối và khách hàng tiêu dùng cuối'
         />
         <div className='w-full pr-4'>
           <img
@@ -20,7 +18,7 @@ export function TraceabilitySolution() {
             data-duration='500'
             src='/images/solution-origin.png'
             alt='solution-origin-image'
-            className=' w-full'
+            className='w-full '
           />
         </div>
         <Benefit />

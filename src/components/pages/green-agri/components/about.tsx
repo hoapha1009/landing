@@ -11,8 +11,8 @@ export function About() {
     >
       <Title text='Về green agri' />
       <Subtitle
-        className='mx-auto lg:w-3/4'
-        text='Là giải pháp thương mại điện tử và kênh phân phối trong ngành nông nghiệp. Hệ thống hỗ trợ nền tảng công nghệ cho doanh nghiệp kinh doanh truyền thống offline và kênh online hiệu quả. Hỗ trợ doanh nghiệp mở rộng kênh phân phối đến các đại lý các tỉnh, và phát triển mạng lưới sales/ cộng tác viên'
+        className='mx-auto !text-left lg:w-3/4 lg:!text-center'
+        text='Là giải pháp thương mại điện tử và quản lý kênh phân phối cho các doanh nghiệp trong lĩnh vực nông nghiệp. Hỗ trợ nền tảng công nghệ cho doanh nghiệp kinh doanh truyền thống tiếp cận thêm kênh online hiệu quả. Ngoài ra, giúp doanh nghiệp mở rộng kênh phân phối đến các đại lý các tỉnh và mạng lưới cộng tác viên.'
       />
       <Swiper
         slidesPerView={1}
@@ -40,7 +40,7 @@ export function About() {
               src={`/images/${item.url}`}
               alt={item.url}
               height='100%'
-              className=' mx-auto rounded-lg object-contain'
+              className='mx-auto rounded-lg object-contain '
             />
           </SwiperSlide>
         ))}
@@ -66,28 +66,32 @@ const LIST = [
       url: '/images/automation.png',
       alt: 'about-green-agri-1',
     },
-    content: 'Tự động hóa quá trình bán hàng cho thành viên kênh phân phối',
+    content:
+      'Quản lý đa kênh trên một nền tảng kiểm soát hoạt động bán hàng mọi lúc mọi nơi và quản lý thông tin sản phẩm phân phối tới người dùng',
   },
   {
     img: {
       url: '/images/update.png',
       alt: 'about-green-agri-2',
     },
-    content: 'Cập nhật, tổng hợp và báo cáo tình hình của đội ngũ bán hàng',
+    content:
+      'Theo dõi tình trang hàng tồn, báo cáo luân chuyển hàng hóa giữa các kênh bán hàng',
   },
   {
     img: {
       url: '/images/handle.png',
       alt: 'about-green-agri-3',
     },
-    content: 'Chủ động kiểm soát hàng tồn kho, xử lý đơn hàng,… ',
+    content:
+      'Quản lý thu chi kiểm soát hoạt động bán hàng và linh hoạt kết nối, xây dựng các chương trình khuyến mãi cho các nhóm khách hàng khác nhau',
   },
   {
     img: {
       url: '/images/information.png',
       alt: 'about-green-agri-4',
     },
-    content: 'Kiểm soát thông tin chính xác',
+    content:
+      'Hệ thống API mở kết nối ERP, Call center và các phần mềm chuyên biệt của doanh nghiệp',
   },
 ];
 
