@@ -58,7 +58,7 @@ export default function Header() {
                 <img
                   src='/images/logo.png'
                   alt='logo'
-                  className=' h-[30px] w-[85px] lg:h-[36px] lg:w-[102px]'
+                  className='h-[30px] w-[85px] lg:h-[36px] lg:w-[102px]'
                 />
               </a>
             </Link>
@@ -206,13 +206,13 @@ const MENU_TAB_LIST: Menu[] = [
     title: 'Giải pháp',
     isSolutionPage: true,
     subTabs: [
-      { href: '/green-agri', title: 'Green Agri' },
       { href: '/green-check', title: 'Green Check' },
+      { href: '/green-agri', title: 'Green Agri' },
     ],
   },
   // { href: '/features', title: 'Tính năng' },
   // { href: '/recruit', title: 'Tuyển dụng' },
   // { href: '/guide', title: 'Hướng dẫn' },
   { href: '/news-and-blog', title: 'Tin tức & Blog' },
-  { href: '/join-us', title: 'Tham gia cộng đồng' },
+  { href: '/recruit', title: 'Tuyển dụng' },
 ];

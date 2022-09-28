@@ -1,32 +1,25 @@
-import { OptionRow } from '../option-row/option-row';
 import Button from '../../buttons/Button';
 import { useScreen } from '../../../hooks/use-screen';
 
 interface IntroduceProps {
+  name: string;
   title: string;
-  subtitle?: string;
-  options: {
-    content: string;
-  }[];
   img: {
     src: string;
     alt: string;
   };
 }
 
-export function Introduce({
-  img,
-  title,
-  subtitle,
-  options,
-  ...props
-}: IntroduceProps) {
+export function Introduce({ name, img, title, ...props }: IntroduceProps) {
   const isLg = useScreen('lg');
 
   if (!isLg) {
     return (
       <div className='bg-primary-light py-8' data-aos='fade-up'>
         <div className='main-container'>
+          <div className='mb-3 text-center font-saira text-4xl font-bold uppercase text-primary'>
+            {name}
+          </div>
           <div className='text-center text-2xl font-bold leading-tight'>
             {title}
           </div>
@@ -35,11 +28,6 @@ export function Introduce({
             alt={img.alt}
             className='mx-auto object-contain '
           />
-          <div className='mt-6 flex flex-col gap-4'>
-            {options.map((option, index) => (
-              <OptionRow key={index} content={option.content} />
-            ))}
-          </div>
           <div className='mt-8 text-center'>
             <Button variant='primary' className='!px-8 !py-3'>
               LIÊN HỆ NGAY
@@ -54,19 +42,10 @@ export function Introduce({
     <div className='bg-primary-light py-24' data-aos='fade-up'>
       <div className='main-container flex items-center gap-2'>
         <div className='flex-1'>
+          <div className='mb-3 font-saira text-5xl font-bold uppercase text-primary'>
+            {name}
+          </div>
           <div className='text-5xl font-bold leading-tight'>{title}</div>
-          <div className='mt-5 mb-8 text-xl uppercase text-[#6C6C6C]'>
-            {subtitle}
-          </div>
-          <div className='mt-4 flex flex-col gap-4'>
-            {options.map((option, index) => (
-              <OptionRow
-                key={index}
-                content={option.content}
-                contentClassName='text-xl leading-8'
-              />
-            ))}
-          </div>
           <Button variant='primary' className='mt-8 !px-8 !py-3'>
             LIÊN HỆ NGAY
           </Button>

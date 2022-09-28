@@ -3,9 +3,9 @@ import { Title } from '../../../shared/title/title';
 
 export function TargetCustomer({ title }: { title: string }) {
   return (
-    <div className='py-8 lg:py-24' data-aos='fade-up'>
+    <div className='main-container py-8 lg:pb-24 lg:pt-14' data-aos='fade-up'>
       <Title text={title} className='mx-auto mb-10 ' />
-      <div className='main-container mx-2.5 grid auto-rows-fr grid-cols-2 gap-4 lg:mx-auto lg:grid-cols-4 lg:gap-8'>
+      <div className='grid auto-rows-fr grid-cols-2 gap-4 lg:mx-auto lg:grid-cols-4 lg:gap-8'>
         {LIST.map((item, index) => (
           <Card
             index={index + 1}

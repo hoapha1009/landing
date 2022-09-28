@@ -11,7 +11,7 @@ export function About() {
     >
       <Title text='Về green agri' />
       <Subtitle
-        className='mx-auto  !text-left  lg:!text-center'
+        className='mx-auto !text-left lg:!text-center'
         text='Là giải pháp thương mại điện tử và quản lý kênh phân phối cho các doanh nghiệp trong lĩnh vực nông nghiệp. Hỗ trợ nền tảng công nghệ và giúp tiếp cận thêm kênh online hiệu quả. Ngoài ra, giúp doanh nghiệp mở rộng kênh phân phối đến các đại lý các tỉnh và mạng lưới cộng tác viên.'
       />
       <Swiper

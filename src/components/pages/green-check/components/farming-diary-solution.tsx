@@ -44,7 +44,8 @@ export function FarmingDiarySolution() {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className='mt-8'>
+      <Title text='tính năng chính' className='mt-8 lg:mt-16 lg:hidden' />
+      <div className='mt-3'>
         <FeatMain options={LIST_FEAT} />
       </div>
       <Title text='lợi ích của nhật ký canh tác' className='mt-8 lg:mt-14' />
@@ -135,10 +136,6 @@ const IMAGE_LIST = [
   {
     url: 'solution-diary-2.png',
     alt: 'solution-diary-2',
-  },
-  {
-    url: 'solution-diary-3.png',
-    alt: 'solution-diary-3',
   },
   {
     url: 'solution-diary-4.png',

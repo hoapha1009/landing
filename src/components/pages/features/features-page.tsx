@@ -52,7 +52,7 @@ export function FeaturesPage() {
       </div>
 
       <FeaturesOther />
-      <SlidePart title='Khách hàng green argi' />
+      <SlidePart title='Khách hàng green argi' type='customer' />
     </>
   );
 }
