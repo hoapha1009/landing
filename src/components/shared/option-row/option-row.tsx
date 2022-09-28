@@ -15,7 +15,7 @@ export function OptionRow({
   url = '/images/leaf.png',
   hasAnimation = false,
 }: OptionRowProps) {
-  const delay = (index * 200).toString();
+  const delay = (index * 100).toString();
 
   return (
     <div

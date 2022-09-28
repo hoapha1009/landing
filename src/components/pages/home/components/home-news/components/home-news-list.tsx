@@ -12,27 +12,35 @@ export function HomeNewList() {
 
 const MOCK_DATA = [
   {
-    image: 'home-news-share-1.png',
-    topic: 'Thông tin mùa vụ',
-    date: '11/8/2000',
+    image: 'news-blogs-2.png',
+    topic: 'Tin nông nghiệp',
+    date: '28/09/2022',
     title:
       'Đồng Nai: Nông dân liên kết cùng doanh nghiệp trồng lúa hữu cơ có lợi nhiều bề',
     href: '/',
   },
   {
-    image: 'home-news-share-2.png',
-    topic: 'Thông tin dịch hại',
-    date: '11/8/2000',
+    image: 'news-blogs-3.png',
+    topic: 'Tình hình mùa vụ',
+    date: '28/09/2022',
     title:
-      'Đào ao dưới nuôi tôm, trên trồng thứ rau bò lan man, ra trái nằm la liệt, nông dân Kiên',
+      'Đưa công nghệ cao vào chăn nuôi, tận dụng hiệu quả chất thải, nâng cao giá trị sản phẩm',
     href: '/',
   },
   {
-    image: 'home-news-share-3.png',
-    topic: 'Thông tin thị trường',
-    date: '11/8/2000',
+    image: 'news-blogs-4.png',
+    topic: 'Tình hình dịch hại',
+    date: '28/09/2022',
     title:
-      'Giá mít Thái hôm nay 27/9: Giá mít giảm thêm 3.000 đồng/kg, vì sao cây mít Thái',
+      'Đào ao dưới nuôi tôm, trên trồng thứ rau bò lan man, ra trái nằm la liệt, nông dân Kiên Giang thu lời kép',
+    href: '/',
+  },
+  {
+    image: 'news-blogs-5.png',
+    topic: 'Thông tin thị trường',
+    date: '28/09/2022',
+    title:
+      'Giá mít Thái hôm nay 27/9: Giá mít giảm thêm 3.000 đồng/kg, vì sao cây mít Thái chưa ra trái bị xì mủ?',
     href: '/',
   },
 ];

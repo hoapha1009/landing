@@ -11,6 +11,8 @@ export function FeatMain({ options }) {
       <div className='grid gap-2.5 lg:grid-cols-2 lg:gap-8'>
         {options?.map((item, index) => (
           <OptionRow
+            hasAnimation
+            index={index + 1}
             content={item.content}
             url={item.url}
             key={index}

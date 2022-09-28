@@ -3,7 +3,11 @@ import { Title } from '../../../shared/title/title';
 
 export function AboutUsSolution() {
   return (
-    <div data-aos='fade-up' className='main-container py-16 lg:px-16'>
+    <div
+      data-aos='fade-up'
+      data-aos-delay='1000'
+      className='main-container py-16 lg:px-16'
+    >
       <Title text='Giải pháp green agri' />
       <Subtitle
         text='Bộ giải pháp hàng đầu cho ngành nông nghiệp'
@@ -45,7 +49,7 @@ function AboutUsSolutionCard({
           {data.title}
         </div>
       </div>
-      <div className='mt-3 text-base font-medium text-[#6C6C6C] lg:mt-7 lg:text-lg'>
+      <div className='mt-3 text-base font-medium  lg:mt-7 lg:text-lg'>
         {data.content}
       </div>
     </div>

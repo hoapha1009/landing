@@ -10,7 +10,7 @@ export function GreenAgriPage() {
   const isLg = useScreen('lg');
 
   return (
-    <div className=''>
+    <div data-aos='fade-up' className=''>
       {!isLg && (
         <BreadCrumbs
           breadcrumbs={[
@@ -21,7 +21,7 @@ export function GreenAgriPage() {
         />
       )}
       <Introduce title={title} img={img} name='green agri' />
-      <div className='pt-8'>
+      <div data-aos='fade-up' className='pt-8'>
         {SOLUTION_LIST.map((item, index) => (
           <Solution key={index} item={item} />
         ))}

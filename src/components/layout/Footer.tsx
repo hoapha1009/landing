@@ -84,7 +84,7 @@ function InformationGat() {
           </div>
         </div>
       ))}
-      <div className='mb-6 flex flex-row gap-4'>
+      {/* <div className='flex flex-row gap-4 mb-6'>
         {IMAGE_SOCIAL.map((item, index) => (
           <Link href={item.href} key={index}>
             <a>
@@ -97,7 +97,7 @@ function InformationGat() {
             </a>
           </Link>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }
