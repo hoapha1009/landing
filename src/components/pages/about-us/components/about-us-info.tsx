@@ -44,7 +44,7 @@ function AboutUseCardHorizontal({
           <div className='mb-3 text-center font-saira text-[23px] font-semibold uppercase'>
             {data.title}
           </div>
-          <div className='text-ellipsis-4 min-h-24'>{data.content}</div>
+          <div className='lg:text-ellipsis-4 min-h-24'>{data.content}</div>
         </div>
         <Link href='/'>
           <a className='hidden text-primary lg:block'>Xem thêm</a>

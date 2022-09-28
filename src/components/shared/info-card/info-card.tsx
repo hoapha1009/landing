@@ -29,6 +29,7 @@ export function InfoCard({ item }: InfoCardProps) {
           <OptionRow
             key={index}
             content={option.content}
+            index={index + 1}
             hasAnimation
             contentClassName='lg:text-lg'
           />

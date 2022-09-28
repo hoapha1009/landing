@@ -8,7 +8,7 @@ export function HomeAboutUs() {
 
   if (!isLg) {
     return (
-      <div className='main-container py-8'>
+      <div data-aos='fade-up' className='main-container py-8'>
         <img
           src='./images/logo.png'
           alt='logo'
@@ -36,7 +36,10 @@ export function HomeAboutUs() {
   }
 
   return (
-    <div className='main-container flex items-center gap-16 py-16'>
+    <div
+      data-aos='fade-up'
+      className='main-container flex items-center gap-16 py-16'
+    >
       <img
         src='./images/home-about-us.png'
         alt='home-about-us-image'

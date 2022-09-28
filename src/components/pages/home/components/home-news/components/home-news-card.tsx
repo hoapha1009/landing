@@ -41,7 +41,7 @@ export function HomeNewsCard({
               <div className='rounded-sm bg-[#E7F7F0] px-1 py-1 text-xs font-semibold text-primary lg:px-4 lg:text-base'>
                 {news.topic}
               </div>
-              <div className='px-1 py-1 text-xs font-semibold text-[#6C6C6C] lg:px-4 lg:text-base'>
+              <div className='px-1 py-1 text-xs font-semibold  lg:px-4 lg:text-base'>
                 {news.date}
               </div>
             </div>

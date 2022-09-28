@@ -84,7 +84,7 @@ function InformationGat() {
           </div>
         </div>
       ))}
-      <div className='mb-6 flex flex-row gap-4'>
+      {/* <div className='flex flex-row gap-4 mb-6'>
         {IMAGE_SOCIAL.map((item, index) => (
           <Link href={item.href} key={index}>
             <a>
@@ -97,7 +97,7 @@ function InformationGat() {
             </a>
           </Link>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }
@@ -180,7 +180,7 @@ const MOCKS_DATA = [
     name: 'Trụ sở Vũng Tàu',
     address:
       'Thôn Sông Xoài 1, xã Láng Lớn, huyện Châu Đức tỉnh Bà Rịa-Vũng Tàu',
-    hotline: '0839787272',
+    hotline: '083 9787 272',
     email: 'contact@greengroupsvungtau.com.vn',
     linkAddress:
       'https://www.google.com/maps/search/Th%C3%B4n+S%C3%B4ng+Xo%C3%A0i+1,+x%C3%A3+L%C3%A1ng+L%E1%BB%9Bn,+huy%E1%BB%87n+Ch%C3%A2u+%C4%90%E1%BB%A9c+t%E1%BB%89nh+B%C3%A0+R%E1%BB%8Ba-V%C5%A9ng+T%C3%A0u/@10.6565782,107.1808849,13z/data=!3m1!4b1',

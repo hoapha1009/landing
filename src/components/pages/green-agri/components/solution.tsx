@@ -33,7 +33,7 @@ export function Solution({ item, className = '', ...props }: SolutionProps) {
         <img
           src={item.img.url}
           alt={item.img.alt}
-          className='mx-auto mt-8 mb-10 w-2/3 rounded-md object-contain'
+          className='mx-auto mt-8 mb-10 rounded-md object-contain lg:w-2/3'
         />
         <div className='box-content flex flex-col items-stretch overflow-hidden rounded-md border border-gray-100 shadow-lg lg:flex-row'>
           <Part
@@ -70,6 +70,8 @@ function Part({ type, title, options, className = '', ...props }: PartProps) {
       <div className='mt-4 flex flex-col gap-3'>
         {options.map((option, index) => (
           <OptionRow
+            hasAnimation
+            index={index + 1}
             content={option.content}
             url={option.url}
             key={index}

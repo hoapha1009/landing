@@ -22,7 +22,7 @@ export function TraceabilitySolution() {
             className='w-full '
           />
         </div>
-        <div className='mt-8'>
+        <div data-aos='fade-up' className='mt-8'>
           <FeatMain options={LIST} />
         </div>
         <Benefit />

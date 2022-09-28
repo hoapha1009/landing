@@ -45,9 +45,7 @@ function HomeSolutionCard(solution) {
       <div className='mt-4 font-saira text-[23px] font-semibold'>
         {solution.solution.title}
       </div>
-      <div className='mt-4 min-h-[165px] text-xl text-[#6C6C6C]'>
-        {solution.solution.content}
-      </div>
+      <div className='mt-4 min-h-[165px] '>{solution.solution.content}</div>
       <Button variant='primary' className='mt-4'>
         <Link href={solution.solution.href}>TÌM HIỂU THÊM</Link>
       </Button>
