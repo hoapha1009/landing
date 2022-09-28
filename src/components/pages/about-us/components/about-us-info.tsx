@@ -47,7 +47,7 @@ function AboutUseCardHorizontal({
           <div className='text-ellipsis-4 min-h-24'>{data.content}</div>
         </div>
         <Link href='/'>
-          <a className='hidden  text-primary lg:block'>Xem thêm</a>
+          <a className='hidden text-primary lg:block'>Xem thêm</a>
         </Link>
       </div>
     </div>
@@ -59,7 +59,7 @@ const MOCK_DATA = [
     title: 'Mục tiêu',
     image: '/images/target-1.png',
     content:
-      'Mang lại lợi ích cho nông dân bằng việc chuẩn hóa quy trình canh tác,truy xuất nguồn gốc và phát triển kênh bán hàng qua nền tảng công nghệ',
+      'Mang lại lợi ích cho nông dân bằng việc số hóa quy trình canh tác,truy xuất nguồn gốc và phát triển kênh bán hàng qua nền tảng công nghệ',
   },
   {
     title: 'Sứ mệnh',

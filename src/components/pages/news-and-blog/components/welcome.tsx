@@ -5,14 +5,19 @@ import { Chip } from '../../../shared/chip/chip';
 import { Subtitle } from '../../../shared/subtitle/subtitle';
 
 type TabValue =
-  | 'caseStudy'
-  | 'blogs'
-  | 'whitePaper'
-  | 'thoughtLeadership'
-  | 'webinar';
+  | 'Nông nghiệp trong nước'
+  | 'Blogs'
+  | 'Thời tiết nông vụ'
+  | 'Dự báo sâu bệnh'
+  | 'Sự kiện nông nghiệp'
+  | 'Sự kiện nông nghiệp'
+  | 'Thị trường'
+  | 'Nông dân cảnh giác';
 
 export function Welcome() {
-  const [selectedTab, setSelectedTab] = useState<TabValue>('caseStudy');
+  const [selectedTab, setSelectedTab] = useState<TabValue>(
+    'Nông nghiệp trong nước'
+  );
 
   const handleSelect = (val: TabValue) => setSelectedTab(val);
 
@@ -26,8 +31,8 @@ export function Welcome() {
         text='Chúng tôi, tại GAT, đang trên đường xây dựng thư viện tài nguyên công nghệ nông nghiệp đầu tiên trên thế giới dựa trên kinh nghiệm của chúng tôi, các dự án đã thực hiện, các vấn đề đã giải quyết và hàng nghìn tỷ bộ dữ liệu cấp pixel trong ngành nông nghiệp mà chúng tôi đã thu thập trong suốt thời gian qua.'
       />
       <Subtitle
-        text='Bạn sẽ tìm thấy các tin tức, nghiên cứu điển hình, các trường hợp sử dụng và báo cáo liên quan đến chuỗi giá trị nông nghiệp tại đây..'
-        className='!mt-0 !text-left lg:!text-center'
+        text='Bạn sẽ tìm thấy các tin tức, nghiên cứu điển hình, các trường hợp sử dụng và báo cáo liên quan đến chuỗi giá trị nông nghiệp tại đây.'
+        className='mx-auto !mt-0 !text-left lg:w-11/12 lg:!text-center'
       />
       <TabList selectedTab={selectedTab} onSelect={handleSelect} />
       <NewsAndBlogList selectedTab={selectedTab} />

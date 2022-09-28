@@ -10,7 +10,15 @@ export interface LogoSliderProps {
   href: string;
 }
 
-export function LogoSlider() {
+interface MobiLogoSliderProps {
+  list: LogoSliderProps[];
+}
+
+interface Props {
+  type?: 'partner' | 'customer';
+}
+
+export function LogoSlider({ type = 'partner', ...props }: Props) {
   const isLg = useScreen('lg');
 
   return (
@@ -18,21 +26,21 @@ export function LogoSlider() {
       slidesPerView='auto'
       spaceBetween={56}
       grabCursor
-      className='pb-16'
+      // className='pb-16'
       loop={true}
       autoplay={{
         delay: 3000,
         disableOnInteraction: false,
       }}
-      pagination={{
-        bulletActiveClass: 'bg-primary',
-        clickable: true,
+      // pagination={{
+      //   bulletActiveClass: 'bg-primary',
+      //   clickable: true,
 
-        bulletClass:
-          'inline-block w-3 h-3 bg-gray-400 rounded-full transition-all cursor-pointer mr-2 last:mr-0 hover:bg-primary transform translate-y-3',
-      }}
+      //   bulletClass:
+      //     'inline-block w-3 h-3 bg-gray-400 rounded-full transition-all cursor-pointer mr-2 last:mr-0 hover:bg-primary transform translate-y-3',
+      // }}
     >
-      {isLg ? (
+      {isLg && type === 'partner' && (
         <>
           {MOCK_DATA.map((item, index) => (
             <SwiperSlide key={index} className='w-40'>
@@ -41,7 +49,81 @@ export function LogoSlider() {
                   <img
                     src={`/images/${item.url}`}
                     alt={item.url}
-                    className=' object-contain'
+                    className='object-contain '
+                  />
+                </a>
+              </Link>
+            </SwiperSlide>
+          ))}
+        </>
+      )}
+      {!isLg && type === 'partner' && (
+        <>
+          {MOCK_DATA_MOBILE.map((item, index) => (
+            <SwiperSlide key={index} className='grid grid-cols-2 gap-12'>
+              {item.list.map((logo, index) => (
+                <Link key={index} href={logo.href}>
+                  <a className='mx-auto block'>
+                    <img
+                      src={`/images/${logo.url}`}
+                      alt={logo.url}
+                      height='100%'
+                      className='object-contain '
+                    />
+                  </a>
+                </Link>
+              ))}
+            </SwiperSlide>
+          ))}
+        </>
+      )}
+      {isLg && type === 'customer' && (
+        <>
+          {CUSTOMER_MOCK_DATA.map((item, index) => (
+            <SwiperSlide key={index} className='w-40'>
+              <Link href={item.href}>
+                <a>
+                  <img
+                    src={`/images/${item.url}`}
+                    alt={item.url}
+                    className='object-contain '
+                  />
+                </a>
+              </Link>
+            </SwiperSlide>
+          ))}
+        </>
+      )}
+      {!isLg && type === 'customer' && (
+        <>
+          {CUSTOMER_MOCK_DATA_MOBILE.map((item, index) => (
+            <SwiperSlide key={index} className='grid grid-cols-2 gap-12'>
+              {item.list.map((logo, index) => (
+                <Link key={index} href={logo.href}>
+                  <a className='mx-auto block'>
+                    <img
+                      src={`/images/${logo.url}`}
+                      alt={logo.url}
+                      height='100%'
+                      className='object-contain '
+                    />
+                  </a>
+                </Link>
+              ))}
+            </SwiperSlide>
+          ))}
+        </>
+      )}
+      {/* {isLg ? (
+        <>
+          {MOCK_DATA.map((item, index) => (
+            <SwiperSlide key={index} className='w-40'>
+              <Link href={item.href}>
+                <a>
+                  <img
+                    src={`/images/${item.url}`}
+                    alt={item.url}
+                    className='object-contain '
                   />
                 </a>
               </Link>
@@ -54,12 +136,12 @@ export function LogoSlider() {
             <SwiperSlide key={index} className='grid grid-cols-2 gap-12'>
               {item.list.map((logo, index) => (
                 <Link key={index} href={logo.href}>
-                  <a className='mx-auto block'>
+                  <a className='block mx-auto'>
                     <img
                       src={`/images/${logo.url}`}
                       alt={logo.url}
                       height='100%'
-                      className=' object-contain'
+                      className='object-contain '
                     />
                   </a>
                 </Link>
@@ -67,67 +149,67 @@ export function LogoSlider() {
             </SwiperSlide>
           ))}
         </>
-      )}
+      )} */}
     </Swiper>
   );
 }
 
 export const MOCK_DATA: LogoSliderProps[] = [
   {
-    url: 'partner-1.png',
+    url: 'slide-som.png',
     href: '',
   },
   {
-    url: 'partner-2.png',
+    url: 'slide-BKH&CN.png',
     href: '',
   },
   {
-    url: 'partner-3.png',
+    url: 'slide-buu-dien.png',
     href: '',
   },
   {
-    url: 'partner-4.png',
+    url: 'slide-DH-KHTN.png',
     href: '',
   },
   {
-    url: 'partner-5.png',
+    url: 'slide-tentamus.png',
     href: '',
   },
   {
-    url: 'partner-6.png',
+    url: 'slide-green-farm.png',
     href: '',
   },
   {
-    url: 'partner-7.png',
+    url: 'slide-ptit.png',
     href: '',
   },
 ];
 
-const MOCK_DATA_MOBILE = [
+const MOCK_DATA_MOBILE: MobiLogoSliderProps[] = [
   {
     list: [
       {
-        url: 'partner-5.png',
+        url: 'slide-som.png',
         href: '',
       },
       {
-        url: 'partner-4.png',
+        url: 'slide-BKH&CN.png',
         href: '',
       },
       {
-        url: 'partner-10.png',
+        url: 'slide-buu-dien.png',
         href: '',
       },
       {
-        url: 'partner-1.png',
+        url: 'slide-DH-KHTN.png',
         href: '',
       },
       {
-        url: 'partner-9.png',
+        url: 'slide-tentamus.png',
         href: '',
       },
       {
-        url: 'partner-8.png',
+        url: 'slide-ptit.png',
         href: '',
       },
     ],
@@ -135,55 +217,27 @@ const MOCK_DATA_MOBILE = [
   {
     list: [
       {
-        url: 'partner-5.png',
+        url: 'slide-som.png',
         href: '',
       },
       {
-        url: 'partner-4.png',
+        url: 'slide-BKH&CN.png',
         href: '',
       },
       {
-        url: 'partner-10.png',
+        url: 'slide-buu-dien.png',
         href: '',
       },
       {
-        url: 'partner-1.png',
+        url: 'slide-DH-KHTN.png',
         href: '',
       },
       {
-        url: 'partner-9.png',
+        url: 'slide-tentamus.png',
         href: '',
       },
       {
-        url: 'partner-8.png',
-        href: '',
-      },
-    ],
-  },
-  {
-    list: [
-      {
-        url: 'partner-5.png',
-        href: '',
-      },
-      {
-        url: 'partner-4.png',
-        href: '',
-      },
-      {
-        url: 'partner-10.png',
-        href: '',
-      },
-      {
-        url: 'partner-1.png',
-        href: '',
-      },
-      {
-        url: 'partner-9.png',
-        href: '',
-      },
-      {
-        url: 'partner-8.png',
+        url: 'slide-ptit.png',
         href: '',
       },
     ],
@@ -191,27 +245,208 @@ const MOCK_DATA_MOBILE = [
   {
     list: [
       {
-        url: 'partner-5.png',
+        url: 'slide-som.png',
         href: '',
       },
       {
-        url: 'partner-4.png',
+        url: 'slide-BKH&CN.png',
         href: '',
       },
       {
-        url: 'partner-10.png',
+        url: 'slide-buu-dien.png',
         href: '',
       },
       {
-        url: 'partner-1.png',
+        url: 'slide-DH-KHTN.png',
         href: '',
       },
       {
-        url: 'partner-9.png',
+        url: 'slide-tentamus.png',
         href: '',
       },
       {
-        url: 'partner-8.png',
+        url: 'slide-ptit.png',
+        href: '',
+      },
+    ],
+  },
+  {
+    list: [
+      {
+        url: 'slide-som.png',
+        href: '',
+      },
+      {
+        url: 'slide-BKH&CN.png',
+        href: '',
+      },
+      {
+        url: 'slide-buu-dien.png',
+        href: '',
+      },
+      {
+        url: 'slide-DH-KHTN.png',
+        href: '',
+      },
+      {
+        url: 'slide-tentamus.png',
+        href: '',
+      },
+      {
+        url: 'slide-ptit.png',
+        href: '',
+      },
+    ],
+  },
+];
+export const CUSTOMER_MOCK_DATA: LogoSliderProps[] = [
+  {
+    url: 'slide-som.png',
+    href: '',
+  },
+  {
+    url: 'slide-loc-troi.png',
+    href: '',
+  },
+  {
+    url: 'slide-bv-caq.png',
+    href: '',
+  },
+  {
+    url: 'slide-shb.png',
+    href: '',
+  },
+  {
+    url: 'slide-gas-thien-ha.png',
+    href: '',
+  },
+  {
+    url: 'slide-dat-xanh-mien-trung.png',
+    href: '',
+  },
+  {
+    url: 'slide-an-tam-gia.png',
+    href: '',
+  },
+  {
+    url: 'slide-bv-cay-lua.png',
+    href: '',
+  },
+  {
+    url: 'slide-mirae-asset.png',
+    href: '',
+  },
+  {
+    url: 'slide-bac-giang.png',
+    href: '',
+  },
+  {
+    url: 'slide-buu-dien-mobi.png',
+    href: '',
+  },
+  {
+    url: 'slide-clb-doanh-nhan.png',
+    href: '',
+  },
+  {
+    url: 'slide-green-farm-customer.png',
+    href: '',
+  },
+  {
+    url: 'slide-green-retail.png',
+    href: '',
+  },
+  {
+    url: 'slide-green-agri.png',
+    href: '',
+  },
+  {
+    url: 'slide-green-food.png',
+    href: '',
+  },
+];
+
+const CUSTOMER_MOCK_DATA_MOBILE: MobiLogoSliderProps[] = [
+  {
+    list: [
+      {
+        url: 'slide-som.png',
+        href: '',
+      },
+      {
+        url: 'slide-loc-troi.png',
+        href: '',
+      },
+      {
+        url: 'slide-bv-caq.png',
+        href: '',
+      },
+      {
+        url: 'slide-shb.png',
+        href: '',
+      },
+      {
+        url: 'slide-gas-thien-ha.png',
+        href: '',
+      },
+      {
+        url: 'slide-dat-xanh-mien-trung.png',
+        href: '',
+      },
+    ],
+  },
+  {
+    list: [
+      {
+        url: 'slide-an-tam-gia.png',
+        href: '',
+      },
+      {
+        url: 'slide-bv-cay-lua.png',
+        href: '',
+      },
+      {
+        url: 'slide-mirae-asset.png',
+        href: '',
+      },
+      {
+        url: 'slide-bac-giang.png',
+        href: '',
+      },
+      {
+        url: 'slide-buu-dien-mobi.png',
+        href: '',
+      },
+      {
+        url: 'slide-clb-doanh-nhan.png',
+        href: '',
+      },
+    ],
+  },
+  {
+    list: [
+      {
+        url: 'slide-green-farm-customer.png',
+        href: '',
+      },
+      {
+        url: 'slide-green-retail.png',
+        href: '',
+      },
+      {
+        url: 'slide-green-agri.png',
+        href: '',
+      },
+      {
+        url: 'slide-green-food.png',
+        href: '',
+      },
+      {
+        url: 'slide-som.png',
+        href: '',
+      },
+      {
+        url: 'slide-loc-troi.png',
         href: '',
       },
     ],

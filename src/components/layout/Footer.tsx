@@ -131,7 +131,7 @@ function QRcode() {
   return (
     <div className='mt-12 mb-4 flex flex-row xl:mb-0'>
       <img
-        src='/images/QR.png'
+        src='/images/qrCode.png'
         alt='qrcode'
         className='h-24 w-24 object-contain '
       />

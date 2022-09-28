@@ -9,39 +9,27 @@ export function HomeSolution() {
   return (
     <div
       data-aos='fade-up'
-      className='main-container rounded-xl bg-primary-dark px-1 pt-8 pb-3 lg:px-8 lg:pt-16 lg:pb-8 xl:px-16'
+      className='main-container rounded-xl bg-primary-dark px-1 pt-8 pb-3 lg:px-8 lg:py-16 xl:px-16'
     >
-      {isLg && (
-        <div className='mb-8 px-3 lg:px-0'>
-          <Title text='giải pháp gat' className='text-white' />
-          <Subtitle
-            text='Giải quyết các hạn chế trong chuỗi giá trị nông nghiệp'
-            className='mx-auto max-w-lg !text-white'
-          />
-        </div>
-      )}
-
-      {/* <div className='flex flex-col gap-3 px-2 lg:flex-row lg:gap-10 lg:px-0'> */}
-      {/* <HomeSolutionTabs /> */}
-      {/* <div className='lg:pt-16'>
-          <img
-            src='/images/home-solution.png'
-            alt='image'
-            className='w-full lg:w-auto'
-          />
-        </div> */}
-      {/* </div> */}
-
-      {isLg && (
-        <div className='mt-8'>
-          <img
-            src='./images/home-solution-main.png'
-            alt='image'
-            className='m-auto'
-          />
-        </div>
-      )}
-      <div className='mt-8 grid grid-cols-1 gap-8 lg:grid-cols-2'>
+      <div className='mb-8 px-3 lg:px-0'>
+        <Title text='giải pháp gat' className='text-white' />
+        <Subtitle
+          text='Giải quyết các vấn đề còn hạn chế trong chuỗi giá trị nông nghiệp'
+          className='!mt-2 font-light !text-white'
+        />
+      </div>
+      <div className='mt-8'>
+        <img
+          src={
+            isLg
+              ? './images/home-solution-main.png'
+              : './images/main-solution-mobile.png'
+          }
+          alt='image'
+          className='m-auto'
+        />
+      </div>
+      <div className='my-8 grid grid-cols-1 gap-8 px-4 lg:grid-cols-2 lg:px-0'>
         {MOCK_DATA.map((item, index) => (
           <HomeSolutionCard key={index} solution={item} />
         ))}

@@ -18,8 +18,7 @@ export function NewsAndBlogPage() {
         />
       )}
       <Welcome />
-      {/* <AboutOurPlatform /> */}
-      <Form />
+      <Form className='lg:!bg-[#E7F7F0]' />
     </div>
   );
 }

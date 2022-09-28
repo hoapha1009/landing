@@ -22,7 +22,7 @@ export function OptionRow({
       className={`flex gap-2 ${className}`}
       {...(hasAnimation && { 'data-aos': 'fade-up', 'data-aos-delay': delay })}
     >
-      <img src={url} alt='leaf' className=' mt-1 h-[22px] w-[22px]' />
+      <img src={url} alt='leaf' className='h-[22px] w-[22px]' />
       <div className={`flex-1 text-gray-600 ${contentClassName}`}>
         {content}
       </div>

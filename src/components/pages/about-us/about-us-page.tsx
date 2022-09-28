@@ -19,7 +19,11 @@ export function AboutUsPage() {
       <AboutUsInfo />
       <AboutUsExpert />
       {/* <AboutUsSolution /> */}
-      <SlidePart title='KHÁCH HÀNG GAT' className='bg-[#E7F7F0]' />
+      <SlidePart
+        title='KHÁCH HÀNG GAT'
+        className='bg-[#E7F7F0]'
+        type='customer'
+      />
       <SlidePart title='Đối tác GAT' />
     </>
   );

@@ -1,4 +1,5 @@
 import { SlidePart } from '../../shared/slide-part/slide-part';
+import { HomeAboutUs } from './components/home-about-us/home-about-us';
 import { HomeBanner } from './components/home-banner';
 import { HomeGroupCard } from './components/home-group-card';
 import { HomeNews } from './components/home-news/home-news';
@@ -8,17 +9,15 @@ export function HomePage() {
   return (
     <>
       <HomeBanner />
-
-      <HomeGroupCard text='Ưu điểm GAT' options={MOCK_DATA_1} />
+      <HomeAboutUs />
       <HomeSolution />
-
-      {/* <HomeValueChain /> */}
       <HomeGroupCard text='Giá trị cộng đồng' options={MOCK_DATA_2} />
-
-      <SlidePart title='Khách hàng GAT' className='bg-[#E7F7F0]' />
+      <SlidePart
+        title='Khách hàng GAT'
+        className='bg-[#E7F7F0]'
+        type='customer'
+      />
       <SlidePart title='Đối tác GAT' />
-      {/* <HomePartner />
-      <HomeCustomer /> */}
       <HomeNews />
     </>
   );
