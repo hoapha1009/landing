@@ -1,13 +1,12 @@
-import Button from '../../../buttons/Button';
+import { useRouter } from 'next/router';
+import { useState } from 'react';
 import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper/core';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { useRef, useState } from 'react';
 import { useScreen } from '../../../../hooks/use-screen';
-import { useRouter } from 'next/router';
+import Button from '../../../buttons/Button';
 SwiperCore.use([Pagination, Autoplay, Navigation]);
 
 export function HomeBanner() {
-  const paginationRef = useRef(null);
   const [_, setActiveIndex] = useState<any>();
 
   return (
