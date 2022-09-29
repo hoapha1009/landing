@@ -14,8 +14,8 @@ export function HomeSolution() {
       <div className='mb-8 px-3 lg:px-0'>
         <Title text='giải pháp gat' className='text-white' />
         <Subtitle
-          text='Giải quyết các vấn đề còn hạn chế trong chuỗi giá trị nông nghiệp'
-          className='!mt-2 font-light !text-white'
+          text='Xây dựng nền tảng công nghệ để số hóa các công đoạn trong chuỗi giá trị nông nghiệp, tạo thành một hệ sinh thái có liên kết các khâu trong chuỗi để đạt hiệu năng cao nhất'
+          className='mx-auto !mt-2 w-5/6 font-light !text-white'
         />
       </div>
       <div className='mt-8'>
