@@ -35,12 +35,4 @@ const MOCK_DATA = [
       'Đào ao dưới nuôi tôm, trên trồng thứ rau bò lan man, ra trái nằm la liệt, nông dân Kiên Giang thu lời kép',
     href: '/',
   },
-  {
-    image: 'news-blogs-5.png',
-    topic: 'Thông tin thị trường',
-    date: '28/09/2022',
-    title:
-      'Giá mít Thái hôm nay 27/9: Giá mít giảm thêm 3.000 đồng/kg, vì sao cây mít Thái chưa ra trái bị xì mủ?',
-    href: '/',
-  },
 ];
