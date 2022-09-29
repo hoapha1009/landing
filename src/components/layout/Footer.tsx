@@ -84,20 +84,6 @@ function InformationGat() {
           </div>
         </div>
       ))}
-      {/* <div className='flex flex-row gap-4 mb-6'>
-        {IMAGE_SOCIAL.map((item, index) => (
-          <Link href={item.href} key={index}>
-            <a>
-              <img
-                src={`images/${item.img}`}
-                alt={item.img}
-                height='100%'
-                className='object-contain '
-              />
-            </a>
-          </Link>
-        ))}
-      </div> */}
     </div>
   );
 }
