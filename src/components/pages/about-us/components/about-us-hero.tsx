@@ -24,9 +24,8 @@ export function AboutUsHero() {
             data-aos-delay={150}
             className='mt-4 text-base !leading-[1.5]  lg:text-xl'
           >
-            Bắt nguồn từ thực trạng chuỗi giá trình ngành Nông nghiệp Việt Nam
-            còn nhiều vấn đề hạn chế từ việc quản lý canh tác đến đầu ra sản
-            phẩm.
+            Bắt nguồn từ thực trạng chuỗi giá trị ngành Nông nghiệp Việt Nam còn
+            nhiều vấn đề hạn chế từ việc quản lý canh tác đến đầu ra sản phẩm.
           </div>
           <div
             data-aos='fade-up'
