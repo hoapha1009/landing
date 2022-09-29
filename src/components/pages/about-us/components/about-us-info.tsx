@@ -64,7 +64,7 @@ const MOCK_DATA = [
   {
     title: 'Sứ mệnh',
     image: '/images/target-3.png',
-    content: `Đối với khách hàng: Xây dựng nền tảng và giải pháp công nghệ phù hợp, tối ưu với dịch vụ tư vấn và hỗ trợ vận hành hiệu quả, kịp thời\nĐối với nhà đầu tư: Luôn đảm bảo minh bạch và hiệu quả\nĐối với nhân viên: Luôn đổi mới, sáng tạo để tạo ra môi trường làm việc năng động với hiệu năng cao nhất`,
+    content: `Đối với khách hàng: Xây dựng nền tảng và giải pháp công nghệ phù hợp, tối ưu với dịch vụ tư vấn và hỗ trợ vận hành hiệu quả, kịp thời. Đối với nhà đầu tư: Luôn đảm bảo minh bạch và hiệu quả. Đối với nhân viên: Luôn đổi mới, sáng tạo để tạo ra môi trường làm việc năng động với hiệu năng cao nhất`,
   },
   {
     title: 'Tầm nhìn',
