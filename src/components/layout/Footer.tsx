@@ -168,7 +168,7 @@ function QRcode() {
 
 const MOCKS_DATA = [
   {
-    name: 'Trung tâm kinh doanh Hồ Chí Minh',
+    name: 'Văn phòng đại diện Hồ Chí Minh',
     address:
       'Chung Cư Intresco An Khang, Số 30, đường 19 An Khang building, Cao ốc, khu đô thị An Phú An Khánh, Thủ Đức, Thành phố Hồ Chí Minh',
     hotline: '090 4451 107',
@@ -235,20 +235,12 @@ const MOCKS_LINK_DEKTOP = [
     name: 'Giải pháp',
     menus: [
       {
-        name: 'Nhật ký canh tác',
-        href: '/',
+        name: 'Green Check',
+        href: '/green-check',
       },
       {
-        name: 'Truy xuất nguồn gốc',
-        href: '/',
-      },
-      {
-        name: 'Quản lý kênh phân phối',
-        href: '/',
-      },
-      {
-        name: 'CRM Platform',
-        href: '/',
+        name: 'Green Agri',
+        href: '/green-agri',
       },
     ],
   },
