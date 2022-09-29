@@ -291,20 +291,12 @@ const MOCKS_LINK_WEBAPP = [
     name: 'Giải pháp',
     menus: [
       {
-        name: 'Nhật ký canh tác',
-        href: '/',
+        name: 'Green Check',
+        href: '/green-check',
       },
       {
-        name: 'Quản lý kênh phân phối',
-        href: '/',
-      },
-      {
-        name: 'Truy xuất nguồn gốc',
-        href: '/',
-      },
-      {
-        name: 'CRM Platform',
-        href: '/',
+        name: 'Green Agri',
+        href: '/green-agri',
       },
     ],
   },
