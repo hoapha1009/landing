@@ -33,7 +33,11 @@ function ExpertCard({ expert, delay }) {
       data-aos='fade-up'
       data-aos-delay={(delay + 1) * 50}
     >
-      <img src={expert.url} alt='avatar' className='rounded-md' />
+      <img
+        src={expert.url}
+        alt='avatar'
+        className='w-full rounded-md object-contain'
+      />
 
       <div className='mt-4 font-saira text-[20px] font-semibold uppercase'>
         {expert.name}

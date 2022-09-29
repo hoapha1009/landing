@@ -8,10 +8,14 @@ export function AboutUsInfo() {
       style={{ backgroundImage: "url('./images/about-us.png')" }}
     >
       <div className=''>
-        <img src='./images/logo.png' alt='logo' className='mx-auto w-[18%]' />
+        <img
+          src='./images/logo.png'
+          alt='logo'
+          className='mx-auto w-32 object-contain lg:w-48'
+        />
       </div>
 
-      <div className='mt-8 grid gap-20 lg:mt-20 lg:grid-cols-4 lg:gap-8'>
+      <div className='mt-20 grid gap-20 lg:grid-cols-4 lg:gap-8'>
         {MOCK_DATA.map((item, index) => (
           <AboutUseCardHorizontal data={item} key={index} index={index} />
         ))}
@@ -36,7 +40,7 @@ function AboutUseCardHorizontal({
       className='flex flex-col gap-2 rounded-md bg-white shadow-sm lg:gap-4'
     >
       <div className='mx-auto -mt-[55px] flex h-32 w-24 flex-row items-center justify-center rounded-full border-2 border-primary bg-white shadow-md'>
-        <img src={data.image} alt='image' className='' />
+        <img src={data.image} alt='image' className='object-contain' />
       </div>
 
       <div className='flex h-full flex-col px-4 pt-2 pb-0'>
