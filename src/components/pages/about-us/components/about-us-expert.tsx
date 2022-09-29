@@ -7,7 +7,7 @@ export function AboutUsExpert() {
       data-aos='fade-up'
       className='main-container mx-auto py-8 lg:w-11/12 lg:py-16 lg:px-16'
     >
-      <Title text='Đội ngũ chuyên gia' />
+      <Title text='Đội ngũ lãnh đạo' />
       <Subtitle
         text='Với đội ngũ là những chuyên gia đầu ngành và giàu kinh nghiệm trong lĩnh vực nông nghiệp và công nghệ thông tin.'
         className='mx-auto mt-4 mb-10'
