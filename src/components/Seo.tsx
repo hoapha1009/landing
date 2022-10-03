@@ -78,7 +78,7 @@ export default function Seo(props: SeoProps) {
         <link key={linkProps.href} {...linkProps} />
       ))}
       <meta name='GAT-TileColor' content='#ffffff' />
-      <meta name='GAT-TileImage' content='/images/logo-1.png' />
+      <meta name='GAT-TileImage' content='/images/logo.png.png' />
       <meta name='theme-color' content='#ffffff' />
     </Head>
   );
