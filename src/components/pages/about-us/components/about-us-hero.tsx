@@ -61,7 +61,7 @@ export function AboutUsHero() {
         <img
           data-aos='fade-up'
           data-aos-delay={200}
-          src='/images/about-us-hero.png'
+          src='/images/about-us-hero-1.png'
           alt=''
           className='mt-3 shrink-0 grow-0 object-contain lg:mt-5 lg:w-1/3'
         />
