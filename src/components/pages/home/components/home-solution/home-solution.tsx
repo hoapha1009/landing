@@ -40,17 +40,21 @@ export function HomeSolution() {
 
 function HomeSolutionCard(solution) {
   return (
-    <div className='rounded-md bg-white p-4 lg:p-8'>
-      <img src={solution.solution.url} alt='image' />
-      <div className='mt-4 font-saira text-[23px] font-semibold'>
-        {solution.solution.title}
+    <div className='flex flex-col justify-between gap-4 rounded-md bg-white p-4 lg:p-8'>
+      <div className='flex-1'>
+        <img src={solution.solution.url} alt='image' />
+        <div className='mt-4 font-saira text-[23px] font-semibold'>
+          {solution.solution.title}
+        </div>
+        <div className='mt-4 min-h-[165px] indent-0 leading-7'>
+          {solution.solution.content}
+        </div>
       </div>
-      <div className='mt-4 min-h-[165px] indent-0 leading-7'>
-        {solution.solution.content}
+      <div className=''>
+        <Button variant='primary' className=''>
+          <Link href={solution.solution.href}>TÌM HIỂU THÊM</Link>
+        </Button>
       </div>
-      <Button variant='primary' className='mt-4'>
-        <Link href={solution.solution.href}>TÌM HIỂU THÊM</Link>
-      </Button>
     </div>
   );
 }
