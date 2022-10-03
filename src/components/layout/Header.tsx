@@ -56,7 +56,7 @@ export default function Header() {
             <Link href='/'>
               <a className='mr-8 -mt-2.5 block'>
                 <img
-                  src='/images/logo-1.png'
+                  src='/images/logo.png.png'
                   alt='logo'
                   className='w-28 object-contain lg:w-32'
                 />
