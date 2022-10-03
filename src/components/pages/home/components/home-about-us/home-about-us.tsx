@@ -10,7 +10,7 @@ export function HomeAboutUs() {
     return (
       <div data-aos='fade-up' className='main-container py-8'>
         <img
-          src='./images/logo.png.png'
+          src='./images/logo.png'
           alt='logo'
           className='mx-auto w-40 object-contain'
         />
@@ -47,7 +47,7 @@ export function HomeAboutUs() {
       />
       <div className=''>
         <img
-          src='./images/logo.png.png'
+          src='./images/logo.png'
           alt='logo'
           className='w-72 object-contain'
         />

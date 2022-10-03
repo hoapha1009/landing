@@ -37,7 +37,7 @@ function InformationGat() {
       <Link href='/'>
         <a>
           <img
-            src='/images/logo.png.png'
+            src='/images/logo.png'
             alt='logo'
             className='w-60 object-contain lg:w-72'
           />
@@ -261,7 +261,7 @@ const MOCKS_LINK_WEBAPP = [
         href: '/about-us',
       },
       {
-        name: 'Hướng dẫn',
+        name: 'Tuyển dụng',
         href: '/',
       },
       {
@@ -271,18 +271,6 @@ const MOCKS_LINK_WEBAPP = [
       {
         name: 'Tin tức & Blog',
         href: 'news-and-blog',
-      },
-      {
-        name: 'Tính năng',
-        href: '/features',
-      },
-      {
-        name: 'Tham gia cộng đồng',
-        href: 'join-us',
-      },
-      {
-        name: 'Tuyển dụng',
-        href: '/',
       },
     ],
   },

@@ -13,7 +13,7 @@ export function AboutUsInfo() {
     >
       <div className=''>
         <img
-          src='./images/logo.png.png'
+          src='./images/logo.png'
           alt='logo'
           className='mx-auto w-32 object-contain lg:w-48'
         />
