@@ -17,7 +17,7 @@ export function HomeNewsCard({
   index: number;
 }) {
   const isLg = useScreen('lg');
-  const delay = (index * 200).toString();
+  const delay = (index * 80).toString();
 
   return (
     <Link href='/'>
