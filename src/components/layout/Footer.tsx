@@ -37,7 +37,7 @@ function InformationGat() {
       <Link href='/'>
         <a>
           <img
-            src='/images/logo.png.png'
+            src='/images/logo.png'
             alt='logo'
             className='w-60 object-contain lg:w-72'
           />
