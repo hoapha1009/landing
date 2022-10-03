@@ -9,7 +9,7 @@ export function AboutUsExpert() {
     >
       <Title text='Đội ngũ lãnh đạo' />
       <Subtitle
-        text='Với đội ngũ là những chuyên gia đầu ngành và giàu kinh nghiệm trong lĩnh vực nông nghiệp và công nghệ thông tin.'
+        text='Với đội ngũ lãnh đạo là những chuyên gia đầu ngành và giàu kinh nghiệm trong lĩnh vực nông nghiệp và công nghệ thông tin.'
         className='mx-auto mt-4 mb-10'
       />
       <div className='mb-4 flex flex-col justify-center gap-6 lg:mb-8 lg:flex-row lg:gap-8'>
@@ -29,7 +29,7 @@ export function AboutUsExpert() {
 function ExpertCard({ expert, delay }) {
   return (
     <div
-      className='rounded-md border-2 bg-white p-[14px] text-center shadow-md'
+      className='rounded-lg border-2 bg-white p-[14px] text-center shadow-md'
       data-aos='fade-up'
       data-aos-delay={(delay + 1) * 50}
     >

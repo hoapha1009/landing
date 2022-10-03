@@ -100,7 +100,7 @@ function NewsAndBlogList({ selectedTab }: NewsAndBlogListProps) {
           />
           <div className='my-3 flex items-center gap-2'>
             <Chip text='Thông tin mùa vụ' />
-            <div className='text-xs lg:text-base'>08/03/2022</div>
+            <div className='text-xs lg:text-base'>03/10/2022</div>
           </div>
           <div className='font-saira text-[23px] font-semibold leading-8 group-hover:text-primary'>
             {NEWS_LIST[0].title}
@@ -121,7 +121,7 @@ function NewsAndBlogList({ selectedTab }: NewsAndBlogListProps) {
               <div className='flex flex-1 flex-col md:gap-2 xl:gap-6'>
                 <div className='flex items-center gap-2'>
                   <Chip text='Thông tin mùa vụ' />
-                  <div className='text-xs lg:text-base'>08/03/2022</div>
+                  <div className='text-xs lg:text-base'>03/10/2022</div>
                 </div>
                 <div className='text-ellipsis-2 font-saira font-medium group-hover:text-primary lg:text-[23px] lg:font-semibold lg:leading-8'>
                   {item.title}

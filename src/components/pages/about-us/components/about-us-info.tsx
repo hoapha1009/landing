@@ -1,6 +1,10 @@
-import Link from 'next/link';
+import { useState } from 'react';
 
 export function AboutUsInfo() {
+  const [showMore, setShowMore] = useState(false);
+
+  const handleClickShowMoreButton = () => setShowMore(true);
+
   return (
     <div
       data-aos='fade-up'
@@ -17,7 +21,13 @@ export function AboutUsInfo() {
 
       <div className='mt-20 grid gap-20 lg:grid-cols-4 lg:gap-8'>
         {MOCK_DATA.map((item, index) => (
-          <AboutUseCardHorizontal data={item} key={index} index={index} />
+          <AboutUseCardHorizontal
+            data={item}
+            key={index}
+            index={index + 1}
+            showMore={showMore}
+            onClick={handleClickShowMoreButton}
+          />
         ))}
       </div>
     </div>
@@ -27,11 +37,19 @@ export function AboutUsInfo() {
 function AboutUseCardHorizontal({
   data,
   index,
+  showMore,
+  onClick,
 }: {
-  data: { image: string; content: string; title: string };
+  data: {
+    image: string;
+    content: string;
+    title: string;
+  };
   index: number;
+  showMore: boolean;
+  onClick: () => void;
 }) {
-  const delay = (index * 100).toString();
+  const delay = (index * 120).toString();
 
   return (
     <div
@@ -48,11 +66,18 @@ function AboutUseCardHorizontal({
           <div className='mb-3 text-center font-saira text-[23px] font-semibold uppercase'>
             {data.title}
           </div>
-          <div className='lg:text-ellipsis-4 min-h-24'>{data.content}</div>
+          <div className={`min-h-24 ${!showMore && 'lg:text-ellipsis-4'}`}>
+            {data.content}
+          </div>
         </div>
-        <Link href='/'>
-          <a className='hidden text-primary lg:block'>Xem thêm</a>
-        </Link>
+        {!showMore && (
+          <div
+            className='hidden cursor-pointer text-primary lg:block'
+            onClick={() => onClick?.()}
+          >
+            Xem thêm
+          </div>
+        )}
       </div>
     </div>
   );

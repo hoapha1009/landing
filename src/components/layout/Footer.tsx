@@ -39,7 +39,7 @@ function InformationGat() {
           <img
             src='/images/logo.png'
             alt='logo'
-            className='w-36 object-contain'
+            className='w-60 object-contain lg:w-72'
           />
         </a>
       </Link>
@@ -55,12 +55,11 @@ function InformationGat() {
             <div className='mt-2 text-base text-[#CCCCCC]  lg:text-lg'>
               <p>
                 <a
-                  className='hover:text-white hover:underline'
+                  className='whitespace-pre-wrap hover:text-white hover:underline'
                   href={item.linkAddress}
                   target='_blank'
                   rel='noreferrer'
                 >
-                  {' '}
                   {item.address}
                 </a>
               </p>
@@ -155,8 +154,8 @@ function QRcode() {
 const MOCKS_DATA = [
   {
     name: 'Văn phòng đại diện Hồ Chí Minh',
-    address:
-      'Chung Cư Intresco An Khang, Số 30, đường 19 An Khang building, Cao ốc, khu đô thị An Phú An Khánh, Thủ Đức, Thành phố Hồ Chí Minh',
+    address: `Chung Cư Intresco An Khang 
+Số 30 đường 19, An Phú, Thành phố Thủ Đức`,
     hotline: '090 4451 107',
     email: 'contact@greengroups.com.vn',
     linkAddress:
