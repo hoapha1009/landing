@@ -58,30 +58,30 @@ export const MOCK_DATA_1 = [
 export const MOCK_DATA_2 = [
   {
     img: {
-      url: '/images/leaf.png',
-      alt: 'lá cây',
-    },
-    content: 'Hạn chế hàng giả, kém chất lượng',
-  },
-  {
-    img: {
       url: '/images/scan.png',
-      alt: 'lá cây',
+      alt: 'scan-image',
     },
-    content: 'Hiện đại hóa nền nông nghiệp Việt',
+    content: 'Góp phần số hóa nền nông nghiệp Việt Nam',
   },
   {
     img: {
-      url: '/images/virut.png',
-      alt: 'lá cây',
+      url: '/images/leaf2.png',
+      alt: 'leaf-image',
     },
-    content: 'Bảo vệ môi trường',
+    content: 'Góp phần bảo vệ môi trường',
   },
   {
     img: {
-      url: '/images/user.png',
-      alt: 'lá cây',
+      url: '/images/group.png',
+      alt: 'group-image',
     },
-    content: 'Ổn định thị trường nông nghiệp',
+    content: 'Góp phần nâng cao hiệu năng cho sản xuất nông nghiệp',
+  },
+  {
+    img: {
+      url: '/images/search2.png',
+      alt: 'search-image',
+    },
+    content: 'Góp phần nâng cao tính minh bạch trong thương mại',
   },
 ];

@@ -49,7 +49,7 @@ export function HomeAboutUs() {
         <img
           src='./images/logo.png'
           alt='logo'
-          className='w-40 object-contain'
+          className='w-72 object-contain'
         />
         <div className='mt-6 text-2xl font-bold uppercase text-primary'>
           nông nghiệp xanh - sống an lành

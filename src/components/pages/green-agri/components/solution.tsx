@@ -22,9 +22,15 @@ interface Solution {
 interface SolutionProps {
   item: Solution;
   className?: string;
+  index: number;
 }
 
-export function Solution({ item, className = '', ...props }: SolutionProps) {
+export function Solution({
+  item,
+  className = '',
+  index,
+  ...props
+}: SolutionProps) {
   return (
     <div className={`py-4 lg:py-10 ${className}`}>
       <div className='main-container'>
@@ -33,7 +39,9 @@ export function Solution({ item, className = '', ...props }: SolutionProps) {
         <img
           src={item.img.url}
           alt={item.img.alt}
-          className='mx-auto mt-8 mb-10 rounded-md object-contain lg:w-2/3'
+          className={`mx-auto mt-8 mb-10 object-contain lg:w-2/3 ${
+            index !== 2 && 'rounded-md'
+          }`}
         />
         <div className='box-content flex flex-col items-stretch overflow-hidden rounded-md border border-gray-100 shadow-lg lg:flex-row'>
           <Part
@@ -65,7 +73,11 @@ interface PartProps {
 
 function Part({ type, title, options, className = '', ...props }: PartProps) {
   return (
-    <div className={`py-8 pl-6 lg:w-1/2 ${className}`}>
+    <div
+      className={`py-8 pl-6 lg:w-1/2 ${
+        type === 'mainFeatures' && 'bg-white'
+      } ${className}`}
+    >
       <Title text={title} className='!text-left' />
       <div className='mt-4 flex flex-col gap-3'>
         {options.map((option, index) => (

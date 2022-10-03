@@ -54,11 +54,11 @@ export default function Header() {
         <div className='main-container flex h-20 items-center justify-between font-medium'>
           <div className='flex items-center gap-1'>
             <Link href='/'>
-              <a className='mr-8 block'>
+              <a className='mr-8 -mt-2.5 block'>
                 <img
                   src='/images/logo.png'
                   alt='logo'
-                  className='h-[30px] w-[85px] lg:h-[36px] lg:w-[102px]'
+                  className='w-28 object-contain lg:w-32'
                 />
               </a>
             </Link>

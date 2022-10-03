@@ -26,10 +26,10 @@ export function HomeSolution() {
               : './images/main-solution-mobile.png'
           }
           alt='image'
-          className='m-auto'
+          className='m-auto object-contain'
         />
       </div>
-      <div className='my-8 grid grid-cols-1 gap-8 px-4 lg:grid-cols-2 lg:px-0'>
+      <div className='my-8 grid grid-cols-1 gap-8 whitespace-pre-wrap px-4 lg:grid-cols-2 lg:px-0'>
         {MOCK_DATA.map((item, index) => (
           <HomeSolutionCard key={index} solution={item} />
         ))}
@@ -45,7 +45,9 @@ function HomeSolutionCard(solution) {
       <div className='mt-4 font-saira text-[23px] font-semibold'>
         {solution.solution.title}
       </div>
-      <div className='mt-4 min-h-[165px] '>{solution.solution.content}</div>
+      <div className='mt-4 min-h-[165px] indent-0 leading-7'>
+        {solution.solution.content}
+      </div>
       <Button variant='primary' className='mt-4'>
         <Link href={solution.solution.href}>TÌM HIỂU THÊM</Link>
       </Button>
@@ -57,15 +59,15 @@ const MOCK_DATA = [
   {
     url: './images/logo-green-agri-2.png',
     title: 'Giải pháp Green Agri',
-    content:
-      'Là giải pháp thương mại điện tử và quản lý kênh phân phối cho các doanh nghiệp trong lĩnh vực nông nghiệp. Hỗ trợ nền tảng công nghệ và giúp tiếp cận thêm kênh online hiệu quả. Ngoài ra, giúp doanh nghiệp mở rộng kênh phân phối đến các đại lý các tỉnh và mạng lưới cộng tác viên. ',
+    content: `Là giải pháp thương mại điện tử cho các doanh nghiệp nói chung đặc biệt là các doanh nghiệp nông nghiệp để quản lý và hỗ trợ kênh phân phối.
+Ngoài ra còn giúp doanh nghiệp quản lý dữ liệu khách hàng để từ đó thực hiện các chương trình khuyến mại, chăm sóc, dịch vụ khách hàng hiệu quả, đúng đối tượng.`,
     href: '/green-agri',
   },
   {
     url: './images/logo-green-check.png',
     title: 'Giải pháp Green Check',
-    content:
-      'Là giải pháp truy xuất nguồn gốc từ nông trại đến bàn ăn hỗ trợ mã QR để theo dõi và đáp ứng các tiêu chuẩn chất lượng của nông sản. Loại bỏ hàng giả và đảm bảo rằng tất cả nông sản khi đến tay người tiêu dùng cuối là sản phẩm tốt nhất.',
+    content: `Là giải pháp truy xuất nguồn gốc ghi nhận đầy đủ, kịp thời các hoạt động từ quá trình canh tác đến thu hoạch, thu mua, chế biến và phân phối sản phẩm đến người tiêu dùng, thông qua việc mã hóa và định danh bằng mã QR code cho từng công việc, công đoạn. 
+Đảm bảo tính minh bạch, rõ ràng trong việc kiểm soát chất lượng sản phẩm, góp phần khẳng định chất lượng và xây dựng thương hiệu sản phẩm.`,
     href: '/green-check',
   },
 ];

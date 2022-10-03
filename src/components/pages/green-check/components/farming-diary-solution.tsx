@@ -1,9 +1,12 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { useScreen } from '../../../../hooks/use-screen';
 import { Subtitle } from '../../../shared/subtitle/subtitle';
 import { Title } from '../../../shared/title/title';
 import { FeatMain } from '../../green-agri/components/feat-main';
 
 export function FarmingDiarySolution() {
+  const isLg = useScreen('lg');
+
   return (
     <div
       data-aos='fade-up'
@@ -12,7 +15,7 @@ export function FarmingDiarySolution() {
       <Title text='GIẢI PHÁP NHẬT KÝ CANH TÁC' />
       <Subtitle
         className='mx-auto w-full text-center'
-        text='Là giải pháp giám sát và quản lý trang trại giúp số hóa hồ sơ sản xuất của nông trại / hộ nông dân, chia sẻ thông tin thời tiết và dịch hại, theo dõi năng suất cây trồng, cải thiện hiệu quả trang trại và tăng năng suất lao động của nhân viên nông trại/ hộ nông dân'
+        text='Là giải pháp giúp ghi nhận đầy đủ, kịp thời các hoạt động từ quá trình canh tác đến thu hoạch, thu mua, chế biến và phân phối sản phẩm đến người tiêu dùng, thông qua việc mã hóa và định danh bằng mã QR code cho từng công việc, công đoạn. '
       />
       <Swiper
         slidesPerView={1}
@@ -46,7 +49,7 @@ export function FarmingDiarySolution() {
       </Swiper>
       <Title text='tính năng chính' className='mt-8 lg:mt-16 lg:hidden' />
       <div className='mt-3'>
-        <FeatMain options={LIST_FEAT} />
+        <FeatMain options={isLg ? LIST_FEAT : MOBILE_LIST_FEAT} />
       </div>
       <Title text='lợi ích của nhật ký canh tác' className='mt-8 lg:mt-14' />
       <div className='mt-4 grid w-full gap-4 lg:mt-8 lg:auto-rows-fr lg:grid-cols-3 lg:gap-8'>
@@ -149,35 +152,78 @@ const IMAGE_LIST = [
 
 const LIST_FEAT = [
   {
-    url: '/images/leaf-2.png',
-    content: 'Định vị địa điểm canh tác',
+    url: '/images/star.png',
+    content: 'Quản lý thông tin vùng trồng và địa điểm canh tác',
   },
   {
-    url: '/images/leaf-2.png',
-    content: 'Xác định cây trồng',
+    url: '/images/star.png',
+    content: 'Chia sẻ thông tin nông nghiệp và thời tiết',
   },
   {
-    url: '/images/leaf-2.png',
-    content: 'Chia sẻ thông tin thời tiết',
+    url: '/images/star.png',
+    content: 'Quản lý quy trình canh tác',
   },
   {
-    url: '/images/leaf-2.png',
-    content: 'Theo dõi sức khỏe cây trồng từ xa',
+    url: '/images/star.png',
+    content: 'Thiết lập và quản lý năng suất công việc',
   },
   {
-    url: '/images/leaf-2.png',
-    content: 'Chia sẻ thông tin và Đặt cảnh báo dịch hại',
-  },
-  {
-    url: '/images/leaf-2.png',
-    content: 'Thiết lập công việc và quản lý năng suất công nhân',
-  },
-  {
-    url: '/images/leaf-2.png',
+    url: '/images/star.png',
     content: 'Quản lý vật tư đầu vào và kho vật tư nông nghiệp',
   },
   {
-    url: '/images/leaf-2.png',
+    url: '/images/star.png',
     content: 'Quản lý sản lượng',
+  },
+  {
+    url: '/images/star.png',
+    content: 'Quản lý dịch hại và thiết lập cảnh báo',
+  },
+  {
+    url: '/images/star.png',
+    content: 'Thống kê và báo cáo',
+  },
+  {
+    url: '/images/star.png',
+    content: 'Quản lý hoạt chất sản phẩm và chứng nhận',
+  },
+];
+
+const MOBILE_LIST_FEAT = [
+  {
+    url: '/images/star.png',
+    content: 'Quản lý thông tin vùng trồng và địa điểm canh tác',
+  },
+  {
+    url: '/images/star.png',
+    content: 'Quản lý quy trình canh tác',
+  },
+  {
+    url: '/images/star.png',
+    content: 'Quản lý vật tư đầu vào và kho vật tư nông nghiệp',
+  },
+  {
+    url: '/images/star.png',
+    content: 'Quản lý dịch hại và thiết lập cảnh báo',
+  },
+  {
+    url: '/images/star.png',
+    content: 'Quản lý hoạt chất sản phẩm và chứng nhận',
+  },
+  {
+    url: '/images/star.png',
+    content: 'Chia sẻ thông tin nông nghiệp và thời tiết',
+  },
+  {
+    url: '/images/star.png',
+    content: 'Thiết lập và quản lý năng suất công việc',
+  },
+  {
+    url: '/images/star.png',
+    content: 'Quản lý sản lượng',
+  },
+  {
+    url: '/images/star.png',
+    content: 'Thống kê và báo cáo',
   },
 ];
