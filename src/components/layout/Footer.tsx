@@ -116,9 +116,9 @@ function QRcode() {
   return (
     <div className='mt-12 mb-4 flex flex-row xl:mb-0'>
       <img
-        src='/images/qrCode.png'
-        alt='qrcode'
-        className='h-24 w-24 object-contain '
+        src='/images/qr-code.png'
+        alt='qr-code'
+        className='h-24 w-24 object-contain'
       />
       <div className='ml-4 flex flex-col justify-around'>
         <div className='font-saira font-semibold text-white lg:text-lg'>
