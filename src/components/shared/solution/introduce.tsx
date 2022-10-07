@@ -29,7 +29,16 @@ export function Introduce({ name, img, title, ...props }: IntroduceProps) {
             className='mx-auto object-contain '
           />
           <div className='mt-8 text-center'>
-            <Button variant='primary' className='!px-8 !py-3'>
+            <Button
+              variant='primary'
+              className='!px-8 !py-3'
+              onClick={() => {
+                const el = document.getElementById('form');
+
+                if (el)
+                  el.scrollIntoView({ block: 'center', behavior: 'smooth' });
+              }}
+            >
               LIÊN HỆ NGAY
             </Button>
           </div>
@@ -46,7 +55,16 @@ export function Introduce({ name, img, title, ...props }: IntroduceProps) {
             {name}
           </div>
           <div className='text-5xl font-bold leading-tight'>{title}</div>
-          <Button variant='primary' className='mt-8 !px-8 !py-3'>
+          <Button
+            variant='primary'
+            className='mt-8 !px-8 !py-3'
+            onClick={() => {
+              const el = document.getElementById('form');
+
+              if (el)
+                el.scrollIntoView({ block: 'center', behavior: 'smooth' });
+            }}
+          >
             LIÊN HỆ NGAY
           </Button>
         </div>

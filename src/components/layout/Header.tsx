@@ -68,6 +68,12 @@ export default function Header() {
             <Button
               variant='primary'
               className='px-3 text-sm lg:px-4 lg:text-base'
+              onClick={() => {
+                const el = document.getElementById('form');
+
+                if (el)
+                  el.scrollIntoView({ block: 'center', behavior: 'smooth' });
+              }}
             >
               Đăng ký tư vấn
             </Button>

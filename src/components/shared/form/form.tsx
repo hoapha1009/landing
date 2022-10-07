@@ -52,6 +52,7 @@ export function Form({ className = '', ...props }: Props) {
 
   return (
     <div
+      id='form'
       className={`bg-gray-50 pt-8 lg:bg-white lg:py-24 lg:px-0 ${className}`}
       data-aos='fade-up'
     >
