@@ -28,7 +28,6 @@ export function Form({ className = '', ...props }: Props) {
     axios
       .post(scriptURL, data)
       .then((res) => {
-        console.log(res);
         //clearing form fields
         setData(initialData);
         alert(
