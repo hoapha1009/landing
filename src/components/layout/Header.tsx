@@ -72,9 +72,14 @@ export default function Header() {
               onClick={async () => {
                 if (['/', '/about-us'].includes(router.pathname)) {
                   await router.push('/green-check');
-                  const el = document.getElementById('form-body');
+                  const el = document.getElementById('form');
                   if (el)
-                    el.scrollIntoView({ block: 'center', behavior: 'smooth' });
+                    setTimeout(() => {
+                      el.scrollIntoView({
+                        block: 'center',
+                        behavior: 'smooth',
+                      });
+                    }, 500);
                   return;
                 }
 

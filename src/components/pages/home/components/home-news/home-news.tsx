@@ -7,7 +7,7 @@ export function HomeNews() {
   const isLg = useScreen('lg');
 
   return (
-    <div data-aos='fade-up' className='bg-gray-50 py-8 lg:py-16'>
+    <div className='bg-gray-50 py-8 lg:py-16'>
       <div className='main-container'>
         <div className='flex flex-row items-center justify-between'>
           <Title text='tin tức và chia sẻ' className='mb-4 lg:mb-8' />

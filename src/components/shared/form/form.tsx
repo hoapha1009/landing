@@ -55,13 +55,13 @@ export function Form({ className = '', ...props }: Props) {
       id='form'
       className={`bg-gray-50 pt-8 lg:bg-white lg:py-24 lg:px-0 ${className}`}
       data-aos='fade-up'
+      data-aos-delay={80}
     >
       <div className='main-container mx-auto rounded-xl border-gray-50 bg-gray-50 pb-12 lg:w-2/3 lg:border lg:px-20 lg:shadow-md 2xl:w-7/12'>
         <Title text='sản phẩm của chúng tôi đã sẵn sàng' className='lg:pt-12' />
         <Subtitle text='Đăng ký đặt lịch để được trải nghiệm sớm nhất công nghệ của chúng tôi' />
 
         <form
-          id='form-body'
           name='google-sheet'
           className='flex flex-col gap-4'
           onSubmit={handleSubmit}
