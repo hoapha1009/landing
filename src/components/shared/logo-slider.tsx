@@ -183,6 +183,22 @@ export const MOCK_DATA: LogoSliderProps[] = [
     url: 'slide-ptit.png',
     href: '',
   },
+  {
+    url: 'slide-gas-thien-ha.png',
+    href: '',
+  },
+  {
+    url: 'slide-bv-caq.png',
+    href: '',
+  },
+  {
+    url: 'slide-shb.png',
+    href: '',
+  },
+  {
+    url: 'slide-loc-troi.png',
+    href: '',
+  },
 ];
 
 const MOCK_DATA_MOBILE: MobiLogoSliderProps[] = [
@@ -217,23 +233,23 @@ const MOCK_DATA_MOBILE: MobiLogoSliderProps[] = [
   {
     list: [
       {
-        url: 'slide-som.png',
+        url: 'slide-clb-doanh-nhan.png',
         href: '',
       },
       {
-        url: 'slide-BKH&CN.png',
+        url: 'slide-bv-caq.png',
         href: '',
       },
       {
-        url: 'slide-buu-dien.png',
-        href: '',
-      },
-      {
-        url: 'slide-DH-KHTN.png',
+        url: 'slide-shb.png',
         href: '',
       },
       {
         url: 'slide-tentamus.png',
+        href: '',
+      },
+      {
+        url: 'slide-loc-troi.png',
         href: '',
       },
       {
@@ -245,7 +261,11 @@ const MOCK_DATA_MOBILE: MobiLogoSliderProps[] = [
   {
     list: [
       {
-        url: 'slide-som.png',
+        url: 'slide-green-farm-customer.png',
+        href: '',
+      },
+      {
+        url: 'slide-green-retail.png',
         href: '',
       },
       {
@@ -253,7 +273,7 @@ const MOCK_DATA_MOBILE: MobiLogoSliderProps[] = [
         href: '',
       },
       {
-        url: 'slide-buu-dien.png',
+        url: 'slide-green-food.png',
         href: '',
       },
       {
@@ -261,11 +281,7 @@ const MOCK_DATA_MOBILE: MobiLogoSliderProps[] = [
         href: '',
       },
       {
-        url: 'slide-tentamus.png',
-        href: '',
-      },
-      {
-        url: 'slide-ptit.png',
+        url: 'slide-buu-dien.png',
         href: '',
       },
     ],
@@ -357,11 +373,19 @@ export const CUSTOMER_MOCK_DATA: LogoSliderProps[] = [
     href: '',
   },
   {
-    url: 'slide-green-agri.png',
+    url: 'slide-green-food.png',
     href: '',
   },
   {
-    url: 'slide-green-food.png',
+    url: 'slide-BKH&CN.png',
+    href: '',
+  },
+  {
+    url: 'slide-DH-KHTN.png',
+    href: '',
+  },
+  {
+    url: 'slide-buu-dien.png',
     href: '',
   },
 ];
@@ -434,7 +458,7 @@ const CUSTOMER_MOCK_DATA_MOBILE: MobiLogoSliderProps[] = [
         href: '',
       },
       {
-        url: 'slide-green-agri.png',
+        url: 'slide-BKH&CN.png',
         href: '',
       },
       {
@@ -442,11 +466,11 @@ const CUSTOMER_MOCK_DATA_MOBILE: MobiLogoSliderProps[] = [
         href: '',
       },
       {
-        url: 'slide-som.png',
+        url: 'slide-DH-KHTN.png',
         href: '',
       },
       {
-        url: 'slide-loc-troi.png',
+        url: 'slide-buu-dien.png',
         href: '',
       },
     ],
