@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { useState } from 'react';
 import Button from '../../buttons/Button';
 import { Subtitle } from '../subtitle/subtitle';
@@ -9,17 +10,35 @@ interface Props {
 }
 
 export function Form({ className = '', ...props }: Props) {
-  const [data, setData] = useState(() => ({
+  const scriptURL =
+    'https://sheet.best/api/sheets/97d64446-b0ac-4f85-8ad2-70be2de79b99';
+  const initialData = {
     email: '',
     phone: '',
-    businessLines: '',
-    yourNeeds: '',
-  }));
+    career: '',
+    demand: '',
+  };
+  const [data, setData] = useState(() => initialData);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log('data', data);
+    setLoading(true);
+    axios
+      .post(scriptURL, data)
+      .then((res) => {
+        console.log(res);
+        //clearing form fields
+        setData(initialData);
+        alert(
+          'Cảm ơn bạn đã đăng ký. Chúng tôi sẽ liên hệ lại với bạn sớm nhất.'
+        );
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+      .finally(() => setLoading(false));
   };
 
   const handleChangeValue = (e) => {
@@ -41,11 +60,16 @@ export function Form({ className = '', ...props }: Props) {
         <Title text='sản phẩm của chúng tôi đã sẵn sàng' className='lg:pt-12' />
         <Subtitle text='Đăng ký đặt lịch để được trải nghiệm sớm nhất công nghệ của chúng tôi' />
 
-        <form className='flex flex-col gap-4' onSubmit={handleSubmit}>
+        <form
+          name='google-sheet'
+          className='flex flex-col gap-4'
+          onSubmit={handleSubmit}
+        >
           <div className=''>
             <Label required text='Email doanh nghiệp' />
             <input
               required
+              id='email'
               name='email'
               className='form-control'
               type='email'
@@ -58,6 +82,7 @@ export function Form({ className = '', ...props }: Props) {
               <Label required text='Số điện thoại' />
               <input
                 required
+                id='phone'
                 name='phone'
                 className='form-control'
                 type='tel'
@@ -69,9 +94,10 @@ export function Form({ className = '', ...props }: Props) {
               <Label required text='Ngành nghề kinh doanh' />
               <input
                 required
-                name='businessLines'
+                id='career'
+                name='career'
                 className='form-control'
-                value={data.businessLines}
+                value={data.career}
                 onChange={handleChangeValue}
               />
             </div>
@@ -79,10 +105,11 @@ export function Form({ className = '', ...props }: Props) {
           <div className=''>
             <Label text='Nhu cầu của bạn là gì?' />
             <textarea
-              name='yourProblem'
+              id='demand'
+              name='demand'
               className='form-control py-2 outline-none'
               rows={3}
-              value={data.yourNeeds}
+              value={data.demand}
               onChange={handleChangeValue}
             />
           </div>
@@ -91,6 +118,7 @@ export function Form({ className = '', ...props }: Props) {
               variant='primary'
               className='w-52 justify-center !py-3'
               type='submit'
+              disabled={loading}
             >
               ĐẶT LỊCH LIÊN HỆ
             </Button>
