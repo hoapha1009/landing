@@ -9,6 +9,7 @@ import Button from '../buttons/Button';
 export default function Header() {
   const { lg } = useScreen();
   const router = useRouter();
+  console.log('🚀 ~ file: Header.tsx ~ line 12 ~ Header ~ router', router);
   const [scrollTop, setScrollTop] = useState(0);
   const [showMenuMobile, setShowMenuMobile] = useState(false);
   const isScrolled = useMemo(() => scrollTop > 50, [scrollTop]);
@@ -68,11 +69,18 @@ export default function Header() {
             <Button
               variant='primary'
               className='px-3 text-sm lg:px-4 lg:text-base'
-              onClick={() => {
-                const el = document.getElementById('form');
+              onClick={async () => {
+                if (['/', '/about-us'].includes(router.pathname)) {
+                  await router.push('/green-check');
+                  const el = document.getElementById('form-body');
+                  if (el)
+                    el.scrollIntoView({ block: 'center', behavior: 'smooth' });
+                  return;
+                }
 
+                const el = document.getElementById('form');
                 if (el)
-                  el.scrollIntoView({ block: 'center', behavior: 'smooth' });
+                  el.scrollIntoView({ block: 'start', behavior: 'smooth' });
               }}
             >
               Đăng ký tư vấn

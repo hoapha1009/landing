@@ -61,6 +61,7 @@ export function Form({ className = '', ...props }: Props) {
         <Subtitle text='Đăng ký đặt lịch để được trải nghiệm sớm nhất công nghệ của chúng tôi' />
 
         <form
+          id='form-body'
           name='google-sheet'
           className='flex flex-col gap-4'
           onSubmit={handleSubmit}
