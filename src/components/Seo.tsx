@@ -3,18 +3,19 @@ import { useRouter } from 'next/router';
 
 // !STARTERCONF Change these default meta
 const defaultMeta = {
-  title: 'GAT',
-  siteName: 'GAT',
-  description: 'GAT Landing',
+  title: 'Green Agri',
+  siteName: 'Green Agri',
+  description:
+    'Green Agri/ Green Check - Giải pháp Thương mại điện tử và Quản lý kênh phân phối',
   /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
-  url: 'https://tsnext-tw.thcl.dev',
+  url: 'https://greenagri.com.vn/',
   type: 'website',
   robots: 'follow, index',
   /**
    * No need to be filled, will be populated with openGraph function
    * If you wish to use a normal image, just specify the path below
    */
-  image: 'https://tsnext-tw.thcl.dev/images/large-og.png',
+  image: 'https://i.imgur.com/TEWDd5D.png',
 };
 
 type SeoProps = {
