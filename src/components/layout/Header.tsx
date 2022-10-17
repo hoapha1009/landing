@@ -9,7 +9,6 @@ import Button from '../buttons/Button';
 export default function Header() {
   const { lg } = useScreen();
   const router = useRouter();
-  console.log('🚀 ~ file: Header.tsx ~ line 12 ~ Header ~ router', router);
   const [scrollTop, setScrollTop] = useState(0);
   const [showMenuMobile, setShowMenuMobile] = useState(false);
   const isScrolled = useMemo(() => scrollTop > 50, [scrollTop]);
