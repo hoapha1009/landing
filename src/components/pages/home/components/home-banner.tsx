@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper/core';
@@ -35,7 +36,8 @@ export function HomeBanner() {
         >
           {MOCK_DATA_BANNER.map((item, index) => (
             <SwiperSlide key={index}>
-              <HomBannerContent banner={item} />
+              {/* <HomBannerContent banner={item} /> */}
+              <HomeBannerContent banner={item} />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -44,37 +46,29 @@ export function HomeBanner() {
   );
 }
 
-function HomBannerContent(banner) {
+function HomeBannerContent(banner) {
   const router = useRouter();
   const isLg = useScreen('lg');
+
   return (
-    <div
-      className={`relative flex max-h-96 min-h-[350px] w-full flex-row justify-center bg-cover bg-center bg-no-repeat lg:mb-[2.5rem] lg:flex lg:h-[645px] lg:max-h-[645px] lg:flex-row   lg:justify-center ${
-        !isLg ? 'items-center' : ''
-      }`}
-      style={{ backgroundImage: `url('./images/${banner.banner.image}')` }}
-    >
-      <div className='lg:mt-24'>
-        <div
-          data-aos='fade-up'
-          data-aos-delay='100'
-          className={`mx-auto mt-10 mb-2 text-center font-saira text-xl font-semibold uppercase !leading-[1.5] text-white lg:mt-16 lg:mb-8 ${banner.banner.maxWidth} lg:text-[60px]`}
+    <div className='relative h-[339px] lg:h-[660px]'>
+      <Image
+        src={`/images/${banner.banner.image}`}
+        alt={banner.banner.image}
+        layout='fill'
+        objectFit='cover'
+      />
+      <div className='absolute top-1/3 w-full -translate-y-16 transform text-center '>
+        <h1 className='mt-10 mb-2 whitespace-pre-wrap font-saira text-2xl font-semibold uppercase !leading-tight text-white lg:text-6xl'>
+          {isLg ? banner.banner.title : banner.banner.mobiTitle}
+        </h1>
+        <Button
+          variant='primary'
+          className='mt-4 py-[12px] px-5 font-normal uppercase lg:py-[14px] lg:px-7'
+          onClick={() => router.push('/about-us')}
         >
-          {banner.banner.title}
-        </div>
-        <div
-          data-aos='fade-up'
-          data-aos-delay='200'
-          className='mt-10 text-center lg:mt-12'
-        >
-          <Button
-            variant='primary'
-            className='py-[12px] px-5 font-normal uppercase  lg:py-[14px] lg:px-7'
-            onClick={() => router.push('/about-us')}
-          >
-            Tìm hiểu thêm
-          </Button>
-        </div>
+          Tìm hiểu thêm
+        </Button>
       </div>
     </div>
   );
@@ -83,19 +77,30 @@ function HomBannerContent(banner) {
 const MOCK_DATA_BANNER = [
   {
     image: 'home-banner-3.png',
-    title: 'Nông nghiệp xanh sống an lành',
+    mobiTitle: `Nông nghiệp xanh
+sống an lành`,
+    title: `Nông nghiệp xanh
+sống an lành`,
     href: '/',
     maxWidth: 'lg:max-w-2xl max-w-[250px]',
   },
   {
     image: 'home-banner-2.png',
-    title: 'giải pháp công nghệ hàng đầu trong ngành nông nghiệp',
+    mobiTitle: `giải pháp công nghệ
+hàng đầu trong 
+ngành nông nghiệp`,
+    title: `giải pháp công nghệ hàng đầu
+trong ngành nông nghiệp`,
     href: '/',
     maxWidth: 'lg:max-w-5xl',
   },
   {
     image: 'home-banner-1.png',
-    title: 'ứng dụng công nghệ nâng tầm nông nghiệp Việt Nam',
+    mobiTitle: `ứng dụng công nghệ 
+nâng tầm
+nông nghiệp Việt Nam`,
+    title: `ứng dụng công nghệ nâng tầm
+nông nghiệp Việt Nam`,
     href: '/',
     maxWidth: 'lg:max-w-5xl',
   },

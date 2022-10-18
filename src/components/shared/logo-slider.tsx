@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper/core';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -46,11 +47,14 @@ export function LogoSlider({ type = 'partner', ...props }: Props) {
             <SwiperSlide key={index} className='w-40'>
               <Link href={item.href}>
                 <a>
-                  <img
-                    src={`/images/${item.url}`}
-                    alt={item.url}
-                    className='object-contain '
-                  />
+                  <div className='relative h-24'>
+                    <Image
+                      src={`/images/${item.url}`}
+                      alt={item.url}
+                      layout='fill'
+                      objectFit='contain'
+                    />
+                  </div>
                 </a>
               </Link>
             </SwiperSlide>
@@ -63,13 +67,15 @@ export function LogoSlider({ type = 'partner', ...props }: Props) {
             <SwiperSlide key={index} className='grid grid-cols-2 gap-12'>
               {item.list.map((logo, index) => (
                 <Link key={index} href={logo.href}>
-                  <a className='mx-auto block'>
-                    <img
-                      src={`/images/${logo.url}`}
-                      alt={logo.url}
-                      height='100%'
-                      className='object-contain '
-                    />
+                  <a className=''>
+                    <div className='relative h-24'>
+                      <Image
+                        src={`/images/${logo.url}`}
+                        alt={logo.url}
+                        layout='fill'
+                        objectFit='contain'
+                      />
+                    </div>
                   </a>
                 </Link>
               ))}
@@ -83,11 +89,14 @@ export function LogoSlider({ type = 'partner', ...props }: Props) {
             <SwiperSlide key={index} className='w-40'>
               <Link href={item.href}>
                 <a>
-                  <img
-                    src={`/images/${item.url}`}
-                    alt={item.url}
-                    className='object-contain '
-                  />
+                  <div className='relative h-24'>
+                    <Image
+                      src={`/images/${item.url}`}
+                      alt={item.url}
+                      layout='fill'
+                      objectFit='contain'
+                    />
+                  </div>
                 </a>
               </Link>
             </SwiperSlide>
@@ -100,13 +109,15 @@ export function LogoSlider({ type = 'partner', ...props }: Props) {
             <SwiperSlide key={index} className='grid grid-cols-2 gap-12'>
               {item.list.map((logo, index) => (
                 <Link key={index} href={logo.href}>
-                  <a className='mx-auto block'>
-                    <img
-                      src={`/images/${logo.url}`}
-                      alt={logo.url}
-                      height='100%'
-                      className='object-contain '
-                    />
+                  <a className=''>
+                    <div className='relative h-24'>
+                      <Image
+                        src={`/images/${logo.url}`}
+                        alt={logo.url}
+                        layout='fill'
+                        objectFit='contain'
+                      />
+                    </div>
                   </a>
                 </Link>
               ))}

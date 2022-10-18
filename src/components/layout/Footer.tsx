@@ -52,10 +52,10 @@ function InformationGat() {
             {item.name}
           </div>
           <div className='mt-2'>
-            <div className='mt-2 text-base text-[#CCCCCC]  lg:text-lg'>
+            <div className='mt-2 text-base text-[#CCCCCC] lg:text-lg'>
               <p>
                 <a
-                  className='whitespace-pre-wrap hover:text-white hover:underline'
+                  className='my-0.5 block whitespace-pre-wrap hover:text-white hover:underline'
                   href={item.linkAddress}
                   target='_blank'
                   rel='noreferrer'
@@ -65,7 +65,7 @@ function InformationGat() {
               </p>
               <p>
                 <a
-                  className='hover:text-white hover:underline'
+                  className='my-0.5 block hover:text-white hover:underline'
                   href={`tel: +${item.hotline}`}
                 >
                   Phone: {item.hotline}
@@ -73,7 +73,7 @@ function InformationGat() {
               </p>
               <p>
                 <a
-                  className='hover:text-white hover:underline'
+                  className='my-0.5 block hover:text-white hover:underline'
                   href={`mailto:${item.email}`}
                 >
                   Email: {item.email}
