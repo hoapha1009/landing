@@ -45,6 +45,41 @@ export default function Seo(props: SeoProps) {
 
   return (
     <Head>
+      <title>Green Agri</title>
+      <meta name='title' content='Green Agri' />
+      <meta
+        name='description'
+        content='Green Agri/ Green Check - Giải pháp Thương mại điện tử và Quản lý kênh phân phối'
+      />
+
+      <meta property='og:type' content='website' />
+      <meta property='og:url' content='https://metatags.io/' />
+      <meta property='og:title' content='Green Agri' />
+      <meta
+        property='og:description'
+        content='Green Agri/ Green Check - Giải pháp Thương mại điện tử và Quản lý kênh phân phối'
+      />
+      <meta
+        property='og:image'
+        content='https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png'
+      />
+
+      <meta property='twitter:card' content='summary_large_image' />
+      <meta property='twitter:url' content='https://metatags.io/' />
+      <meta property='twitter:title' content='Green Agri' />
+      <meta
+        property='twitter:description'
+        content='Green Agri/ Green Check - Giải pháp Thương mại điện tử và Quản lý kênh phân phối'
+      />
+      <meta
+        property='twitter:image'
+        content='https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png'
+      ></meta>
+    </Head>
+  );
+
+  return (
+    <Head>
       <title>{meta.title}</title>
       <meta name='robots' content={meta.robots} />
       <meta content={meta.description} name='description' />

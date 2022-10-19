@@ -23,6 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             description='GreenAgri - Giải pháp Thương mại điện tử và Quản lý kênh phân phối'
             canonical='https://greenagri.com.vn/'
             openGraph={{
+              type: 'website',
               url: 'https://greenagri.com.vn/',
               title: 'Green Agri',
               description:
