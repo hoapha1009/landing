@@ -50,8 +50,8 @@ export function DefaultHead() {
           property='og:image:secure'
           content='https://i.imgur.com/QanmG6r.png'
         /> */}
-        <meta property='og:image:width' content='1200'></meta>
-        <meta property='og:image:height' content='630'></meta>
+        {/* <meta property='og:image:width' content='1200'></meta>
+        <meta property='og:image:height' content='630'></meta> */}
         {/* <meta
           property='og:image:secure_url'
           content='https://i.imgur.com/QanmG6r.png'
