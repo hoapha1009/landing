@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             'Công ty Cổ phần Công nghệ Green Agri là đơn vị tiên phong trong lĩnh vực cung cấp các giải pháp công nghệ cho ngành nông nghiệp',
           images: [
             {
-              url: 'https://i.imgur.com/TEWDd5D.png',
+              url: 'https://i.imgur.com/QanmG6r.png',
               width: 1200,
               height: 630,
               alt: 'Công ty Cổ phần Công nghệ Green Agri là đơn vị tiên phong trong lĩnh vực cung cấp các giải pháp công nghệ cho ngành nông nghiệp',
