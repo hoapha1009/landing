@@ -14,7 +14,7 @@ export default function Footer() {
         </div>
         <div className='flex flex-col-reverse items-center border-t border-t-white py-6 text-sm font-medium text-gray-400 lg:mx-5 lg:flex-row lg:justify-between'>
           <div className='text-center text-xs text-[#CCCCCC] lg:text-base'>
-            Ver13 Copyright © 2022 GreenAgri Software. All rights reserved.{' '}
+            Ver14 Copyright © 2022 GreenAgri Software. All rights reserved.{' '}
           </div>
           <div className='mb-1 text-[#CCCCCC] lg:mb-0'>
             <Link href='/'>
