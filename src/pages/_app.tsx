@@ -1,6 +1,5 @@
 import { AppProps } from 'next/app';
 import '../styles/style.scss';
-
 import { DefaultHead } from '../components/layout/default-head';
 import Layout from '../components/layout/Layout';
 import { ScreenProvider } from '../lib/providers/screen-provider';

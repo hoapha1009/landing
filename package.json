@@ -20,6 +20,7 @@
     "analyze": "cross-env ANALYZE=true next build"
   },
   "dependencies": {
+    "@bradgarropy/next-seo": "^1.2.0",
     "@next/bundle-analyzer": "^12.3.1",
     "aos": "^2.3.4",
     "axios": "^1.1.0",
