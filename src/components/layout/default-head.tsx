@@ -61,7 +61,7 @@ export function DefaultHead() {
         {/* Twitter */}
         <meta property='twitter:card' content='summary_large_image' />
         <meta property='twitter:url' content='https://gat-mu.vercel.app/' />
-        <meta property='twitter:title' content='Green Agri' />
+        {/* <meta property='twitter:title' content='Green Agri' />
         <meta
           property='twitter:description'
           content='Công ty Cổ phần Công nghệ Green Agri là đơn vị tiên phong trong lĩnh vực cung cấp các giải pháp công nghệ cho ngành nông nghiệp'
@@ -74,7 +74,7 @@ export function DefaultHead() {
           property='twitter:image:secure_url'
           content='https://i.imgur.com/QanmG6r.png'
         />
-        <meta property='twitter:image:type' content='image/png' />
+        <meta property='twitter:image:type' content='image/png' /> */}
 
         <link rel='icon' type='image/x-icon' href='/favicon/favicon.ico?v=3' />
         <link rel='preconnect' href='https://fonts.gstatic.com' />
