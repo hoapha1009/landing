@@ -45,79 +45,76 @@ export default function Seo(props: SeoProps) {
 
   return (
     <Head>
+      {/* Primary Meta Tags */}
       <title>Green Agri</title>
       <meta name='title' content='Green Agri' />
       <meta
         name='description'
-        content='Green Agri/ Green Check - Giải pháp Thương mại điện tử và Quản lý kênh phân phối'
+        content='Công ty Cổ phần Công nghệ Green Agri là đơn vị tiên phong trong lĩnh vực cung cấp các giải pháp công nghệ cho ngành nông nghiệp'
       />
 
+      {/* Open Graph / Facebook */}
       <meta property='og:type' content='website' />
-      <meta property='og:url' content='https://metatags.io/' />
+      <meta property='og:url' content='https://greenagri.com.vn/' />
       <meta property='og:title' content='Green Agri' />
       <meta
         property='og:description'
-        content='Green Agri/ Green Check - Giải pháp Thương mại điện tử và Quản lý kênh phân phối'
+        content='Công ty Cổ phần Công nghệ Green Agri là đơn vị tiên phong trong lĩnh vực cung cấp các giải pháp công nghệ cho ngành nông nghiệp'
       />
-      <meta
-        property='og:image'
-        content='https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png'
-      />
+      <meta property='og:image' content='' />
 
+      {/* Twitter */}
       <meta property='twitter:card' content='summary_large_image' />
-      <meta property='twitter:url' content='https://metatags.io/' />
+      <meta property='twitter:url' content='https://greenagri.com.vn/' />
       <meta property='twitter:title' content='Green Agri' />
       <meta
         property='twitter:description'
-        content='Green Agri/ Green Check - Giải pháp Thương mại điện tử và Quản lý kênh phân phối'
+        content='Công ty Cổ phần Công nghệ Green Agri là đơn vị tiên phong trong lĩnh vực cung cấp các giải pháp công nghệ cho ngành nông nghiệp'
       />
-      <meta
-        property='twitter:image'
-        content='https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png'
-      ></meta>
+      <meta property='twitter:image' content='' />
     </Head>
   );
 
-  return (
-    <Head>
-      <title>{meta.title}</title>
-      <meta name='robots' content={meta.robots} />
-      <meta content={meta.description} name='description' />
-      <meta property='og:url' content={`${meta.url}${router.asPath}`} />
-      <link rel='canonical' href={`${meta.url}${router.asPath}`} />
-      {/* Open Graph */}
-      <meta property='og:type' content={meta.type} />
-      <meta property='og:site_name' content={meta.siteName} />
-      <meta property='og:description' content={meta.description} />
-      <meta property='og:title' content={meta.title} />
-      <meta name='image' property='og:image' content={meta.image} />
-      {/* Twitter */}
-      <meta name='twitter:card' content='summary_large_image' />
-      <meta name='twitter:site' content='@th_clarence' />
-      <meta name='twitter:title' content={meta.title} />
-      <meta name='twitter:description' content={meta.description} />
-      <meta name='twitter:image' content={meta.image} />
-      {meta.date && (
-        <>
-          <meta property='article:published_time' content={meta.date} />
-          <meta
-            name='publish_date'
-            property='og:publish_date'
-            content={meta.date}
-          />
-          <meta name='author' property='article:author' content='GAT' />
-        </>
-      )}
+  // return (
+  //   <Head>
+  //     <title>{meta.title}</title>
+  //     <meta name='robots' content={meta.robots} />
+  //     <meta content={meta.description} name='description' />
+  //     <meta property='og:url' content={`${meta.url}${router.asPath}`} />
+  //     <link rel='canonical' href={`${meta.url}${router.asPath}`} />
+  //     {/* Open Graph */}
+  //     <meta property='og:type' content={meta.type} />
+  //     <meta property='og:site_name' content={meta.siteName} />
+  //     <meta property='og:description' content={meta.description} />
+  //     <meta property='og:title' content={meta.title} />
+  //     <meta name='image' property='og:image' content={meta.image} />
+  //     {/* Twitter */}
+  //     <meta name='twitter:card' content='summary_large_image' />
+  //     <meta name='twitter:site' content='@th_clarence' />
+  //     <meta name='twitter:title' content={meta.title} />
+  //     <meta name='twitter:description' content={meta.description} />
+  //     <meta name='twitter:image' content={meta.image} />
+  //     {meta.date && (
+  //       <>
+  //         <meta property='article:published_time' content={meta.date} />
+  //         <meta
+  //           name='publish_date'
+  //           property='og:publish_date'
+  //           content={meta.date}
+  //         />
+  //         <meta name='author' property='article:author' content='GAT' />
+  //       </>
+  //     )}
 
-      {/* Favicons */}
-      {favicons.map((linkProps) => (
-        <link key={linkProps.href} {...linkProps} />
-      ))}
-      <meta name='GAT-TileColor' content='#ffffff' />
-      <meta name='GAT-TileImage' content='/images/logo.png' />
-      <meta name='theme-color' content='#ffffff' />
-    </Head>
-  );
+  //     {/* Favicons */}
+  //     {favicons.map((linkProps) => (
+  //       <link key={linkProps.href} {...linkProps} />
+  //     ))}
+  //     <meta name='GAT-TileColor' content='#ffffff' />
+  //     <meta name='GAT-TileImage' content='/images/logo.png' />
+  //     <meta name='theme-color' content='#ffffff' />
+  //   </Head>
+  // );
 }
 
 type Favicons = {

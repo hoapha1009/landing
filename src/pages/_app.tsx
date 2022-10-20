@@ -1,7 +1,6 @@
 import { AppProps } from 'next/app';
 import '../styles/style.scss';
 
-import { DefaultSeo } from 'next-seo';
 import { DefaultHead } from '../components/layout/default-head';
 import Layout from '../components/layout/Layout';
 import { ScreenProvider } from '../lib/providers/screen-provider';
@@ -17,7 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <DefaultHead />
       <ScreenProvider>
         <Layout>
-          <DefaultSeo
+          {/* <DefaultSeo
             titleTemplate='%s | GreenAgri'
             defaultTitle='GreenAgri'
             description='GreenAgri - Giải pháp Thương mại điện tử và Quản lý kênh phân phối'
@@ -38,7 +37,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               ],
               site_name: 'Green Agri',
             }}
-          />
+          /> */}
           <Component {...pageProps} />
         </Layout>
       </ScreenProvider>
