@@ -30,7 +30,7 @@ export function DefaultHead() {
         <meta name='title' content='Green Agri' />
         <meta
           name='description'
-          content='<b>Công ty Cổ phần Công nghệ Green Agri</b> là đơn vị tiên phong trong lĩnh vực cung cấp các <b>giải pháp công nghệ</b> cho <b>ngành nông nghiệp</b>'
+          content='Công ty Cổ phần Công nghệ Green Agri là đơn vị tiên phong trong lĩnh vực cung cấp các giải pháp công nghệ cho ngành nông nghiệp'
         />
 
         {/* Open Graph / Facebook */}
@@ -39,42 +39,13 @@ export function DefaultHead() {
         <meta property='og:title' content='Green Agri' />
         <meta
           property='og:description'
-          content='<b>Công ty Cổ phần Công nghệ Green Agri</b> là đơn vị tiên phong trong lĩnh vực cung cấp các <b>giải pháp công nghệ</b> cho <b>ngành nông nghiệp</b>'
+          content='Công ty Cổ phần Công nghệ Green Agri là đơn vị tiên phong trong lĩnh vực cung cấp các giải pháp công nghệ cho ngành nông nghiệp'
         />
         <meta property='og:image' content='https://i.imgur.com/QanmG6r.png' />
-        {/* <meta
-          property='og:image:url'
-          content='https://i.imgur.com/QanmG6r.png'
-        /> */}
-        {/* <meta
-          property='og:image:secure'
-          content='https://i.imgur.com/QanmG6r.png'
-        /> */}
-        {/* <meta property='og:image:width' content='1200'></meta>
-        <meta property='og:image:height' content='630'></meta> */}
-        {/* <meta
-          property='og:image:secure_url'
-          content='https://i.imgur.com/QanmG6r.png'
-        />
-        <meta property='og:image:type' content='image/png' /> */}
 
         {/* Twitter */}
         <meta property='twitter:card' content='summary_large_image' />
         <meta property='twitter:url' content='https://gat-mu.vercel.app/' />
-        {/* <meta property='twitter:title' content='Green Agri' />
-        <meta
-          property='twitter:description'
-          content='Công ty Cổ phần Công nghệ Green Agri là đơn vị tiên phong trong lĩnh vực cung cấp các giải pháp công nghệ cho ngành nông nghiệp'
-        />
-        <meta
-          property='twitter:image'
-          content='https://i.imgur.com/QanmG6r.png'
-        />
-        <meta
-          property='twitter:image:secure_url'
-          content='https://i.imgur.com/QanmG6r.png'
-        />
-        <meta property='twitter:image:type' content='image/png' /> */}
 
         <link rel='icon' type='image/x-icon' href='/favicon/favicon.ico?v=3' />
         <link rel='preconnect' href='https://fonts.gstatic.com' />
