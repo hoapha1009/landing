@@ -2,12 +2,11 @@ import * as React from 'react';
 import { RiAlarmWarningFill } from 'react-icons/ri';
 
 import ArrowLink from '@/components/links/ArrowLink';
-import { NextSeo } from 'next-seo';
 
 export default function NotFoundPage() {
   return (
     <>
-      <NextSeo title='Not Found' />
+      {/* <NextSeo title='Not Found' /> */}
 
       <main>
         <section className='bg-white'>
