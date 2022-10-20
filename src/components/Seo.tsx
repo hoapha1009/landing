@@ -6,7 +6,7 @@ const defaultMeta = {
   title: 'Green Agri',
   siteName: 'Green Agri',
   description:
-    'Green Agri/ Green Check - Giải pháp Thương mại điện tử và Quản lý kênh phân phối',
+    'Công ty Cổ phần Công nghệ Green Agri là đơn vị tiên phong trong lĩnh vực cung cấp các giải pháp công nghệ cho ngành nông nghiệp',
   /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
   url: 'https://greenagri.com.vn/',
   type: 'website',
@@ -15,7 +15,7 @@ const defaultMeta = {
    * No need to be filled, will be populated with openGraph function
    * If you wish to use a normal image, just specify the path below
    */
-  image: 'https://i.imgur.com/TEWDd5D.png',
+  image: 'https://i.imgur.com/DyUsJDB.png',
 };
 
 type SeoProps = {
@@ -61,7 +61,7 @@ export default function Seo(props: SeoProps) {
         property='og:description'
         content='Công ty Cổ phần Công nghệ Green Agri là đơn vị tiên phong trong lĩnh vực cung cấp các giải pháp công nghệ cho ngành nông nghiệp'
       />
-      <meta property='og:image' content='' />
+      <meta property='og:image' content='https://i.imgur.com/DyUsJDB.png' />
 
       {/* Twitter */}
       <meta property='twitter:card' content='summary_large_image' />
@@ -71,7 +71,10 @@ export default function Seo(props: SeoProps) {
         property='twitter:description'
         content='Công ty Cổ phần Công nghệ Green Agri là đơn vị tiên phong trong lĩnh vực cung cấp các giải pháp công nghệ cho ngành nông nghiệp'
       />
-      <meta property='twitter:image' content='' />
+      <meta
+        property='twitter:image'
+        content='https://i.imgur.com/DyUsJDB.png'
+      />
     </Head>
   );
 
