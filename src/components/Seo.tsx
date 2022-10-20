@@ -61,7 +61,10 @@ export default function Seo(props: SeoProps) {
         property='og:description'
         content='Công ty Cổ phần Công nghệ Green Agri là đơn vị tiên phong trong lĩnh vực cung cấp các giải pháp công nghệ cho ngành nông nghiệp'
       />
-      <meta property='og:image' content='https://i.imgur.com/DyUsJDB.png' />
+      <meta
+        property='og:image'
+        content='https://znews-photo-fbcrawler.zadn.vn/w1250/Uploaded/hointt/2022_10_19/pexels_alena_darmel_7706967.jpg'
+      />
       <meta property='og:image:width' content='1200'></meta>
       <meta property='og:image:height' content='630'></meta>
 
@@ -75,7 +78,7 @@ export default function Seo(props: SeoProps) {
       />
       <meta
         property='twitter:image'
-        content='https://i.imgur.com/DyUsJDB.png'
+        content='https://znews-photo-fbcrawler.zadn.vn/w1250/Uploaded/hointt/2022_10_19/pexels_alena_darmel_7706967.jpg'
       />
     </Head>
   );
