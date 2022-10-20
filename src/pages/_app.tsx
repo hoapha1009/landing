@@ -4,6 +4,7 @@ import '../styles/style.scss';
 import { DefaultHead } from '../components/layout/default-head';
 import Layout from '../components/layout/Layout';
 import { ScreenProvider } from '../lib/providers/screen-provider';
+import { DefaultSeo } from 'next-seo';
 
 /**
  * !STARTERCONF info
@@ -16,28 +17,28 @@ function MyApp({ Component, pageProps }: AppProps) {
       <DefaultHead />
       <ScreenProvider>
         <Layout>
-          {/* <DefaultSeo
-            titleTemplate='%s | GreenAgri'
-            defaultTitle='GreenAgri'
-            description='GreenAgri - Giải pháp Thương mại điện tử và Quản lý kênh phân phối'
+          <DefaultSeo
+            titleTemplate='%s | Green Agri'
+            defaultTitle='Green Agri'
+            description='Công ty Cổ phần Công nghệ Green Agri là đơn vị tiên phong trong lĩnh vực cung cấp các giải pháp công nghệ cho ngành nông nghiệp'
             canonical='https://greenagri.com.vn/'
             openGraph={{
               type: 'website',
               url: 'https://greenagri.com.vn/',
               title: 'Green Agri',
               description:
-                'GreenAgri - Giải pháp Thương mại điện tử và Quản lý kênh phân phối',
+                'Công ty Cổ phần Công nghệ Green Agri là đơn vị tiên phong trong lĩnh vực cung cấp các giải pháp công nghệ cho ngành nông nghiệp',
               images: [
                 {
                   url: 'https://i.imgur.com/TEWDd5D.png',
                   width: 1200,
                   height: 630,
-                  alt: 'GreenAgri - Giải pháp Thương mại điện tử và Quản lý kênh phân phối.',
+                  alt: 'Công ty Cổ phần Công nghệ Green Agri là đơn vị tiên phong trong lĩnh vực cung cấp các giải pháp công nghệ cho ngành nông nghiệp',
                 },
               ],
               site_name: 'Green Agri',
             }}
-          /> */}
+          />
           <Component {...pageProps} />
         </Layout>
       </ScreenProvider>
