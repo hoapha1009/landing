@@ -26,6 +26,45 @@ export function DefaultHead() {
           name='viewport'
           content='initial-scale=1.0, width=device-width, user-scalable=yes'
         ></meta>
+        <title>Green Agri</title>
+        <meta name='title' content='Green Agri' />
+        <meta
+          name='description'
+          content='Công ty Cổ phần Công nghệ Green Agri là đơn vị tiên phong trong lĩnh vực cung cấp các giải pháp công nghệ cho ngành nông nghiệp'
+        />
+
+        {/* Open Graph / Facebook */}
+        <meta property='og:type' content='website' />
+        <meta property='og:url' content='https://gat-mu.vercel.app/' />
+        <meta property='og:title' content='Green Agri' />
+        <meta
+          property='og:description'
+          content='Công ty Cổ phần Công nghệ Green Agri là đơn vị tiên phong trong lĩnh vực cung cấp các giải pháp công nghệ cho ngành nông nghiệp'
+        />
+        <meta
+          property='og:image:secure'
+          content='https://i.imgur.com/DyUsJDB.png'
+        />
+        <meta property='og:image:width' content='1200'></meta>
+        <meta property='og:image:height' content='630'></meta>
+        <meta
+          property='og:image:secure_url'
+          content='https://i.imgur.com/DyUsJDB.png'
+        />
+        <meta property='og:image:type' content='image/png' />
+
+        {/* Twitter */}
+        <meta property='twitter:card' content='summary_large_image' />
+        <meta property='twitter:url' content='https://gat-mu.vercel.app/' />
+        <meta property='twitter:title' content='Green Agri' />
+        <meta
+          property='twitter:description'
+          content='Công ty Cổ phần Công nghệ Green Agri là đơn vị tiên phong trong lĩnh vực cung cấp các giải pháp công nghệ cho ngành nông nghiệp'
+        />
+        <meta
+          property='twitter:image'
+          content='https://i.imgur.com/DyUsJDB.png'
+        />
         <link rel='icon' type='image/x-icon' href='/favicon/favicon.ico?v=3' />
         <link rel='preconnect' href='https://fonts.gstatic.com' />
         <link rel='preconnect' href='https://fonts.googleapis.com' />
