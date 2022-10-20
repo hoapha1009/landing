@@ -41,10 +41,11 @@ export function DefaultHead() {
           property='og:description'
           content='Công ty Cổ phần Công nghệ Green Agri là đơn vị tiên phong trong lĩnh vực cung cấp các giải pháp công nghệ cho ngành nông nghiệp'
         />
-        <meta
+        <meta property='og:image' content='https://i.imgur.com/DyUsJDB.png' />
+        {/* <meta
           property='og:image:url'
           content='https://i.imgur.com/DyUsJDB.png'
-        />
+        /> */}
         {/* <meta
           property='og:image:secure'
           content='https://i.imgur.com/DyUsJDB.png'
