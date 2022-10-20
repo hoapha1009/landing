@@ -41,20 +41,20 @@ export function DefaultHead() {
           property='og:description'
           content='Công ty Cổ phần Công nghệ Green Agri là đơn vị tiên phong trong lĩnh vực cung cấp các giải pháp công nghệ cho ngành nông nghiệp'
         />
-        <meta property='og:image' content='https://i.imgur.com/DyUsJDB.png' />
+        <meta property='og:image' content='https://i.imgur.com/QanmG6r.png' />
         {/* <meta
           property='og:image:url'
-          content='https://i.imgur.com/DyUsJDB.png'
+          content='https://i.imgur.com/QanmG6r.png'
         /> */}
         {/* <meta
           property='og:image:secure'
-          content='https://i.imgur.com/DyUsJDB.png'
+          content='https://i.imgur.com/QanmG6r.png'
         /> */}
         <meta property='og:image:width' content='1200'></meta>
         <meta property='og:image:height' content='630'></meta>
         {/* <meta
           property='og:image:secure_url'
-          content='https://i.imgur.com/DyUsJDB.png'
+          content='https://i.imgur.com/QanmG6r.png'
         />
         <meta property='og:image:type' content='image/png' /> */}
 
@@ -68,11 +68,11 @@ export function DefaultHead() {
         />
         <meta
           property='twitter:image'
-          content='https://i.imgur.com/DyUsJDB.png'
+          content='https://i.imgur.com/QanmG6r.png'
         />
         <meta
           property='twitter:image:secure_url'
-          content='https://i.imgur.com/DyUsJDB.png'
+          content='https://i.imgur.com/QanmG6r.png'
         />
         <meta property='twitter:image:type' content='image/png' />
 
