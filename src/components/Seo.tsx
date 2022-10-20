@@ -55,7 +55,7 @@ export default function Seo(props: SeoProps) {
 
       {/* Open Graph / Facebook */}
       <meta property='og:type' content='website' />
-      <meta property='og:url' content='https://greenagri.com.vn/' />
+      <meta property='og:url' content='https://gat-mu.vercel.app/' />
       <meta property='og:title' content='Green Agri' />
       <meta
         property='og:description'
@@ -65,7 +65,7 @@ export default function Seo(props: SeoProps) {
 
       {/* Twitter */}
       <meta property='twitter:card' content='summary_large_image' />
-      <meta property='twitter:url' content='https://greenagri.com.vn/' />
+      <meta property='twitter:url' content='https://gat-mu.vercel.app/' />
       <meta property='twitter:title' content='Green Agri' />
       <meta
         property='twitter:description'

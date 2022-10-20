@@ -29,7 +29,7 @@ export function DefaultHead() {
         <link rel='icon' type='image/x-icon' href='/favicon/favicon.ico?v=3' />
         <link rel='preconnect' href='https://fonts.gstatic.com' />
         <link rel='preconnect' href='https://fonts.googleapis.com' />
-        <link rel='canonical' href='https://greenagri.com.vn/' />
+        <link rel='canonical' href='https://gat-mu.vercel.app/' />
         <link
           href='https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&family=Saira:wght@400;500;600;700;800&display=swap'
           rel='stylesheet'
