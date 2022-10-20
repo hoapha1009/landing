@@ -30,7 +30,7 @@ export function DefaultHead() {
         <meta name='title' content='Green Agri' />
         <meta
           name='description'
-          content='Công ty Cổ phần Công nghệ Green Agri là đơn vị tiên phong trong lĩnh vực cung cấp các giải pháp công nghệ cho ngành nông nghiệp'
+          content='<b>Công ty Cổ phần Công nghệ Green Agri</b> là đơn vị tiên phong trong lĩnh vực cung cấp các <b>giải pháp công nghệ</b> cho <b>ngành nông nghiệp</b>'
         />
 
         {/* Open Graph / Facebook */}
@@ -39,7 +39,7 @@ export function DefaultHead() {
         <meta property='og:title' content='Green Agri' />
         <meta
           property='og:description'
-          content='Công ty Cổ phần Công nghệ Green Agri là đơn vị tiên phong trong lĩnh vực cung cấp các giải pháp công nghệ cho ngành nông nghiệp'
+          content='<b>Công ty Cổ phần Công nghệ Green Agri</b> là đơn vị tiên phong trong lĩnh vực cung cấp các <b>giải pháp công nghệ</b> cho <b>ngành nông nghiệp</b>'
         />
         <meta property='og:image' content='https://i.imgur.com/QanmG6r.png' />
         {/* <meta
