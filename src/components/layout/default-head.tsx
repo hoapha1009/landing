@@ -52,11 +52,11 @@ export function DefaultHead() {
         /> */}
         <meta property='og:image:width' content='1200'></meta>
         <meta property='og:image:height' content='630'></meta>
-        <meta
+        {/* <meta
           property='og:image:secure_url'
           content='https://i.imgur.com/DyUsJDB.png'
         />
-        <meta property='og:image:type' content='image/png' />
+        <meta property='og:image:type' content='image/png' /> */}
 
         {/* Twitter */}
         <meta property='twitter:card' content='summary_large_image' />
