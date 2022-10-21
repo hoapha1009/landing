@@ -1,19 +1,14 @@
-import SEO from '@bradgarropy/next-seo';
+import { DefaultSeo } from 'next-seo';
 import { AppProps } from 'next/app';
 import { DefaultHead } from '../components/layout/default-head';
 import Layout from '../components/layout/Layout';
 import { ScreenProvider } from '../lib/providers/screen-provider';
 import '../styles/style.scss';
 
-/**
- * !STARTERCONF info
- * ? `Layout` component is called in every page using `np` snippets. If you have consistent layout across all page, you can add it here too
- */
-
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      {/* <DefaultSeo
+      <DefaultSeo
         titleTemplate='%s | Green Agri'
         defaultTitle='Green Agri'
         description='Công ty Cổ phần Công nghệ Green Agri / Green Check là đơn vị tiên phong trong lĩnh vực cung cấp các giải pháp công nghệ cho ngành nông nghiệp'
@@ -33,24 +28,6 @@ function MyApp({ Component, pageProps }: AppProps) {
             },
           ],
           site_name: 'Green Agri',
-        }}
-      /> */}
-      <SEO
-        title='Green Agri'
-        description='Công ty Cổ phần Công nghệ Green Agri / Green Check là đơn vị tiên phong trong lĩnh vực cung cấp các giải pháp công nghệ cho ngành nông nghiệp'
-        keywords={['website']}
-        icon='/favicon.ico'
-        themeColor='#000000'
-        colorScheme='light'
-        facebook={{
-          image: 'https://i.imgur.com/QanmG6r.png',
-          url: 'https://greenagri.com.vn/',
-          type: 'website',
-        }}
-        twitter={{
-          image: 'https://i.imgur.com/QanmG6r.png',
-          site: 'https://greenagri.com.vn/',
-          card: 'summary',
         }}
       />
       <DefaultHead />
