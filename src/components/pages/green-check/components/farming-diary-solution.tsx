@@ -10,7 +10,7 @@ export function FarmingDiarySolution() {
   return (
     <div
       data-aos='fade-up'
-      className='main-container py-8 text-center lg:py-24'
+      className='main-container bg-[#E5E5E5] py-8 text-center lg:bg-[#FAFBFB] lg:py-24'
     >
       <Title text='GIẢI PHÁP NHẬT KÝ CANH TÁC' />
       <Subtitle

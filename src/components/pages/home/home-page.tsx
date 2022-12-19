@@ -12,12 +12,12 @@ export function HomePage() {
       <HomeAboutUs />
       <HomeSolution />
       <HomeGroupCard text='Giá trị cộng đồng' options={MOCK_DATA_2} />
-      <SlidePart
+      {/* <SlidePart
         title='Khách hàng GAT'
         className='bg-[#E7F7F0]'
         type='customer'
       />
-      <SlidePart title='Đối tác GAT' />
+      <SlidePart title='Đối tác GAT' /> */}
       <HomeNews />
     </>
   );
